@@ -369,6 +369,36 @@
         },
         "step-5.2": {
             "English": "5.2: Pass the starting player token to the next player"
+        },
+        "nextStep": {
+            "English": "Next Step"
+        },
+        "undoMany": {
+            "English": "Undo Many"
+        },
+        "undo": {
+            "English": "Undo"
+        },
+        "clearTargets": {
+            "English": "Clear Targets"
+        },
+        "ringTokens": {
+            "English": "Ring Tokens"
+        },
+        "corruption": {
+            "English": "Corruption"
+        },
+        "pathAttack": {
+            "English": "Path Attack"
+        },
+        "defense": {
+            "English": "Defense"
+        },
+        "attack": {
+            "English": "Attack"
+        },
+        "pathDefense": {
+            "English": "Path Defense"
         }
     }
 }

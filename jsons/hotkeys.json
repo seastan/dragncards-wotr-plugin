@@ -1,26 +1,26 @@
 {
     "hotkeys": {
         "token": [
-            {"key": "1", "tokenType": "attackBlue", "labelId": "attackBlueIcon"},
-            {"key": "2", "tokenType": "defenseBlue", "labelId": "defenseBlueIcon"},
-            {"key": "3", "tokenType": "pathBlue", "labelId": "pathBlueIcon"},
-            {"key": "4", "tokenType": "attackRed", "labelId": "attackRedIcon"},
-            {"key": "5", "tokenType": "defenseRed", "labelId": "defenseRedIcon"},
-            {"key": "6", "tokenType": "pathRed", "labelId": "pathRedIcon"},
-            {"key": "7", "tokenType": "corruption", "labelId": "corruptionIcon"}
+            {"key": "1", "tokenType": "attackBlue", "label": "id:attackBlueIcon"},
+            {"key": "2", "tokenType": "defenseBlue", "label": "id:defenseBlueIcon"},
+            {"key": "3", "tokenType": "pathBlue", "label": "id:pathBlueIcon"},
+            {"key": "4", "tokenType": "attackRed", "label": "id:attackRedIcon"},
+            {"key": "5", "tokenType": "defenseRed", "label": "id:defenseRedIcon"},
+            {"key": "6", "tokenType": "pathRed", "label": "id:pathRedIcon"},
+            {"key": "7", "tokenType": "corruption", "label": "id:corruptionIcon"}
         ],
         "game": [
-            {"key": "D", "actionListId": "drawCard", "labelId": "drawCard"},
-            {"key": "P", "actionListId": "pass", "labelId": "pass"}
+            {"key": "D", "actionList": "drawCard", "label": "id:drawCard"},
+            {"key": "P", "actionList": "pass", "label": "id:pass"}
         ],
         "card": [
-            {"key": "Shift+N", "actionListId": "newRound", "labelId": "drawCardsAndStartNewRound"},
-            {"key": "F", "actionListId": "flipCard", "labelId": "flip"},
-            {"key": "T", "actionListId": "targetCard", "labelId": "targetCard"},
-            {"key": "S", "actionListId": "addToScoringArea", "labelId": "addToScoringArea"},
-            {"key": "C", "actionListId": "cycleCard", "labelId": "cycleCard"},
-            {"key": "E", "actionListId": "eliminateCard", "labelId": "eliminateCard"},
-            {"key": "R", "actionListId": "toggleRotate", "labelId": "rotateCard"}
+            {"key": "Shift+N", "actionList": "newRound", "label": "id:drawCardsAndStartNewRound"},
+            {"key": "F", "actionList": "flipCard", "label": "id:flip"},
+            {"key": "T", "actionList": "targetCard", "label": "id:targetCard"},
+            {"key": "S", "actionList": "addToScoringArea", "label": "id:addToScoringArea"},
+            {"key": "C", "actionList": "cycleCard", "label": "id:cycleCard"},
+            {"key": "E", "actionList": "eliminateCard", "label": "id:eliminateCard"},
+            {"key": "R", "actionList": "toggleRotate", "label": "id:rotateCard"}
         ]
     }
 }

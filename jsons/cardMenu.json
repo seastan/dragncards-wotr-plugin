@@ -3,7 +3,7 @@
         "moveToGroupIds": [],
         "options": [
             {
-                "labelId": "toggleRotate",
+                "label": "id:toggleRotate",
                 "actionList": "toggleRotate"
             }
         ]

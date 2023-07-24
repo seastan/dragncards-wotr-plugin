@@ -1,8 +1,8 @@
 {
     "groups": {
         "sharedBattlegroundBlue": {
-            "labelId": "freePeoplesBattlegroundDeck", 
-            "tableLabelId": "",
+            "label": "id:freePeoplesBattlegroundDeck", 
+            "tableLabel": "",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -13,8 +13,8 @@
             }
         },
         "sharedBattlegroundRed": {
-            "labelId": "shadowBattlegroundDeck", 
-            "tableLabelId": "",
+            "label": "id:shadowBattlegroundDeck", 
+            "tableLabel": "",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -25,8 +25,8 @@
             }
         },
         "sharedScoringBlue": {
-            "labelId": "freePeoplesScoringArea", 
-            "tableLabelId": "freePeoplesScoringArea",
+            "label": "id:freePeoplesScoringArea", 
+            "tableLabel": "id:freePeoplesScoringArea",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "A",
@@ -34,8 +34,8 @@
             }
         },
         "sharedScoringRed": {
-            "labelId": "shadowScoringArea", 
-            "tableLabelId": "shadowScoringArea",
+            "label": "id:shadowScoringArea", 
+            "tableLabel": "id:shadowScoringArea",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "A",
@@ -43,8 +43,8 @@
             }
         },
         "sharedPathDeck1": {
-            "labelId": "pathDeck1",
-            "tableLabelId": "pathDeck1",
+            "label": "id:pathDeck1",
+            "tableLabel": "id:pathDeck1",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -54,8 +54,8 @@
             }
         },
         "sharedPathDeck2": {
-            "labelId": "pathDeck2",
-            "tableLabelId": "pathDeck2",
+            "label": "id:pathDeck2",
+            "tableLabel": "id:pathDeck2",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -65,8 +65,8 @@
             }
         },
         "sharedPathDeck3": {
-            "labelId": "pathDeck3",
-            "tableLabelId": "pathDeck3",
+            "label": "id:pathDeck3",
+            "tableLabel": "id:pathDeck3",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -76,8 +76,8 @@
             }
         },
         "sharedPathDeck4": {
-            "labelId": "pathDeck4",
-            "tableLabelId": "pathDeck4",
+            "label": "id:pathDeck4",
+            "tableLabel": "id:pathDeck4",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -87,8 +87,8 @@
             }
         },
         "sharedPathDeck5": {
-            "labelId": "pathDeck5",
-            "tableLabelId": "pathDeck5",
+            "label": "id:pathDeck5",
+            "tableLabel": "id:pathDeck5",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -98,8 +98,8 @@
             }
         },
         "sharedPathDeck6": {
-            "labelId": "pathDeck6",
-            "tableLabelId": "pathDeck6",
+            "label": "id:pathDeck6",
+            "tableLabel": "id:pathDeck6",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -109,8 +109,8 @@
             }
         },
         "sharedPathDeck7": {
-            "labelId": "pathDeck7",
-            "tableLabelId": "pathDeck7",
+            "label": "id:pathDeck7",
+            "tableLabel": "id:pathDeck7",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -120,8 +120,8 @@
             }
         },
         "sharedPathDeck8": {
-            "labelId": "pathDeck8",
-            "tableLabelId": "pathDeck8",
+            "label": "id:pathDeck8",
+            "tableLabel": "id:pathDeck8",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -131,8 +131,8 @@
             }
         },
         "sharedPathDeck9": {
-            "labelId": "pathDeck9",
-            "tableLabelId": "pathDeck9",
+            "label": "id:pathDeck9",
+            "tableLabel": "id:pathDeck9",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -142,8 +142,8 @@
             }
         },
         "sharedSetAside": {
-            "labelId": "setAside", 
-            "tableLabelId": "setAside",
+            "label": "id:setAside", 
+            "tableLabel": "id:setAside",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -151,8 +151,8 @@
             }
         },
         "sharedActiveLocation1": {
-            "labelId": "activeLocation1", 
-            "tableLabelId": "location1",
+            "label": "id:activeLocation1", 
+            "tableLabel": "id:location1",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -160,8 +160,8 @@
             }
         },
         "sharedActiveLocation2": {
-            "labelId": "activeLocation2", 
-            "tableLabelId": "location2",
+            "label": "id:activeLocation2", 
+            "tableLabel": "id:location2",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -169,8 +169,8 @@
             }
         },
         "sharedActiveLocation3": {
-            "labelId": "activeLocation3", 
-            "tableLabelId": "location3",
+            "label": "id:activeLocation3", 
+            "tableLabel": "id:location3",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -178,8 +178,8 @@
             }
         },
         "sharedActiveLocation4": {
-            "labelId": "activeLocation4", 
-            "tableLabelId": "location4",
+            "label": "id:activeLocation4", 
+            "tableLabel": "id:location4",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -187,8 +187,8 @@
             }
         },
         "sharedActiveRed1": {
-            "labelId": "activeShadow1", 
-            "tableLabelId": "shadow1",
+            "label": "id:activeShadow1", 
+            "tableLabel": "id:shadow1",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -196,8 +196,8 @@
             }
         },
         "sharedActiveRed2": {
-            "labelId": "activeShadow2", 
-            "tableLabelId": "shadow2",
+            "label": "id:activeShadow2", 
+            "tableLabel": "id:shadow2",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -205,8 +205,8 @@
             }
         },
         "sharedActiveRed3": {
-            "labelId": "activeShadow3", 
-            "tableLabelId": "shadow3",
+            "label": "id:activeShadow3", 
+            "tableLabel": "id:shadow3",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -214,8 +214,8 @@
             }
         },
         "sharedActiveRed4": {
-            "labelId": "activeShadow4", 
-            "tableLabelId": "shadow4",
+            "label": "id:activeShadow4", 
+            "tableLabel": "id:shadow4",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -223,8 +223,8 @@
             }
         },
         "sharedActiveBlue1": {
-            "labelId": "activeFreePeoples1", 
-            "tableLabelId": "freePeoples1",
+            "label": "id:activeFreePeoples1", 
+            "tableLabel": "id:freePeoples1",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -232,8 +232,8 @@
             }
         },
         "sharedActiveBlue2": {
-            "labelId": "activeFreePeoples2", 
-            "tableLabelId": "freePeoples2",
+            "label": "id:activeFreePeoples2", 
+            "tableLabel": "id:freePeoples2",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -241,8 +241,8 @@
             }
         },
         "sharedActiveBlue3": {
-            "labelId": "activeFreePeoples3", 
-            "tableLabelId": "freePeoples3",
+            "label": "id:activeFreePeoples3", 
+            "tableLabel": "id:freePeoples3",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -250,8 +250,8 @@
             }
         },
         "sharedActiveBlue4": {
-            "labelId": "activeFreePeoples4", 
-            "tableLabelId": "freePeoples4",
+            "label": "id:activeFreePeoples4", 
+            "tableLabel": "id:freePeoples4",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -259,8 +259,8 @@
             }
         },
         "player1Hand": {
-            "labelId": "player1Hand", 
-            "tableLabelId": "hand",
+            "label": "id:player1Hand", 
+            "tableLabel": "id:hand",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -269,8 +269,8 @@
             }
         },
         "player1Deck": {
-            "labelId": "player1Deck", 
-            "tableLabelId": "deck",
+            "label": "id:player1Deck", 
+            "tableLabel": "id:deck",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -283,8 +283,8 @@
             }
         },
         "player1Cycled": {
-            "labelId": "player1Cycled", 
-            "tableLabelId": "cycled",
+            "label": "id:player1Cycled", 
+            "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -292,8 +292,8 @@
             }
         },
         "player1Eliminated": {
-            "labelId": "player1Eliminated", 
-            "tableLabelId": "eliminated",
+            "label": "id:player1Eliminated", 
+            "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -301,8 +301,8 @@
             }
         },
         "player1Reserve": {
-            "labelId": "player1Reserve", 
-            "tableLabelId": "p1Reserve",
+            "label": "id:player1Reserve", 
+            "tableLabel": "id:p1Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -311,8 +311,8 @@
             }
         },
         "player2Hand": {
-            "labelId": "player2Hand", 
-            "tableLabelId": "hand",
+            "label": "id:player2Hand", 
+            "tableLabel": "id:hand",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -321,8 +321,8 @@
             }
         },
         "player2Deck": {
-            "labelId": "player2Deck", 
-            "tableLabelId": "deck",
+            "label": "id:player2Deck", 
+            "tableLabel": "id:deck",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -335,8 +335,8 @@
             }
         },
         "player2Cycled": {
-            "labelId": "player2Cycled", 
-            "tableLabelId": "cycled",
+            "label": "id:player2Cycled", 
+            "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -344,8 +344,8 @@
             }
         },
         "player2Eliminated": {
-            "labelId": "player2Eliminated", 
-            "tableLabelId": "eliminated",
+            "label": "id:player2Eliminated", 
+            "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -353,8 +353,8 @@
             }
         },
         "player2Reserve": {
-            "labelId": "player2Reserve", 
-            "tableLabelId": "p2Reserve",
+            "label": "id:player2Reserve", 
+            "tableLabel": "id:p2Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -363,8 +363,8 @@
             }
         },
         "player3Hand": {
-            "labelId": "player3Hand", 
-            "tableLabelId": "hand",
+            "label": "id:player3Hand", 
+            "tableLabel": "id:hand",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -373,8 +373,8 @@
             }
         },
         "player3Deck": {
-            "labelId": "player3Deck", 
-            "tableLabelId": "deck",
+            "label": "id:player3Deck", 
+            "tableLabel": "id:deck",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -387,8 +387,8 @@
             }
         },
         "player3Cycled": {
-            "labelId": "player3Cycled", 
-            "tableLabelId": "cycled",
+            "label": "id:player3Cycled", 
+            "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -396,8 +396,8 @@
             }
         },
         "player3Eliminated": {
-            "labelId": "player3Eliminated", 
-            "tableLabelId": "eliminated",
+            "label": "id:player3Eliminated", 
+            "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -405,8 +405,8 @@
             }
         },
         "player3Reserve": {
-            "labelId": "player3Reserve", 
-            "tableLabelId": "p3Reserve",
+            "label": "id:player3Reserve", 
+            "tableLabel": "id:p3Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -415,8 +415,8 @@
             }
         },
         "player4Hand": {
-            "labelId": "player4Hand", 
-            "tableLabelId": "hand",
+            "label": "id:player4Hand", 
+            "tableLabel": "id:hand",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -425,8 +425,8 @@
             }
         },
         "player4Deck": {
-            "labelId": "player4Deck", 
-            "tableLabelId": "deck",
+            "label": "id:player4Deck", 
+            "tableLabel": "id:deck",
             "canHaveAttachments": false,
             "shuffleOnLoad": true,
             "onCardEnter": {
@@ -439,8 +439,8 @@
             }
         },
         "player4Cycled": {
-            "labelId": "player4Cycled", 
-            "tableLabelId": "cycled",
+            "label": "id:player4Cycled", 
+            "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -448,8 +448,8 @@
             }
         },
         "player4Eliminated": {
-            "labelId": "player4Eliminated", 
-            "tableLabelId": "eliminated",
+            "label": "id:player4Eliminated", 
+            "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
                 "currentSide": "B",
@@ -457,8 +457,8 @@
             }
         },
         "player4Reserve": {
-            "labelId": "player4Reserve", 
-            "tableLabelId": "p4Reserve",
+            "label": "id:player4Reserve", 
+            "tableLabel": "id:p4Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",
@@ -467,8 +467,8 @@
             }
         },
         "sharedRules": {
-            "labelId": "rules", 
-            "tableLabelId": "rules",
+            "label": "id:rules", 
+            "tableLabel": "id:rules",
             "canHaveAttachments": true,
             "onCardEnter": {
                 "currentSide": "A",

@@ -1,29 +1,25 @@
 {
-    "phases": [
-        {
-            "phaseId": "Location",
-            "labelId" : "location",
+    "phases": {
+        "Location": {
+            "label" : "location",
             "height" : "10%"
         },
-        {
-            "phaseId": "Action",
-            "labelId" : "action",
+        "Action": {
+            "label" : "action",
             "height" : "10%"
         },
-        {
-            "phaseId": "Combat",
-            "labelId" : "combat",
+        "Combat": {
+            "label" : "combat",
             "height" : "60%"
         },
-        {
-            "phaseId": "Victory",
-            "labelId" : "victory",
+        "Victory": {
+            "label" : "victory",
             "height" : "10%"
         },
-        {
-            "phaseId": "Draw",
-            "labelId" : "drawPhase",
+        "Draw": {
+            "label" : "drawPhase",
             "height" : "10%"
         }
-    ]
+    },
+    "phaseOrder": ["Location", "Action", "Combat", "Victory", "Draw"]
 }

@@ -9,29 +9,29 @@
             "Free Peoples Battleground": "#007BBD"
         },
         "columns": [
-            {"propName": "name", "propLabel": "Name"},
-            {"propName": "faction", "propLabel": "Faction"},
-            {"propName": "type", "propLabel": "Type"},
-            {"propName": "playerName", "propLabel": "Player Name"},
-            {"propName": "cardNumber", "propLabel": "Number"}
+            {"propName": "name", "label": "Name"},
+            {"propName": "faction", "label": "Faction"},
+            {"propName": "type", "label": "Type"},
+            {"propName": "playerName", "label": "Player Name"},
+            {"propName": "cardNumber", "label": "Number"}
         ],
         "spawnGroups": [
-            {"id": "playerNDeck", "labelId": "myDeck"},
-            {"id": "player1Deck", "labelId": "player1Deck"},
-            {"id": "player2Deck", "labelId": "player2Deck"},
-            {"id": "player3Deck", "labelId": "player3Deck"},
-            {"id": "player4Deck", "labelId": "player4Deck"},
-            {"id": "sharedBattlegroundBlue","labelId": "freePeoplesBattlegroundDeck"},
-            {"id": "sharedBattlegroundRed", "labelId": "shadowBattlegroundDeck"},
-            {"id": "sharedPathDeck1", "labelId": "pathDeck1"},
-            {"id": "sharedPathDeck2", "labelId": "pathDeck2"},
-            {"id": "sharedPathDeck3", "labelId": "pathDeck3"},
-            {"id": "sharedPathDeck4", "labelId": "pathDeck4"},
-            {"id": "sharedPathDeck5", "labelId": "pathDeck5"},
-            {"id": "sharedPathDeck6", "labelId": "pathDeck6"},
-            {"id": "sharedPathDeck7", "labelId": "pathDeck7"},
-            {"id": "sharedPathDeck8", "labelId": "pathDeck8"},
-            {"id": "sharedPathDeck9", "labelId": "pathDeck9"}
+            {"loadGroupId": "playerNDeck", "label": "id:myDeck"},
+            {"loadGroupId": "player1Deck", "label": "id:player1Deck"},
+            {"loadGroupId": "player2Deck", "label": "id:player2Deck"},
+            {"loadGroupId": "player3Deck", "label": "id:player3Deck"},
+            {"loadGroupId": "player4Deck", "label": "id:player4Deck"},
+            {"loadGroupId": "sharedBattlegroundBlue","label": "id:freePeoplesBattlegroundDeck"},
+            {"loadGroupId": "sharedBattlegroundRed", "label": "id:shadowBattlegroundDeck"},
+            {"loadGroupId": "sharedPathDeck1", "label": "id:pathDeck1"},
+            {"loadGroupId": "sharedPathDeck2", "label": "id:pathDeck2"},
+            {"loadGroupId": "sharedPathDeck3", "label": "id:pathDeck3"},
+            {"loadGroupId": "sharedPathDeck4", "label": "id:pathDeck4"},
+            {"loadGroupId": "sharedPathDeck5", "label": "id:pathDeck5"},
+            {"loadGroupId": "sharedPathDeck6", "label": "id:pathDeck6"},
+            {"loadGroupId": "sharedPathDeck7", "label": "id:pathDeck7"},
+            {"loadGroupId": "sharedPathDeck8", "label": "id:pathDeck8"},
+            {"loadGroupId": "sharedPathDeck9", "label": "id:pathDeck9"}
         ]
     }
 }

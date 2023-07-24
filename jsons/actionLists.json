@@ -6,13 +6,13 @@
             ["SET", "/layoutVariants/redPlayers", 2],
             ["SET", "/cardsPerRound", {"player1": 3, "player2": 3, "player3": 3, "player4": 3}],
             ["MOVE_STACKS", "player1Deck", "player1Hand", 7, "bottom"],
-            ["LOG", "player1 drew their starting hand."],
+            ["LOG", "{player1} drew their starting hand."],
             ["MOVE_STACKS", "player2Deck", "player2Hand", 7, "bottom"],
-            ["LOG", "player2 drew their starting hand."],
+            ["LOG", "{player2} drew their starting hand."],
             ["MOVE_STACKS", "player3Deck", "player3Hand", 7, "bottom"],
-            ["LOG", "player3 drew their starting hand."],
+            ["LOG", "{player3} drew their starting hand."],
             ["MOVE_STACKS", "player4Deck", "player4Hand", 7, "bottom"],
-            ["LOG", "player4 drew their starting hand."]
+            ["LOG", "{player4} drew their starting hand."]
         ],
         "twoPlayerSetup": [
             ["SET", "/numPlayers", 2],
@@ -22,9 +22,9 @@
             ["SET", "/player1CardsPerRound", 4],
             ["SET", "/player2CardsPerRound", 6],
             ["MOVE_STACKS", "player1Deck", "player1Hand", 4, "bottom"],
-            ["LOG", "player1 drew their starting hand."],
+            ["LOG", "{player1} drew their starting hand."],
             ["MOVE_STACKS", "player2Deck", "player2Hand", 6, "bottom"],
-            ["LOG", "player2 drew their starting hand."]
+            ["LOG", "{player2} drew their starting hand."]
         ],
         "threePlayerSetup": [
             ["SET", "/numPlayers", 3],
@@ -32,11 +32,11 @@
             ["SET", "/layoutVariants/redPlayers", 2],
             ["SET", "/cardsPerRound", {"player1": 6, "player2": 4, "player3": 4}],
             ["MOVE_STACKS", "player1Deck", "player1Hand", 6, "bottom"],
-            ["LOG", "player1 drew their starting hand."],
+            ["LOG", "{player1} drew their starting hand."],
             ["MOVE_STACKS", "player2Deck", "player2Hand", 7, "bottom"],
-            ["LOG", "player2 drew their starting hand."],
+            ["LOG", "{player2} drew their starting hand."],
             ["MOVE_STACKS", "player3Deck", "player3Hand", 7, "bottom"],
-            ["LOG", "player3 drew their starting hand."]
+            ["LOG", "{player3} drew their starting hand."]
         ],
         "fellowshipSetup": [
             ["SET", "/numPlayers", 3],
@@ -44,9 +44,9 @@
             ["SET", "/layoutVariants/redPlayers", 2],
             ["SET", "/cardsPerRound", {"player1": 3, "player2": 4}],
             ["MOVE_STACKS", "player1Deck", "player1Hand", 7, "bottom"],
-            ["LOG", "player1 drew their starting hand."],
+            ["LOG", "{player1} drew their starting hand."],
             ["MOVE_STACKS", "player2Deck", "player2Hand", 7, "bottom"],
-            ["LOG", "player2 drew their starting hand."]
+            ["LOG", "{player2} drew their starting hand."]
         ],
         "newRound": [
             ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID", 
@@ -97,7 +97,7 @@
             ["EQUAL", "$ACTIVE_CARD.currentSide", "A"],
             [
                 ["LOG", "$PLAYER_N", " flipped ", "$ACTIVE_FACE.name", " facedown."],
-                ["SET", "/$ACTIVE_CARD_PATH/currentSide", "B"]
+                ["SET", "/cardById/$ACTIVE_CARD_ID/currentSide", "B"]
             ],
             true,
             [

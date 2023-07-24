@@ -1,5 +1,5 @@
 {
     "layoutMenu": [
-        {"labelId": "standard", "layoutId": "standard", "numPlayers": 4}
+        {"label": "id:standard", "layoutId": "standard", "numPlayers": 4}
     ]
 }
