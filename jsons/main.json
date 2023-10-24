@@ -3,5 +3,8 @@
     "tutorialUrl": "youtube.com",
     "minPlayers": 2,
     "maxPlayers": 4,
-    "firstPlayerImageUrl": "https://dragncards-wotr.s3.amazonaws.com/tokens/RectangleBlue.png"
+    "firstPlayerImageUrl": "https://dragncards-wotr.s3.amazonaws.com/tokens/RectangleBlue.png",
+    "backgroundUrl": "https://i.imgur.com/pIqGqRp.jpg",
+    "loadPreBuiltOnNewGame": true,
+    "vacantSeatOnNewGame": true
 }

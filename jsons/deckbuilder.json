@@ -13,7 +13,8 @@
             {"propName": "faction", "label": "Faction"},
             {"propName": "type", "label": "Type"},
             {"propName": "playerName", "label": "Player Name"},
-            {"propName": "cardNumber", "label": "Number"}
+            {"propName": "cardNumber", "label": "Number"},
+            {"propName": "set", "label": "Set"}
         ],
         "spawnGroups": [
             {"loadGroupId": "playerNDeck", "label": "id:myDeck"},
@@ -31,7 +32,8 @@
             {"loadGroupId": "sharedPathDeck6", "label": "id:pathDeck6"},
             {"loadGroupId": "sharedPathDeck7", "label": "id:pathDeck7"},
             {"loadGroupId": "sharedPathDeck8", "label": "id:pathDeck8"},
-            {"loadGroupId": "sharedPathDeck9", "label": "id:pathDeck9"}
+            {"loadGroupId": "sharedPathDeck9", "label": "id:pathDeck9"},
+            {"loadGroupId": "sharedAside", "label": "id:aside"}
         ]
     }
 }

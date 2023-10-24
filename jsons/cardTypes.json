@@ -7,6 +7,6 @@
         "Path":          {"width": 1.44, "height": 1.0, "tokens": ["attackBlue","defenseBlue","attackRed","defenseRed","pathRed","pathBlue","corruption"]},
         "Battleground":  {"width": 1.44, "height": 1.0, "tokens": ["attackBlue","defenseBlue","attackRed","defenseRed","pathRed","pathBlue","corruption"]},
         "Rules":         {"width": 1.44, "height": 1.0, "tokens": ["attackBlue","defenseBlue","attackRed","defenseRed","pathRed","pathBlue","corruption"]},
-        "_Other":        {"width": 0.72, "height": 1.0, "tokens": ["attackBlue","defenseBlue","attackRed","defenseRed","pathRed","pathBlue","corruption"]}
+        "Rulebook":      {"width": 1.00, "height": 1.25, "tokens": []}
     }
 }
