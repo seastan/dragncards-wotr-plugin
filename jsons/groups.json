@@ -238,6 +238,7 @@
             "tableLabel": "id:hand",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "controller": "player1",
                 "peeking": {"player1": true}
             }
         },
@@ -285,6 +286,7 @@
             "tableLabel": "id:hand",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "controller": "player2",
                 "peeking": {"player2": true}
             }
         },
@@ -332,6 +334,7 @@
             "tableLabel": "id:hand",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "controller": "player3",
                 "peeking": {"player3": true}
             }
         },
@@ -379,6 +382,7 @@
             "tableLabel": "id:hand",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "controller": "player4",
                 "peeking": {"player4": true}
             }
         },

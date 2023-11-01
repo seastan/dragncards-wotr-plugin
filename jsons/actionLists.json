@@ -141,6 +141,7 @@
         "fellowshipSetup": [
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
+            ["SET", "/firstPlayer", "player2"],
             ["SET", "/playerData/player1/ringTokens", 0],
             ["SET", "/playerData/player2/ringTokens", 0],
             ["SET", "/layoutVariants/bluePlayers", 1],
@@ -155,28 +156,29 @@
             ["LOAD_CARDS", "AtS-Rulebook"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
+            ["SET", "/firstPlayer", "player2"],
             ["SET", "/layoutVariants/bluePlayers", 1],
             ["SET", "/layoutVariants/redPlayers", 1],
             ["SET", "/cardsPerRound", {"player1": 3, "player2": 4}]
         ],
         "newRound": [
             ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID", 
-            [
-                ["COND",
-                ["EQUAL", "$CARD.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
-                ["SET", "/cardById/$CARD_ID/rotation", 0]
+                [
+                    ["COND",
+                    ["EQUAL", "$CARD.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
+                    ["SET", "/cardById/$CARD_ID/rotation", 0]
+                    ]
                 ]
-            ]
             ],
             ["DRAW_CARD", "$GAME.cardsPerRound.$PLAYER_N"],
             ["LOG", "$PLAYER_N", " performed their draw step."],
             ["COND",
-            ["EQUAL", "$PLAYER_N", "player1"],
-            [
-                ["SET", "/firstPlayer", ["NEXT_PLAYER", "$GAME.firstPlayer"]],
-                ["INCREASE_VAL", "/roundNumber", 1],
-                ["LOG", "$PLAYER_N", " moved the first player token and increased the round number."]
-            ]
+                ["EQUAL", "$PLAYER_N", "player1"],
+                [
+                    ["SET", "/firstPlayer", ["NEXT_PLAYER", "$GAME.firstPlayer"]],
+                    ["INCREASE_VAL", "/roundNumber", 1],
+                    ["LOG", "$PLAYER_N", " moved the first player token and increased the round number."]
+                ]
             ]
         ],
         "pass": [
@@ -192,16 +194,16 @@
         ],
         "toggleRotate": [
             ["COND",
-            ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 90], "$ACTIVE_CARD.inPlay"],
-            [
-                ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 0],
-                ["LOG", "$PLAYER_N", " rotated ", "$ACTIVE_FACE.name", "."]
-            ],
-            ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 0], "$ACTIVE_CARD.inPlay"],
-            [
-                ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 90],
-                ["LOG", "$PLAYER_N", " rotated ", "$ACTIVE_FACE.name", "."]
-            ]
+                ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 90], "$ACTIVE_CARD.inPlay"],
+                [
+                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 0],
+                    ["LOG", "$PLAYER_N", " rotated ", "$ACTIVE_FACE.name", "."]
+                ],
+                ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 0], "$ACTIVE_CARD.inPlay"],
+                [
+                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 90],
+                    ["LOG", "$PLAYER_N", " rotated ", "$ACTIVE_FACE.name", "."]
+                ]
             ]
         ],
         "flipCard": [

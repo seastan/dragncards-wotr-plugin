@@ -1,5 +1,6 @@
 {
     "groupMenu": {
+        "peekAtTopN": [3, 7],
         "moveToGroupIds": [],
         "options": [
             {

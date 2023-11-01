@@ -1,5 +1,17 @@
 {
     "automation": {
+        "gameRules": [
+            { 
+                "_comment": "Track hand size",
+                "type": "trigger", 
+                "listenTo": ["/groupById/player1Hand/stackIds", "/groupById/player2Hand/stackIds", "/groupById/player3Hand/stackIds", "/groupById/player4Hand/stackIds"],
+                "condition": ["TRUE"],
+                "then": [
+                    ["LOG_DEV", "$TARGET.onCardEnter.controller"],
+                    ["SET_HAND_SIZE", "$TARGET.onCardEnter.controller"]
+                ]
+            }
+        ],
         "cards": {
             "a6cdd8d3-cd6e-4d1a-908b-2f788fbb357e": {
                 "_comment": "Aragorn",
@@ -10,8 +22,8 @@
                         "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
                         "then": [
                             ["DEFINE", "$TARGET", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "Strider"]]],
-                            ["MOVE_CARD", "$TARGET.id", ["JOIN_STRING", "$TARGET.controller", "Eliminated"], 0, 0],
-                            ["LOG", "Strider was removed from the game."]
+                            ["LOG", "└── Strider was removed from the game."],
+                            ["MOVE_CARD", "$TARGET.id", ["JOIN_STRING", "$TARGET.controller", "Eliminated"], 0, 0]
                         ]
                     },
                     { 

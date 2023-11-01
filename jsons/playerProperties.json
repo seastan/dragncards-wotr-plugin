@@ -1,6 +1,7 @@
 {
     "playerProperties": {    
         "ringTokens": {"type": "integer", "default": 1, "min": 0},
+        "handSize": {"type": "integer", "default": 0, "min": 0},
         "team": {"type": "string", "default": ""}
     }
 }

@@ -22,6 +22,11 @@
                 "label": "id:ringTokens",
                 "imageUrl": "https://dragncards-wotr.s3.amazonaws.com/tokens/RingBlue.png",
                 "playerProperty": "ringTokens"
+            },
+            {
+                "label": "id:handSize",
+                "imageUrl": "https://dragncards-wotr.s3.amazonaws.com/tokens/HandSize.png",
+                "playerProperty": "handSize"
             }
         ]
     }

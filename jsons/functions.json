@@ -7,6 +7,15 @@
                 ["DEFINE", "$PLAYER_N", "$PLAYER_I"],
                 ["DRAW_CARD"]
             ]
+        },
+        "SET_HAND_SIZE": {
+            "args": ["$PLAYER_I"],
+            "code": [
+                ["VAR", "$HAND_GROUP_ID", "{{$PLAYER_I}}Hand"],
+                ["VAR", "$HAND_SIZE", ["LENGTH", "$GAME.groupById.$HAND_GROUP_ID.stackIds"]],
+                ["LOG", "└── {{$PLAYER_I}}'s hand size is now {{$HAND_SIZE}}."],
+                ["SET", "/playerData/$PLAYER_I/handSize", "$HAND_SIZE"]
+            ]
         }
     }
 }
