@@ -141,6 +141,8 @@
         "fellowshipSetup": [
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
+            ["SET", "/playerData/player1/label", "Gandalf"],
+            ["SET", "/playerData/player2/label", "Balrog"],
             ["SET", "/firstPlayer", "player2"],
             ["SET", "/playerData/player1/ringTokens", 0],
             ["SET", "/playerData/player2/ringTokens", 0],
