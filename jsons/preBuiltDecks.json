@@ -2657,36 +2657,6 @@
               "quantity": 1
             },
             {
-              "_name": "Rivendell",
-              "databaseId": "57bf5374-082f-4a2b-8e48-39b2cbf7197e",
-              "loadGroupId": "sharedBattlegroundBlue",
-              "quantity": 1
-            },
-            {
-              "_name": "Moria",
-              "databaseId": "85854c43-e1cb-4fa2-84bd-ae35b7398223",
-              "loadGroupId": "sharedBattlegroundRed",
-              "quantity": 1
-            },
-            {
-              "_name": "Lórien",
-              "databaseId": "6397535b-b8cf-451c-b119-7d2b4866eff7",
-              "loadGroupId": "sharedBattlegroundBlue",
-              "quantity": 1
-            },
-            {
-              "_name": "Dol Guldur",
-              "databaseId": "56861e3e-9a1d-4f8e-913a-9f86ec5c4709",
-              "loadGroupId": "sharedBattlegroundRed",
-              "quantity": 1
-            },
-            {
-              "_name": "Orthanc",
-              "databaseId": "6c9327c7-5438-4ab7-8a81-d2572eea6ae9",
-              "loadGroupId": "sharedBattlegroundRed",
-              "quantity": 1
-            },
-            {
               "databaseId": "4444419a-d47a-485d-9bd7-f7d9d8304704",
               "quantity": 1,
               "loadGroupId": "player2Deck",
@@ -2867,10 +2837,40 @@
               "_name": "Uglúk"
             },
             {
+              "_name": "Rivendell",
+              "databaseId": "57bf5374-082f-4a2b-8e48-39b2cbf7197e",
+              "loadGroupId": "sharedBattlegroundBlue",
+              "quantity": 1
+            },
+            {
               "databaseId": "402b68bc-29f3-4d7a-8073-7148dee950ba",
               "quantity": 1,
               "loadGroupId": "sharedBattlegroundRed",
               "_name": "Minas Morgul"
+            },
+            {
+              "_name": "Moria",
+              "databaseId": "85854c43-e1cb-4fa2-84bd-ae35b7398223",
+              "loadGroupId": "sharedBattlegroundRed",
+              "quantity": 1
+            },
+            {
+              "_name": "Lórien",
+              "databaseId": "6397535b-b8cf-451c-b119-7d2b4866eff7",
+              "loadGroupId": "sharedBattlegroundBlue",
+              "quantity": 1
+            },
+            {
+              "_name": "Dol Guldur",
+              "databaseId": "56861e3e-9a1d-4f8e-913a-9f86ec5c4709",
+              "loadGroupId": "sharedBattlegroundRed",
+              "quantity": 1
+            },
+            {
+              "_name": "Orthanc",
+              "databaseId": "6c9327c7-5438-4ab7-8a81-d2572eea6ae9",
+              "loadGroupId": "sharedBattlegroundRed",
+              "quantity": 1
             },
             {
               "databaseId": "558e6de6-582c-4ca1-a7af-f69551c9a551",
