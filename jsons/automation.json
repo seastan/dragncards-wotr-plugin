@@ -13,6 +13,58 @@
             }
         ],
         "cards": {
+            "a6cdd8d3-cd6e-4d1a-908b-2f788fbb357e": {
+                "_comment": "Aragorn",
+                "rules": [
+                    { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/$THIS_ID/inPlay"],
+                        "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
+                        "then": [
+                            ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Aragorn", "Strider"]
+                        ]
+                    }
+                ]
+            },
+            "ffa8235b-c293-44c0-b88e-7ebb5f909960": {
+                "_comment": "Ganfalf the White",
+                "rules": [
+                    { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/$THIS_ID/inPlay"],
+                        "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
+                        "then": [
+                            ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Gandalf the White", "Gandalf the Grey"]
+                        ]
+                    }
+                ]
+            },
+            "b9539977-4ed1-44c6-aa09-5431a4a11967": {
+                "_comment": "Gothmog",
+                "rules": [
+                    { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/$THIS_ID/inPlay"],
+                        "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
+                        "then": [
+                            ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Gothmog", "The Witch-king"]
+                        ]
+                    }
+                ]
+            },
+            "d2e8078c-c71c-4098-ae47-6d82ee9bc295": {
+                "_comment": "Gothmog",
+                "rules": [
+                    { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/$THIS_ID/inPlay"],
+                        "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
+                        "then": [
+                            ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Gothmog", "The Witch-king"]
+                        ]
+                    }
+                ]
+            }
         }
     }
 }
