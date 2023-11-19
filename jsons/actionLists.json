@@ -20,7 +20,7 @@
             ["SET", "/numPlayers", 4],
             ["SET", "/layoutVariants/bluePlayers", 2],
             ["SET", "/layoutVariants/redPlayers", 2],
-            ["SET", "/cardsPerRound", {"player1": 3, "player2": 3, "player3": 3, "player4": 3}]
+            ["SET", "/cardsPerRound", {"player1": 3, "player2": 4, "player3": 3, "player4": 4}]
         ],
         "coopTrilogySetup": [
             ["LOAD_CARDS", "AtS-Paths"],
