@@ -170,10 +170,10 @@
             "English": "Round"
         },
         "freePVP": {
-            "English": "Free P. VP"
+            "English": "FP"
         },
         "shadowVP": {
-            "English": "Shadow VP"
+            "English": "SP"
         },
         "standard": {
             "English": "Standard"
@@ -414,6 +414,49 @@
         },
         "pathDefense": {
             "English": "Path Defense"
+        },
+        "freePeoples6": {
+            "English": "Free Peoples6"
+        },
+        "activeFreePeoples6": {
+            "English": "Active Free Peoples6"
+        },
+        "freePeoples5": {
+            "English": "Free Peoples5"
+        },
+        "activeFreePeoples5": {
+            "English": "Active Free Peoples5"
+        },
+        "shadow6": {
+            "English": "Shadow6"
+        },
+        "activeShadow6": {
+            "English": "Active Shadow6"
+        },
+        "shadow5": {
+            "English": "Shadow5"
+        },
+        "activeShadow5": {
+            "English": "Active Shadow5"
+        },
+        "location6": {
+            "English": "Location6"
+        },
+        "activeLocation6": {
+            "English": "Active Location6"
+        },
+        "location5": {
+            "English": "Location5"
+        },
+        "activeLocation5": {
+            "English": "Active Location5"
+        },
+        "scoreLocation": {
+            "English": "Move location to scoring area"
+        },
+        "corruptionScore": {
+            "English": "Corruption"
         }
+
     }
 }

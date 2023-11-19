@@ -141,7 +141,13 @@
             "label": "id:activeLocation1", 
             "tableLabel": "id:location1",
             "canHaveAttachments": true,
+            "activeRedGroupId": "sharedActiveRed1",
+            "activeBlueGroupId": "sharedActiveBlue1",
             "onCardEnter": {
+                "locationIndex": 1
+            },
+            "onCardLeave": {
+                "locationIndex": null
             }
         },
         "sharedActiveLocation2": {
@@ -149,7 +155,13 @@
             "label": "id:activeLocation2", 
             "tableLabel": "id:location2",
             "canHaveAttachments": true,
+            "activeRedGroupId": "sharedActiveRed2",
+            "activeBlueGroupId": "sharedActiveBlue2",
             "onCardEnter": {
+                "locationIndex": 2
+            },
+            "onCardLeave": {
+                "locationIndex": null
             }
         },
         "sharedActiveLocation3": {
@@ -157,7 +169,13 @@
             "label": "id:activeLocation3", 
             "tableLabel": "id:location3",
             "canHaveAttachments": true,
+            "activeRedGroupId": "sharedActiveRed3",
+            "activeBlueGroupId": "sharedActiveBlue3",
             "onCardEnter": {
+                "locationIndex": 3
+            },
+            "onCardLeave": {
+                "locationIndex": null
             }
         },
         "sharedActiveLocation4": {
@@ -165,7 +183,41 @@
             "label": "id:activeLocation4", 
             "tableLabel": "id:location4",
             "canHaveAttachments": true,
+            "activeRedGroupId": "sharedActiveRed4",
+            "activeBlueGroupId": "sharedActiveBlue4",
             "onCardEnter": {
+                "locationIndex": 4
+            },
+            "onCardLeave": {
+                "locationIndex": null
+            }
+        },
+        "sharedActiveLocation5": {
+            "groupType": "inPlay",
+            "label": "id:activeLocation5", 
+            "tableLabel": "id:location5",
+            "canHaveAttachments": true,
+            "activeRedGroupId": "sharedActiveRed5",
+            "activeBlueGroupId": "sharedActiveBlue5",
+            "onCardEnter": {
+                "locationIndex": 5
+            },
+            "onCardLeave": {
+                "locationIndex": null
+            }
+        },
+        "sharedActiveLocation6": {
+            "groupType": "inPlay",
+            "label": "id:activeLocation6", 
+            "tableLabel": "id:location6",
+            "canHaveAttachments": true,
+            "activeRedGroupId": "sharedActiveRed6",
+            "activeBlueGroupId": "sharedActiveBlue6",
+            "onCardEnter": {
+                "locationIndex": 6
+            },
+            "onCardLeave": {
+                "locationIndex": null
             }
         },
         "sharedActiveRed1": {
@@ -173,7 +225,14 @@
             "label": "id:activeShadow1", 
             "tableLabel": "id:shadow1",
             "canHaveAttachments": true,
+            "color": "red",
             "onCardEnter": {
+                "locationIndex": 1,
+                "locationGroupId": "sharedActiveLocation1"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
             }
         },
         "sharedActiveRed2": {
@@ -181,7 +240,14 @@
             "label": "id:activeShadow2", 
             "tableLabel": "id:shadow2",
             "canHaveAttachments": true,
+            "color": "red",
             "onCardEnter": {
+                "locationIndex": 2,
+                "locationGroupId": "sharedActiveLocation2"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
             }
         },
         "sharedActiveRed3": {
@@ -189,7 +255,14 @@
             "label": "id:activeShadow3", 
             "tableLabel": "id:shadow3",
             "canHaveAttachments": true,
+            "color": "red",
             "onCardEnter": {
+                "locationIndex": 3,
+                "locationGroupId": "sharedActiveLocation3"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
             }
         },
         "sharedActiveRed4": {
@@ -197,7 +270,43 @@
             "label": "id:activeShadow4", 
             "tableLabel": "id:shadow4",
             "canHaveAttachments": true,
+            "color": "red",
             "onCardEnter": {
+                "locationIndex": 4,
+                "locationGroupId": "sharedActiveLocation4"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
+            }
+        },
+        "sharedActiveRed5": {
+            "groupType": "inPlay",
+            "label": "id:activeShadow5", 
+            "tableLabel": "id:shadow5",
+            "canHaveAttachments": true,
+            "color": "red",
+            "onCardEnter": {
+                "locationIndex": 5,
+                "locationGroupId": "sharedActiveLocation5"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
+            }
+        },
+        "sharedActiveRed6": {
+            "groupType": "inPlay",
+            "label": "id:activeShadow6", 
+            "tableLabel": "id:shadow6",
+            "canHaveAttachments": true,
+            "color": "red",
+            "onCardEnter": {
+                "locationIndex": 6,
+                "locationGroupId": "sharedActiveLocation6"
+            },
+            "onCardLeave": {
+                "locationIndex": null
             }
         },
         "sharedActiveBlue1": {
@@ -205,7 +314,14 @@
             "label": "id:activeFreePeoples1", 
             "tableLabel": "id:freePeoples1",
             "canHaveAttachments": true,
+            "color": "blue",
             "onCardEnter": {
+                "locationIndex": 1,
+                "locationGroupId": "sharedActiveLocation1"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
             }
         },
         "sharedActiveBlue2": {
@@ -213,7 +329,14 @@
             "label": "id:activeFreePeoples2", 
             "tableLabel": "id:freePeoples2",
             "canHaveAttachments": true,
+            "color": "blue",
             "onCardEnter": {
+                "locationIndex": 2,
+                "locationGroupId": "sharedActiveLocation2"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
             }
         },
         "sharedActiveBlue3": {
@@ -221,7 +344,14 @@
             "label": "id:activeFreePeoples3", 
             "tableLabel": "id:freePeoples3",
             "canHaveAttachments": true,
+            "color": "blue",
             "onCardEnter": {
+                "locationIndex": 3,
+                "locationGroupId": "sharedActiveLocation3"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
             }
         },
         "sharedActiveBlue4": {
@@ -229,7 +359,44 @@
             "label": "id:activeFreePeoples4", 
             "tableLabel": "id:freePeoples4",
             "canHaveAttachments": true,
+            "color": "blue",
             "onCardEnter": {
+                "locationIndex": 4,
+                "locationGroupId": "sharedActiveLocation4"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
+            }
+        },
+        "sharedActiveBlue5": {
+            "groupType": "inPlay",
+            "label": "id:activeFreePeoples5", 
+            "tableLabel": "id:freePeoples5",
+            "canHaveAttachments": true,
+            "color": "blue",
+            "onCardEnter": {
+                "locationIndex": 5,
+                "locationGroupId": "sharedActiveLocation5"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
+            }
+        },
+        "sharedActiveBlue6": {
+            "groupType": "inPlay",
+            "label": "id:activeFreePeoples6", 
+            "tableLabel": "id:freePeoples6",
+            "canHaveAttachments": true,
+            "color": "blue",
+            "onCardEnter": {
+                "locationIndex": 6,
+                "locationGroupId": "sharedActiveLocation6"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
             }
         },
         "player1Hand": {

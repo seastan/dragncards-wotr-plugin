@@ -24,7 +24,8 @@
             {"key": "T", "actionList": "targetCard", "label": "id:targetCard"},
             {"key": "C", "actionList": "cycleCard", "label": "id:cycleCard"},
             {"key": "E", "actionList": "eliminateCard", "label": "id:eliminateCard"},
-            {"key": "R", "actionList": "toggleRotate", "label": "id:rotateCard"}
+            {"key": "R", "actionList": "toggleRotate", "label": "id:rotateCard"},
+            {"key": "S", "actionList": "scoreLocation", "label": "id:scoreLocation"}
         ]
     }
 }
