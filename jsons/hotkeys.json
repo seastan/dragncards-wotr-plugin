@@ -11,6 +11,7 @@
         ],
         "game": [
             {"key": "D", "actionList": "drawCard", "label": "id:drawCard"},
+            {"key": "Shift+N", "actionList": "newRound", "label": "id:drawCardsAndStartNewRound"},
             {"key": "Alt+1", "actionList": ["DRAW_CARD_PLAYER_I", "player1"], "label": "id:drawCard1"},
             {"key": "Alt+2", "actionList": ["DRAW_CARD_PLAYER_I", "player2"], "label": "id:drawCard2"},
             {"key": "Alt+3", "actionList": ["DRAW_CARD_PLAYER_I", "player3"], "label": "id:drawCard3"},
@@ -19,7 +20,6 @@
 
         ],
         "card": [
-            {"key": "Shift+N", "actionList": "newRound", "label": "id:drawCardsAndStartNewRound"},
             {"key": "F", "actionList": "flipCard", "label": "id:flip"},
             {"key": "T", "actionList": "targetCard", "label": "id:targetCard"},
             {"key": "C", "actionList": "cycleCard", "label": "id:cycleCard"},

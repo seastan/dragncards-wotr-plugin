@@ -87,10 +87,10 @@
                 "actionList": "targetCard"
             },
             {
-                "id": "claim",
-                "label": "id:claim",
+                "id": "scoreLocation",
+                "label": "id:scoreLocation",
                 "actionType": "card",
-                "actionList": "addToScoringArea"
+                "actionList": "scoreLocation"
             },
             {
                 "id": "drawArrow",

@@ -164,16 +164,31 @@
             ["SET", "/cardsPerRound", {"player1": 3, "player2": 4}]
         ],
         "newRound": [
+            ["VAR", "$ADDITIONAL_CARDS", 0],
             ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID", 
                 [
                     ["COND",
-                    ["EQUAL", "$CARD.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
-                    ["SET", "/cardById/$CARD_ID/rotation", 0]
+                        ["EQUAL", "$CARD.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
+                        ["SET", "/cardById/$CARD_ID/rotation", 0]
+                    ],
+                    ["COND",
+                        ["AND",
+                            ["EQUAL", "$CARD.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
+                            ["IN_STRING", "$CARD.sides.A.text", "draw 1 additional card each Draw step"]
+                        ],
+                        ["VAR", "$ADDITIONAL_CARDS", ["ADD", "$ADDITIONAL_CARDS", 1]]
                     ]
                 ]
             ],
-            ["DRAW_CARD", "$GAME.cardsPerRound.$PLAYER_N"],
             ["LOG", "$ALIAS_N", " performed their draw step."],
+            ["DRAW_CARD", "$GAME.cardsPerRound.$PLAYER_N"],
+            ["COND",
+                ["GREATER_THAN", "$ADDITIONAL_CARDS", 0],
+                [
+                    ["LOG", "└── {{$ALIAS_N}} drew {{$ADDITIONAL_CARDS}} additional card(s)."],
+                    ["DRAW_CARD", "$ADDITIONAL_CARDS"]
+                ]
+            ],
             ["COND",
                 ["EQUAL", "$PLAYER_N", "player1"],
                 [
@@ -198,13 +213,13 @@
             ["COND",
                 ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 90], "$ACTIVE_CARD.inPlay"],
                 [
-                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 0],
-                    ["LOG", "$ALIAS_N", " rotated ", "$ACTIVE_FACE.name", "."]
+                    ["LOG", "$ALIAS_N", " rotated ", "$ACTIVE_FACE.name", "."],
+                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 0]
                 ],
                 ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 0], "$ACTIVE_CARD.inPlay"],
                 [
-                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 90],
-                    ["LOG", "$ALIAS_N", " rotated ", "$ACTIVE_FACE.name", "."]
+                    ["LOG", "$ALIAS_N", " rotated ", "$ACTIVE_FACE.name", "."],
+                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 90]
                 ]
             ]
         ],
@@ -225,14 +240,6 @@
         "targetCard": [
             ["SET", "/cardById/$ACTIVE_CARD_ID/targeting/$PLAYER_N", true],
             ["LOG", "$ALIAS_N", " targeted ", "$ACTIVE_FACE.name", "."]
-        ],
-        "addToScoringArea": [
-            ["COND",
-                ["EQUAL", "$PLAYER_DATA.team", "red"],
-                ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringRed", 0, 0],
-                ["EQUAL", "$PLAYER_DATA.team", "blue"],
-                ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringBlue", 0, 0]
-            ]
         ],
         "cycleCard": [
             ["COND",
