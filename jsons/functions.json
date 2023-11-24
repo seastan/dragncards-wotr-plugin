@@ -44,7 +44,8 @@
                         ["COND",
                             ["OR",
                                 ["EQUAL", "$LOC_CARD.sides.A.type", "Battleground"],
-                                ["EQUAL", "$PLAY_GROUP.color", "blue"]
+                                ["EQUAL", "$PLAY_GROUP.color", "blue"],
+                                ["EQUAL", "$PLAY_GROUP.color", "red"]
                             ],
                             [
                                 ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
