@@ -238,7 +238,7 @@
             ]
         ],
         "targetCard": [
-            ["COND"],
+            ["COND",
 		["EQUAL","$ACTIVE_CARD.targeting", false],
 		[
 	    ["SET", "/cardById/$ACTIVE_CARD_ID/targeting/$PLAYER_N", true],
@@ -249,6 +249,7 @@
 	    ["SET", "/cardById/$ACTIVE_CARD_ID/targeting/$PLAYER_N", false],
             ["LOG", "$ALIAS_N", " targeted ", "$ACTIVE_FACE.name", "."]
 		]
+	    ]
         ],
         "cycleCard": [
             ["COND",
