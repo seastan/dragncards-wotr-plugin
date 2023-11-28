@@ -113,7 +113,7 @@
                         ["IN_STRING", "$TARGET.parentCards.[0].sides.B.name", "Path"],
                         [
                             ["SET", "/groupById/$TARGET.activeBlueGroupId/combatStat", "pathCombat"],
-                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatStat", "pathCombat"],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatStat", 0],
                             ["SET", "/groupById/$TARGET.activeBlueGroupId/combatToken", "pathBlue"],
                             ["SET", "/groupById/$TARGET.activeRedGroupId/combatToken", "pathRed"]
                         ],
