@@ -41,13 +41,18 @@
                                 ]
                             ]
                         ],
-                        ["COND",
-                            ["OR",
+                            ["COND",
                                 ["EQUAL", "$LOC_CARD.sides.A.type", "Battleground"],
-                                ["EQUAL", "$LOC_CARD.sides.A.type", "Path"]
-                            ],
+                            	[
+                                	["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
+                                	["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
+                            	]
+			    ],
+			["COND",
+                           
+                        	["EQUAL", "$LOC_CARD.sides.A.type", "Path"],
                             [
-                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
+                                ["INCREASE_VAL", "/textBoxById/activeBlueGroupId/content", "$LOC_CARD.sides.A.$STAT"],
                                 ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
                             ]
                         ],
