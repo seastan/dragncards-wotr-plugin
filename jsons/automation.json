@@ -52,8 +52,7 @@
                 "listenTo": [
                     "/cardById/*/groupId", "/cardById/*/tokens/*"
                 ],
-                "condition": ["OR",
-                    ["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"],
+                "condition": [
                     ["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"]
                 ],
                 "then": [
@@ -69,8 +68,7 @@
                 "listenTo": [
                     "/cardById/*/groupId", "/cardById/*/tokens/*"
                 ],
-                "condition": ["OR",
-                    ["PREV", ["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"]],
+                "condition": [
                     ["PREV", ["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"]]
                 ],
                 "then": [
