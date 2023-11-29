@@ -141,6 +141,7 @@
             "label": "id:activeLocation1", 
             "tableLabel": "id:location1",
             "canHaveAttachments": true,
+            "activeRedGroupId": "sharedActiveRed1",
             "activeBlueGroupId": "sharedActiveBlue1",
             "onCardEnter": {
                 "locationIndex": 1
