@@ -23,6 +23,7 @@
                 ["VAR", "$PLAY_GROUP", "$GAME.groupById.$PLAY_GROUP_ID"],
                 ["VAR", "$LOC_GROUP_ID", "$PLAY_GROUP.onCardEnter.locationGroupId"],
                 ["VAR", "$LOC_GROUP", "$GAME.groupById.$LOC_GROUP_ID"],
+		["VAR", "$BLUE_GROUP_ID", "$ACTIVE_GROUP.activeBlueGroupId"],
                 ["VAR", "$STAT", "$PLAY_GROUP.combatStat"],
                 ["VAR", "$TOKEN", "$PLAY_GROUP.combatToken"],
                 ["LOG_DEV", "$STAT"],
