@@ -1,0 +1,20 @@
+{
+    "steps": {
+        "1.1": {"phaseId": "Location", "label": "id:step-1.1"},
+        "1.2": {"phaseId": "Location", "label": "id:step-1.2"},
+        "2.1": {"phaseId": "Action",   "label": "id:step-2.1"},
+        "3.0": {"phaseId": "Combat",   "label": "id:step-3.0"},
+        "3.1": {"phaseId": "Combat",   "label": "id:step-3.1"},
+        "3.2": {"phaseId": "Combat",   "label": "id:step-3.2"},
+        "3.3": {"phaseId": "Combat",   "label": "id:step-3.3"},
+        "3.4": {"phaseId": "Combat",   "label": "id:step-3.4"},
+        "3.5": {"phaseId": "Combat",   "label": "id:step-3.5"},
+        "3.6": {"phaseId": "Combat",   "label": "id:step-3.6"},
+        "3.7": {"phaseId": "Combat",   "label": "id:step-3.7"},
+        "4.1": {"phaseId": "Victory",  "label": "id:step-4.1"},
+        "4.2": {"phaseId": "Victory",  "label": "id:step-4.2"},
+        "5.1": {"phaseId": "Draw",     "label": "id:step-5.1"},
+        "5.2": {"phaseId": "Draw",     "label": "id:step-5.2"}
+    },
+    "stepOrder": ["1.1", "1.2", "2.1", "3.0", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "4.1", "4.2", "5.1", "5.2"]
+}

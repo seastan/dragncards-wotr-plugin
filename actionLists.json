@@ -1,0 +1,402 @@
+{
+    "actionLists": {
+        "trilogySetup": [
+            ["LOAD_CARDS", "Paths"],
+            ["LOAD_CARDS", "Battlegrounds"],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Hobbit"],
+            ["SET", "/playerData/$PLAYER_N/label", "Frodo"],
+            ["DEFINE", "$PLAYER_N", "player2"],
+            ["LOAD_CARDS", "Sauron"],
+            ["SET", "/playerData/$PLAYER_N/label", "Witch-king"],
+            ["DEFINE", "$PLAYER_N", "player3"],
+            ["LOAD_CARDS", "Aragorn"],
+            ["SET", "/playerData/$PLAYER_N/label", "Aragorn"],
+            ["DEFINE", "$PLAYER_N", "player4"],
+            ["LOAD_CARDS", "Isengard"],
+            ["SET", "/playerData/$PLAYER_N/label", "Saruman"],
+            ["LOAD_CARDS", "Trilogy Rules"],
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 4],
+            ["SET", "/layoutVariants/bluePlayers", 2],
+            ["SET", "/layoutVariants/redPlayers", 2],
+            ["SET", "/cardsPerRound", {"player1": 3, "player2": 4, "player3": 3, "player4": 4}]
+        ],
+        "coopTrilogySetup": [
+            ["LOAD_CARDS", "AtS-Paths"],
+            ["LOAD_CARDS", "AtS-Battlegrounds"],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Hobbit"],
+            ["SET", "/playerData/$PLAYER_N/label", "Frodo"],
+            ["DEFINE", "$PLAYER_N", "player2"],
+            ["LOAD_CARDS", "AtS-Sauron"],
+            ["SET", "/playerData/$PLAYER_N/label", "Witch-king"],
+            ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
+            ["DEFINE", "$PLAYER_N", "player3"],
+            ["LOAD_CARDS", "Aragorn"],
+            ["SET", "/playerData/$PLAYER_N/label", "Aragorn"],
+            ["DEFINE", "$PLAYER_N", "player4"],
+            ["LOAD_CARDS", "AtS-Isengard"],
+            ["SET", "/playerData/$PLAYER_N/label", "Saruman"],
+            ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
+            ["LOAD_CARDS", "Trilogy Rules"],
+            ["LOAD_CARDS", "AtS-Rulebook"],
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 4],
+            ["SET", "/layoutVariants/bluePlayers", 2],
+            ["SET", "/layoutVariants/redPlayers", 2],
+            ["SET", "/cardsPerRound", {"player1": 3, "player2": 3, "player3": 3, "player4": 3}]
+        ],
+        "twoPlayerSetup": [
+            ["LOAD_CARDS", "Paths"],
+            ["LOAD_CARDS", "Battlegrounds"],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Hobbit"],
+            ["SET", "/playerData/$PLAYER_N/label", "Gandalf"],
+            ["DEFINE", "$PLAYER_N", "player2"],
+            ["LOAD_CARDS", "Sauron"],
+            ["SET", "/playerData/$PLAYER_N/label", "Witch-king"],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Aragorn"],
+            ["DEFINE", "$PLAYER_N", "player2"],
+            ["LOAD_CARDS", "Isengard"],
+            ["LOAD_CARDS", "Duel Rules"],
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 2],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 1],
+            ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
+        ],
+        "coopTwoPlayerSetup": [
+            ["LOAD_CARDS", "AtS-Paths"],
+            ["LOAD_CARDS", "AtS-Battlegrounds"],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Hobbit"],
+            ["SET", "/playerData/$PLAYER_N/label", "Gandalf"],
+            ["DEFINE", "$PLAYER_N", "player2"],
+            ["LOAD_CARDS", "AtS-Sauron"],
+            ["SET", "/playerData/$PLAYER_N/label", "Witch-king"],
+            ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Aragorn"],
+            ["DEFINE", "$PLAYER_N", "player2"],
+            ["LOAD_CARDS", "AtS-Isengard"],
+            ["LOAD_CARDS", "Duel Rules"],
+            ["LOAD_CARDS", "AtS-Rulebook"],
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 2],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 1],
+            ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
+        ],
+        "threePlayerSetup": [
+            ["LOAD_CARDS", "Paths"],
+            ["LOAD_CARDS", "Battlegrounds"],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Hobbit"],
+            ["SET", "/playerData/$PLAYER_N/label", "Gandalf"],
+            ["DEFINE", "$PLAYER_N", "player2"],
+            ["LOAD_CARDS", "Sauron"],
+            ["SET", "/playerData/$PLAYER_N/label", "Witch-king"],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Aragorn"],
+            ["DEFINE", "$PLAYER_N", "player3"],
+            ["LOAD_CARDS", "Isengard"],
+            ["SET", "/playerData/$PLAYER_N/label", "Saruman"],
+            ["LOAD_CARDS", "Duel Rules"],
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 3],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 2],
+            ["SET", "/cardsPerRound", {"player1": 6, "player2": 4, "player3": 4}]
+        ],
+        "coopThreePlayerSetup": [
+            ["LOAD_CARDS", "AtS-Paths"],
+            ["LOAD_CARDS", "AtS-Battlegrounds"],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Hobbit"],
+            ["SET", "/playerData/$PLAYER_N/label", "Gandalf"],
+            ["DEFINE", "$PLAYER_N", "player2"],
+            ["LOAD_CARDS", "AtS-Sauron"],
+            ["SET", "/playerData/$PLAYER_N/label", "Witch-king"],
+            ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_CARDS", "Aragorn"],
+            ["DEFINE", "$PLAYER_N", "player3"],
+            ["LOAD_CARDS", "AtS-Isengard"],
+            ["SET", "/playerData/$PLAYER_N/label", "Saruman"],
+            ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
+            ["LOAD_CARDS", "Duel Rules"],
+            ["LOAD_CARDS", "AtS-Rulebook"],
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 3],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 2],
+            ["SET", "/cardsPerRound", {"player1": 6, "player2": 4, "player3": 4}]
+        ],
+        "preFellowshipSetup": [
+            ["SET", "/groupById/sharedBattlegroundBlue/shuffleOnLoad", false],
+            ["SET", "/groupById/sharedBattlegroundRed/shuffleOnLoad", false]
+        ],
+        "fellowshipSetup": [
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 2],
+            ["SET", "/playerData/player1/label", "Gandalf"],
+            ["SET", "/playerData/player2/label", "Balrog"],
+            ["SET", "/firstPlayer", "player2"],
+            ["SET", "/playerData/player1/ringTokens", 0],
+            ["SET", "/playerData/player2/ringTokens", 0],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 1],
+            ["SET", "/cardsPerRound", {"player1": 3, "player2": 4}]
+        ],
+        "coopFellowshipSetup": [
+            ["SET", "/playerData/player1/label", "Gandalf"],
+            ["SET", "/playerData/player2/label", "Balrog"],
+            ["SET", "/playerData/player1/ringTokens", 0],
+            ["SET", "/playerData/player2/ringTokens", 0],
+            ["LOAD_CARDS", "AtS-Rulebook"],
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 2],
+            ["SET", "/firstPlayer", "player2"],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 1],
+            ["SET", "/cardsPerRound", {"player1": 3, "player2": 4}]
+        ],
+        "newRound": [
+            ["VAR", "$ADDITIONAL_CARDS", 0],
+            ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID", 
+                [
+                    ["COND",
+                        ["EQUAL", "$CARD.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
+                        ["SET", "/cardById/$CARD_ID/rotation", 0]
+                    ],
+                    ["COND",
+                        ["AND",
+                            ["EQUAL", "$CARD.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
+                            ["IN_STRING", "$CARD.sides.A.text", "draw 1 additional card each Draw step"]
+                        ],
+                        ["VAR", "$ADDITIONAL_CARDS", ["ADD", "$ADDITIONAL_CARDS", 1]]
+                    ]
+                ]
+            ],
+            ["LOG", "$ALIAS_N", " performed their draw step."],
+            ["DRAW_CARD", "$GAME.cardsPerRound.$PLAYER_N"],
+            ["COND",
+                ["GREATER_THAN", "$ADDITIONAL_CARDS", 0],
+                [
+                    ["LOG", "└── {{$ALIAS_N}} drew {{$ADDITIONAL_CARDS}} additional card(s)."],
+                    ["DRAW_CARD", "$ADDITIONAL_CARDS"]
+                ]
+            ],
+            ["COND",
+                ["EQUAL", "$PLAYER_N", "player1"],
+                [
+                    ["SET", "/firstPlayer", ["NEXT_PLAYER", "$GAME.firstPlayer"]],
+                    ["INCREASE_VAL", "/roundNumber", 1],
+                    ["LOG", "$ALIAS_N", " moved the first player token and increased the round number."]
+                ]
+            ]
+        ],
+        "pass": [
+            ["LOG", "$ALIAS_N", " passes."]
+        ],
+        "drawCard": [
+            ["LOG", "{{$PLAYER_N}} drew a card."],
+            ["DRAW_CARD"]
+        ],
+        "zeroTokens": [
+            ["SET", "$ACTIVE_TOKENS_PATH", {}],
+            ["LOG", "$ALIAS_N", " removed all tokens from ", "$ACTIVE_FACE.name", "."]
+        ],
+        "toggleRotate": [
+            ["COND",
+                ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 90], "$ACTIVE_CARD.inPlay"],
+                [
+                    ["LOG", "$ALIAS_N", " rotated ", "$ACTIVE_FACE.name", "."],
+                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 0]
+                ],
+                ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 0], "$ACTIVE_CARD.inPlay"],
+                [
+                    ["LOG", "$ALIAS_N", " rotated ", "$ACTIVE_FACE.name", "."],
+                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 90]
+                ]
+            ]
+        ],
+        "flipCard": [
+            ["COND",
+            ["EQUAL", "$ACTIVE_CARD.currentSide", "A"],
+            [
+                ["LOG", "$ALIAS_N", " flipped ", "$ACTIVE_FACE.name", " facedown."],
+                ["SET", "/cardById/$ACTIVE_CARD_ID/currentSide", "B"]
+            ],
+            true,
+            [
+                ["SET", "/cardById/$ACTIVE_CARD_ID/currentSide", "A"],
+                ["LOG", "$ALIAS_N", " flipped ", "$ACTIVE_FACE.name", " faceup."]
+            ]
+            ]
+        ],
+        "targetCard": [
+            ["SET", "/cardById/$ACTIVE_CARD_ID/targeting/$PLAYER_N", true],
+            ["LOG", "$ALIAS_N", " targeted ", "$ACTIVE_FACE.name", "."]
+	],
+        "cycleCard": [
+            ["COND",
+            ["EQUAL", "$ACTIVE_CARD.cycleGroupId", null],
+            ["LOG", "$ALIAS_N", " failed to cycle ", "$ACTIVE_FACE.name", " because it is not associated with a cycle pile. Please drag the card instead."],
+            true,
+            [
+                ["LOG", "$ALIAS_N", " cycled ", "$ACTIVE_FACE.name", "."],
+                ["MOVE_CARD", "$ACTIVE_CARD_ID", "$ACTIVE_CARD.cycleGroupId", 0, 0]
+            ]
+            ]
+        ],
+        "eliminateCard": [
+            ["COND",
+            ["EQUAL", "$ACTIVE_CARD.eliminateGroupId", null],
+            ["LOG", "$ALIAS_N", " failed to eliminate ", "$ACTIVE_FACE.name", " because it is not associated with an eliminated pile. Please drag the card instead."],
+            true,
+            [
+                ["LOG", "$ALIAS_N", " eliminated ", "$ACTIVE_FACE.name", "."],
+                ["MOVE_CARD", "$ACTIVE_CARD_ID", "$ACTIVE_CARD.eliminateGroupId", 0, 0]
+            ]
+            ]
+        ],
+        "detach": [
+            ["COND",
+            ["GREATER_THAN", "$ACTIVE_CARD.cardIndex", 0],
+            [
+                ["MOVE_CARD", "$ACTIVE_CARD_ID", "$ACTIVE_CARD.groupId", ["ADD", "$ACTIVE_CARD.stackIndex", 1], 0],
+                ["LOG", "$ALIAS_N", " detached ", "$ACTIVE_FACE.name", "."]
+            ]
+            ]
+        ],
+        "togglePeeking": [
+            ["DEFINE", "$GROUP_ID", "$ACTIVE_CARD.groupId"],
+            ["DEFINE", "$GROUP_NAME", ["$GAME.groupById.$GROUP_ID.name"]],
+            ["COND",
+            ["EQUAL", "$ACTIVE_CARD.peeking.$PLAYER_N", true],
+            [
+                ["LOG", "$ALIAS_N", " stopped peeking at a card in ", "$GROUP_NAME"],
+                ["SET", "/cardById/$ACTIVE_CARD_ID/peeking/$PLAYER_N", false]
+            ],
+            true,
+            [
+                ["LOG", "$ALIAS_N", " started peeking at a card in ", "$GROUP_NAME"],
+                ["SET", "/cardById/$ACTIVE_CARD_ID/peeking/$PLAYER_N", true]
+            ]
+            ]
+        ],
+        "shuffleGroupIntoDeck": [
+            ["DEFINE", "$ORIG_GROUP", "$GAME.playerUi.dropdownMenu.group"],
+            ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID",
+            ["COND", 
+                ["AND",
+                ["EQUAL", "$CARD.groupId", "$GAME.playerUi.dropdownMenu.group.id"],
+                ["NOT_EQUAL", "$CARD.deckGroupId", null]
+                ],
+                [
+                ["MOVE_CARD", "$CARD_ID", "$CARD.deckGroupId", 0, 0],
+                ["SHUFFLE_GROUP", "$CARD.deckGroupId"]
+                ]
+            ]
+            ],
+            ["LOG", "$ALIAS_N", " shuffled the cards in ", "$ORIG_GROUP.name", " into their corresponding decks."]
+        ],
+        "deleteCard": [
+            ["LOG", "$ALIAS_N", " deleted ", "$ACTIVE_FACE.name", "."],
+            ["DELETE", "$ACTIVE_CARD_ID"]
+        ],
+        "layoutPath1": [
+            ["SET", "/layoutVariants/path", 1]
+        ],
+        "layoutPath2": [
+            ["SET", "/layoutVariants/path", 2]
+        ],
+        "layoutPath3": [
+            ["SET", "/layoutVariants/path", 3]
+        ],
+        "layoutPath4": [
+            ["SET", "/layoutVariants/path", 4]
+        ],
+        "layoutPath5": [
+            ["SET", "/layoutVariants/path", 5]
+        ],
+        "layoutPath6": [
+            ["SET", "/layoutVariants/path", 6]
+        ],
+        "layoutPath7": [
+            ["SET", "/layoutVariants/path", 7]
+        ],
+        "layoutPath8": [
+            ["SET", "/layoutVariants/path", 8]
+        ],
+        "layoutPath9": [
+            ["SET", "/layoutVariants/path", 9]
+        ],
+        "layoutLocation2": [
+            ["SET", "/layoutVariants/location", 2]
+        ],
+        "layoutLocation3": [
+            ["SET", "/layoutVariants/location", 3]
+        ],
+        "layoutLocation4": [
+            ["SET", "/layoutVariants/location", 4]
+        ],
+        "layoutLocation5": [
+            ["SET", "/layoutVariants/location", 5]
+        ],
+        "layoutLocation6": [
+            ["SET", "/layoutVariants/location", 6]
+        ],
+        "scoreLocation": [
+            ["COND", 
+                ["IN_STRING", "$ACTIVE_GROUP_ID", "sharedActiveLocation"],
+                [
+                    ["VAR", "$BLUE_GROUP_ID", "$ACTIVE_GROUP.activeBlueGroupId"],
+                    ["VAR", "$RED_GROUP_ID", "$ACTIVE_GROUP.activeRedGroupId"],
+                    ["VAR", "$BLUE_TOTAL", "$GAME.textBoxById.$BLUE_GROUP_ID.content"],
+                    ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
+                    ["COND",
+                        ["GREATER_THAN", "$BLUE_TOTAL", "$RED_TOTAL"],
+                        [
+                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Free Peoples Player(s) team."],
+                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringBlue", 0]
+                        ],
+                        ["GREATER_THAN", "$RED_TOTAL", "$BLUE_TOTAL"],
+                        [
+                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Shadow Player(s) team."],
+                            ["COND", 
+                                ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "pathCombat"],
+                                [
+                                    ["LOG", "$ALIAS_N", " flipped ", "$ACTIVE_FACE.name", " facedown."],
+                                    ["SET", "/cardById/$ACTIVE_CARD_ID/currentSide", "B"],
+                                    ["LOG", "$ALIAS_N", " increased the corruption score by ", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"], "."],
+                                    ["INCREASE_VAL", "/corruptionScore", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"]]
+                                ]
+                            ],
+                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringRed", 0]
+                        ],
+                        true,
+                        ["COND",
+                            ["OR",
+                                ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "defense"],
+                                ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "pathCombat"]
+                            ],
+                            [
+                                ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Free Peoples Player(s) team."],
+                                ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringBlue", 0]
+                            ],
+                            ["EQUAL", "$GAME.groupById.$RED_GROUP_ID.combatStat", "defense"],
+                            [
+                                ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Shadow Player(s) team."],
+                                ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringRed", 0]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    }
+}

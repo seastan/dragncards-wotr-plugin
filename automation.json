@@ -1,0 +1,184 @@
+{
+    "automation": {
+        "gameRules": [
+            { 
+                "_comment": "Track hand size",
+                "type": "trigger", 
+                "listenTo": ["/groupById/player1Hand/stackIds", "/groupById/player2Hand/stackIds", "/groupById/player3Hand/stackIds", "/groupById/player4Hand/stackIds"],
+                "condition": ["TRUE"],
+                "then": [
+                    ["SET_HAND_SIZE", "$TARGET.onCardEnter.controller"]
+                ]
+            },
+            { 
+                "_comment": "Track victory points",
+                "type": "trigger", 
+                "listenTo": [
+                    "/cardById/*/groupId", "/cardById/*/tokens/*"
+                ],
+                "condition": ["OR",
+                    ["IN_STRING", "$TARGET.groupId", "sharedScoring"],
+                    ["PREV", ["IN_STRING", "$TARGET.groupId", "sharedScoring"]]
+                ],
+                "then": ["COMPUTE_SCORE"]
+            },
+            { 
+                "_comment": "Card enters combat",
+                "type": "trigger", 
+                "listenTo": [
+                    "/cardById/*/groupId", "/cardById/*/tokens/*"
+                ],
+                "condition": ["OR",
+                    ["IN_STRING", "$TARGET.groupId", "sharedActiveRed"],
+                    ["IN_STRING", "$TARGET.groupId", "sharedActiveBlue"]
+                ],
+                "then": ["COMPUTE_STRENGTH", "$TARGET.groupId"]
+            },
+            { 
+                "_comment": "Card leaves combat",
+                "type": "trigger", 
+                "listenTo": [
+                    "/cardById/*/groupId"
+                ],
+                "condition": ["OR",
+                    ["PREV", ["IN_STRING", "$TARGET.groupId", "sharedActiveRed"]],
+                    ["PREV", ["IN_STRING", "$TARGET.groupId", "sharedActiveBlue"]]
+                ],
+                "then": ["COMPUTE_STRENGTH", ["PREV", "$TARGET.groupId"]]
+            },
+            { 
+                "_comment": "Location enters play",
+                "type": "trigger", 
+                "listenTo": [
+                    "/cardById/*/groupId", "/cardById/*/tokens/*"
+                ],
+                "condition": ["OR",
+                    ["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"],
+			["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"]
+                ],
+                "then": [
+                    ["VAR", "$LOC_GROUP_ID", "$TARGET.groupId"],
+                    ["VAR", "$LOC_GROUP", "$GAME.groupById.$LOC_GROUP_ID"],
+                    ["COMPUTE_STRENGTH", "$LOC_GROUP.activeRedGroupId"],
+                    ["COMPUTE_STRENGTH", "$LOC_GROUP.activeBlueGroupId"]
+                ]
+            },
+            { 
+                "_comment": "Location leaves play",
+                "type": "trigger", 
+                "listenTo": [
+                    "/cardById/*/groupId", "/cardById/*/tokens/*"
+                ],
+                "condition": ["OR",
+                    ["PREV", ["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"]],
+                    ["PREV", ["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"]]
+                ],
+                "then": [
+                    ["VAR", "$LOC_GROUP_ID", ["PREV", "$TARGET.groupId"]],
+                    ["VAR", "$LOC_GROUP", "$GAME.groupById.$LOC_GROUP_ID"],
+                    ["COMPUTE_STRENGTH", "$LOC_GROUP.activeRedGroupId"],
+                    ["COMPUTE_STRENGTH", "$LOC_GROUP.activeBlueGroupId"]
+                ]
+            },
+            { 
+                "_comment": "Track location",
+                "type": "trigger", 
+                "listenTo": ["/groupById/sharedActiveLocation1/stackIds", "/groupById/sharedActiveLocation2/stackIds", "/groupById/sharedActiveLocation3/stackIds", "/groupById/sharedActiveLocation4/stackIds", "/groupById/sharedActiveLocation5/stackIds", "/groupById/sharedActiveLocation6/stackIds"],
+                "condition": ["TRUE"],
+                "then": [
+                    ["COND",
+                        ["EQUAL", ["LENGTH", "$TARGET.stackIds"], 0],
+                        [
+                            ["LOG_DEV", "Setting null"],
+                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatStat", null],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatStat", null],
+                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatToken", null],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatToken", null]
+                        ],
+                        ["EQUAL", "$TARGET.parentCards.[0].sides.B.name", "Free Peoples Battleground"],
+                        [
+                            ["LOG_DEV", "$TARGET.activeBlueGroupId"],
+                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatStat", "defense"],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatStat", "attack"],
+                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatToken", "defenseBlue"],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatToken", "attackRed"]
+                        ],
+                        ["EQUAL", "$TARGET.parentCards.[0].sides.B.name", "Shadow Battleground"],
+                        [
+                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatStat", "attack"],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatStat", "defense"],
+                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatToken", "attackBlue"],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatToken", "defenseRed"]
+                        ],
+                        ["IN_STRING", "$TARGET.parentCards.[0].sides.A.type", "Path"],
+                        [
+                            ["LOG_DEV", "$TARGET.activeBlueGroupId"],
+                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatStat", "pathCombat"],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatStat", "pathCombat"],
+                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatToken", "pathBlue"],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatToken", "pathRed"]
+                        ],
+                        ["TRUE"],
+                        ["LOG_DEV", "$TARGET.parentCards"]
+                    ],
+                    ["VAR", "$ABGI", "$TARGET.activeBlueGroupId"],
+                    ["LOG_DEV", "$GAME.groupById.$ABGI"]
+                ]
+            }
+        ],
+        "cards": {
+            "a6cdd8d3-cd6e-4d1a-908b-2f788fbb357e": {
+                "_comment": "Aragorn",
+                "rules": [
+                    { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/$THIS_ID/inPlay"],
+                        "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
+                        "then": [
+                            ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Aragorn", "Strider"]
+                        ]
+                    }
+                ]
+            },
+            "ffa8235b-c293-44c0-b88e-7ebb5f909960": {
+                "_comment": "Ganfalf the White",
+                "rules": [
+                    { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/$THIS_ID/inPlay"],
+                        "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
+                        "then": [
+                            ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Gandalf the White", "Gandalf the Grey"]
+                        ]
+                    }
+                ]
+            },
+            "b9539977-4ed1-44c6-aa09-5431a4a11967": {
+                "_comment": "Gothmog",
+                "rules": [
+                    { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/$THIS_ID/inPlay"],
+                        "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
+                        "then": [
+                            ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Gothmog", "The Witch-king"]
+                        ]
+                    }
+                ]
+            },
+            "d2e8078c-c71c-4098-ae47-6d82ee9bc295": {
+                "_comment": "Gothmog",
+                "rules": [
+                    { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/$THIS_ID/inPlay"],
+                        "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
+                        "then": [
+                            ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Gothmog", "The Witch-king"]
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

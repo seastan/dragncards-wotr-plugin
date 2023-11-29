@@ -1,0 +1,96 @@
+{
+    "functions": {
+        "DRAW_CARD_PLAYER_I": {
+            "args": ["$PLAYER_I"],
+            "code": [
+                ["LOG", "{{$PLAYER_N}} made {{$PLAYER_I}} draw a card."],
+                ["DEFINE", "$PLAYER_N", "$PLAYER_I"],
+                ["DRAW_CARD"]
+            ]
+        },
+        "SET_HAND_SIZE": {
+            "args": ["$PLAYER_I"],
+            "code": [
+                ["VAR", "$HAND_GROUP_ID", "{{$PLAYER_I}}Hand"],
+                ["VAR", "$HAND_SIZE", ["LENGTH", "$GAME.groupById.$HAND_GROUP_ID.stackIds"]],
+                ["LOG", "└── {{$PLAYER_I}}'s hand size is now {{$HAND_SIZE}}."],
+                ["SET", "/playerData/$PLAYER_I/handSize", "$HAND_SIZE"]
+            ]
+        },
+        "COMPUTE_STRENGTH": {
+            "args": ["$PLAY_GROUP_ID"],
+            "code": [
+                ["VAR", "$PLAY_GROUP", "$GAME.groupById.$PLAY_GROUP_ID"],
+                ["VAR", "$LOC_GROUP_ID", "$PLAY_GROUP.onCardEnter.locationGroupId"],
+                ["VAR", "$LOC_GROUP", "$GAME.groupById.$LOC_GROUP_ID"],
+                ["VAR", "$STAT", "$PLAY_GROUP.combatStat"],
+                ["VAR", "$TOKEN", "$PLAY_GROUP.combatToken"],
+		["VAR", "$BLUE_GROUP_ID", "$LOC_GROUP.activeBlueGroupId"],
+                ["LOG_DEV", "$STAT"],
+                ["LOG_DEV", "$TOKEN"],
+                ["SET", "/textBoxById/$PLAY_GROUP_ID/content", 0],
+                ["COND",
+                    ["GREATER_THAN", ["LENGTH", "$LOC_GROUP.stackIds"], 0],
+                    [
+                        ["VAR", "$LOC_CARD", "$LOC_GROUP.parentCards.[0]"],
+                        ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID",
+                            ["COND",
+                                ["EQUAL", "$CARD.groupId", "$PLAY_GROUP_ID"],
+                                [
+                                    ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$CARD.sides.A.$STAT"],
+                                    ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$CARD.tokens.$TOKEN"]
+                                ]
+                            ]
+                        ],
+                            ["COND",
+                                ["EQUAL", "$LOC_CARD.sides.A.type", "Battleground"],
+                            	[
+                                	["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
+                                	["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
+                            	]
+			    ],
+			["COND",
+                           
+                        	["EQUAL", "$LOC_CARD.sides.A.type", "Path"],
+                            [
+                                ["INCREASE_VAL", "/textBoxById/$BLUE_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
+                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
+                            ]
+                        ],
+                        ["LOG", "└── The {{$GAME.tokenById.$TOKEN.label}} at {{$LOC_CARD.sides.A.name}} is now {{$GAME.textBoxById.$PLAY_GROUP_ID.content}}."]
+                    ]
+                ]
+            ]
+        },
+        "COMPUTE_SCORE": {
+            "args": [],
+            "code": [
+                ["SET", "/victoryPointsRed", 0],
+                ["SET", "/victoryPointsBlue", 0],
+                ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID",
+                    ["COND",
+                        ["EQUAL", "$CARD.groupId", "sharedScoringRed"],
+                        [
+                            ["INCREASE_VAL", "/victoryPointsRed", "$CARD.currentFace.victoryPoints"],
+                            ["INCREASE_VAL", "/victoryPointsRed", "$CARD.tokens.corruption"]
+                        ],
+                        ["EQUAL", "$CARD.groupId", "sharedScoringBlue"],
+                        [
+                            ["INCREASE_VAL", "/victoryPointsBlue", "$CARD.currentFace.victoryPoints"]
+                        ]
+                    ]
+                ],
+                ["INCREASE_VAL", "/victoryPointsRed", "$GAME.corruptionScore"],
+                ["COND",
+                    ["GREATER_THAN", "$GAME.victoryPointsRed", "$GAME.victoryPointsBlue"],
+                    ["LOG", "└── The Shadow Player(s) are leading {{$GAME.victoryPointsRed}}-{{$GAME.victoryPointsBlue}}."],
+                    ["GREATER_THAN", "$GAME.victoryPointsBlue", "$GAME.victoryPointsRed"],
+                    ["LOG", "└── The Free Peoples Player(s) are leading {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."],
+                    ["LOG", "└── The game is tied {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."],
+                    ["TRUE"],
+                    ["LOG", "└── The game is tied {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."]
+                ]
+            ]
+        }
+    }
+}

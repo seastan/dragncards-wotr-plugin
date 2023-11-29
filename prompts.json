@@ -1,0 +1,23 @@
+{
+    "prompts": {
+        "eliminateOnPlay": {
+            "args": ["$PLAYED_CARD_NAME", "$ELIMINATE_CARD_NAME"],
+            "message": "{{$PLAYED_CARD_NAME}} was played. Eliminate {{$ELIMINATE_CARD_NAME}}?",
+            "options": [
+                {
+                    "label": "Yes",
+                    "hotkey": "Y",
+                    "code": [
+                        ["VAR", "$ELIMINATE_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "$ELIMINATE_CARD_NAME"]]],
+                        ["LOG", "{{$ALIAS_N}} eliminated {{$ELIMINATE_CARD_NAME}}."],
+                        ["MOVE_CARD", "$ELIMINATE_CARD.id", "{{$PLAYER_N}}Eliminated", 0]
+                    ]
+                },
+                {
+                    "label": "No",
+                    "hotkey": "N"
+                }
+            ]
+        }
+    }
+}
