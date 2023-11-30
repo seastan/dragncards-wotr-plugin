@@ -136,6 +136,19 @@
             "onCardEnter": {
             }
         },
+ 	"sharedActivePath": {
+            "groupType": "inPlay",
+            "label": "id:activePath", 
+            "tableLabel": "id:locationPath",
+            "canHaveAttachments": true,
+            "activeBlueGroupId": "sharedActiveBluePath",
+            "onCardEnter": {
+                "locationIndex": 1
+            },
+            "onCardLeave": {
+                "locationIndex": null
+            }
+        },
         "sharedActiveLocation1": {
             "groupType": "inPlay",
             "label": "id:activeLocation1", 
@@ -218,6 +231,21 @@
             },
             "onCardLeave": {
                 "locationIndex": null
+            }
+        },
+	"sharedActiveRedPath": {
+            "groupType": "inPlay",
+            "label": "id:activeShadowPath", 
+            "tableLabel": "id:shadowPath",
+            "canHaveAttachments": true,
+            "color": "red",
+            "onCardEnter": {
+                "locationIndex": 1,
+                "locationGroupId": "sharedActivePath"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
             }
         },
         "sharedActiveRed1": {
@@ -307,6 +335,21 @@
             },
             "onCardLeave": {
                 "locationIndex": null
+            }
+        },
+	"sharedActiveBluePath": {
+            "groupType": "inPlay",
+            "label": "id:activeFreePeoplesPath", 
+            "tableLabel": "id:freePeoplesPath",
+            "canHaveAttachments": true,
+            "color": "blue",
+            "onCardEnter": {
+                "locationIndex": 1,
+                "locationGroupId": "sharedActivePath"
+            },
+            "onCardLeave": {
+                "locationIndex": null,
+                "locationGroupId": null
             }
         },
         "sharedActiveBlue1": {
