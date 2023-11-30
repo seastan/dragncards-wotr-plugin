@@ -456,7 +456,30 @@
         },
         "corruptionScore": {
             "English": "Corruption"
-        }
-
+        },
+	"skull": {
+		"English": "Skull"
+	},
+	"buckler": {
+		"English": "Buckler"
+	},
+	"activePath": {
+		"English": "Active Path"
+	},
+	"activeFreePeoplesPath": {
+            "English": "Active Free Peoples Path"
+        },
+        "freePeoplesPath": {
+            "English": "Free Peoples Path"
+        },
+	"activeShadowPath": {
+            "English": "Active Shadow Path"
+        },
+        "shadowPath": {
+            "English": "Shadow Path"
+        },
+	"locationPath": {
+		"English": "Location Path"
+	}
     }
 }

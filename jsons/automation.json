@@ -112,9 +112,8 @@
                         ],
                         ["IN_STRING", "$TARGET.parentCards.[0].sides.A.type", "Path"],
                         [
-                            ["LOG_DEV", "$TARGET.activeBlueGroupId"],
-                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatStat", "pathCombat"],
-                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatStat", "pathCombat"],
+                            ["SET", "/groupById/$TARGET.activeBlueGroupId/combatStat", "buckler"],
+                            ["SET", "/groupById/$TARGET.activeRedGroupId/combatStat", "skull"],
                             ["SET", "/groupById/$TARGET.activeBlueGroupId/combatToken", "pathBlue"],
                             ["SET", "/groupById/$TARGET.activeRedGroupId/combatToken", "pathRed"]
                         ],
