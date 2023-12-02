@@ -1,6 +1,0 @@
-{
-    "spawnExistingCardModal": {
-        "columnProperties": ["name"],
-        "loadGroupIds": ["sharedSetAside", "player1Hand", "player2Hand", "player3Hand", "player4Hand"]
-    }
-}
