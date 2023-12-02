@@ -1,9 +1,0 @@
-{
-    "defaultActions": [
-        {
-            "actionList": "cycleCard",
-            "label": "id:cycle",
-            "condition": ["$ACTIVE_CARD.inPlay"]
-        }
-    ]
-}
