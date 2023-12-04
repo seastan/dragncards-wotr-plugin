@@ -358,6 +358,8 @@
                     ["VAR", "$RED_GROUP_ID", "$ACTIVE_GROUP.activeRedGroupId"],
                     ["VAR", "$BLUE_TOTAL", "$GAME.textBoxById.$BLUE_GROUP_ID.content"],
                     ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
+			["LOG_DEV", "$BLUE_TOTAL"],
+			["LOG_DEV", "$GAME.groupById.$BLUE_GROUP_ID.combatStat"],
                     ["COND",
                         ["GREATER_THAN", "$BLUE_TOTAL", "$RED_TOTAL"],
                         [
@@ -368,7 +370,7 @@
                         [
                             ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Shadow Player(s) team."],
                             ["COND", 
-                                ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "pathCombat"],
+                                ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"],
                                 [
                                     ["LOG", "$ALIAS_N", " flipped ", "$ACTIVE_FACE.name", " facedown."],
                                     ["SET", "/cardById/$ACTIVE_CARD_ID/currentSide", "B"],
@@ -382,7 +384,7 @@
                         ["COND",
                             ["OR",
                                 ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "defense"],
-                                ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "pathCombat"]
+                                ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
                             ],
                             [
                                 ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Free Peoples Player(s) team."],

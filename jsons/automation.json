@@ -54,7 +54,7 @@
                 ],
                 "condition": ["OR",
                     ["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"],
-			["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"]
+                    ["IN_STRING", "$TARGET.groupId", "sharedActiveLocation"]
                 ],
                 "then": [
                     ["VAR", "$LOC_GROUP_ID", "$TARGET.groupId"],
@@ -112,6 +112,7 @@
                         ],
                         ["IN_STRING", "$TARGET.parentCards.[0].sides.A.type", "Path"],
                         [
+                            ["LOG_DEV", "$TARGET.activeBlueGroupId"],
                             ["SET", "/groupById/$TARGET.activeBlueGroupId/combatStat", "buckler"],
                             ["SET", "/groupById/$TARGET.activeRedGroupId/combatStat", "skull"],
                             ["SET", "/groupById/$TARGET.activeBlueGroupId/combatToken", "pathBlue"],

@@ -480,6 +480,10 @@
         },
 	"locationPath": {
 		"English": "Location Path"
+	},
+	"deckSize" : {
+		"English": "Deck Size"
 	}
+		
     }
 }

@@ -8,6 +8,7 @@
                 ["DRAW_CARD"]
             ]
         },
+
         "SET_HAND_SIZE": {
             "args": ["$PLAYER_I"],
             "code": [
