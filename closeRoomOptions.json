@@ -1,7 +1,0 @@
-{
-    "closeRoomOptions": [
-        {"label": "id:labelMarkAsFreePeoplesVictory", "actionList": ["SET", "/victoryState", "FreePeoples"]},
-        {"label": "id:labelMarkAsShadowVictory", "actionList": ["SET", "/victoryState", "Shadow"]},
-        {"label": "id:labelMarkAsIncomplete", "actionList": ["SET", "/victoryState", "Incomplete"]}
-    ]
-}
