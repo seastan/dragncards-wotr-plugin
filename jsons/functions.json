@@ -18,6 +18,14 @@
                 ["SET", "/playerData/$PLAYER_I/handSize", "$HAND_SIZE"]
             ]
         },
+	"IS_DECK_EMPTY": {
+	"args": ["$PLAYER_I"],
+	"code" : [
+		["VAR", "$DECK_GROUP_ID", "{{$PLAYER_I}}Deck"],
+		["VAR", "$DECK_SIZE", ["LENGTH", "$GAME.groupById.$DECK_GROUP_ID.stackIds"]],
+		["LOG", "└──{{$PLAYER_I}}'s deck is Empty."]
+		]	
+	},
         "COMPUTE_STRENGTH": {
             "args": ["$PLAY_GROUP_ID"],
             "code": [

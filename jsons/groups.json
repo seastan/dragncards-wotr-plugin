@@ -463,7 +463,10 @@
                 "deckGroupId": "player1Deck",
                 "cycleGroupId": "player1Cycled",
                 "eliminateGroupId": "player1Eliminated"
-            }
+            },
+		"onCardLeave": {
+		"controller": "player1"
+		}
         },
         "player1Cycled": {
             "groupType": "deck",
@@ -511,7 +514,10 @@
                 "deckGroupId": "player2Deck",
                 "cycleGroupId": "player2Cycled",
                 "eliminateGroupId": "player2Eliminated"
-            }
+            },
+		"onCardLeave": {
+		"controller": "player2"
+		}
         },
         "player2Cycled": {
             "groupType": "deck",
@@ -559,7 +565,10 @@
                 "deckGroupId": "player3Deck",
                 "cycleGroupId": "player3Cycled",
                 "eliminateGroupId": "player3Eliminated"
-            }
+            },
+		"onCardLeave": {
+		"controller": "player3"
+		}
         },
         "player3Cycled": {
             "groupType": "deck",
@@ -607,7 +616,10 @@
                 "deckGroupId": "player4Deck",
                 "cycleGroupId": "player4Cycled",
                 "eliminateGroupId": "player4Eliminated"
-            }
+            },
+		"onCardLeave": {
+		"controller": "player4"
+		}
         },
         "player4Cycled": {
             "groupType": "deck",

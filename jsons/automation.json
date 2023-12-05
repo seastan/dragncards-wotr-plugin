@@ -10,6 +10,15 @@
                     ["SET_HAND_SIZE", "$TARGET.onCardEnter.controller"]
                 ]
             },
+		{ 
+                "_comment": "Track Deck is empty",
+                "type": "trigger", 
+                "listenTo": ["/groupById/player1Deck/stackIds", "/groupById/player2Deck/stackIds", "/groupById/player3Deck/stackIds", "/groupById/player4Deck/stackIds"],
+                "condition": ["EQUAL", ["LENGTH", "$TARGET.stackIds"], 0],
+                "then": [
+                    	"IS_DECK_EMPTY", "$TARGET.onCardLeave.controller"
+			]
+            },
             { 
                 "_comment": "Track victory points",
                 "type": "trigger", 
