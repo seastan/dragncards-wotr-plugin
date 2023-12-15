@@ -31,13 +31,15 @@
                 ],
                 "then": ["COMPUTE_SCORE"]
             },
-		{
+	    {
 		"_comment": "Track corruption",
 		"type": "trigger",
 		"listenTo": ["/corruptionScore"],
-		"condition": ["TRUE"],
+		"condition": ["NOT_EQUAL",
+        		"$GAME.corruptionScore",
+        		["PREV", "$GAME.corruptionScore"]],
 		"then": ["COMPUTE_SCORE"]
-		},
+	    },
             { 
                 "_comment": "Card enters combat",
                 "type": "trigger", 
