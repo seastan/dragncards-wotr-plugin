@@ -350,6 +350,17 @@
         "layoutLocation6": [
             ["SET", "/layoutVariants/location", 6]
         ],
+	"increaseCorruption": [
+		["LOG", "$ALIAS_N", " increased the corruption counter."],
+		["INCREASE_VAL", "/corruptionScore", 1],
+		["COMPUTE_SCORE"]
+	],
+
+	"decreaseCorruption": [
+		["LOG", "$ALIAS_N", " decreased the corruption counter."],
+		["DECREASE_VAL", "/corruptionScore", 1],
+		["COMPUTE_SCORE"]
+	],
         "scoreLocation": [
             ["COND", 
                 ["IN_STRING", "$ACTIVE_GROUP_ID", "sharedActiveLocation"],

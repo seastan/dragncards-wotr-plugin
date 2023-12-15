@@ -481,6 +481,12 @@
 	"locationPath": {
 		"English": "Location Path"
 	},
+	"increaseCorruption": {
+		"English": "Increase Corruption"
+	},
+	"decreaseCorruption": {
+		"English": "Decrease Corruption"
+	},
 	"deckSize" : {
 		"English": "Deck Size"
 	}

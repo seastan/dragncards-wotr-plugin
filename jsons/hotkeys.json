@@ -16,7 +16,9 @@
             {"key": "Alt+2", "actionList": ["DRAW_CARD_PLAYER_I", "player2"], "label": "id:drawCard2"},
             {"key": "Alt+3", "actionList": ["DRAW_CARD_PLAYER_I", "player3"], "label": "id:drawCard3"},
             {"key": "Alt+4", "actionList": ["DRAW_CARD_PLAYER_I", "player4"], "label": "id:drawCard4"},
-            {"key": "P", "actionList": "pass", "label": "id:pass"}
+            {"key": "P", "actionList": "pass", "label": "id:pass"},
+	    {"key": "U", "actionList": "increaseCorruption", "label": "id:increaseCorruption"},
+	    {"key": "J", "actionList": "decreaseCorruption", "label": "id:decreaseCorruption"}
 
         ],
         "card": [
