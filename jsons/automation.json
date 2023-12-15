@@ -31,6 +31,13 @@
                 ],
                 "then": ["COMPUTE_SCORE"]
             },
+		{
+		"_comment": "Track corruption",
+		"type": "trigger",
+		"listenTo": ["/corruptionScore"],
+		"condition": ["TRUE"],
+		"then": ["COMPUTE_SCORE"]
+		},
             { 
                 "_comment": "Card enters combat",
                 "type": "trigger", 
