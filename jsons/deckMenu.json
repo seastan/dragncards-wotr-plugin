@@ -2,13 +2,16 @@
     "deckMenu": {
         "deckLists": [
             {"deckListId": "The Fellowship of the Ring", "label": "The Fellowship of the Ring"},
-            {"deckListId": "Trilogy", "label": "Trilogy"},
+	    {"deckListId": "The Return of the King", "label": "The Return of the King"},
+	    {"deckListId": "The Two Towers", "label": "The Two Towers"},            
+	    {"deckListId": "Trilogy", "label": "Trilogy"},
             {"deckListId": "Two-Player Duel", "label": "Two-Player Duel"},
             {"deckListId": "Three-Player Duel", "label": "Three-Player Duel"},
             {"deckListId": "AtS-The Fellowship of the Ring", "label": "Co-op The Fellowship of the Ring"},
             {"deckListId": "AtS-Trilogy", "label": "Co-op Trilogy"},
             {"deckListId": "AtS-Two-Player Duel", "label": "Co-op Two-Player Duel"},
             {"deckListId": "AtS-Three-Player Duel", "label": "Co-op Three-Player Duel"}
+	    
         ]
     }
 }

@@ -69,6 +69,32 @@
             ["SET", "/numPlayers", 2],
             ["SET", "/layoutVariants/bluePlayers", 1],
             ["SET", "/layoutVariants/redPlayers", 1],
+            ["SET", "/cardsPerRound", {"player1": 6, "player2": 4}]
+        ],
+	"twoTowersSetup": [
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 2],
+	    ["SET", "/playerData/player2/label", "Saruman"],
+            ["SET", "/playerData/player1/label", "Theoden"],
+	    ["SET", "/firstPlayer", "player2"],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 1],
+	    ["SET", "/layoutVariants/path", 6],
+	    ["SET", "/playerData/player1/ringTokens", 2],
+ 	    ["SET", "/playerData/player2/ringTokens", 2],
+            ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
+        ],
+	    "roTK": [
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 2],
+	    ["SET", "/playerData/player2/label", "Witch King"],
+            ["SET", "/playerData/player1/label", "Aragorn"],
+	    ["SET", "/firstPlayer", "player2"],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 1],
+	    ["SET", "/layoutVariants/path", 7],
+	    ["SET", "/playerData/player1/ringTokens", 2],
+ 	    ["SET", "/playerData/player2/ringTokens", 2],
             ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
         ],
         "coopTwoPlayerSetup": [
