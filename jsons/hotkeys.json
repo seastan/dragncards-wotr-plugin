@@ -18,8 +18,9 @@
             {"key": "Alt+3", "actionList": ["DRAW_CARD_PLAYER_I", "player3"], "label": "id:drawCard3"},
             {"key": "Alt+4", "actionList": ["DRAW_CARD_PLAYER_I", "player4"], "label": "id:drawCard4"},
             {"key": "P", "actionList": "pass", "label": "id:pass"},
-            {"key": "Z", "actionList": "printPileSizes", "label": "id:printPileSizes"}
-
+            {"key": "Z", "actionList": "printPileSizes", "label": "id:printPileSizes"},
+            {"key": "U", "actionList": "increaseCorruption", "label": "id:increaseCorruption"},
+            {"key": "J", "actionList": "decreaseCorruption", "label": "id:decreaseCorruption"}
 
         ],
         "card": [

@@ -8,6 +8,7 @@
                 ["DRAW_CARD"]
             ]
         },
+
         "SET_HAND_SIZE": {
             "args": ["$PLAYER_I"],
             "code": [
@@ -17,6 +18,14 @@
                 ["SET", "/playerData/$PLAYER_I/handSize", "$HAND_SIZE"]
             ]
         },
+	"IS_DECK_EMPTY": {
+	"args": ["$PLAYER_I"],
+	"code" : [
+		["VAR", "$DECK_GROUP_ID", "{{$PLAYER_I}}Deck"],
+		["VAR", "$DECK_SIZE", ["LENGTH", "$GAME.groupById.$DECK_GROUP_ID.stackIds"]],
+		["LOG", "└──{{$PLAYER_I}}'s deck is Empty."]
+		]	
+	},
         "COMPUTE_STRENGTH": {
             "args": ["$PLAY_GROUP_ID"],
             "code": [
@@ -25,6 +34,7 @@
                 ["VAR", "$LOC_GROUP", "$GAME.groupById.$LOC_GROUP_ID"],
                 ["VAR", "$STAT", "$PLAY_GROUP.combatStat"],
                 ["VAR", "$TOKEN", "$PLAY_GROUP.combatToken"],
+		["VAR", "$BLUE_GROUP_ID", "$LOC_GROUP.activeBlueGroupId"],
                 ["LOG_DEV", "$STAT"],
                 ["LOG_DEV", "$TOKEN"],
                 ["SET", "/textBoxById/$PLAY_GROUP_ID/content", 0],
@@ -42,17 +52,20 @@
                             ]
                         ],
                         ["COND",
-                            ["OR",
-                                ["EQUAL", "$LOC_CARD.sides.A.type", "Battleground"],
-                                ["EQUAL", "$PLAY_GROUP.color", "blue"],
-                                ["EQUAL", "$PLAY_GROUP.color", "red"]
-                            ],
+                            ["EQUAL", "$LOC_CARD.sides.A.type", "Battleground"],
                             [
                                 ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
                                 ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
                             ]
                         ],
-                        ["LOG", "└── The {{$GAME.tokenById.$TOKEN.label}} strength at {{$LOC_CARD.sides.A.name}} is now {{$GAME.textBoxById.$PLAY_GROUP_ID.content}}."]
+                        ["COND",
+                            ["EQUAL", "$LOC_CARD.sides.A.type", "Path"],
+                            [
+                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
+                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
+                            ]
+                        ],
+                        ["LOG", "└── The {{$GAME.tokenById.$TOKEN.label}} at {{$LOC_CARD.sides.A.name}} is now {{$GAME.textBoxById.$PLAY_GROUP_ID.content}}."]
                     ]
                 ]
             ]

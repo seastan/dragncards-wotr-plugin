@@ -462,7 +462,39 @@
         },
         "printPileSizes": {
             "English": "Print pile sizes"
+        },
+        "skull": {
+            "English": "Skull"
+        },
+        "buckler": {
+            "English": "Buckler"
+        },
+        "activePath": {
+            "English": "Active Path"
+        },
+        "activeFreePeoplesPath": {
+            "English": "Active Free Peoples Path"
+        },
+        "freePeoplesPath": {
+            "English": "Free Peoples Path"
+        },
+        "activeShadowPath": {
+            "English": "Active Shadow Path"
+        },
+        "shadowPath": {
+            "English": "Shadow Path"
+        },
+        "locationPath": {
+            "English": "Location Path"
+        },
+        "increaseCorruption": {
+            "English": "Increase Corruption"
+        },
+        "decreaseCorruption": {
+            "English": "Decrease Corruption"
+        },
+        "deckSize" : {
+            "English": "Deck Size"
         }
-
     }
 }
