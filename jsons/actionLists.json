@@ -32,8 +32,8 @@
             ["LOAD_CARDS", "AtS-Sauron"],
             ["SET", "/playerData/$PLAYER_N/label", "Witch-king"],
             ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
-	    ["SET", "/groupById/{{$PLAYER_N}}Reserve/onCardEnter/rotation", 0],
-	    ["SET", "/groupById/{{$PLAYER_N}}Hand/onCardEnter/peeking/{{$PLAYER_N}}", false],
+	        ["SET", "/groupById/{{$PLAYER_N}}Reserve/onCardEnter/rotation", 0],
+	        ["SET", "/groupById/{{$PLAYER_N}}Hand/onCardEnter/peeking/{{$PLAYER_N}}", false],
             ["DEFINE", "$PLAYER_N", "player3"],
             ["LOAD_CARDS", "Aragorn"],
             ["SET", "/playerData/$PLAYER_N/label", "Aragorn"],
@@ -41,8 +41,8 @@
             ["LOAD_CARDS", "AtS-Isengard"],
             ["SET", "/playerData/$PLAYER_N/label", "Saruman"],
             ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
-	    ["SET", "/groupById/{{$PLAYER_N}}Reserve/onCardEnter/rotation", 0],
-	    ["SET", "/groupById/{{$PLAYER_N}}Hand/onCardEnter/peeking/{{$PLAYER_N}}", false],
+	        ["SET", "/groupById/{{$PLAYER_N}}Reserve/onCardEnter/rotation", 0],
+	        ["SET", "/groupById/{{$PLAYER_N}}Hand/onCardEnter/peeking/{{$PLAYER_N}}", false],
             ["LOAD_CARDS", "Trilogy Rules"],
             ["LOAD_CARDS", "AtS-Rulebook"],
             ["LOAD_CARDS", "Rulebook"],
@@ -69,6 +69,32 @@
             ["SET", "/numPlayers", 2],
             ["SET", "/layoutVariants/bluePlayers", 1],
             ["SET", "/layoutVariants/redPlayers", 1],
+            ["SET", "/cardsPerRound", {"player1": 6, "player2": 4}]
+        ],
+        "twoTowersSetup": [
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 2],
+            ["SET", "/playerData/player2/label", "Saruman"],
+            ["SET", "/playerData/player1/label", "Theoden"],
+            ["SET", "/firstPlayer", "player2"],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 1],
+            ["SET", "/layoutVariants/path", 6],
+            ["SET", "/playerData/player1/ringTokens", 2],
+            ["SET", "/playerData/player2/ringTokens", 2],
+            ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
+            ],
+        "roTK": [
+            ["LOAD_CARDS", "Rulebook"],
+            ["SET", "/numPlayers", 2],
+            ["SET", "/playerData/player2/label", "Witch King"],
+            ["SET", "/playerData/player1/label", "Aragorn"],
+            ["SET", "/firstPlayer", "player2"],
+            ["SET", "/layoutVariants/bluePlayers", 1],
+            ["SET", "/layoutVariants/redPlayers", 1],
+            ["SET", "/layoutVariants/path", 7],
+            ["SET", "/playerData/player1/ringTokens", 2],
+            ["SET", "/playerData/player2/ringTokens", 2],
             ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
         ],
         "coopTwoPlayerSetup": [
@@ -81,8 +107,8 @@
             ["LOAD_CARDS", "AtS-Sauron"],
             ["SET", "/playerData/$PLAYER_N/label", "Witch-king"],
             ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
-	    ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
-	    ["SET", "/groupById/{{$PLAYER_N}}Hand/onCardEnter/peeking/{{$PLAYER_N}}", false],
+	        ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
+	        ["SET", "/groupById/{{$PLAYER_N}}Hand/onCardEnter/peeking/{{$PLAYER_N}}", false],
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_CARDS", "Aragorn"],
             ["DEFINE", "$PLAYER_N", "player2"],
@@ -131,7 +157,7 @@
             ["DEFINE", "$PLAYER_N", "player3"],
             ["LOAD_CARDS", "AtS-Isengard"],
             ["SET", "/playerData/$PLAYER_N/label", "Saruman"],
-	    ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
+	        ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
             ["LOAD_CARDS", "Duel Rules"],
             ["LOAD_CARDS", "AtS-Rulebook"],
             ["LOAD_CARDS", "Rulebook"],
@@ -161,8 +187,8 @@
             ["SET", "/playerData/player2/label", "Balrog"],
             ["SET", "/playerData/player1/ringTokens", 0],
             ["SET", "/playerData/player2/ringTokens", 0],
-	    ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
-	    ["SET", "/groupById/player2Hand/onCardEnter/peeking/player2", false],
+	        ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
+	        ["SET", "/groupById/player2Hand/onCardEnter/peeking/player2", false],
             ["LOAD_CARDS", "AtS-Rulebook"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
@@ -245,10 +271,6 @@
             ]
             ]
         ],
-        "targetCard": [
-            ["SET", "/cardById/$ACTIVE_CARD_ID/targeting/$PLAYER_N", true],
-            ["LOG", "$ALIAS_N", " targeted ", "$ACTIVE_FACE.name", "."]
-	],
         "cycleCard": [
             ["COND",
             ["EQUAL", "$ACTIVE_CARD.cycleGroupId", null],
@@ -374,17 +396,17 @@
         "layoutLocation6": [
             ["SET", "/layoutVariants/location", 6]
         ],
-	"increaseCorruption": [
-		["LOG", "$ALIAS_N", " increased the corruption counter."],
-		["INCREASE_VAL", "/corruptionScore", 1],
-		["COMPUTE_SCORE"]
-	],
+        "increaseCorruption": [
+            ["LOG", "$ALIAS_N", " increased the corruption counter."],
+            ["INCREASE_VAL", "/corruptionScore", 1],
+            ["COMPUTE_SCORE"]
+        ],
 
-	"decreaseCorruption": [
-		["LOG", "$ALIAS_N", " decreased the corruption counter."],
-		["DECREASE_VAL", "/corruptionScore", 1],
-		["COMPUTE_SCORE"]
-	],
+        "decreaseCorruption": [
+            ["LOG", "$ALIAS_N", " decreased the corruption counter."],
+            ["DECREASE_VAL", "/corruptionScore", 1],
+            ["COMPUTE_SCORE"]
+        ],
         "scoreLocation": [
             ["COND", 
                 ["IN_STRING", "$ACTIVE_GROUP_ID", "sharedActiveLocation"],
@@ -393,8 +415,6 @@
                     ["VAR", "$RED_GROUP_ID", "$ACTIVE_GROUP.activeRedGroupId"],
                     ["VAR", "$BLUE_TOTAL", "$GAME.textBoxById.$BLUE_GROUP_ID.content"],
                     ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
-			["LOG_DEV", "$BLUE_TOTAL"],
-			["LOG_DEV", "$GAME.groupById.$BLUE_GROUP_ID.combatStat"],
                     ["COND",
                         ["GREATER_THAN", "$BLUE_TOTAL", "$RED_TOTAL"],
                         [
