@@ -25,7 +25,6 @@
         ],
         "card": [
             {"key": "F", "actionList": "flipCard", "label": "id:flip"},
-            {"key": "T", "actionList": "targetCard", "label": "id:targetCard"},
             {"key": "C", "actionList": "cycleCard", "label": "id:cycleCard"},
             {"key": "E", "actionList": "eliminateCard", "label": "id:eliminateCard"},
             {"key": "R", "actionList": "toggleRotate", "label": "id:rotateCard"},
