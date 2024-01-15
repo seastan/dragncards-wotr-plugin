@@ -456,6 +456,12 @@
         },
         "corruptionScore": {
             "English": "Corruption"
+        },
+        "shuffleCyclePileAndPlaceOnBottomOfDeck": {
+            "English": "Shuffle cycle pile and place on bottom of deck"
+        },
+        "printPileSizes": {
+            "English": "Print pile sizes"
         }
 
     }

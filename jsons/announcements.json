@@ -1,5 +1,7 @@
 {
     "announcements": [
+        "2024-01-15: Press Z to print out all player's pile sizes",
+        "2024-01-15: Press Shift+C to shuffle your cycle pile and place it under your deck",
         "2023-09-15: Plugin beta 1.0 release",
         "2023-07-04: Plugin beta development complete",
         "2022-11-01: Plugin beta development begun"

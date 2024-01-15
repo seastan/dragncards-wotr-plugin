@@ -252,6 +252,13 @@
             ]
             ]
         ],
+        "cycleDeck": [
+            ["VAR", "$CYCLE_DECK_ID", "{{$PLAYER_N}}Cycled"],
+            ["VAR", "$CYCLE_DECK", "$GAME.groupById.$CYCLE_DECK_ID"],
+            ["LOG", "{{$ALIAS_N}} shuffled their cycle pile and moved it to the bottom of their deck."],
+            ["SHUFFLE_GROUP", "$CYCLE_DECK_ID"],
+            ["MOVE_STACKS", "$CYCLE_DECK_ID", "{{$PLAYER_N}}Deck", ["LENGTH", "$CYCLE_DECK.stackIds"], "bottom"]
+        ],
         "eliminateCard": [
             ["COND",
             ["EQUAL", "$ACTIVE_CARD.eliminateGroupId", null],
@@ -303,6 +310,15 @@
             ]
             ],
             ["LOG", "$ALIAS_N", " shuffled the cards in ", "$ORIG_GROUP.name", " into their corresponding decks."]
+        ],
+        "printPileSizes": [
+            ["LOG", "Printing pile sizes:"],
+            ["FOR_EACH_KEY_VAL", "$PLAYER_I", "$PLAYER_DATA", "$GAME.playerData", [
+                ["VAR", "$DECK_LENGTH", ["LENGTH", "$GAME.groupById.{{$PLAYER_I}}Deck.stackIds"]],
+                ["VAR", "$CYCLE_LENGTH", ["LENGTH", "$GAME.groupById.{{$PLAYER_I}}Cycled.stackIds"]],
+                ["VAR", "$ELIM_LENGTH", ["LENGTH", "$GAME.groupById.{{$PLAYER_I}}Eliminated.stackIds"]],
+                ["LOG", "├── {{$PLAYER_DATA.label}} Deck/Cycle/Elim: {{$DECK_LENGTH}}/{{$CYCLE_LENGTH}}/{{$ELIM_LENGTH}}"]
+            ]]
         ],
         "deleteCard": [
             ["LOG", "$ALIAS_N", " deleted ", "$ACTIVE_FACE.name", "."],
