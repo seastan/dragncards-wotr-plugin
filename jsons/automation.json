@@ -10,7 +10,7 @@
                     ["SET_HAND_SIZE", "$TARGET.onCardEnter.controller"]
                 ]
             },
-		{ 
+		    { 
                 "_comment": "Track Deck is empty",
                 "type": "trigger", 
                 "listenTo": ["/groupById/player1Deck/stackIds", "/groupById/player2Deck/stackIds", "/groupById/player3Deck/stackIds", "/groupById/player4Deck/stackIds"],
@@ -31,15 +31,16 @@
                 ],
                 "then": ["COMPUTE_SCORE"]
             },
-	    {
-		"_comment": "Track corruption",
-		"type": "trigger",
-		"listenTo": ["/corruptionScore"],
-		"condition": ["NOT_EQUAL",
-        		"$GAME.corruptionScore",
-        		["PREV", "$GAME.corruptionScore"]],
-		"then": ["COMPUTE_SCORE"]
-	    },
+            {
+                "_comment": "Track corruption",
+                "type": "trigger",
+                "listenTo": ["/corruptionScore"],
+                "condition": ["NOT_EQUAL",
+                    "$GAME.corruptionScore",
+                    ["PREV", "$GAME.corruptionScore"]
+                ],
+                "then": ["COMPUTE_SCORE"]
+            },
             { 
                 "_comment": "Update score when corruption counter changes value",
                 "type": "trigger", 
@@ -198,6 +199,16 @@
                         ]
                     }
                 ]
+            },
+            "1bf8e385-9b87-47a0-a536-f560cc0db14e": {
+                "_comment": "Mirror of Galadriel",
+                "ability": {
+                    "A": [
+                        ["LOG", "{{$ALIAS_N}} used {{$THIS.currentFace.name}} to look at the top card of their deck."],
+                        ["VAR", "$TOP_CARD_ID", "$GAME.groupById.{{$PLAYER_N}}Deck.parentCardIds.[0]"],
+                        ["SET", "/cardById/$TOP_CARD_ID/peeking/{{$THIS.controller}}", true]
+                    ]
+                }
             }
         }
     }
