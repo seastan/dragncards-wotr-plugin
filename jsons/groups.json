@@ -136,7 +136,7 @@
             "onCardEnter": {
             }
         },
- 	"sharedActivePath": {
+ 	    "sharedActivePath": {
             "groupType": "inPlay",
             "label": "id:activePath", 
             "tableLabel": "id:locationPath",

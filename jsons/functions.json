@@ -34,7 +34,7 @@
                 ["VAR", "$LOC_GROUP", "$GAME.groupById.$LOC_GROUP_ID"],
                 ["VAR", "$STAT", "$PLAY_GROUP.combatStat"],
                 ["VAR", "$TOKEN", "$PLAY_GROUP.combatToken"],
-		["VAR", "$BLUE_GROUP_ID", "$LOC_GROUP.activeBlueGroupId"],
+		        ["VAR", "$BLUE_GROUP_ID", "$LOC_GROUP.activeBlueGroupId"],
                 ["LOG_DEV", "$STAT"],
                 ["LOG_DEV", "$TOKEN"],
                 ["SET", "/textBoxById/$PLAY_GROUP_ID/content", 0],

@@ -1,5 +1,8 @@
 {
     "announcements": [
+        "2024-01-20: Added a card ability to Mirror of Galadriel. Hover over it and press Shift+A to use it.",
+        "2024-01-20: New default layout where all hands are visible. To change to the old, go to Menu->Layout",
+        "2024-01-20: Bug fixes related to card visibility",
         "2024-01-15: Press Z to print out all player's pile sizes",
         "2024-01-15: Press Shift+C to shuffle your cycle pile and place it under your deck",
         "2023-12-26: Plugin beta 1.2 release - empty deck notifier, Two Towers and RoTK available as PreBuilt decks",

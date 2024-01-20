@@ -1,5 +1,6 @@
 {
     "layoutMenu": [
-        {"label": "id:standard", "layoutId": "standard", "numPlayers": 4}
+        {"label": "id:allHandsVisible", "layoutId": "allHandsVisible", "numPlayers": 4},
+        {"label": "id:onlyShowMyHand", "layoutId": "onlyShowMyHand", "numPlayers": 4}
     ]
 }

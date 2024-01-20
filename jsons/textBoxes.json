@@ -35,6 +35,18 @@
         },
         "sharedActiveRed6": {
             "content": 0
+        },
+        "p1Label": {
+            "content": "Frodo"
+        },
+        "p2Label": {
+            "content": "Witch-king"
+        },
+        "p3Label": {
+            "content": "Aragorn"
+        },
+        "p4Label": {
+            "content": "Saruman"
         }
     }
 }
