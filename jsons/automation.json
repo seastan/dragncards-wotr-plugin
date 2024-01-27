@@ -1,6 +1,21 @@
 {
     "automation": {
+        "postLoadActionList": [
+            ["SET", "/currentPlayer", "player1"]
+        ],
         "gameRules": [
+            { 
+                "_comment": "Track current player",
+                "type": "trigger", 
+                "listenTo": ["/currentPlayer"],
+                "condition": ["TRUE"],
+                "then": [
+                    ["FOR_EACH_VAL", "$PLAYER_I", "$PLAYER_ORDER", [
+                        ["SET", "/groupById/{{$PLAYER_I}}Reserve/extraStyle", null]
+                    ]],
+                    ["SET", "/groupById/{{$GAME.currentPlayer}}Reserve/extraStyle", {"background": "rgba(0, 255, 0, 0.2)"}]
+                ]
+            },
             { 
                 "_comment": "Track hand size",
                 "type": "trigger", 

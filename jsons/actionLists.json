@@ -251,7 +251,24 @@
             ]
         ],
         "pass": [
-            ["LOG", "$ALIAS_N", " passes."]
+            ["LOG", "$ALIAS_N", " passes."],
+            ["COND", 
+                ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.currentPlayer", "player2"]],
+                [
+                    ["SET", "/currentPlayer", "player1"],
+                    ["SET", "/prevPlayer", "player2"]
+                ],
+                ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.currentPlayer", "player1"], ["EQUAL", "$GAME.prevPlayer", "player2"]],
+                [
+                    ["SET", "/currentPlayer", "player3"],
+                    ["SET", "/prevPlayer", "player1"]
+                ],
+                true,
+                [
+                    ["SET", "/prevPlayer", "$GAME.currentPlayer"],
+                    ["SET", "/currentPlayer", ["NEXT_PLAYER", "$GAME.currentPlayer"]]
+                ]
+            ]
         ],
         "drawCard": [
             ["LOG", "{{$PLAYER_N}} drew a card."],
