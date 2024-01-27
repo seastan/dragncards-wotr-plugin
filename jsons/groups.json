@@ -233,7 +233,7 @@
                 "locationIndex": null
             }
         },
-	"sharedActiveRedPath": {
+	    "sharedActiveRedPath": {
             "groupType": "inPlay",
             "label": "id:activeShadowPath", 
             "tableLabel": "id:shadowPath",
@@ -464,9 +464,9 @@
                 "cycleGroupId": "player1Cycled",
                 "eliminateGroupId": "player1Eliminated"
             },
-		"onCardLeave": {
-		"controller": "player1"
-		}
+            "onCardLeave": {
+                "controller": "player1"
+            }
         },
         "player1Cycled": {
             "groupType": "deck",

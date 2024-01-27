@@ -442,16 +442,16 @@
                         ["GREATER_THAN", "$RED_TOTAL", "$BLUE_TOTAL"],
                         [
                             ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Shadow Player(s) team."],
+                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringRed", 0],
                             ["COND", 
-                                ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"],
+                                ["EQUAL", "$ACTIVE_FACE.type", "Path"],
                                 [
                                     ["LOG", "$ALIAS_N", " flipped ", "$ACTIVE_FACE.name", " facedown."],
                                     ["SET", "/cardById/$ACTIVE_CARD_ID/currentSide", "B"],
                                     ["LOG", "$ALIAS_N", " increased the corruption score by ", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"], "."],
                                     ["INCREASE_VAL", "/corruptionScore", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"]]
                                 ]
-                            ],
-                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringRed", 0]
+                            ]
                         ],
                         true,
                         ["COND",

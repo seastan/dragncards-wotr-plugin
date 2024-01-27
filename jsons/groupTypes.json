@@ -46,7 +46,8 @@
             "shuffleOnLoad": false,
             "onCardEnter": {
                 "currentSide": "A",
-                "inPlay": true
+                "inPlay": true,
+                "support": false
             }
         }
     }
