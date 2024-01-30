@@ -3,7 +3,7 @@
         "DRAW_CARD_PLAYER_I": {
             "args": ["$PLAYER_I"],
             "code": [
-                ["LOG", "{{$PLAYER_N}} made {{$PLAYER_I}} draw a card."],
+                ["LOG", "{{$ALIAS_N}} made ", ["GET_ALIAS", "$PLAYER_I"], " draw a card."],
                 ["DEFINE", "$PLAYER_N", "$PLAYER_I"],
                 ["DRAW_CARD"]
             ]
