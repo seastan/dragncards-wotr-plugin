@@ -10,6 +10,15 @@
                 "rotation": 0
             }
         },
+        "nonFlippingPile": {
+            "canHaveAttachments": false,
+            "canHaveTokens": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "inPlay": false,
+                "rotation": 0
+            }
+        },
         "discard": {
             "canHaveAttachments": false,
             "canHaveTokens": false,

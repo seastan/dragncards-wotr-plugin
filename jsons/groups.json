@@ -469,7 +469,7 @@
             }
         },
         "player1Cycled": {
-            "groupType": "deck",
+            "groupType": "nonFlippingPile",
             "label": "id:player1Cycled", 
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
@@ -477,7 +477,7 @@
             }
         },
         "player1Eliminated": {
-            "groupType": "deck",
+            "groupType": "nonFlippingPile",
             "label": "id:player1Eliminated", 
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
@@ -515,12 +515,12 @@
                 "cycleGroupId": "player2Cycled",
                 "eliminateGroupId": "player2Eliminated"
             },
-		"onCardLeave": {
-		"controller": "player2"
-		}
+            "onCardLeave": {
+                "controller": "player2"
+            }
         },
         "player2Cycled": {
-            "groupType": "deck",
+            "groupType": "nonFlippingPile",
             "label": "id:player2Cycled", 
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
@@ -528,7 +528,7 @@
             }
         },
         "player2Eliminated": {
-            "groupType": "deck",
+            "groupType": "nonFlippingPile",
             "label": "id:player2Eliminated", 
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
@@ -571,7 +571,7 @@
 		}
         },
         "player3Cycled": {
-            "groupType": "deck",
+            "groupType": "nonFlippingPile",
             "label": "id:player3Cycled", 
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
@@ -579,7 +579,7 @@
             }
         },
         "player3Eliminated": {
-            "groupType": "deck",
+            "groupType": "nonFlippingPile",
             "label": "id:player3Eliminated", 
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
@@ -617,12 +617,12 @@
                 "cycleGroupId": "player4Cycled",
                 "eliminateGroupId": "player4Eliminated"
             },
-		"onCardLeave": {
-		"controller": "player4"
-		}
+            "onCardLeave": {
+                "controller": "player4"
+            }
         },
         "player4Cycled": {
-            "groupType": "deck",
+            "groupType": "nonFlippingPile",
             "label": "id:player4Cycled", 
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
@@ -630,7 +630,7 @@
             }
         },
         "player4Eliminated": {
-            "groupType": "deck",
+            "groupType": "nonFlippingPile",
             "label": "id:player4Eliminated", 
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,

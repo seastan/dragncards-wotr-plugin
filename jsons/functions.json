@@ -1,5 +1,96 @@
 {
     "functions": {
+        "SET_NUM_BLUE": {
+            "args": ["$NUM_BLUE"],
+            "code": [
+                ["LOG", "{{$ALIAS_N}} set the number of Free Peoples players to {{$NUM_BLUE}}."],
+                ["SET", "/numBlue", "$NUM_BLUE"],
+                ["COND", 
+                    ["EQUAL", "$NUM_BLUE", 2],
+                    [
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Reserve/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Reserve/width", "32%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundBlue/left", "32%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/sharedPathDeck/left", "44%"],
+                        ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+                            ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", ["CALC", "(0.415+{{$I}}*0.015)*100"]]
+                        ]]
+                    ],
+                    ["TRUE"],
+                    [
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Reserve/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Reserve/width", "64%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundBlue/left", "64%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/sharedPathDeck/left", "76%"],
+                        ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1,
+                            ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", ["CALC", "(0.73+{{$I}}*0.015)*100"]]
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "SET_NUM_RED": {
+            "args": ["$NUM_RED"],
+            "code": [
+                ["LOG", "{{$ALIAS_N}} set the number of Shadow players to {{$NUM_RED}}."],
+                ["SET", "/numRed", "$NUM_RED"],
+                ["COND", 
+                    ["EQUAL", "$NUM_RED", 2],
+                    [
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Reserve/width", "38%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundRed/left", "38%"]
+                    ],
+                    ["TRUE"],
+                    [
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Reserve/width", "76%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundRed/left", "76%"]
+                    ]
+                ]
+            ]
+        },
+        "SET_NUM_LOCATIONS": {
+            "args": ["$NUM_LOCATIONS"],
+            "code": [
+                ["LOG", "{{$ALIAS_N}} set the number of locations to {{$NUM_LOCATIONS}}."],
+                ["SET", "/numLocations", "$NUM_LOCATIONS"],
+                ["FOR_EACH_START_STOP_STEP", "$I", 1, 7, 1, [
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveRed{{$I}}/visible", false],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveBlue{{$I}}/visible", false],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveLocation{{$I}}/visible", false],
+                    ["UPDATE_LAYOUT", "/layout/textBoxes/sharedActiveRed{{$I}}/visible", false],
+                    ["UPDATE_LAYOUT", "/layout/textBoxes/sharedActiveBlue{{$I}}/visible", false]
+                ]],
+                ["FOR_EACH_START_STOP_STEP", "$I", 1, ["ADD", "$NUM_LOCATIONS", 1], 1, [
+                    ["VAR", "$WIDTH", ["CALC", "0.88/{{$NUM_LOCATIONS}}"]],
+                    ["VAR", "$LEFT", ["CALC", "({{$I}}-1)*{{$WIDTH}}"]],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveRed{{$I}}/width", "$WIDTH"],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveBlue{{$I}}/width", "$WIDTH"],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveLocation{{$I}}/width", "$WIDTH"],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveRed{{$I}}/left", "$LEFT"],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveBlue{{$I}}/left", "$LEFT"],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveLocation{{$I}}/left", "$LEFT"],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveRed{{$I}}/visible", true],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveBlue{{$I}}/visible", true],
+                    ["UPDATE_LAYOUT", "/layout/regions/sharedActiveLocation{{$I}}/visible", true],
+
+                    ["UPDATE_LAYOUT", "/layout/textBoxes/sharedActiveRed{{$I}}/left", "$LEFT"],
+                    ["UPDATE_LAYOUT", "/layout/textBoxes/sharedActiveBlue{{$I}}/left", "$LEFT"],
+                    ["UPDATE_LAYOUT", "/layout/textBoxes/sharedActiveRed{{$I}}/visible", true],
+                    ["UPDATE_LAYOUT", "/layout/textBoxes/sharedActiveBlue{{$I}}/visible", true]
+
+                ]]
+            ]
+        },
+        "SET_PATH": {
+            "args": ["$PATH"],
+            "code": [
+                ["LOG", "{{$ALIAS_N}} set the path to {{$PATH}}."],
+                ["SET", "/pathNum", "$PATH"],
+                ["UPDATE_LAYOUT", "/layout/regions/sharedPathDeck/groupId", "sharedPathDeck{{$PATH}}"]
+            ]
+        },
         "DRAW_CARD_PLAYER_I": {
             "args": ["$PLAYER_I"],
             "code": [
