@@ -144,11 +144,11 @@
                 "layoutPath7": {"actionList": ["SET_PATH", 7], "label": "7", "left": "52%",   "top": "83.5%", "width": "1.5%", "height": "3.5%"},
                 "layoutPath8": {"actionList": ["SET_PATH", 8], "label": "8", "left": "53.5%", "top": "83.5%", "width": "1.5%", "height": "3.5%"},
                 "layoutPath9": {"actionList": ["SET_PATH", 9], "label": "9", "left": "55%",   "top": "83.5%", "width": "1.5%", "height": "3.5%"},
-                "layoutLocation2": {"actionList": ["SET_NUM_LOCATIONS", 2], "label": "2", "left": "86.5%", "top": "32%", "width": "1.5%", "height": "3%"},
-                "layoutLocation3": {"actionList": ["SET_NUM_LOCATIONS", 3], "label": "3", "left": "86.5%", "top": "35%", "width": "1.5%", "height": "3%"},
-                "layoutLocation4": {"actionList": ["SET_NUM_LOCATIONS", 4], "label": "4", "left": "86.5%", "top": "38%", "width": "1.5%", "height": "3%"},
-                "layoutLocation5": {"actionList": ["SET_NUM_LOCATIONS", 5], "label": "5", "left": "86.5%", "top": "41%", "width": "1.5%", "height": "3%"},
-                "layoutLocation6": {"actionList": ["SET_NUM_LOCATIONS", 6], "label": "6", "left": "86.5%", "top": "44%", "width": "1.5%", "height": "3%"}
+                "layoutLocation2": {"actionList": ["SET_NUM_LOCATIONS", 2], "label": "2", "left": "86.5%", "top": "42%", "width": "1.5%", "height": "3%"},
+                "layoutLocation3": {"actionList": ["SET_NUM_LOCATIONS", 3], "label": "3", "left": "86.5%", "top": "45%", "width": "1.5%", "height": "3%"},
+                "layoutLocation4": {"actionList": ["SET_NUM_LOCATIONS", 4], "label": "4", "left": "86.5%", "top": "48%", "width": "1.5%", "height": "3%"},
+                "layoutLocation5": {"actionList": ["SET_NUM_LOCATIONS", 5], "label": "5", "left": "86.5%", "top": "51%", "width": "1.5%", "height": "3%"},
+                "layoutLocation6": {"actionList": ["SET_NUM_LOCATIONS", 6], "label": "6", "left": "86.5%", "top": "54%", "width": "1.5%", "height": "3%"}
             },
             "textBoxes": {
                 "sharedActiveRed1": {"left": "0%", "top": "3/7", "width": "2%", "height": "3%"},
