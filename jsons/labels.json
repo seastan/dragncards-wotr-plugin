@@ -501,6 +501,21 @@
         },
         "onlyShowMyHand" : {
             "English": "Only Show My Hand"
+        },
+        "getHandFromSetAsideHand": {
+            "English": "Return cards in set-aside hand to my hand"
+        },
+        "cycleSetAsidePiles": {
+            "English": "Cycle set-aside piles"
+        },
+        "setAsideHand": {
+            "English": "Set-Aside Hand"
+        },
+        "setAsidePile1": {
+            "English": "Set-Aside Pile 1"
+        },
+        "setAsidePile2": {
+            "English": "Set-Aside Pile 2"
         }
     }
 }

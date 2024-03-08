@@ -1,5 +1,12 @@
 {
     "functions": {
+        "SET_NUM_BLUE_RED": {
+            "args": ["$NUM_BLUE", "$NUM_RED"],
+            "code": [
+                ["SET_NUM_BLUE", "$NUM_BLUE"],
+                ["SET_NUM_RED", "$NUM_RED"]
+            ]
+        },
         "SET_NUM_BLUE": {
             "args": ["$NUM_BLUE"],
             "code": [
@@ -12,6 +19,16 @@
                         ["UPDATE_LAYOUT", "/layout/regions/player1Reserve/width", "32%"],
                         ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundBlue/left", "32%"],
                         ["UPDATE_LAYOUT", "/layout/regions/sharedPathDeck/left", "44%"],
+
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Hand/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Deck/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Cycled/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Eliminated/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Hand/width", "23%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Deck/left", "23%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Cycled/left", "30%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Eliminated/left", "37%"],
+                        
                         ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
                             ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", ["CALC", "(0.415+{{$I}}*0.015)*100"]]
                         ]]
@@ -22,6 +39,16 @@
                         ["UPDATE_LAYOUT", "/layout/regions/player1Reserve/width", "64%"],
                         ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundBlue/left", "64%"],
                         ["UPDATE_LAYOUT", "/layout/regions/sharedPathDeck/left", "76%"],
+
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Hand/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Deck/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Cycled/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player3Eliminated/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Hand/width", "67%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Deck/left", "67%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Cycled/left", "74%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player1Eliminated/left", "81%"],
+
                         ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1,
                             ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", ["CALC", "(0.73+{{$I}}*0.015)*100"]]
                         ]
@@ -39,13 +66,36 @@
                     [
                         ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/visible", true],
                         ["UPDATE_LAYOUT", "/layout/regions/player2Reserve/width", "38%"],
-                        ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundRed/left", "38%"]
+                        ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundRed/left", "38%"],
+
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Hand/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Deck/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Cycled/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Eliminated/visible", true],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Hand/width", "23%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Deck/left", "23%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Cycled/left", "30%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Eliminated/left", "37%"],
+
+                        ["COND",
+                            ["EQUAL", "$GAME.numBlue", 1],
+                            ["ACTION_LIST", "changeP4ToP3"]
+                        ]
                     ],
                     ["TRUE"],
                     [
                         ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/visible", false],
                         ["UPDATE_LAYOUT", "/layout/regions/player2Reserve/width", "76%"],
-                        ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundRed/left", "76%"]
+                        ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundRed/left", "76%"],
+
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Hand/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Deck/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Cycled/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player4Eliminated/visible", false],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Hand/width", "67%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Deck/left", "67%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Cycled/left", "74%"],
+                        ["UPDATE_LAYOUT", "/layout/regions/player2Eliminated/left", "81%"]
                     ]
                 ]
             ]
@@ -180,6 +230,21 @@
                     ["TRUE"],
                     ["LOG", "└── The game is tied {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."]
                 ]
+            ]
+        },
+        "HIGHLIGHT_CURRENT_PLAYER": {
+            "args": [],
+            "code": [
+                ["FOR_EACH_KEY_VAL", "$PLAYER_I", "$PLAYER_I_DATA", "$PLAYER_DATA", [
+                    ["UPDATE_LAYOUT", "/layout/regions/{{$PLAYER_I}}Reserve/style", null]
+                ]],
+                ["COND",
+                    ["AND", ["EQUAL", "$GAME.currentPlayer", "player3"], ["EQUAL", "$GAME.numPlayers", 3]],
+                    ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/style", {"background": "rgba(0, 255, 0, 0.2)"}],
+                    ["TRUE"],
+                    ["UPDATE_LAYOUT", "/layout/regions/{{$GAME.currentPlayer}}Reserve/style", {"background": "rgba(0, 255, 0, 0.2)"}]
+                ]
+                
             ]
         }
     }

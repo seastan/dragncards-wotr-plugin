@@ -18,8 +18,7 @@
             ["LOAD_CARDS", "Trilogy Rules"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 4],
-            ["SET_NUM_BLUE", 2],
-            ["SET_NUM_RED", 2],
+            ["SET_NUM_BLUE_RED", 2, 2],
             ["SET", "/cardsPerRound", {"player1": 3, "player2": 4, "player3": 3, "player4": 4}]
         ],
         "coopTrilogySetup": [
@@ -32,8 +31,7 @@
             ["LOAD_CARDS", "AtS-Sauron"],
             ["SET", "/playerData/$PLAYER_N/label", "W-k"],
             ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
-	        ["SET", "/groupById/{{$PLAYER_N}}Reserve/onCardEnter/rotation", 0],
-	        ["SET", "/groupById/{{$PLAYER_N}}Hand/onCardEnter/peeking/{{$PLAYER_N}}", false],
+	        ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
             ["DEFINE", "$PLAYER_N", "player3"],
             ["LOAD_CARDS", "Aragorn"],
             ["SET", "/playerData/$PLAYER_N/label", "Aragorn"],
@@ -41,15 +39,14 @@
             ["LOAD_CARDS", "AtS-Isengard"],
             ["SET", "/playerData/$PLAYER_N/label", "Saruman"],
             ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
-	        ["SET", "/groupById/{{$PLAYER_N}}Reserve/onCardEnter/rotation", 0],
-	        ["SET", "/groupById/{{$PLAYER_N}}Hand/onCardEnter/peeking/{{$PLAYER_N}}", false],
+	        ["SET", "/groupById/player4Reserve/onCardEnter/rotation", 0],
             ["LOAD_CARDS", "Trilogy Rules"],
             ["LOAD_CARDS", "AtS-Rulebook"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 4],
-            ["SET_NUM_BLUE", 2],
-            ["SET_NUM_RED", 2],
-            ["SET", "/cardsPerRound", {"player1": 3, "player2": 4, "player3": 3, "player4": 4}]
+            ["SET_NUM_BLUE_RED", 2, 2],
+            ["SET", "/cardsPerRound", {"player1": 3, "player2": 4, "player3": 3, "player4": 4}],
+            ["SET_LAYOUT", "shared", "allHandsVisible"]
         ],
         "twoPlayerSetup": [
             ["LOAD_CARDS", "Paths"],
@@ -69,9 +66,8 @@
             ["LOAD_CARDS", "Duel Rules"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
-            ["SET_NUM_BLUE", 1],
-            ["SET_NUM_RED", 1],
-            ["SET", "/cardsPerRound", {"player1": 6, "player2": 4}]
+            ["SET_NUM_BLUE_RED", 1, 1],
+            ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
         ],
         "twoTowersSetup": [
             ["LOAD_CARDS", "Rulebook"],
@@ -81,8 +77,7 @@
             ["SET", "/playerData/player1/label", "Theoden"],
             ["SET", "/textBoxById/p1Label/content", "Theoden"],
             ["SET", "/firstPlayer", "player2"],
-            ["SET_NUM_BLUE", 1],
-            ["SET_NUM_RED", 1],
+            ["SET_NUM_BLUE_RED", 1, 1],
             ["UPDATE_LAYOUT", "/layout/regions/sharedPathDeck/groupId", "sharedPathDeck6"],
             ["SET", "/playerData/player1/ringTokens", 2],
             ["SET", "/playerData/player2/ringTokens", 2],
@@ -96,8 +91,7 @@
             ["SET", "/playerData/player1/label", "Aragorn"],
             ["SET", "/textBoxById/p1Label/content", "Aragorn"],
             ["SET", "/firstPlayer", "player2"],
-            ["SET_NUM_BLUE", 1],
-            ["SET_NUM_RED", 1],
+            ["SET_NUM_BLUE_RED", 1, 1],
             ["UPDATE_LAYOUT", "/layout/regions/sharedPathDeck/groupId", "sharedPathDeck7"],
             ["SET", "/playerData/player1/ringTokens", 2],
             ["SET", "/playerData/player2/ringTokens", 2],
@@ -116,7 +110,6 @@
             ["SET", "/textBoxById/p2Label/content", "W-k"],
             ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
 	        ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
-	        ["SET", "/groupById/{{$PLAYER_N}}Hand/onCardEnter/peeking/{{$PLAYER_N}}", false],
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_CARDS", "Aragorn"],
             ["DEFINE", "$PLAYER_N", "player2"],
@@ -125,9 +118,9 @@
             ["LOAD_CARDS", "AtS-Rulebook"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
-            ["SET_NUM_BLUE", 1],
-            ["SET_NUM_RED", 1],
-            ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
+            ["SET_NUM_BLUE_RED", 1, 1],
+            ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}],
+            ["SET_LAYOUT", "shared", "allHandsVisible"]
         ],
         "threePlayerSetup": [
             ["LOAD_CARDS", "Paths"],
@@ -149,8 +142,7 @@
             ["LOAD_CARDS", "Duel Rules"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 3],
-            ["SET_NUM_BLUE", 1],
-            ["SET_NUM_RED", 2],
+            ["SET_NUM_BLUE_RED", 1, 2],
             ["SET", "/cardsPerRound", {"player1": 6, "player2": 4, "player3": 4}]
         ],
         "coopThreePlayerSetup": [
@@ -172,13 +164,15 @@
             ["SET", "/playerData/$PLAYER_N/label", "Saruman"],
             ["SET", "/textBoxById/p3Label/content", "Saruman"],
 	        ["SET", "/playerData/$PLAYER_N/ringTokens", 0],
+	        ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
+	        ["SET", "/groupById/player3Reserve/onCardEnter/rotation", 0],
             ["LOAD_CARDS", "Duel Rules"],
             ["LOAD_CARDS", "AtS-Rulebook"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 3],
-            ["SET_NUM_BLUE", 1],
-            ["SET_NUM_RED", 2],
-            ["SET", "/cardsPerRound", {"player1": 6, "player2": 4, "player3": 4}]
+            ["SET_NUM_BLUE_RED", 1, 2],
+            ["SET", "/cardsPerRound", {"player1": 6, "player2": 4, "player3": 4}],
+            ["SET_LAYOUT", "shared", "allHandsVisible"]
         ],
         "preFellowshipSetup": [
             ["SET", "/groupById/sharedBattlegroundBlue/shuffleOnLoad", false],
@@ -194,8 +188,7 @@
             ["SET", "/firstPlayer", "player2"],
             ["SET", "/playerData/player1/ringTokens", 0],
             ["SET", "/playerData/player2/ringTokens", 0],
-            ["SET_NUM_BLUE", 1],
-            ["SET_NUM_RED", 1],
+            ["SET_NUM_BLUE_RED", 1, 1],
             ["SET", "/cardsPerRound", {"player1": 3, "player2": 4}]
         ],
         "coopFellowshipSetup": [
@@ -206,14 +199,13 @@
             ["SET", "/playerData/player1/ringTokens", 0],
             ["SET", "/playerData/player2/ringTokens", 0],
 	        ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
-	        ["SET", "/groupById/player2Hand/onCardEnter/peeking/player2", false],
             ["LOAD_CARDS", "AtS-Rulebook"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
             ["SET", "/firstPlayer", "player2"],
-            ["SET_NUM_BLUE", 1],
-            ["SET_NUM_RED", 1],
-            ["SET", "/cardsPerRound", {"player1": 3, "player2": 4}]
+            ["SET_NUM_BLUE_RED", 1, 1],
+            ["SET", "/cardsPerRound", {"player1": 3, "player2": 4}],
+            ["SET_LAYOUT", "shared", "allHandsVisible"]
         ],
         "newRound": [
             ["VAR", "$ADDITIONAL_CARDS", 0],
@@ -244,7 +236,24 @@
             ["COND",
                 ["EQUAL", "$PLAYER_N", "player1"],
                 [
-                    ["SET", "/firstPlayer", ["NEXT_PLAYER", "$GAME.firstPlayer"]],
+
+                    ["COND", 
+                        ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.firstPlayer", "player2"]],
+                        [
+                            ["SET", "/firstPlayer", "player1"],
+                            ["SET", "/prevFirstPlayer", "player2"]
+                        ],
+                        ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.firstPlayer", "player1"], ["EQUAL", "$GAME.prevFirstPlayer", "player2"]],
+                        [
+                            ["SET", "/firstPlayer", "player3"],
+                            ["SET", "/prevFirstPlayer", "player1"]
+                        ],
+                        true,
+                        [
+                            ["SET", "/prevFirstPlayer", "$GAME.firstPlayer"],
+                            ["SET", "/firstPlayer", ["NEXT_PLAYER", "$GAME.firstPlayer"]]
+                        ]
+                    ],
                     ["INCREASE_VAL", "/roundNumber", 1],
                     ["LOG", "$ALIAS_N", " moved the first player token and increased the round number."]
                 ]
@@ -256,16 +265,16 @@
                 ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.currentPlayer", "player2"]],
                 [
                     ["SET", "/currentPlayer", "player1"],
-                    ["SET", "/prevPlayer", "player2"]
+                    ["SET", "/prevCurrentPlayer", "player2"]
                 ],
-                ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.currentPlayer", "player1"], ["EQUAL", "$GAME.prevPlayer", "player2"]],
+                ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.currentPlayer", "player1"], ["EQUAL", "$GAME.prevCurrentPlayer", "player2"]],
                 [
                     ["SET", "/currentPlayer", "player3"],
-                    ["SET", "/prevPlayer", "player1"]
+                    ["SET", "/prevCurrentPlayer", "player1"]
                 ],
                 true,
                 [
-                    ["SET", "/prevPlayer", "$GAME.currentPlayer"],
+                    ["SET", "/prevCurrentPlayer", "$GAME.currentPlayer"],
                     ["SET", "/currentPlayer", ["NEXT_PLAYER", "$GAME.currentPlayer"]]
                 ]
             ]
@@ -430,6 +439,14 @@
                         ],
                         true,
                         ["COND",
+                            ["AND",
+                                ["EQUAL", "$GAME.numPlayers", 2],
+                                ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
+                            ],
+                            [
+                                ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for neither team."],
+                                ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedAside", 0]
+                            ],
                             ["OR",
                                 ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "defense"],
                                 ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
@@ -447,6 +464,27 @@
                     ]
                 ]
             ]
+        ],
+        "getHandFromSetAsideHand": [
+            ["LOG", "{{$PLAYER_N}} moved the cards in Set-Aside Hand to their hand."],
+            ["MOVE_STACKS", "sharedSetAsideHand", "{{$PLAYER_N}}Hand"]
+        ],
+        "cycleSetAsidePiles": [
+            ["LOG", "{{$PLAYER_N}} cycled the cards in id:setAsidePile1"],
+            ["MOVE_STACKS", "sharedSetAsidePile1", "{{$PLAYER_N}}Cycled"],
+            ["LOG", "{{$PLAYER_N}} cycled the cards in id:setAsidePile2"],
+            ["MOVE_STACKS", "sharedSetAsidePile2", "{{$PLAYER_N}}Cycled"]
+        ],
+        "postSetLayout": [
+            ["SET_NUM_BLUE_RED", "$GAME.numBlue", "$GAME.numRed"],
+            ["HIGHLIGHT_CURRENT_PLAYER"]
+        ],
+        "changeP4ToP3": [
+            ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/groupId", "player3Reserve"],
+            ["UPDATE_LAYOUT", "/layout/regions/player4Hand/groupId", "player3Hand"],
+            ["UPDATE_LAYOUT", "/layout/regions/player4Deck/groupId", "player3Deck"],
+            ["UPDATE_LAYOUT", "/layout/regions/player4Cycled/groupId", "player3Cycled"],
+            ["UPDATE_LAYOUT", "/layout/regions/player4Eliminated/groupId", "player3Eliminated"]
         ]
     }
 }

@@ -1,6 +1,7 @@
 {
     "layouts": {
         "onlyShowMyHand": {
+            "postSetActionList": "postSetLayout",
             "cardSize": 13,
             "rowSpacing": 3,
             "chat": {"left": "63%", "top": "84%", "width": "25%", "height": "16%"},
@@ -76,6 +77,7 @@
             }
         },
         "allHandsVisible": {
+            "postSetActionList": "postSetLayout",
             "cardSize": 12,
             "rowSpacing": 3,
             "chat": {"left": "88%", "top": "86%", "width": "12%", "height": "14%"},

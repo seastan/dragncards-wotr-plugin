@@ -20,7 +20,9 @@
             {"key": "P", "actionList": "pass", "label": "id:pass"},
             {"key": "Z", "actionList": "printPileSizes", "label": "id:printPileSizes"},
             {"key": "U", "actionList": "increaseCorruption", "label": "id:increaseCorruption"},
-            {"key": "J", "actionList": "decreaseCorruption", "label": "id:decreaseCorruption"}
+            {"key": "J", "actionList": "decreaseCorruption", "label": "id:decreaseCorruption"},
+            {"key": "Shift+H", "actionList": "getHandFromSetAsideHand", "label": "id:getHandFromSetAsideHand"},
+            {"key": "Shift+J", "actionList": "cycleSetAsidePiles", "label": "id:cycleSetAsidePiles"}
 
         ],
         "card": [

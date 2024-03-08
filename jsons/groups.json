@@ -128,10 +128,26 @@
                 "deckGroupId": "sharedPathDeck9"
             }
         },
-        "sharedSetAside": {
-            "groupType": "discard",
-            "label": "id:setAside", 
-            "tableLabel": "id:setAside",
+        "sharedSetAsidePile1": {
+            "groupType": "deck",
+            "label": "id:setAsidePile1", 
+            "tableLabel": "id:setAsidePile1",
+            "canHaveAttachments": true,
+            "onCardEnter": {
+            }
+        },
+        "sharedSetAsidePile2": {
+            "groupType": "deck",
+            "label": "id:setAsidePile2", 
+            "tableLabel": "id:setAsidePile2",
+            "canHaveAttachments": true,
+            "onCardEnter": {
+            }
+        },
+        "sharedSetAsideHand": {
+            "groupType": "deck",
+            "label": "id:setAsideHand", 
+            "tableLabel": "id:setAsideHand",
             "canHaveAttachments": true,
             "onCardEnter": {
             }
@@ -474,6 +490,7 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "peeking": {}
             }
         },
         "player1Eliminated": {
@@ -482,6 +499,7 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "peeking": {}
             }
         },
         "player1Reserve": {
@@ -525,6 +543,7 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "peeking": {}
             }
         },
         "player2Eliminated": {
@@ -533,6 +552,7 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "peeking": {}
             }
         },
         "player2Reserve": {
@@ -576,6 +596,7 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "peeking": {}
             }
         },
         "player3Eliminated": {
@@ -584,6 +605,7 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "peeking": {}
             }
         },
         "player3Reserve": {
@@ -627,6 +649,7 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "peeking": {}
             }
         },
         "player4Eliminated": {
@@ -635,6 +658,7 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
+                "peeking": {}
             }
         },
         "player4Reserve": {

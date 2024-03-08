@@ -9,12 +9,7 @@
                 "type": "trigger", 
                 "listenTo": ["/currentPlayer"],
                 "condition": ["TRUE"],
-                "then": [
-                    ["FOR_EACH_VAL", "$PLAYER_I", "$PLAYER_ORDER", [
-                        ["SET", "/groupById/{{$PLAYER_I}}Reserve/extraStyle", null]
-                    ]],
-                    ["SET", "/groupById/{{$GAME.currentPlayer}}Reserve/extraStyle", {"background": "rgba(0, 255, 0, 0.2)"}]
-                ]
+                "then": ["HIGHLIGHT_CURRENT_PLAYER"]
             },
             { 
                 "_comment": "Track hand size",
