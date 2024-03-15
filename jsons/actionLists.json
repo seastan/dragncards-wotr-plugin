@@ -49,6 +49,7 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"]
         ],
         "twoPlayerSetup": [
+            ["SET", "/dualMode", true],
             ["LOAD_CARDS", "Paths"],
             ["LOAD_CARDS", "Battlegrounds"],
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -70,6 +71,7 @@
             ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
         ],
         "twoTowersSetup": [
+            ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
             ["SET", "/playerData/player2/label", "Saruman"],
@@ -84,6 +86,7 @@
             ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
             ],
         "roTK": [
+            ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
             ["SET", "/playerData/player2/label", "W-k"],
@@ -98,6 +101,7 @@
             ["SET", "/cardsPerRound", {"player1": 4, "player2": 6}]
         ],
         "coopTwoPlayerSetup": [
+            ["SET", "/dualMode", true],
             ["LOAD_CARDS", "AtS-Paths"],
             ["LOAD_CARDS", "AtS-Battlegrounds"],
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -123,6 +127,7 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"]
         ],
         "threePlayerSetup": [
+            ["SET", "/dualMode", true],
             ["LOAD_CARDS", "Paths"],
             ["LOAD_CARDS", "Battlegrounds"],
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -146,6 +151,7 @@
             ["SET", "/cardsPerRound", {"player1": 6, "player2": 4, "player3": 4}]
         ],
         "coopThreePlayerSetup": [
+            ["SET", "/dualMode", true],
             ["LOAD_CARDS", "AtS-Paths"],
             ["LOAD_CARDS", "AtS-Battlegrounds"],
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -179,6 +185,7 @@
             ["SET", "/groupById/sharedBattlegroundRed/shuffleOnLoad", false]
         ],
         "fellowshipSetup": [
+            ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_CARDS", "Rulebook"],
             ["SET", "/numPlayers", 2],
             ["SET", "/playerData/player1/label", "Gandalf"],
@@ -192,6 +199,7 @@
             ["SET", "/cardsPerRound", {"player1": 3, "player2": 4}]
         ],
         "coopFellowshipSetup": [
+            ["DEFINE", "$PLAYER_N", "player1"],
             ["SET", "/playerData/player1/label", "Gandalf"],
             ["SET", "/textBoxById/p1Label/content", "Gandalf"],
             ["SET", "/playerData/player2/label", "Balrog"],
@@ -317,22 +325,16 @@
         ],
         "cycleCard": [
             ["COND",
-            ["EQUAL", "$ACTIVE_CARD.cycleGroupId", null],
-            ["LOG", "$ALIAS_N", " failed to cycle ", "$ACTIVE_FACE.name", " because it is not associated with a cycle pile. Please drag the card instead."],
-            true,
-            [
-                ["LOG", "$ALIAS_N", " cycled ", "$ACTIVE_FACE.name", "."],
-                ["MOVE_CARD", "$ACTIVE_CARD_ID", "$ACTIVE_CARD.cycleGroupId", 0, 0]
-            ]
+                ["EQUAL", "$ACTIVE_CARD.cycleGroupId", null],
+                ["LOG", "$ALIAS_N", " failed to cycle ", "$ACTIVE_FACE.name", " because it is not associated with a cycle pile. Please drag the card instead."],
+                true,
+                [
+                    ["LOG", "$ALIAS_N", " cycled ", "$ACTIVE_FACE.name", "."],
+                    ["MOVE_CARD", "$ACTIVE_CARD_ID", "$ACTIVE_CARD.cycleGroupId", 0, 0]
+                ]
             ]
         ],
-        "cycleDeck": [
-            ["VAR", "$CYCLE_DECK_ID", "{{$PLAYER_N}}Cycled"],
-            ["VAR", "$CYCLE_DECK", "$GAME.groupById.$CYCLE_DECK_ID"],
-            ["LOG", "{{$ALIAS_N}} shuffled their cycle pile and moved it to the bottom of their deck."],
-            ["SHUFFLE_GROUP", "$CYCLE_DECK_ID"],
-            ["MOVE_STACKS", "$CYCLE_DECK_ID", "{{$PLAYER_N}}Deck", ["LENGTH", "$CYCLE_DECK.stackIds"], "bottom"]
-        ],
+        "cycleDeck": ["CYCLE_DECK", "$PLAYER_N"],
         "eliminateCard": [
             ["COND",
             ["EQUAL", "$ACTIVE_CARD.eliminateGroupId", null],
@@ -440,7 +442,7 @@
                         true,
                         ["COND",
                             ["AND",
-                                ["EQUAL", "$GAME.numPlayers", 2],
+                                "$GAME.dualMode",
                                 ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
                             ],
                             [

@@ -30,7 +30,8 @@
                         ["UPDATE_LAYOUT", "/layout/regions/player1Eliminated/left", "37%"],
                         
                         ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
-                            ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", ["CALC", "(0.415+{{$I}}*0.015)*100"]]
+                            ["VAR", "$LEFT", ["CALC", "0.415+{{$I}}*0.015"]],
+                            ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", "$LEFT"]
                         ]]
                     ],
                     ["TRUE"],
@@ -49,9 +50,10 @@
                         ["UPDATE_LAYOUT", "/layout/regions/player1Cycled/left", "74%"],
                         ["UPDATE_LAYOUT", "/layout/regions/player1Eliminated/left", "81%"],
 
-                        ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1,
-                            ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", ["CALC", "(0.73+{{$I}}*0.015)*100"]]
-                        ]
+                        ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+                            ["VAR", "$LEFT", ["CALC", "0.73+{{$I}}*0.015"]],
+                            ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", "$LEFT"]
+                        ]]
                     ]
                 ]
             ]
@@ -245,6 +247,41 @@
                     ["UPDATE_LAYOUT", "/layout/regions/{{$GAME.currentPlayer}}Reserve/style", {"background": "rgba(0, 255, 0, 0.2)"}]
                 ]
                 
+            ]
+        },
+        "PLAY_NUMBERED_CARD_TO_RESERVE": {
+            "args": ["$PLAYER_I", "$GROUP_ID", "$I"],
+            "code": [
+                ["VAR", "$CHOSEN_CARD", "$GAME.groupById.$GROUP_ID.parentCards.[{{$I}}]"],
+                ["LOG", ["GET_ALIAS", "$PLAYER_I"], " played {{$CHOSEN_CARD.sides.A.name}} to reserve."],
+                ["MOVE_CARD", "$CHOSEN_CARD.id", "{{$PLAYER_I}}Reserve", -1],
+                ["CYCLE_TOP_N_CARDS", "$GROUP_ID", 4],
+                ["SET", "/playerData/$PLAYER_I/browseGroup/id", null]
+            ]
+        },
+        "CYCLE_TOP_CARD": {
+            "args": ["$GROUP_ID"],
+            "code": [
+                ["VAR", "$ACTIVE_CARD_ID", "$GAME.groupById.$GROUP_ID.parentCardIds.[0]"],
+                ["ACTION_LIST", "cycleCard"]
+            ]
+        },
+        "CYCLE_TOP_N_CARDS": {
+            "args": ["$GROUP_ID", "$N"],
+            "code": [
+                ["FOR_EACH_START_STOP_STEP", "$I", 0, "$N", 1, [
+                    ["CYCLE_TOP_CARD", "$GROUP_ID"]
+                ]]
+            ]
+        },
+        "CYCLE_DECK": {
+            "args": ["$PLAYER_I"],
+            "code": [
+                ["VAR", "$CYCLE_DECK_ID", "{{$PLAYER_I}}Cycled"],
+                ["VAR", "$CYCLE_DECK", "$GAME.groupById.$CYCLE_DECK_ID"],
+                ["LOG", ["GET_ALIAS", "$PLAYER_I"], " shuffled their cycle pile and moved it to the bottom of their deck."],
+                ["SHUFFLE_GROUP", "$CYCLE_DECK_ID"],
+                ["MOVE_STACKS", "$CYCLE_DECK_ID", "{{$PLAYER_I}}Deck", ["LENGTH", "$CYCLE_DECK.stackIds"], "bottom"]
             ]
         }
     }

@@ -18,6 +18,56 @@
                     "hotkey": "N"
                 }
             ]
+        },
+        "cardEnteredPlayThisRound": {
+            "args": ["$PLAYED_CARD_NAME"],
+            "message": "{{$PLAYED_CARD_NAME}} was played this round already. Cards can only be played once per round.",
+            "options": [
+                {
+                    "label": "Ok",
+                    "hotkey": "K"
+                }
+            ]
+        },
+        "playNumberedCardToReserve": {
+            "args": ["$PLAYER_I", "$GROUP_ID"],
+            "message": "Press the option corresponding to the card you want to play to reserve.",
+            "options": [
+                {
+                    "label": "1",
+                    "hotkey": "1",
+                    "code": ["PLAY_NUMBERED_CARD_TO_RESERVE", "$PLAYER_I", "$GROUP_ID", 0]
+                },
+                {
+                    "label": "2",
+                    "hotkey": "2",
+                    "code": ["PLAY_NUMBERED_CARD_TO_RESERVE", "$PLAYER_I", "$GROUP_ID", 1]
+                },
+                {
+                    "label": "3",
+                    "hotkey": "3",
+                    "code": ["PLAY_NUMBERED_CARD_TO_RESERVE", "$PLAYER_I", "$GROUP_ID", 2]
+                },
+                {
+                    "label": "4",
+                    "hotkey": "4",
+                    "code": ["PLAY_NUMBERED_CARD_TO_RESERVE", "$PLAYER_I", "$GROUP_ID", 3]
+                },
+                {
+                    "label": "5",
+                    "hotkey": "5",
+                    "code": ["PLAY_NUMBERED_CARD_TO_RESERVE", "$PLAYER_I", "$GROUP_ID", 4]
+                },
+                {
+                    "label": "None",
+                    "hotkey": "N",
+                    "code": [
+                        ["LOG", ["GET_ALIAS", "$PLAYER_I"], " chose no card."],
+                        ["CYCLE_TOP_N_CARDS", "$GROUP_ID", 5],
+                        ["SET", "/playerData/$PLAYER_I/browseGroup/id", null]
+                    ]
+                }
+            ]
         }
     }
 }

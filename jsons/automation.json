@@ -110,6 +110,20 @@
                 ]
             },
             { 
+                "_comment": "Card enters play",
+                "type": "trigger", 
+                "listenTo": [
+                    "/cardById/*/inPlay"
+                ],
+                "condition": ["EQUAL", "$TARGET.inPlay", true],
+                "then": ["COND", 
+                    ["EQUAL", "$TARGET.roundEnteredPlay", "$GAME.roundNumber"],
+                    ["PROMPT", "$PLAYER_N", "cardEnteredPlayThisRound", "$TARGET.sides.A.name"],
+                    ["TRUE"],
+                    ["SET", "/cardById/$TARGET_ID/roundEnteredPlay", "$GAME.roundNumber"]
+                ]
+            },
+            { 
                 "_comment": "Track location",
                 "type": "trigger", 
                 "listenTo": ["/groupById/sharedActiveLocation1/stackIds", "/groupById/sharedActiveLocation2/stackIds", "/groupById/sharedActiveLocation3/stackIds", "/groupById/sharedActiveLocation4/stackIds", "/groupById/sharedActiveLocation5/stackIds", "/groupById/sharedActiveLocation6/stackIds"],
@@ -206,8 +220,28 @@
                 "ability": {
                     "A": [
                         ["LOG", "{{$ALIAS_N}} used {{$THIS.currentFace.name}} to look at the top card of their deck."],
-                        ["VAR", "$TOP_CARD_ID", "$GAME.groupById.{{$PLAYER_N}}Deck.parentCardIds.[0]"],
+                        ["VAR", "$TOP_CARD_ID", "$GAME.groupById.{{$THIS.controller}}Deck.parentCardIds.[0]"],
                         ["SET", "/cardById/$TOP_CARD_ID/peeking/{{$THIS.controller}}", true]
+                    ]
+                }
+            },
+            "178edd70-878d-4c1c-a64c-9eb913611450": {
+                "_comment": "Minas Morgul",
+                "ability": {
+                    "A": [
+                        ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$GAME.cardById", [
+                            ["COND",
+                                ["EQUAL", "$CARD.sides.A.name", "The Witch-king"],
+                                ["DEFINE", "$MORDOR_PLAYER_N", "$CARD.controller"]
+                            ]
+                        ]],
+                        ["COND",
+                            ["LESS_THAN", ["LENGTH", "$GAME.groupById.{{$MORDOR_PLAYER_N}}Deck.stackIds"], 5],
+                            ["CYCLE_DECK", "$MORDOR_PLAYER_N"]
+                        ],
+                        ["LOG", "└── ", ["GET_ALIAS", "$MORDOR_PLAYER_N"], " is looking at the top 5 cards of their deck."],
+                        ["LOOK_AT", "$MORDOR_PLAYER_N", "{{$MORDOR_PLAYER_N}}Deck", 5, true],
+                        ["PROMPT", "$MORDOR_PLAYER_N", "playNumberedCardToReserve", "$MORDOR_PLAYER_N", "{{$MORDOR_PLAYER_N}}Deck"]
                     ]
                 }
             }
