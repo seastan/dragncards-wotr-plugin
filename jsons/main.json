@@ -6,5 +6,6 @@
     "firstPlayerImageUrl": "https://dragncards-wotr.s3.amazonaws.com/tokens/RectangleBlue.png",
     "backgroundUrl": "https://i.imgur.com/pIqGqRp.jpg",
     "loadPreBuiltOnNewGame": true,
-    "vacantSeatOnNewGame": true
+    "vacantSeatOnNewGame": true,
+    "defaultAttachmentDirection": "left"
 }

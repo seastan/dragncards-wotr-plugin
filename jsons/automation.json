@@ -115,7 +115,7 @@
                 "listenTo": [
                     "/cardById/*/inPlay"
                 ],
-                "condition": ["EQUAL", "$TARGET.inPlay", true],
+                "condition": ["AND", "$TARGET.inPlay", ["PREV", ["NOT", "$TARGET.inPlay"]]],
                 "then": ["COND", 
                     ["EQUAL", "$TARGET.roundEnteredPlay", "$GAME.roundNumber"],
                     ["PROMPT", "$PLAYER_N", "cardEnteredPlayThisRound", "$TARGET.sides.A.name"],
@@ -242,6 +242,46 @@
                         ["LOG", "└── ", ["GET_ALIAS", "$MORDOR_PLAYER_N"], " is looking at the top 5 cards of their deck."],
                         ["LOOK_AT", "$MORDOR_PLAYER_N", "{{$MORDOR_PLAYER_N}}Deck", 5, true],
                         ["PROMPT", "$MORDOR_PLAYER_N", "playNumberedCardToReserve", "$MORDOR_PLAYER_N", "{{$MORDOR_PLAYER_N}}Deck"]
+                    ]
+                }
+            },
+            "0b834339-48da-4433-af10-20aaaf6433ce": {
+                "_comment": "Nazgul's Mantle (coop)",
+                "ability": {
+                    "A": [
+                        ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$GAME.cardById", [
+                            ["COND",
+                                ["EQUAL", "$CARD.sides.A.name", "The Witch-king"],
+                                ["DEFINE", "$MORDOR_PLAYER_N", "$CARD.controller"]
+                            ]
+                        ]],
+                        ["VAR", "$NUMBER_OF_NAZGUL", 0],
+                        ["FOR_EACH_VAL", "$CARD", "$GAME.groupById.{{$MORDOR_PLAYER_N}}Eliminated.parentCards", [
+                            ["COND",
+                                ["EQUAL", ["SUBSTRING", "$CARD.sides.A.text", 0, 6], "Nazgûl"],
+                                ["INCREASE_VAR", "$NUMBER_OF_NAZGUL", 1]
+                            ]
+                        ]],
+                        ["COND", 
+                            ["EQUAL", "$NUMBER_OF_NAZGUL", 0],
+                            ["ABORT", "└── ", ["GET_ALIAS", "$MORDOR_PLAYER_N"], " has no Nazgûl in their discard pile."]
+                        ],
+                        ["VAR", "$SELECTED_INDEX", ["RANDOM_INT", 0, ["SUBTRACT", "$NUMBER_OF_NAZGUL", 1]]],
+                        ["FOR_EACH_VAL", "$CARD", "$GAME.groupById.{{$MORDOR_PLAYER_N}}Eliminated.parentCards", [
+                            ["COND",
+                                ["EQUAL", ["SUBSTRING", "$CARD.sides.A.text", 0, 6], "Nazgûl"],
+                                [
+                                    ["COND",
+                                        ["EQUAL", "$SELECTED_INDEX", 0],
+                                        [
+                                            ["LOG", "└── ", ["GET_ALIAS", "$MORDOR_PLAYER_N"], " played a random Nazgûl ({{$CARD.sides.A.name}}) from their eliminated pile to their reserve."],
+                                            ["MOVE_CARD", "$CARD.id", "{{$MORDOR_PLAYER_N}}Reserve", -1]
+                                        ]
+                                    ],
+                                    ["DECREASE_VAR", "$SELECTED_INDEX", 1]
+                                ]
+                            ]
+                        ]]
                     ]
                 }
             }

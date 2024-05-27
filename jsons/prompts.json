@@ -10,7 +10,7 @@
                     "code": [
                         ["VAR", "$ELIMINATE_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "$ELIMINATE_CARD_NAME"]]],
                         ["LOG", "{{$ALIAS_N}} eliminated {{$ELIMINATE_CARD_NAME}}."],
-                        ["MOVE_CARD", "$ELIMINATE_CARD.id", "{{$PLAYER_N}}Eliminated", 0]
+                        ["MOVE_CARD", "$ELIMINATE_CARD.id", "{{$ELIMINATE_CARD.controller}}Eliminated", 0]
                     ]
                 },
                 {
