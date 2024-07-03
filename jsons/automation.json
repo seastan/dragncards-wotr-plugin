@@ -1,6 +1,7 @@
 {
     "automation": {
-        "postLoadActionList": [
+        "postNewGameActionList": [
+            ["SET", "/automationEnabled", false],
             ["SET", "/currentPlayer", "player1"]
         ],
         "gameRules": [
@@ -177,7 +178,7 @@
                 ]
             },
             "ffa8235b-c293-44c0-b88e-7ebb5f909960": {
-                "_comment": "Ganfalf the White",
+                "_comment": "Gandalf the White",
                 "rules": [
                     { 
                         "type": "trigger", 

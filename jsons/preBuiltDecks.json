@@ -1,6 +1,6 @@
 {
     "preBuiltDecks": {
-        "Aragorn": {
+        "Core-Aragorn": {
             "label": "Aragorn",
             "cards": [
                 {
@@ -191,7 +191,7 @@
                 }
             ]
         },
-        "Hobbit": {
+        "Core-Hobbit": {
             "label": "Hobbit",
             "cards": [
                 {
@@ -382,7 +382,7 @@
                 }
             ]
         },
-        "Isengard": {
+        "Core-Isengard": {
             "label": "Isengard",
             "cards": [
                 {
@@ -764,7 +764,7 @@
                 }
             ]
         },
-        "Sauron": {
+        "Core-Sauron": {
             "label": "Sauron",
             "cards": [
                 {
@@ -1146,7 +1146,7 @@
                 }
             ]
         },
-        "Battlegrounds": {
+        "Core-Battlegrounds": {
             "label": "Battlegrounds",
             "cards": [
                 {
@@ -1324,7 +1324,7 @@
                 }
             ]
         },
-        "Paths": {
+        "Core-Paths": {
             "label": "Paths",
             "cards": [
                 {
@@ -1658,7 +1658,7 @@
                 }
             ]
         },
-        "Rulebook": {
+        "Core-Rulebook": {
             "label": "Rulebook",
             "cards": [
                 {
@@ -1888,19 +1888,19 @@
                 }
             ]
         },
-        "Trilogy": {
-            "label": "Trilogy Scenario",
-            "postLoadActionList": "trilogySetup",
+        "Core-Trilogy": {
+            "label": "Core Trilogy Scenario",
+            "postLoadActionList": "setupCoreTrilogy",
             "cards": []
         },
         "AtS-Trilogy": {
             "label": "Co-op Trilogy Scenario",
-            "postLoadActionList": "coopTrilogySetup",
+            "postLoadActionList": "setupAtSTrilogy",
             "cards": []
         },
-        "Two-Player Duel": {
+        "Core-Two-Player Duel": {
             "label": "Two-Player Duel",
-            "postLoadActionList": "twoPlayerSetup",
+            "postLoadActionList": "setupCoreTwoPlayerDuel",
             "cards": []
         },
         "AtS-Two-Player Duel": {
@@ -1908,7 +1908,7 @@
             "postLoadActionList": "coopTwoPlayerSetup",
             "cards": []
         },
-        "Three-Player Duel": {
+        "Core-Three-Player Duel": {
             "label": "Three-Player Duel",
             "postLoadActionList": "threePlayerSetup",
             "cards": []
@@ -1918,9 +1918,9 @@
             "postLoadActionList": "coopThreePlayerSetup",
             "cards": []
         },
-        "The Fellowship of the Ring": {
+        "Core-The Fellowship of the Ring": {
             "label": "The Fellowship of the Ring",
-            "preLoadActionList": "preFellowshipSetup",
+            "preLoadActionList": "keepBattlegroundOrder",
             "postLoadActionList": "fellowshipSetup",
             "cards": [
                 {
@@ -2407,7 +2407,7 @@
         },
         "AtS-The Fellowship of the Ring": {
             "label": "Co-op The Fellowship of the Ring",
-            "preLoadActionList": "preFellowshipSetup",
+            "preLoadActionList": "keepBattlegroundOrder",
             "postLoadActionList": "coopFellowshipSetup",
             "cards": [
                 {
@@ -2892,10 +2892,10 @@
                 }
             ]
         },
-        "The Two Towers": {
+        "Core-The Two Towers": {
             "label": "The Two Towers",
-            "preLoadActionList": "preFellowshipSetup",
-	     "postLoadActionList": "twoTowersSetup",
+            "preLoadActionList": "keepBattlegroundOrder",
+	        "postLoadActionList": "twoTowersSetup",
             "cards": [
                 {
                     "loadGroupId": "player2Deck",
@@ -3113,7 +3113,7 @@
                     "databaseId": "eda0591d-d56a-45c7-b817-270eac2fd963",
                     "_name": "Éowyn"
                 },
-		{
+		        {
                     "loadGroupId": "player1Deck",
                     "quantity": 1,
                     "databaseId": "211bad96-3abb-49e8-a925-aa4b255c59ed",
@@ -3149,25 +3149,25 @@
                     "databaseId": "cd042b41-6ffa-445c-a073-c0d6b4af02d4",
                     "_name": "Ent-draught"
                 },
+		        {
+                    "_name": "Orthanc",
+                    "databaseId": "6c9327c7-5438-4ab7-8a81-d2572eea6ae9",
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1
+                },
                 {
                     "loadGroupId": "sharedBattlegroundBlue",
                     "quantity": 1,
                     "databaseId": "c8c7885a-3df0-4da5-8a01-3a0fbce00444",
                     "_name": "Helm's Deep"
                 },
-		{
+		        {
                     "loadGroupId": "sharedBattlegroundBlue",
                     "quantity": 1,
                     "databaseId": "177f4785-8aff-4f33-847b-676f55b8446f",
                     "_name": "Edoras"
                 },
-		{
-                    "_name": "Orthanc",
-                    "databaseId": "6c9327c7-5438-4ab7-8a81-d2572eea6ae9",
-                    "loadGroupId": "sharedBattlegroundRed",
-                    "quantity": 1
-                },
-		{
+		        {
                     "databaseId": "da78fce7-ae5b-4357-9bdf-d94f20dc53af",
                     "loadGroupId": "sharedPathDeck6",
                     "quantity": 1,
@@ -3211,7 +3211,7 @@
                 }
             ]
         },
-	"The Return of the King": {
+	    "Core-The Return of the King": {
             "label": "The Return of the King",
 	     "postLoadActionList": "roTK",
             "cards": [
@@ -3650,6 +3650,765 @@
                     "_name": "Pelargir"
                 }
                 ]
+        },
+        "AtS-The Two Towers": {
+            "label": "The Two Towers",
+            "preLoadActionList": "keepBattlegroundOrder",
+	        "postLoadActionList": "twoTowersSetup",
+            "cards": [
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "950499de-8927-411b-9c01-f5cc0d28cb2a",
+                    "_name": "Devilry of Saruman"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "7efdeaec-9d0d-4b0e-bf3a-39a8d779196a",
+                    "_name": "Fighting Uruk-hai"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "145d6145-15cd-40ae-bcdb-9cecd87e0584",
+                    "_name": "Wolf-riders"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "6d551a57-8bfb-41e6-824a-42b9aabc7ec8",
+                    "_name": "White Hand Orcs"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "329b7b6f-8e21-4845-880a-630c7ea29540",
+                    "_name": "White Hand Orcs"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "a14b77e9-3035-4f6b-9404-5f8b1d0ea01e",
+                    "_name": "Gríma Wormtongue"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "a2726153-ab9b-4e15-b35d-ea608eebff2f",
+                    "_name": "Saruman"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "1fda0f35-cf4f-4674-a8af-fa9bbf77830d",
+                    "_name": "Uglúk"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "187d17a9-a7cf-4929-a906-e94ae3384905",
+                    "_name": "Palantír of Orthanc"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "f1522404-50ac-40f1-8fa9-51ab28102086",
+                    "_name": "Saruman's Staff"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "fc9aad5d-f396-45d3-b749-aae90e683908",
+                    "_name": "Woven of all Colours"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "aa645d74-5d7b-4f1a-bfab-f49f81863432",
+                    "_name": "Threats and Promises"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "20710710-079c-499e-8d45-74d4c436c6ed",
+                    "_name": "Candles of Corpses"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "e604d6a3-b7e6-40ef-b88f-4c459567fffc",
+                    "_name": "Flocks of Crebain"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "1fc35485-f30f-4867-99b8-b5f6c220780e",
+                    "_name": "Gollum"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "27b02a55-c886-4c7f-9ea7-72a8b54e2daa",
+                    "_name": "Hill-troll"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "5329c719-a1cc-4d83-89a7-072904c50433",
+                    "_name": "Shelob"
+                },
+                {
+                    "databaseId": "f4a7580f-b35e-4ce6-9035-189d0b59b2db",
+                    "quantity": 1,
+                    "loadGroupId": "player2Deck",
+                    "_name": "The Destroyer"
+                },
+                {
+                    "databaseId": "63b17585-99cd-451f-8465-20a233920f3d",
+                    "quantity": 1,
+                    "loadGroupId": "player2Deck",
+                    "_name": "The Hunter"
+                },
+                {
+                    "databaseId": "8888fbbd-1a77-42cb-9a6e-24229916923a",
+                    "quantity": 1,
+                    "loadGroupId": "player2Deck",
+                    "_name": "The Warrior"
+                },
+                {
+                    "databaseId": "646beb61-3072-4ecb-8abc-045afa942960",
+                    "quantity": 1,
+                    "loadGroupId": "player2Deck",
+                    "_name": "Grishnákh"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "a6cdd8d3-cd6e-4d1a-908b-2f788fbb357e",
+                    "_name": "Aragorn"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "d66c85a9-8e87-41bd-a5c4-e57583f20d0c",
+                    "_name": "The Three Hunters"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "cc4c098b-c3d5-4b1f-98d3-db8f0f63b483",
+                    "_name": "Legolas"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "d0e32730-41ae-4cf5-9181-a77fd9c76853",
+                    "_name": "Bow of the Galadhrim"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "9b929c4c-eae9-4a3e-8ccc-ef9f467707be",
+                    "_name": "Dwarven Axe"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "4c9b4a30-a515-4dce-a836-4c3246f60cdd",
+                    "_name": "Frodo Baggins"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "932c78f4-e295-4473-a972-51afc9a16e1d",
+                    "_name": "Merry Brandybuck"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "8d0fdb85-3388-41f7-a4e1-85d70d494333",
+                    "_name": "Pippin Took"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "2ff0ecca-e46d-4cbf-8876-28efe7f3a253",
+                    "_name": "Sam Gamgee"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "141a62f9-2243-4708-982a-efe1a5871612",
+                    "_name": "Riders of Rohan"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "fd86f3d9-9638-4b0d-b824-ca4dbaa7da37",
+                    "_name": "Riders of Rohan"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "a3104464-2b89-417f-b385-c0d4c2461108",
+                    "_name": "Village Militia"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "204addeb-f37e-475b-82ca-fb67a853e594",
+                    "_name": "Éomer"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "eda0591d-d56a-45c7-b817-270eac2fd963",
+                    "_name": "Éowyn"
+                },
+		        {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "211bad96-3abb-49e8-a925-aa4b255c59ed",
+                    "_name": "Theoden"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "fc9f8efc-c10b-4f82-9d71-b24623495186",
+                    "_name": "Shadowfax"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "ffa8235b-c293-44c0-b88e-7ebb5f909960",
+                    "_name": "Gandalf the White"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "679e5e5e-6a43-4a92-bbc1-f956c9de821b",
+                    "_name": "Quickbeam"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "0d9d3d39-6599-4350-a475-f87272681130",
+                    "_name": "Treebeard"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "cd042b41-6ffa-445c-a073-c0d6b4af02d4",
+                    "_name": "Ent-draught"
+                },
+		        {
+                    "_name": "Orthanc",
+                    "databaseId": "6c9327c7-5438-4ab7-8a81-d2572eea6ae9",
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "c8c7885a-3df0-4da5-8a01-3a0fbce00444",
+                    "_name": "Helm's Deep"
+                },
+		        {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "177f4785-8aff-4f33-847b-676f55b8446f",
+                    "_name": "Edoras"
+                },
+		        {
+                    "databaseId": "da78fce7-ae5b-4357-9bdf-d94f20dc53af",
+                    "loadGroupId": "sharedPathDeck6",
+                    "quantity": 1,
+                    "_name": "Dead Marshes"
+                },
+                {
+                    "databaseId": "ca9e10cf-f644-4de8-bcbf-abbb17c13e64",
+                    "loadGroupId": "sharedPathDeck6",
+                    "quantity": 1,
+                    "_name": "Emyn Muil"
+                },
+                {
+                    "databaseId": "7a8b9363-4574-4f3b-be5d-f7345a440ee6",
+                    "loadGroupId": "sharedPathDeck7",
+                    "quantity": 1,
+                    "_name": "Henneth Annûn"
+                },
+                {
+                    "databaseId": "e725315e-a893-4b68-9649-c28511340712",
+                    "loadGroupId": "sharedPathDeck7",
+                    "quantity": 1,
+                    "_name": "Osgiliath"
+                },
+                {
+                    "databaseId": "02eaee4d-9386-452d-9ff1-b1f8f78cfc27",
+                    "loadGroupId": "sharedPathDeck7",
+                    "quantity": 1,
+                    "_name": "The Cross-roads"
+                },
+                {
+                    "databaseId": "304cba39-2c8d-446c-9f8c-55f24594aea0",
+                    "loadGroupId": "sharedPathDeck8",
+                    "quantity": 1,
+                    "_name": "Morgul Vale"
+                },
+                {
+                    "databaseId": "589381ba-5652-4845-bce0-131335b683b6",
+                    "loadGroupId": "sharedPathDeck8",
+                    "quantity": 1,
+                    "_name": "Shelob's Lair"
+                }
+            ]
+        },
+	    "AtS-The Return of the King": {
+            "label": "The Return of the King",
+	        "postLoadActionList": "roTK",
+            "cards": [
+		        {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "1fc35485-f30f-4867-99b8-b5f6c220780e",
+                    "_name": "Gollum"
+                },
+		        {
+                    "databaseId": "5329c719-a1cc-4d83-89a7-072904c50433",
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "_name": "Shelob"
+                },
+		        {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "441cccee-2555-453f-ae95-ac4d4c64c405",
+                    "_name": "Black Uruks"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "74605d40-73f5-49a5-915a-b599ad8721ef",
+                    "_name": "Grond, Hammer of the Underworld"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "a934eaab-676f-47e5-923e-6960907a1521",
+                    "_name": "Mordor Orcs"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "d34dd625-f725-4700-946e-9797d4b4d5e6",
+                    "_name": "Mordor Orcs"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "dcc2b6cb-9c18-46c7-9bef-7de2a896a005",
+                    "_name": "Mordor Orcs"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "f21c29a3-89ed-447e-b6e5-08a1fb333b92",
+                    "_name": "Mordor Orcs"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "c4db81b2-9848-495e-ba97-8807b3ee3103",
+                    "_name": "Olog-hai"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "532deb11-3f00-42e0-9bce-76460e6f49ca",
+                    "_name": "Trolls of Udûn"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "1510bb6a-66f1-446f-bf09-8241187c4432",
+                    "_name": "Gorbag & Shagrat"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "5f246cea-5793-46c7-9845-fa6708a816fc",
+                    "_name": "Mouth of Sauron"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "859443db-aa24-4a3d-959e-8be85df2fc4b",
+                    "_name": "The Commander"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "f4a7580f-b35e-4ce6-9035-189d0b59b2db",
+                    "_name": "The Destroyer"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "63b17585-99cd-451f-8465-20a233920f3d",
+                    "_name": "The Hunter"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "4285d2fc-c4ff-43e7-8b50-516b2514a37d",
+                    "_name": "The Lidless Eye"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "8888fbbd-1a77-42cb-9a6e-24229916923a",
+                    "_name": "The Warrior"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "7083d486-12e7-491c-a143-3a1e92be4c72",
+                    "_name": "The Witch-king"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "40b9f576-1c9a-4747-a061-cd4cd38a3889",
+                    "_name": "The Black Captain"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "1135415d-4fbd-436b-9c05-cfd2a1ac90e2",
+                    "_name": "The Day Without Dawn"
+                },
+		
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "d90443bb-6e7e-4c9d-a122-140d7a8895b6",
+                    "_name": "Fell Beast"
+                },
+		        {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "6f5f1489-346a-42cc-b289-a9eddd41c95e",
+                    "_name": "Coastal Raiders"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "13b54108-1e99-44b9-8dc5-4612bf1de2f9",
+                    "_name": "Corsairs of Umbar"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "d846ef67-0f2a-4701-a91f-38da9a7270da",
+                    "_name": "Haradrim Mûmakil"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "93069d77-f997-48fe-88ac-1b14913c031f",
+                    "_name": "Haradrim Regulars"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "2a34b48f-bf62-47ad-8d6c-f14213419976",
+                    "_name": "Haradrim Cavalry"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "3fc70e4b-761e-4296-80e8-cc1009de2e68",
+                    "_name": "The Black Fleet"
+                },
+                {
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "03455178-5819-457b-b22d-9d49abab59aa",
+                    "_name": "The Black Serpent"
+                },
+		        {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "2e650769-f9f4-4cf0-b57f-8f019b538b02",
+                    "_name": "Dead Men of Dunharrow"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "fe77aaef-a595-47a8-bb0d-4d5796234fec",
+                    "_name": "Knights of Dol Amroth"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "d5f7bca9-0588-4bc3-afd3-eef62243c742",
+                    "_name": "Guards of the Citadel"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "3a780fcd-d2cd-4cc0-ab31-c7bd4901ffed",
+                    "_name": "Soldiers of Gondor"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "1e7b71c7-76b8-45d8-8814-db3f8236d7fa",
+                    "_name": "The Great Gate"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "a6cdd8d3-cd6e-4d1a-908b-2f788fbb357e",
+                    "_name": "Aragorn"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "06e92b40-20ec-43f9-9cc8-e229f09e4673",
+                    "_name": "Faramir"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "0242c6e2-4694-4580-a014-7595968bdf21",
+                    "_name": "Halbarad"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "21a43845-e174-41c4-a543-e15bc2b7b1f1",
+                    "_name": "Prince Imrahil"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "7783f996-2b0a-4de7-a87b-507643c81443",
+                    "_name": "Andúril"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "5ea39238-e8c2-46e8-863d-81c9ba34ec5c",
+                    "_name": "Blade of Westernesse"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "0c44e778-3985-4b1b-8390-c1fd3c8704f9",
+                    "_name": "Paths of the Dead"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "25f95638-87b5-4476-ac84-7e354e78cdd8",
+                    "_name": "The Red Arrow"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "a2f892a8-59cb-4f1b-a8f3-936091fa5aa9",
+                    "_name": "Phial of Galadriel"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "4c9b4a30-a515-4dce-a836-4c3246f60cdd",
+                    "_name": "Frodo Baggins"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "932c78f4-e295-4473-a972-51afc9a16e1d",
+                    "_name": "Merry Brandybuck"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "8d0fdb85-3388-41f7-a4e1-85d70d494333",
+                    "_name": "Pippin Took"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "2ff0ecca-e46d-4cbf-8876-28efe7f3a253",
+                    "_name": "Sam Gamgee"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "e229be1d-8580-48b8-894e-4485ef03cd61",
+                    "_name": "Herbs and Stewed Rabbit"
+                },
+		
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "141a62f9-2243-4708-982a-efe1a5871612",
+                    "_name": "Riders of Rohan"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "fd86f3d9-9638-4b0d-b824-ca4dbaa7da37",
+                    "_name": "Riders of Rohan"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "204addeb-f37e-475b-82ca-fb67a853e594",
+                    "_name": "Éomer"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "eda0591d-d56a-45c7-b817-270eac2fd963",
+                    "_name": "Éowyn"
+                },
+		        {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "211bad96-3abb-49e8-a925-aa4b255c59ed",
+                    "_name": "Theoden"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "fc9f8efc-c10b-4f82-9d71-b24623495186",
+                    "_name": "Shadowfax"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "ffa8235b-c293-44c0-b88e-7ebb5f909960",
+                    "_name": "Gandalf the White"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "25c1df91-b8d1-4727-b7a6-0ab26ef6cab9",
+                    "_name": "Death! Ride, Ride to Ruin!"
+                },
+                {
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "32883b6b-9248-430c-b246-934cb4cf38d8",
+                    "_name": "Gwaihir the Windlord"
+                },
+                {
+                    "databaseId": "7a8b9363-4574-4f3b-be5d-f7345a440ee6",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck7",
+                    "_name": "Henneth Annûn"
+                },
+                {
+                    "databaseId": "e725315e-a893-4b68-9649-c28511340712",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck7",
+                    "_name": "Osgiliath"
+                },
+                {
+                    "databaseId": "02eaee4d-9386-452d-9ff1-b1f8f78cfc27",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck7",
+                    "_name": "The Cross-roads"
+                },
+                {
+                    "databaseId": "ca49537c-ac33-4305-82e4-14452118635c",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Cirith Ungol"
+                },
+                {
+                    "databaseId": "304cba39-2c8d-446c-9f8c-55f24594aea0",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Morgul Vale"
+                },
+                {
+                    "databaseId": "589381ba-5652-4845-bce0-131335b683b6",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Shelob's Lair"
+                },
+                {
+                    "databaseId": "477186c1-2316-43bb-b09b-cbc9b2132762",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Crack of Doom"
+                },
+                {
+                    "databaseId": "4af0ee68-58c0-4e2a-b9b2-264694bf82f8",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Morgai"
+                },
+                {
+                    "databaseId": "5446fbef-187c-4c09-8965-74a6dae37493",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Orodruin"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "bfc38dab-105a-4e8f-bf6b-98cbc471a30d",
+                    "_name": "Harad"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "402b68bc-29f3-4d7a-8073-7148dee950ba",
+                    "_name": "Minas Morgul"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "558e6de6-582c-4ca1-a7af-f69551c9a551",
+                    "_name": "Morannon"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "10c36e6a-f2c1-4b13-8a2d-9108773a5c3f",
+                    "_name": "Umbar"
+                },
+		        {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "5d0b1d1d-a8ab-4b7b-b4d5-81ebdf7a5e6f",
+                    "_name": "Minas Tirith"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "52bd59c1-fce4-4dae-a728-0bd3fc49db7e",
+                    "_name": "Pelargir"
+                }
+            ]
         }
     }
 }

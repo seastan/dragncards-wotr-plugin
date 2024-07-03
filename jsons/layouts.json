@@ -5,7 +5,6 @@
             "cardSize": 13,
             "rowSpacing": 3,
             "chat": {"left": "63%", "top": "84%", "width": "25%", "height": "16%"},
-            "browse": {"type": "fan", "direction": "horizontal", "left": "0%", "top": "48%", "width": "88%", "height": "16%"},
             "regions": {
                 "player2Reserve": {"groupId": "player2Reserve", "type": "row", "direction": "horizontal", "left": "0%", "top": "0%", "width": "38%", "height": "16%"},
                 "sharedBattlegroundRed": {"groupId": "sharedBattlegroundRed", "type": "pile", "direction": "horizontal", "left": "38%", "top": "0%", "width": "12%", "height": "16%"},
@@ -25,12 +24,12 @@
                 "sharedActiveLocation5": {"groupId": "sharedActiveLocation5", "type": "row", "direction": "horizontal", "left":"0%", "top": "32%", "width": "0%", "height": "16%", "visible": false},
                 "sharedActiveLocation6": {"groupId": "sharedActiveLocation6", "type": "row", "direction": "horizontal", "left":"0%", "top": "32%", "width": "0%", "height": "16%", "visible": false},
     
-                "sharedActiveBlue1": {"groupId": "sharedActiveBlue1", "type": "row", "direction": "horizontal", "left":  "0%", "top": "48%", "width": "44%", "height": "16%", "hideWhileBrowsing": true},
-                "sharedActiveBlue2": {"groupId": "sharedActiveBlue2", "type": "row", "direction": "horizontal", "left": "44%", "top": "48%", "width": "44%", "height": "16%", "hideWhileBrowsing": true, "hideTitle": true},
-                "sharedActiveBlue3": {"groupId": "sharedActiveBlue3", "type": "row", "direction": "horizontal", "left":"0%", "top": "48%", "width": "0%", "height": "16%", "hideWhileBrowsing": true, "hideTitle": true, "visible": false},
-                "sharedActiveBlue4": {"groupId": "sharedActiveBlue4", "type": "row", "direction": "horizontal", "left":"0%", "top": "48%", "width": "0%", "height": "16%", "hideWhileBrowsing": true, "hideTitle": true, "visible": false},
-                "sharedActiveBlue5": {"groupId": "sharedActiveBlue5", "type": "row", "direction": "horizontal", "left":"0%", "top": "48%", "width": "0%", "height": "16%", "hideWhileBrowsing": true, "hideTitle": true, "visible": false},
-                "sharedActiveBlue6": {"groupId": "sharedActiveBlue6", "type": "row", "direction": "horizontal", "left":"0%", "top": "48%", "width": "0%", "height": "16%", "hideWhileBrowsing": true, "hideTitle": true, "visible": false},
+                "sharedActiveBlue1": {"groupId": "sharedActiveBlue1", "type": "row", "direction": "horizontal", "left":  "0%", "top": "48%", "width": "44%", "height": "16%"},
+                "sharedActiveBlue2": {"groupId": "sharedActiveBlue2", "type": "row", "direction": "horizontal", "left": "44%", "top": "48%", "width": "44%", "height": "16%", "hideTitle": true},
+                "sharedActiveBlue3": {"groupId": "sharedActiveBlue3", "type": "row", "direction": "horizontal", "left":"0%", "top": "48%", "width": "0%", "height": "16%", "hideTitle": true, "visible": false},
+                "sharedActiveBlue4": {"groupId": "sharedActiveBlue4", "type": "row", "direction": "horizontal", "left":"0%", "top": "48%", "width": "0%", "height": "16%", "hideTitle": true, "visible": false},
+                "sharedActiveBlue5": {"groupId": "sharedActiveBlue5", "type": "row", "direction": "horizontal", "left":"0%", "top": "48%", "width": "0%", "height": "16%", "hideTitle": true, "visible": false},
+                "sharedActiveBlue6": {"groupId": "sharedActiveBlue6", "type": "row", "direction": "horizontal", "left":"0%", "top": "48%", "width": "0%", "height": "16%", "hideTitle": true, "visible": false},
 
                 "player1Reserve": {"groupId": "player1Reserve", "type": "row", "direction": "horizontal", "left":  "0%", "top": "68%", "width": "32%", "height": "16%"},
                 "sharedBattlegroundBlue": {"groupId": "sharedBattlegroundBlue", "type": "pile", "direction": "horizontal", "left": "32%", "top": "64%", "width": "12%", "height": "16%"},
@@ -81,7 +80,6 @@
             "cardSize": 12,
             "rowSpacing": 3,
             "chat": {"left": "88%", "top": "86%", "width": "12%", "height": "14%"},
-            "browse": {"type": "fan", "direction": "horizontal", "left": "0%", "top": "4/7", "width": "88%", "height": "1/7"},
             "regions": {
 
                 "player2Hand":       {"groupId": "player2Hand",           "type": "fan", "direction": "horizontal", "left":  "0%", "top": "0/7", "width": "23%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}, "showMenu": true},
@@ -111,12 +109,12 @@
                 "sharedActiveLocation5": {"groupId": "sharedActiveLocation5", "type": "row", "direction": "horizontal", "left":"0%",  "top": "3/7", "width": "0%",  "height": "1/7", "visible": false},
                 "sharedActiveLocation6": {"groupId": "sharedActiveLocation6", "type": "row", "direction": "horizontal", "left":"0%",  "top": "3/7", "width": "0%",  "height": "1/7", "visible": false},
     
-                "sharedActiveBlue1": {"groupId": "sharedActiveBlue1", "type": "row", "direction": "horizontal", "left": "0%", "top": "4/7", "width": "44%", "height": "1/7", "hideWhileBrowsing": true},
-                "sharedActiveBlue2": {"groupId": "sharedActiveBlue2", "type": "row", "direction": "horizontal", "left":"44%", "top": "4/7", "width": "44%", "height": "1/7", "hideWhileBrowsing": true, "hideTitle": true},
-                "sharedActiveBlue3": {"groupId": "sharedActiveBlue3", "type": "row", "direction": "horizontal", "left":"0%",  "top": "4/7", "width": "0%",  "height": "1/7", "hideWhileBrowsing": true, "hideTitle": true, "visible": false},
-                "sharedActiveBlue4": {"groupId": "sharedActiveBlue4", "type": "row", "direction": "horizontal", "left":"0%",  "top": "4/7", "width": "0%",  "height": "1/7", "hideWhileBrowsing": true, "hideTitle": true, "visible": false},
-                "sharedActiveBlue5": {"groupId": "sharedActiveBlue5", "type": "row", "direction": "horizontal", "left":"0%",  "top": "4/7", "width": "0%",  "height": "1/7", "hideWhileBrowsing": true, "hideTitle": true, "visible": false},
-                "sharedActiveBlue6": {"groupId": "sharedActiveBlue6", "type": "row", "direction": "horizontal", "left":"0%",  "top": "4/7", "width": "0%",  "height": "1/7", "hideWhileBrowsing": true, "hideTitle": true, "visible": false},
+                "sharedActiveBlue1": {"groupId": "sharedActiveBlue1", "type": "row", "direction": "horizontal", "left": "0%", "top": "4/7", "width": "44%", "height": "1/7"},
+                "sharedActiveBlue2": {"groupId": "sharedActiveBlue2", "type": "row", "direction": "horizontal", "left":"44%", "top": "4/7", "width": "44%", "height": "1/7", "hideTitle": true},
+                "sharedActiveBlue3": {"groupId": "sharedActiveBlue3", "type": "row", "direction": "horizontal", "left":"0%",  "top": "4/7", "width": "0%",  "height": "1/7", "hideTitle": true, "visible": false},
+                "sharedActiveBlue4": {"groupId": "sharedActiveBlue4", "type": "row", "direction": "horizontal", "left":"0%",  "top": "4/7", "width": "0%",  "height": "1/7", "hideTitle": true, "visible": false},
+                "sharedActiveBlue5": {"groupId": "sharedActiveBlue5", "type": "row", "direction": "horizontal", "left":"0%",  "top": "4/7", "width": "0%",  "height": "1/7", "hideTitle": true, "visible": false},
+                "sharedActiveBlue6": {"groupId": "sharedActiveBlue6", "type": "row", "direction": "horizontal", "left":"0%",  "top": "4/7", "width": "0%",  "height": "1/7", "hideTitle": true, "visible": false},
 
                 "player1Reserve":         {"groupId": "player1Reserve",         "type": "row",  "direction": "horizontal", "left":  "0%", "top": "5/7", "width": "32%", "height": "1/7"},
                 "sharedBattlegroundBlue": {"groupId": "sharedBattlegroundBlue", "type": "pile", "direction": "horizontal", "left": "32%", "top": "5/7", "width": "12%", "height": "1/7"},

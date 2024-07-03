@@ -1,5 +1,180 @@
 {
     "functions": {
+        "LOAD_RULES": {
+            "args": ["$PRODUCT_ID"],
+            "code": ["COND",
+                ["EQUAL", "$PRODUCT_ID", "Core"],
+                [
+                    ["LOAD_CARDS", "Core-Rulebook"]
+                ],
+                ["EQUAL", "$PRODUCT_ID", "AtS"],
+                [
+                    ["LOAD_CARDS", "AtS-Rulebook"]
+                ],
+                ["EQUAL", "$PRODUCT_ID", "FaS"],
+                [
+                    ["LOAD_CARDS", "FaS-Rulebook"]
+                ],
+                ["TRUE"],
+                [
+                    ["LOG", "Product {{$PRODUCT_ID}} not found."]
+                ]
+            ]
+        },
+        "SET_NUM_PLAYERS": {
+            "args": ["$NUM_PLAYERS"],
+            "code": [
+                ["LOG", "{{$ALIAS_N}} set the number of players to {{$NUM_PLAYERS}}."],
+                ["SET", "/numPlayers", "$NUM_PLAYERS"],
+                ["COND",
+                    ["EQUAL", "$NUM_PLAYERS", 3],
+                    [
+                        ["SET_NUM_BLUE_RED", 2, 1]
+                    ],
+                    ["EQUAL", "$NUM_PLAYERS", 4],
+                    [
+                        ["SET_NUM_BLUE_RED", 2, 2]
+                    ],
+                    ["EQUAL", "$NUM_PLAYERS", 1],
+                    [
+                        ["SET_NUM_BLUE_RED", 1, 1]
+                    ],
+                    ["TRUE"],
+                    [
+                        ["LOG", "Invalid number of players."]
+                    ]
+                ]
+            ]
+        },
+        "SET_PLAYERS_PROPS": {
+            "args": ["$PROP_NAME", "$VAL_LIST"],
+            "code": [
+                ["FOR_EACH_START_STOP_STEP", "$I", 0, "$GAME.numPlayers", 1, [
+                    ["VAR", "$VAL", "$VAL_LIST.[{{$I}}]"],
+                    ["VAR", "$PLAYER_NUM", ["ADD", "$I", 1]],
+                    ["VAR", "$PLAYER_I", "player{{$PLAYER_NUM}}"],
+                    ["SET", "/playerData/$PLAYER_I/$PROP_NAME", "$VAL"]
+                ]]
+            ]
+        },
+        "SET_PLAYER_NAMES": {
+            "args": ["$NAME_LIST"],
+            "code": ["SET_PLAYERS_PROPS", "label", "$NAME_LIST"]
+        },
+        "LOAD_PLAYER_DECKS": {
+            "args": ["$DECK_IDS"],
+            "code": [
+                ["LOG_DEV", "$DECK_IDS"],
+                ["FOR_EACH_START_STOP_STEP", "$I", 0, "$GAME.numPlayers", 1, [
+                    ["VAR", "$DECK_ID", "$DECK_IDS.[{{$I}}]"],  
+                    ["LOG_DEV", "$DECK_ID"],
+                    ["VAR", "$PLAYER_NUM", ["ADD", "$I", 1]],
+                    ["VAR", "$PLAYER_N", "player{{$PLAYER_NUM}}"],
+                    ["LOAD_CARDS", "$DECK_ID"]
+                ]]
+            ]
+        },
+        "SET_TURN_ORDER": {
+            "args": ["$TURN_ORDER_LIST"],
+            "code": ["SET", "/turnOrder", "$TURN_ORDER_LIST"]
+        },
+        "SET_SETUP_DRAW": {
+            "args": ["$VAL_LIST"],
+            "code": ["SET_PLAYERS_PROPS", "setupDraw", "$VAL_LIST"]
+        },
+        "SET_ROUND_DRAW": {
+            "args": ["$VAL_LIST"],
+            "code": ["SET_PLAYERS_PROPS", "roundDraw", "$VAL_LIST"]
+        },
+        "SET_SETUP_RINGS": {
+            "args": ["$VAL_LIST"],
+            "code": ["SET_PLAYERS_PROPS", "setupRings", "$VAL_LIST"]
+        },
+        "SET_ROUND_RINGS": {
+            "args": ["$VAL_LIST"],
+            "code": ["SET_PLAYERS_PROPS", "roundRings", "$VAL_LIST"]
+        },
+        "SHUFFLE_BATTLEGROUNDS": {
+            "args": ["$BOOL"],
+            "code": [
+                ["COND",
+                    "$BOOL",
+                    [
+                        ["LOG", "Shuffled battlegrounds."],
+                        ["SHUFFLE_GROUP", "sharedBattlegroundBlue"],
+                        ["SHUFFLE_GROUP", "sharedBattlegroundRed"]
+                    ]
+                ]
+            ]
+        },
+        "SHUFFLE_PATHS": {
+            "args": ["$BOOL"],
+            "code": [
+                ["COND",
+                    "$BOOL",
+                    [
+                        ["LOG", "Shuffled paths."],
+                        ["SHUFFLE_GROUP", "sharedPathDeck1"],
+                        ["SHUFFLE_GROUP", "sharedPathDeck2"],
+                        ["SHUFFLE_GROUP", "sharedPathDeck3"],
+                        ["SHUFFLE_GROUP", "sharedPathDeck4"],
+                        ["SHUFFLE_GROUP", "sharedPathDeck5"],
+                        ["SHUFFLE_GROUP", "sharedPathDeck6"],
+                        ["SHUFFLE_GROUP", "sharedPathDeck7"],
+                        ["SHUFFLE_GROUP", "sharedPathDeck8"],
+                        ["SHUFFLE_GROUP", "sharedPathDeck9"]
+                    ]
+                ]
+            ]
+        },
+        "SET_NO_POINTS_AWARDED_ON_PATH_TIES": {
+            "args": ["$BOOL"],
+            "code": [
+                ["SET", "/noPointsAwardedOnPathTies", "$BOOL"]
+            ]
+        },
+        "SET_CORRUPTION_BONUS": {
+            "args": ["$BOOL"],
+            "code": [
+                ["SET", "/corruptionBonus", "$BOOL"]
+            ]
+        },
+        "RESOLVE_CORRUPTION_BONUS": {
+            "args": [],
+            "code": ["COND", 
+                "$GAME.corruptionBonus",
+                [
+                    ["LOG", "$ALIAS_N", " added 1 to the corruption score due to the corruption bonus rule."],
+                    ["INCREASE_VAL", "/corruptionScore", 1]
+                ]
+            ]
+        },
+        "SET_INITIAL_CORRUPTION": {
+            "args": ["$CORRUPTION_BONUS"],
+            "code": [
+                ["SET", "/corruptionScore", "$CORRUPTION_BONUS"]
+            ]
+        },
+        "SET_SKIRMISHES": {
+            "args": ["$SKIRMISHES"],
+            "code": [
+                ["SET", "/skirmishes", "$SKIRMISHES"]
+            ]
+        },
+        "LOAD_PROMOS": {
+            "args": ["$PROMO_IDS"],
+            "code": [
+                ["FOR_EACH_VAL", "$PROMO_ID", "$PROMO_IDS", [
+                    ["LOAD_CARDS", ["LIST", ["PROCESS_MAP", {"databaseId": "$PROMO_ID", "loadGroupId": "sharedAside", "quantity": 1}]]]
+                ]]
+            ]
+        },
+        "DRAW_STARTING_HANDS": {
+            "args": [],
+            "code": [
+                ["LOG", "Drew starting hands."]
+            ]
+        },
         "SET_NUM_BLUE_RED": {
             "args": ["$NUM_BLUE", "$NUM_RED"],
             "code": [
@@ -15,6 +190,8 @@
                 ["COND", 
                     ["EQUAL", "$NUM_BLUE", 2],
                     [
+                        ["SET", "/playerData/player1/team", "blue"],
+                        ["SET", "/playerData/player3/team", "blue"],
                         ["UPDATE_LAYOUT", "/layout/regions/player3Reserve/visible", true],
                         ["UPDATE_LAYOUT", "/layout/regions/player1Reserve/width", "32%"],
                         ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundBlue/left", "32%"],
@@ -36,6 +213,7 @@
                     ],
                     ["TRUE"],
                     [
+                        ["SET", "/playerData/player1/team", "blue"],
                         ["UPDATE_LAYOUT", "/layout/regions/player3Reserve/visible", false],
                         ["UPDATE_LAYOUT", "/layout/regions/player1Reserve/width", "64%"],
                         ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundBlue/left", "64%"],
@@ -66,6 +244,8 @@
                 ["COND", 
                     ["EQUAL", "$NUM_RED", 2],
                     [
+                        ["SET", "/playerData/player2/team", "red"],
+                        ["SET", "/playerData/player4/team", "red"],
                         ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/visible", true],
                         ["UPDATE_LAYOUT", "/layout/regions/player2Reserve/width", "38%"],
                         ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundRed/left", "38%"],
@@ -86,6 +266,7 @@
                     ],
                     ["TRUE"],
                     [
+                        ["SET", "/playerData/player2/team", "red"],
                         ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/visible", false],
                         ["UPDATE_LAYOUT", "/layout/regions/player2Reserve/width", "76%"],
                         ["UPDATE_LAYOUT", "/layout/regions/sharedBattlegroundRed/left", "76%"],
