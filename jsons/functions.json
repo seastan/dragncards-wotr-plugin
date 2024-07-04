@@ -64,7 +64,6 @@
         "LOAD_PLAYER_DECKS": {
             "args": ["$DECK_IDS"],
             "code": [
-                ["LOG_DEV", "$DECK_IDS"],
                 ["FOR_EACH_START_STOP_STEP", "$I", 0, "$GAME.numPlayers", 1, [
                     ["VAR", "$DECK_ID", "$DECK_IDS.[{{$I}}]"],  
                     ["LOG_DEV", "$DECK_ID"],
@@ -72,6 +71,14 @@
                     ["VAR", "$PLAYER_N", "player{{$PLAYER_NUM}}"],
                     ["LOAD_CARDS", "$DECK_ID"]
                 ]]
+            ]
+        },
+        "LOAD_DECK_FOR_PLAYER": {
+            "args": ["$PLAYER_I", "$DECK_ID"],
+            "code": [
+                ["VAR", "$PLAYER_N", "$PLAYER_I"],
+                ["LOG", "{{$ALIAS_N}} loaded their deck."],
+                ["LOAD_CARDS", "$DECK_ID"]
             ]
         },
         "SET_TURN_ORDER": {
