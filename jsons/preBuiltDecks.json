@@ -1235,7 +1235,84 @@
                 }
             ]
         },
-        "AtS-Battlegrounds": {
+        "GP-Battlegrounds":{
+			"label": "Battlegrounds",
+            "cards": [
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "c8c7885a-3df0-4da5-8a01-3a0fbce00444",
+                    "_name": "Helm's Deep"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "6397535b-b8cf-451c-b119-7d2b4866eff7",
+                    "_name": "Lórien"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "5d0b1d1d-a8ab-4b7b-b4d5-81ebdf7a5e6f",
+                    "_name": "Minas Tirith"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "52bd59c1-fce4-4dae-a728-0bd3fc49db7e",
+                    "_name": "Pelargir"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "57bf5374-082f-4a2b-8e48-39b2cbf7197e",
+                    "_name": "Rivendell"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "56861e3e-9a1d-4f8e-913a-9f86ec5c4709",
+                    "_name": "Dol Guldur"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "bfc38dab-105a-4e8f-bf6b-98cbc471a30d",
+                    "_name": "Harad"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "178edd70-878d-4c1c-a64c-9eb913611450",
+                    "_name": "Minas Morgul"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "f11d82c4-39c7-4203-bf84-ea0cc6669f3e",
+                    "_name": "Morannon"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "6c9327c7-5438-4ab7-8a81-d2572eea6ae9",
+                    "_name": "Orthanc"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "10c36e6a-f2c1-4b13-8a2d-9108773a5c3f",
+                    "_name": "Umbar"
+                }
+            ]
+		},
+		"AtS-Battlegrounds": {
             "label": "AtS-Battlegrounds",
             "cards": [
                 {
@@ -5514,6 +5591,120 @@
                     "databaseId": "3c3c999b-f515-4dd6-9344-bfdde7341726",
                     "_name": "The Black Serpent"
                 },
+				{
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "177f4785-8aff-4f33-847b-676f55b8446f",
+                    "_name": "Edoras"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "c8c7885a-3df0-4da5-8a01-3a0fbce00444",
+                    "_name": "Helm's Deep"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "5d0b1d1d-a8ab-4b7b-b4d5-81ebdf7a5e6f",
+                    "_name": "Minas Tirith"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "52bd59c1-fce4-4dae-a728-0bd3fc49db7e",
+                    "_name": "Pelargir"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "178edd70-878d-4c1c-a64c-9eb913611450",
+                    "_name": "Minas Morgul"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "f11d82c4-39c7-4203-bf84-ea0cc6669f3e",
+                    "_name": "Morannon"
+                },
+                {
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "6c9327c7-5438-4ab7-8a81-d2572eea6ae9",
+                    "_name": "Orthanc"
+                },
+				{
+                    "databaseId": "da78fce7-ae5b-4357-9bdf-d94f20dc53af",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck6",
+                    "_name": "Dead Marshes"
+                },
+                {
+                    "databaseId": "ca9e10cf-f644-4de8-bcbf-abbb17c13e64",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck6",
+                    "_name": "Emyn Muil"
+                },
+                {
+                    "databaseId": "7a8b9363-4574-4f3b-be5d-f7345a440ee6",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck7",
+                    "_name": "Henneth Annûn"
+                },
+                {
+                    "databaseId": "e725315e-a893-4b68-9649-c28511340712",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck7",
+                    "_name": "Osgiliath"
+                },
+                {
+                    "databaseId": "02eaee4d-9386-452d-9ff1-b1f8f78cfc27",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck7",
+                    "_name": "The Cross-roads"
+                },
+                {
+                    "databaseId": "bfbb4446-a891-48f0-9b30-4f605cbfd501",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Cirith Ungol"
+                },
+                {
+                    "databaseId": "360061e5-e271-4eb5-8044-190c37e1e2de",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Morgul Vale"
+                },
+                {
+                    "databaseId": "589381ba-5652-4845-bce0-131335b683b6",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Shelob's Lair"
+                },
+                {
+                    "databaseId": "477186c1-2316-43bb-b09b-cbc9b2132762",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Crack of Doom"
+                },
+                {
+                    "databaseId": "4af0ee68-58c0-4e2a-b9b2-264694bf82f8",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Morgai"
+                },
+                {
+                    "databaseId": "5446fbef-187c-4c09-8965-74a6dae37493",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Orodruin"
+                }
 		}
 	}
 }
