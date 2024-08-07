@@ -276,7 +276,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveRed2": {
@@ -291,7 +293,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveRed3": {
@@ -306,7 +310,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveRed4": {
@@ -321,7 +327,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveRed5": {
@@ -336,7 +344,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveRed6": {
@@ -350,10 +360,12 @@
                 "locationGroupId": "sharedActiveLocation6"
             },
             "onCardLeave": {
-                "locationIndex": null
+                "locationIndex": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
-	"sharedActiveBluePath": {
+	    "sharedActiveBluePath": {
             "groupType": "inPlay",
             "label": "id:activeFreePeoplesPath", 
             "tableLabel": "id:freePeoplesPath",
@@ -365,7 +377,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveBlue1": {
@@ -380,7 +394,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveBlue2": {
@@ -395,7 +411,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveBlue3": {
@@ -410,7 +428,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveBlue4": {
@@ -425,7 +445,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveBlue5": {
@@ -440,7 +462,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "sharedActiveBlue6": {
@@ -455,7 +479,9 @@
             },
             "onCardLeave": {
                 "locationIndex": null,
-                "locationGroupId": null
+                "locationGroupId": null,
+                "isSupporting": false,
+                "isSupported": false
             }
         },
         "player1Hand": {

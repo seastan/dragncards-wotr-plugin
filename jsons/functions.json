@@ -356,7 +356,6 @@
             "code": [
                 ["VAR", "$HAND_GROUP_ID", "{{$PLAYER_I}}Hand"],
                 ["VAR", "$HAND_SIZE", ["LENGTH", "$GAME.groupById.$HAND_GROUP_ID.stackIds"]],
-                ["LOG", "└── {{$PLAYER_I}}'s hand size is now {{$HAND_SIZE}}."],
                 ["SET", "/playerData/$PLAYER_I/handSize", "$HAND_SIZE"]
             ]
         },
@@ -598,6 +597,76 @@
                 ["LOG", ["GET_ALIAS", "$PLAYER_I"], " shuffled their cycle pile and moved it to the bottom of their deck."],
                 ["SHUFFLE_GROUP", "$CYCLE_DECK_ID"],
                 ["MOVE_STACKS", "$CYCLE_DECK_ID", "{{$PLAYER_I}}Deck", ["LENGTH", "$CYCLE_DECK.stackIds"], "bottom"]
+            ]
+        },
+        "APPLY_LEADER_TOKENS": {
+            "args": ["$TARGET"],
+            "code": [
+                ["COND", 
+                    ["EQUAL", "$TARGET.sides.B.name", "Free Peoples Card"],
+                    [
+                        ["INCREASE_VAL", "/cardById/$TARGET.id/tokens/attackBlue", "$TARGET.sides.A.leadershipAttack"],
+                        ["INCREASE_VAL", "/cardById/$TARGET.id/tokens/defenseBlue", "$TARGET.sides.A.leadershipDefense"]
+                    ],
+                    ["EQUAL", "$TARGET.sides.B.name", "Shadow Card"],
+                    [
+                        ["INCREASE_VAL", "/cardById/$TARGET.id/tokens/attackRed", "$TARGET.sides.A.leadershipAttack"],
+                        ["INCREASE_VAL", "/cardById/$TARGET.id/tokens/defenseRed", "$TARGET.sides.A.leadershipDefense"]
+                    ]
+                ]
+            ]
+        },
+        "LEADER_ENTERED_GROUP": {
+            "args": ["$TARGET", "$GROUP_ID"],
+            "code": [
+                ["VAR", "$IS_SUPPORTED", false],
+                ["FOR_EACH_VAL", "$CARD", "$GAME.groupById.$GROUP_ID.parentCards", [
+                    ["COND",
+                        ["AND",
+                            ["NOT", "$IS_SUPPORTED"],
+                            ["EQUAL", "$CARD.sides.A.type", "Army"],
+                            ["EQUAL", "$CARD.sides.A.faction", "$TARGET.sides.A.faction"],
+                            ["NOT_EQUAL", "$CARD.isSupporting", true]
+                        ],
+                        [
+                            ["LOG", "└── {{$CARD.sides.A.name}} is now supporting {{$TARGET.sides.A.name}}."],
+                            ["SET", "/cardById/$TARGET.id/isSupported", true],
+                            ["SET", "/cardById/$CARD.id/isSupporting", true],
+                            ["APPLY_LEADER_TOKENS", "$TARGET"],
+                            ["UPDATE_VAR", "$IS_SUPPORTED", true]
+                        ]
+                    ]
+                ]]
+            ]
+        },
+        "ARMY_ENTERED_GROUP": {
+            "args": ["$TARGET", "$GROUP_ID"],
+            "code": [
+                ["VAR", "$IS_SUPPORTING", false],
+                ["FOR_EACH_VAL", "$CARD", "$GAME.groupById.$GROUP_ID.parentCards", [
+                    ["COND",
+                        ["AND",
+                            ["NOT", "$IS_SUPPORTING"],
+                            ["IS_LEADER", "$CARD"],
+                            ["EQUAL", "$CARD.sides.A.faction", "$TARGET.sides.A.faction"],
+                            ["NOT_EQUAL", "$CARD.isSupported", true]
+                        ],
+                        [
+                            ["LOG", "└── {{$TARGET.sides.A.name}} is now supporting {{$CARD.sides.A.name}}."],
+                            ["SET", "/cardById/$CARD.id/isSupported", true],
+                            ["SET", "/cardById/$TARGET.id/isSupporting", true],
+                            ["APPLY_LEADER_TOKENS", "$CARD"],
+                            ["UPDATE_VAR", "$IS_SUPPORTING", true]
+                        ]
+                    ]
+                ]]
+            ]
+        },
+        "IS_LEADER": {
+            "args": ["$CARD"],
+            "code": ["OR", 
+                ["GREATER_THAN", "$CARD.sides.A.leadershipAttack", 0],
+                ["GREATER_THAN", "$CARD.sides.A.leadershipDefense", 0]
             ]
         }
     }

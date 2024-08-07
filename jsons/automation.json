@@ -117,11 +117,45 @@
                     "/cardById/*/inPlay"
                 ],
                 "condition": ["AND", "$TARGET.inPlay", ["PREV", ["NOT", "$TARGET.inPlay"]]],
-                "then": ["COND", 
-                    ["EQUAL", "$TARGET.roundEnteredPlay", "$GAME.roundNumber"],
-                    ["PROMPT", "$PLAYER_N", "cardEnteredPlayThisRound", "$TARGET.sides.A.name"],
-                    ["TRUE"],
-                    ["SET", "/cardById/$TARGET_ID/roundEnteredPlay", "$GAME.roundNumber"]
+                "then": [
+                    ["COND", 
+                        ["EQUAL", "$TARGET.roundEnteredPlay", "$GAME.roundNumber"],
+                        ["PROMPT", "$PLAYER_N", "cardEnteredPlayThisRound", "$TARGET.sides.A.name"],
+                        ["TRUE"],
+                        ["SET", "/cardById/$TARGET_ID/roundEnteredPlay", "$GAME.roundNumber"]
+                    ]
+                ]
+            },
+            { 
+                "_comment": "Leader enters location",
+                "type": "trigger", 
+                "listenTo": [
+                    "/cardById/*/groupId"
+                ],
+                "condition": ["AND", 
+                    ["IN_STRING", "$TARGET.groupId", "sharedActive"],
+                    ["NOT_EQUAL", "$TARGET.groupId", ["PREV", "$TARGET.groupId"]],
+                    ["IS_LEADER", "$TARGET"]
+                ],
+                "then": [
+                    ["LOG", "An leader entered play"],
+                    ["LEADER_ENTERED_GROUP", "$TARGET", "$TARGET.groupId"]
+                ]
+            },
+            { 
+                "_comment": "Army enters location",
+                "type": "trigger", 
+                "listenTo": [
+                    "/cardById/*/groupId"
+                ],
+                "condition": ["AND", 
+                    ["IN_STRING", "$TARGET.groupId", "sharedActive"],
+                    ["NOT_EQUAL", "$TARGET.groupId", ["PREV", "$TARGET.groupId"]],
+                    ["EQUAL", "$TARGET.sides.A.type", "Army"]
+                ],
+                "then": [
+                    ["LOG", "An army entered play"],
+                    ["ARMY_ENTERED_GROUP", "$TARGET", "$TARGET.groupId"]
                 ]
             },
             { 

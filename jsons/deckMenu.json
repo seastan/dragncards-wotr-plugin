@@ -1,21 +1,33 @@
 {
     "deckMenu": {
+        "subMenus": [
+            {   
+                "label": "Core",
+                "deckLists": [
+                    {"deckListId": "modeCoreTrilogy", "label": "Trilogy"},
+                    {"deckListId": "modeCoreTwoPlayerDuel", "label": "Two Player Duel"},
+                    {"deckListId": "modeCoreThreePlayerDuel", "label": "Three Player Duel"},
+                    {"deckListId": "modeCoreFellowshipOfTheRing", "label": "Fellowship of the Ring"},
+                    {"deckListId": "modeCoreTheTwoTowers", "label": "The Two Towers"},
+                    {"deckListId": "modeCoreTheReturnOfTheKing", "label": "The Return of the King"},
+                    {"deckListId": "modeCoreExpertDuel", "label": "Expert Duel"},
+                    {"deckListId": "modeCoreAPerilousJourney", "label": "A Perilous Journey"},
+                    {"deckListId": "modeCoreRohanAndGondorAtWar", "label": "Rohan and Gondor at War"}
+                ]
+            },
+            {   
+                "label": "Against the Shadow",
+                "deckLists": [
+                    {"deckListId": "modeAtSTrilogy", "label": "Trilogy"},
+                    {"deckListId": "modeAtSTwoPlayerDuel", "label": "Two Player Duel"},
+                    {"deckListId": "modeAtSThreePlayerDuel", "label": "Three Player Duel"},
+                    {"deckListId": "modeAtSFellowshipOfTheRing", "label": "Fellowship of the Ring"},
+                    {"deckListId": "modeAtSTheTwoTowers", "label": "The Two Towers"},
+                    {"deckListId": "modeAtSTheReturnOfTheKing", "label": "The Return of the King"}
+                ]
+            }
+        ],
         "deckLists": [
-            {"deckListId": "modeCoreTrilogy", "label": "Core Trilogy"},
-            {"deckListId": "modeAtSTrilogy", "label": "AtS Trilogy"},
-            {"deckListId": "modeCoreTwoPlayerDuel", "label": "Core Two Player Duel"},
-            {"deckListId": "modeAtSTwoPlayerDuel", "label": "AtS Two Player Duel"},
-            {"deckListId": "modeCoreThreePlayerDuel", "label": "Core Three Player Duel"},
-            {"deckListId": "modeAtSThreePlayerDuel", "label": "AtS Three Player Duel"},
-            {"deckListId": "modeCoreFellowshipOfTheRing", "label": "Core Fellowship of the Ring"},
-            {"deckListId": "modeAtSFellowshipOfTheRing", "label": "AtS Fellowship of the Ring"},
-            {"deckListId": "modeCoreTheTwoTowers", "label": "Core The Two Towers"},
-            {"deckListId": "modeAtSTheTwoTowers", "label": "AtS The Two Towers"},
-            {"deckListId": "modeCoreTheReturnOfTheKing", "label": "Core The Return of the King"},
-            {"deckListId": "modeAtSTheReturnOfTheKing", "label": "AtS The Return of the King"},
-            {"deckListId": "modeCoreExpertDuel", "label": "Core Expert Duel"},
-            {"deckListId": "modeCoreAPerilousJourney", "label": "Core A Perilous Journey"},
-            {"deckListId": "modeCoreRohanAndGondorAtWar", "label": "Core Rohan and Gondor at War"},
             {"deckListId": "modeGrandPrixTrilogy", "label": "Grand Prix Trilogy"}	    
         ]
     }

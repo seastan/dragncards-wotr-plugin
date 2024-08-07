@@ -2,6 +2,8 @@
     "faceProperties": {
         "attack": {"type": "integer", "default": 0},
         "defense": {"type": "integer", "default": 0},
+        "leadershipAttack": {"type": "integer", "default": 0},
+        "leadershipDefense": {"type": "integer", "default": 0},
         "pathCombat": {"type": "integer", "default": 0},
         "victoryPoints": {"type": "integer", "default": 0},
         "skull": {"type": "integer", "default": 0},
