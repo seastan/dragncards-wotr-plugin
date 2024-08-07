@@ -2,7 +2,6 @@
     "actionLists": {
         "setupCoreTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],			
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
@@ -14,6 +13,7 @@
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
             ["SET_SKIRMISHES", false],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "Core-Battlegrounds"],
@@ -23,12 +23,10 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
         "setupAtSTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
             ["LOAD_RULES", "AtS"],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
@@ -40,6 +38,7 @@
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
             ["SET_SKIRMISHES", false],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "AtS-Paths"],
             ["LOAD_CARDS", "AtS-Battlegrounds"],
@@ -49,13 +48,11 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "AtS-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true]
         ],
         "setupCoreTwoPlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
@@ -67,6 +64,7 @@
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", 0],
             ["SET_SKIRMISHES", false],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "Core-Battlegrounds"],
@@ -76,12 +74,10 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
 		"setupAtSTwoPlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
             ["LOAD_RULES", "AtS"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
@@ -93,6 +89,7 @@
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", 0],
             ["SET_SKIRMISHES", false],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "AtS-Paths"],
             ["LOAD_CARDS", "AtS-Battlegrounds"],
@@ -102,12 +99,10 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
 		"setupCoreThreePlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 3],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
@@ -119,6 +114,7 @@
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", 0],
             ["SET_SKIRMISHES", false],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "Core-Battlegrounds"],
@@ -128,13 +124,11 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
 		"setupAtSThreePlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
-            ["LOAD_RULES", "AtS"],
+            ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 3],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 1, 3]],
@@ -145,6 +139,7 @@
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", 0],
             ["SET_SKIRMISHES", false],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "AtS-Paths"],
             ["LOAD_CARDS", "AtS-Battlegrounds"],
@@ -154,7 +149,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "AtS-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
         "setupCoreFellowshipOfTheRing": [
@@ -162,7 +156,7 @@
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Balrog of Moria"]],
-            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
             ["SET_SETUP_DRAW", ["LIST", 7, 7]],
             ["SET_ROUND_DRAW", ["LIST", 3, 4]],
             ["SET_SETUP_RINGS", ["LIST", 0, 0]],
@@ -174,7 +168,6 @@
             ["LOAD_CARDS", "Core-The Fellowship of the Ring"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -183,7 +176,7 @@
             ["LOAD_RULES", "AtS"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Balrog of Moria"]],
-            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
             ["SET_SETUP_DRAW", ["LIST", 7, 7]],
             ["SET_ROUND_DRAW", ["LIST", 3, 4]],
             ["SET_SETUP_RINGS", ["LIST", 0, 0]],
@@ -195,7 +188,6 @@
             ["LOAD_CARDS", "AtS-The Fellowship of the Ring"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -204,7 +196,7 @@
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Théoden", "Saruman"]],
-            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
             ["SET_SETUP_DRAW", ["LIST", 6, 6]],
             ["SET_ROUND_DRAW", ["LIST", 4, 6]],
             ["SET_SETUP_RINGS", ["LIST", 2, 2]],
@@ -216,16 +208,15 @@
             ["LOAD_CARDS", "Core-The Two Towers"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
 		"setupAtSTheTwoTowers": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_RULES", "AtS"],
+            ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Théoden", "Saruman"]],
-            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
             ["SET_SETUP_DRAW", ["LIST", 6, 6]],
             ["SET_ROUND_DRAW", ["LIST", 4, 6]],
             ["SET_SETUP_RINGS", ["LIST", 2, 0]],
@@ -237,7 +228,6 @@
             ["LOAD_CARDS", "AtS-The Two Towers"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -246,7 +236,7 @@
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "The Witch-king", "Aragorn"]],
-            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
             ["SET_SETUP_DRAW", ["LIST", 6, 6]],
             ["SET_ROUND_DRAW", ["LIST", 4, 6]],
             ["SET_SETUP_RINGS", ["LIST", 2, 2]],
@@ -258,16 +248,15 @@
             ["LOAD_CARDS", "Core-The Return of the King"],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
-		"setupAtSTheTheReturnOfTheKing": [
+		"setupAtSTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_RULES", "AtS"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "The Witch-king", "Aragorn"]],
-            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
             ["SET_SETUP_DRAW", ["LIST", 6, 6]],
             ["SET_ROUND_DRAW", ["LIST", 4, 6]],
             ["SET_SETUP_RINGS", ["LIST", 2, 0]],
@@ -279,13 +268,11 @@
             ["LOAD_CARDS", "AtS-The Return of the King"],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
 		"setupCoreExpertDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
@@ -297,6 +284,7 @@
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
             ["SET_SKIRMISHES", false],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["SET_INITIAL_CORRUPTION", 2],
             ["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "Core-Battlegrounds"],
@@ -306,7 +294,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
         "setupCoreAPerilousJourney": [
@@ -326,7 +313,6 @@
             ["LOAD_CARDS", "Core-A Perilous Journey"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
         "setupCoreRohanAndGondorAtWar":[
@@ -346,13 +332,11 @@
             ["LOAD_CARDS", "Core-Rohan and Gondor at War"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
 		],
 		"setupGrandPrixTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
-			["LOAD_RULES", "Core"],
+            ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
@@ -363,6 +347,7 @@
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
             ["SET_SKIRMISHES", false],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["SET_INITIAL_CORRUPTION", 0],
 			["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "GP-Battlegrounds"],
@@ -372,7 +357,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
 		"newRound": [
