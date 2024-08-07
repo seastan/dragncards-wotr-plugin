@@ -696,6 +696,112 @@
                 "rotation": 90
             }
         },
+        "player5Hand": {
+            "groupType": "hand",
+            "label": "id:player5Hand", 
+            "tableLabel": "id:hand",
+            "canHaveAttachments": false,
+            "onCardEnter": {
+                "controller": "player5",
+                "peeking": {"player5": true}
+            }
+        },
+        "player5Deck": {
+            "groupType": "deck",
+            "label": "id:player5Deck", 
+            "tableLabel": "id:deck",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "controller": "player5",
+                "deckGroupId": "player5Deck",
+                "cycleGroupId": "player5Cycled",
+                "eliminateGroupId": "player5Eliminated"
+            },
+            "onCardLeave": {
+                "controller": "player5"
+            }
+        },
+        "player5Cycled": {
+            "groupType": "nonFlippingPile",
+            "label": "id:player5Cycled", 
+            "tableLabel": "id:cycled",
+            "canHaveAttachments": false,
+            "onCardEnter": {
+                "peeking": {}
+            }
+        },
+        "player5Eliminated": {
+            "groupType": "nonFlippingPile",
+            "label": "id:player5Eliminated", 
+            "tableLabel": "id:eliminated",
+            "canHaveAttachments": false,
+            "onCardEnter": {
+                "peeking": {}
+            }
+        },
+        "player5Reserve": {
+            "groupType": "inPlay",
+            "label": "id:player5Reserve", 
+            "tableLabel": "id:p5Reserve",
+            "canHaveAttachments": true,
+            "onCardEnter": {
+                "rotation": 90
+            }
+        },
+        "player6Hand": {
+            "groupType": "hand",
+            "label": "id:player6Hand", 
+            "tableLabel": "id:hand",
+            "canHaveAttachments": false,
+            "onCardEnter": {
+                "controller": "player6",
+                "peeking": {"player6": true}
+            }
+        },
+        "player6Deck": {
+            "groupType": "deck",
+            "label": "id:player6Deck", 
+            "tableLabel": "id:deck",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "controller": "player6",
+                "deckGroupId": "player6Deck",
+                "cycleGroupId": "player6Cycled",
+                "eliminateGroupId": "player6Eliminated"
+            },
+            "onCardLeave": {
+                "controller": "player6"
+            }
+        },
+        "player6Cycled": {
+            "groupType": "nonFlippingPile",
+            "label": "id:player6Cycled", 
+            "tableLabel": "id:cycled",
+            "canHaveAttachments": false,
+            "onCardEnter": {
+                "peeking": {}
+            }
+        },
+        "player6Eliminated": {
+            "groupType": "nonFlippingPile",
+            "label": "id:player6Eliminated", 
+            "tableLabel": "id:eliminated",
+            "canHaveAttachments": false,
+            "onCardEnter": {
+                "peeking": {}
+            }
+        },
+        "player6Reserve": {
+            "groupType": "inPlay",
+            "label": "id:player6Reserve", 
+            "tableLabel": "id:p6Reserve",
+            "canHaveAttachments": true,
+            "onCardEnter": {
+                "rotation": 90
+            }
+        },
         "sharedAside": {
             "groupType": "discard",
             "label": "id:aside", 

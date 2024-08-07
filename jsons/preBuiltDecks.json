@@ -80,6 +80,11 @@
             "cards": [],
             "postLoadActionList": "setupGrandPrixTrilogy"
         },
+        "modeFaSSixPlayer": {
+            "label": "FaS Six Player",
+            "cards": [],
+            "postLoadActionList": "setupFaSSixPlayer"
+        },
         "Core-Aragorn": {
             "label": "Aragorn",
             "cards": [

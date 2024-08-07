@@ -25,6 +25,12 @@
                     {"deckListId": "modeAtSTheTwoTowers", "label": "The Two Towers"},
                     {"deckListId": "modeAtSTheReturnOfTheKing", "label": "The Return of the King"}
                 ]
+            },
+            {   
+                "label": "Fire and Swords",
+                "deckLists": [
+                    {"deckListId": "modeFaSSixPlayer", "label": "Six Player"}
+                ]
             }
         ],
         "deckLists": [

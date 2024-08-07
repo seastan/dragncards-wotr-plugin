@@ -27,6 +27,10 @@
                 ["LOG", "{{$ALIAS_N}} set the number of players to {{$NUM_PLAYERS}}."],
                 ["SET", "/numPlayers", "$NUM_PLAYERS"],
                 ["COND",
+                    ["EQUAL", "$NUM_PLAYERS", 6],
+                    [
+                        ["SET_NUM_BLUE_RED", 3, 3]
+                    ],
                     ["EQUAL", "$NUM_PLAYERS", 3],
                     [
                         ["SET_NUM_BLUE_RED", 2, 1]
@@ -230,7 +234,7 @@
                             ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", "$LEFT"]
                         ]]
                     ],
-                    ["TRUE"],
+                    ["EQUAL", "$NUM_BLUE", 1],
                     [
                         ["SET", "/playerData/player1/team", "blue"],
                         ["UPDATE_LAYOUT", "/layout/regions/player3Reserve/visible", false],
@@ -283,7 +287,7 @@
                             ["ACTION_LIST", "changeP4ToP3"]
                         ]
                     ],
-                    ["TRUE"],
+                    ["EQUAL", "$NUM_RED", 1],
                     [
                         ["SET", "/playerData/player2/team", "red"],
                         ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/visible", false],

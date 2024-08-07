@@ -1,6 +1,9 @@
 
 {
     "labels": {
+        "sixPlayer": {
+            "English": "Six Player"
+        },
         "labelMarkAsFreePeoplesVictory": {
             "English": "Mark as Free Peoples Victory"
         },
@@ -53,10 +56,10 @@
             "English": "Path Deck 9"
         },
         "freePeoplesScoringArea": {
-            "English": "Free Peoples Scoring Area"
+            "English": "FP Scoring Area"
         },
         "shadowScoringArea": {
-            "English": "Shadow Scoring Area"
+            "English": "SP Scoring Area"
         },
         "drawCard": {
             "English": "Draw a card"
@@ -336,6 +339,42 @@
         },
         "p4Reserve": {
             "English": "P4 Reserve"
+        },
+        "player5Hand": {
+            "English": "Player 4 Hand"
+        },
+        "player5Deck": {
+            "English": "Player 4 Deck"
+        },
+        "player5Cycled": {
+            "English": "Player 4 Cycled"
+        },
+        "player5Eliminated": {
+            "English": "Player 4 Eliminated"
+        },
+        "player5Reserve": {
+            "English": "Player 4 Reserve"
+        },
+        "p6Reserve": {
+            "English": "P6 Reserve"
+        },
+        "player6Hand": {
+            "English": "Player 4 Hand"
+        },
+        "player6Deck": {
+            "English": "Player 4 Deck"
+        },
+        "player6Cycled": {
+            "English": "Player 4 Cycled"
+        },
+        "player6Eliminated": {
+            "English": "Player 4 Eliminated"
+        },
+        "player6Reserve": {
+            "English": "Player 4 Reserve"
+        },
+        "p5Reserve": {
+            "English": "P5 Reserve"
         },
         "aside": {
             "English": "Aside"
