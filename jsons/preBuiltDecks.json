@@ -2041,7 +2041,6 @@
         },
         "Core-The Fellowship of the Ring": {
             "label": "The Fellowship of the Ring",
-            "preLoadActionList": "keepBattlegroundOrder",
             "postLoadActionList": "setupCoreFellowshipOfTheRing",
             "cards": [
                 {
@@ -2528,7 +2527,6 @@
         },
         "AtS-The Fellowship of the Ring": {
             "label": "Co-op The Fellowship of the Ring",
-            "preLoadActionList": "keepBattlegroundOrder",
             "postLoadActionList": "setupAtSFellowshipOfTheRing",
             "cards": [
                 {
@@ -3015,7 +3013,6 @@
         },
         "Core-The Two Towers": {
             "label": "The Two Towers",
-            "preLoadActionList": "keepBattlegroundOrder",
 	        "postLoadActionList": "setupCoreTheTwoTowers",
             "cards": [
                 {
@@ -3774,7 +3771,6 @@
         },
         "AtS-The Two Towers": {
             "label": "The Two Towers",
-            "preLoadActionList": "keepBattlegroundOrder",
 	        "postLoadActionList": "setupAtSTheTwoTowers",
             "cards": [
                 {
@@ -4527,7 +4523,6 @@
         },
         "Core-A Perilous Journey": {
             "label": "A Perilous Journey",
-            "preLoadActionList": "keepBattlegroundOrder",
             "postLoadActionList": "setupCoreAPerilousJourney",
             "cards": [
                 {
@@ -5128,7 +5123,6 @@
         },    
 		"Core-Rohan and Gondor at War":{
             "label": "Rohan and Gondor at War",
-            "preLoadActionList": "keepBattlegroundOrder",
             "postLoadActionList": "setupCoreRohanAndGondorAtWar",
             "cards": [
                 {
