@@ -1,5 +1,85 @@
 {
     "preBuiltDecks": {
+        "modeCoreTrilogy": {
+            "label": "Core Trilogy",
+            "cards": [],
+            "postLoadActionList": "setupCoreTrilogy"
+        },
+        "modeAtSTrilogy": {
+            "label": "AtS Trilogy",
+            "cards": [],
+            "postLoadActionList": "setupAtSTrilogy"
+        },
+        "modeCoreTwoPlayerDuel": {
+            "label": "Core Two Player Duel",
+            "cards": [],
+            "postLoadActionList": "setupCoreTwoPlayerDuel"
+        },
+        "modeAtSTwoPlayerDuel": {
+            "label": "AtS Two Player Duel",
+            "cards": [],
+            "postLoadActionList": "setupAtSTwoPlayerDuel"
+        },
+        "modeCoreThreePlayerDuel": {
+            "label": "Core Three Player Duel",
+            "cards": [],
+            "postLoadActionList": "setupCoreThreePlayerDuel"
+        },
+        "modeAtSThreePlayerDuel": {
+            "label": "AtS Three Player Duel",
+            "cards": [],
+            "postLoadActionList": "setupAtSThreePlayerDuel"
+        },
+        "modeCoreFellowshipOfTheRing": {
+            "label": "Core Fellowship of the Ring",
+            "cards": [],
+            "postLoadActionList": "setupCoreFellowshipOfTheRing"
+        },
+        "modeAtSFellowshipOfTheRing": {
+            "label": "AtS Fellowship of the Ring",
+            "cards": [],
+            "postLoadActionList": "setupAtSFellowshipOfTheRing"
+        },
+        "modeCoreTheTwoTowers": {
+            "label": "Core The Two Towers",
+            "cards": [],
+            "postLoadActionList": "setupCoreTheTwoTowers"
+        },
+        "modeAtSTheTwoTowers": {
+            "label": "AtS The Two Towers",
+            "cards": [],
+            "postLoadActionList": "setupAtSTheTwoTowers"
+        },
+        "modeCoreTheReturnOfTheKing": {
+            "label": "Core The Return of the King",
+            "cards": [],
+            "postLoadActionList": "setupCoreTheReturnOfTheKing"
+        },
+        "modeAtSTheReturnOfTheKing": {
+            "label": "AtS The Return of the King",
+            "cards": [],
+            "postLoadActionList": "setupAtSTheReturnOfTheKing"
+        },
+        "modeCoreExpertDuel": {
+            "label": "Core Expert Duel",
+            "cards": [],
+            "postLoadActionList": "setupCoreExpertDuel"
+        },
+        "modeCoreAPerilousJourney": {
+            "label": "Core A Perilous Journey",
+            "cards": [],
+            "postLoadActionList": "setupCoreAPerilousJourney"
+        },
+        "modeCoreRohanAndGondorAtWar": {
+            "label": "Core Rohan and Gondor at War",
+            "cards": [],
+            "postLoadActionList": "setupCoreRohanAndGondorAtWar"
+        },
+        "modeGrandPrixTrilogy": {
+            "label": "Grand Prix Trilogy",
+            "cards": [],
+            "postLoadActionList": "setupGrandPrixTrilogy"
+        },
         "Core-Aragorn": {
             "label": "Aragorn",
             "cards": [
@@ -182,12 +262,6 @@
                     "quantity": 1,
                     "databaseId": "012ff4ad-8ec9-4f10-80dd-60db11e1b8c9",
                     "_name": "Vilya, Ring of Air"
-                },
-                {
-                    "loadGroupId": "sharedAside",
-                    "quantity": 1,
-                    "databaseId": "e9762403-b5d0-4ff8-97b6-347defc8b8e6",
-                    "_name": "Ioreth"
                 }
             ]
         },
@@ -373,12 +447,6 @@
                     "quantity": 1,
                     "databaseId": "a91b282a-c116-4ed8-be47-8abdbd97479f",
                     "_name": "Narya, the Ring of Fire"
-                },
-                {
-                    "loadGroupId": "sharedAside",
-                    "quantity": 1,
-                    "databaseId": "43bd748d-d81c-4d98-8440-6c5dfcb75a54",
-                    "_name": "Ghân-buri-Ghân"
                 }
             ]
         },
@@ -564,12 +632,6 @@
                     "quantity": 1,
                     "databaseId": "3c3c999b-f515-4dd6-9344-bfdde7341726",
                     "_name": "The Black Serpent"
-                },
-                {
-                    "loadGroupId": "sharedAside",
-                    "quantity": 1,
-                    "databaseId": "584da922-12a5-44a8-b47f-bd280374d3ba",
-                    "_name": "Whip of Many Thongs"
                 }
             ]
         },
@@ -755,12 +817,6 @@
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
                     "_name": "The Black Serpent"
-                },
-                {
-                    "databaseId": "b1f20381-8487-4603-a2e6-f30dbfb5c1ba",
-                    "quantity": 1,
-                    "loadGroupId": "sharedAside",
-                    "_name": "Whip of Many Thongs"
                 }
             ]
         },
@@ -946,12 +1002,6 @@
                     "quantity": 1,
                     "databaseId": "3e989bf2-8d61-4b41-af05-aebdddbf9b6c",
                     "_name": "The Ringwraiths are Abroad"
-                },
-                {
-                    "loadGroupId": "sharedAside",
-                    "quantity": 1,
-                    "databaseId": "b9539977-4ed1-44c6-aa09-5431a4a11967",
-                    "_name": "Gothmog"
                 }
             ]
         },
@@ -1137,12 +1187,6 @@
                     "quantity": 1,
                     "loadGroupId": "playerNDeck",
                     "_name": "The Ringwraiths are Abroad"
-                },
-                {
-                    "databaseId": "d2e8078c-c71c-4098-ae47-6d82ee9bc295",
-                    "quantity": 1,
-                    "loadGroupId": "sharedAside",
-                    "_name": "Gothmog"
                 }
             ]
         },
@@ -4480,7 +4524,7 @@
                     "_name": "Pelargir"
                 }
             ]
-        }
+        },
         "Core-A Perilous Journey": {
             "label": "A Perilous Journey",
             "preLoadActionList": "keepBattlegroundOrder",
@@ -5037,7 +5081,7 @@
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck6",
                     "_name": "Amon Hen"
-                }
+                },
 				{
                     "loadGroupId": "sharedBattlegroundBlue",
                     "quantity": 1,
@@ -5079,7 +5123,7 @@
                     "quantity": 1,
                     "databaseId": "178edd70-878d-4c1c-a64c-9eb913611450",
                     "_name": "Minas Morgul"
-                },
+                }
             ]
         },    
 		"Core-Rohan and Gondor at War":{
@@ -5705,6 +5749,7 @@
                     "loadGroupId": "sharedPathDeck9",
                     "_name": "Orodruin"
                 }
+            ]
 		}
 	}
 }

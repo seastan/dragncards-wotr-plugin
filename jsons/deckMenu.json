@@ -1,17 +1,22 @@
 {
     "deckMenu": {
         "deckLists": [
-            {"deckListId": "Core-The Fellowship of the Ring", "label": "The Fellowship of the Ring"},
-            {"deckListId": "Core-The Return of the King", "label": "The Return of the King"},
-            {"deckListId": "Core-The Two Towers", "label": "The Two Towers"},            
-            {"deckListId": "Core-Trilogy", "label": "Trilogy"},
-            {"deckListId": "Core-Two-Player Duel", "label": "Two-Player Duel"},
-            {"deckListId": "Core-Three-Player Duel", "label": "Three-Player Duel"},
-            {"deckListId": "AtS-The Fellowship of the Ring", "label": "Co-op The Fellowship of the Ring"},
-            {"deckListId": "AtS-Trilogy", "label": "Co-op Trilogy"},
-            {"deckListId": "AtS-Two-Player Duel", "label": "Co-op Two-Player Duel"},
-            {"deckListId": "AtS-Three-Player Duel", "label": "Co-op Three-Player Duel"}
-	    
+            {"deckListId": "modeCoreTrilogy", "label": "Core Trilogy"},
+            {"deckListId": "modeAtSTrilogy", "label": "AtS Trilogy"},
+            {"deckListId": "modeCoreTwoPlayerDuel", "label": "Core Two Player Duel"},
+            {"deckListId": "modeAtSTwoPlayerDuel", "label": "AtS Two Player Duel"},
+            {"deckListId": "modeCoreThreePlayerDuel", "label": "Core Three Player Duel"},
+            {"deckListId": "modeAtSThreePlayerDuel", "label": "AtS Three Player Duel"},
+            {"deckListId": "modeCoreFellowshipOfTheRing", "label": "Core Fellowship of the Ring"},
+            {"deckListId": "modeAtSFellowshipOfTheRing", "label": "AtS Fellowship of the Ring"},
+            {"deckListId": "modeCoreTheTwoTowers", "label": "Core The Two Towers"},
+            {"deckListId": "modeAtSTheTwoTowers", "label": "AtS The Two Towers"},
+            {"deckListId": "modeCoreTheReturnOfTheKing", "label": "Core The Return of the King"},
+            {"deckListId": "modeAtSTheReturnOfTheKing", "label": "AtS The Return of the King"},
+            {"deckListId": "modeCoreExpertDuel", "label": "Core Expert Duel"},
+            {"deckListId": "modeCoreAPerilousJourney", "label": "Core A Perilous Journey"},
+            {"deckListId": "modeCoreRohanAndGondorAtWar", "label": "Core Rohan and Gondor at War"},
+            {"deckListId": "modeGrandPrixTrilogy", "label": "Grand Prix Trilogy"}	    
         ]
     }
 }

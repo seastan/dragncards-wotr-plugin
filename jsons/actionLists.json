@@ -23,7 +23,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
         "setupAtSTrilogy": [
@@ -49,7 +48,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "AtS-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true]
         ],
@@ -76,7 +74,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
 		"setupAtSTwoPlayerDuel": [
@@ -102,7 +99,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
 		"setupCoreThreePlayerDuel": [
@@ -128,7 +124,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
 		"setupAtSThreePlayerDuel": [
@@ -154,7 +149,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "AtS-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
         "setupCoreFellowshipOfTheRing": [
@@ -174,7 +168,6 @@
             ["LOAD_CARDS", "Core-The Fellowship of the Ring"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -195,7 +188,6 @@
             ["LOAD_CARDS", "AtS-The Fellowship of the Ring"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -216,7 +208,6 @@
             ["LOAD_CARDS", "Core-The Two Towers"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -237,7 +228,6 @@
             ["LOAD_CARDS", "AtS-The Two Towers"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -258,11 +248,10 @@
             ["LOAD_CARDS", "Core-The Return of the King"],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
-		"setupAtSTheTheReturnOfTheKing": [
+		"setupAtSTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_RULES", "AtS"],
             ["SET_NUM_PLAYERS", 2],
@@ -279,7 +268,6 @@
             ["LOAD_CARDS", "AtS-The Return of the King"],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -306,7 +294,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
         "setupCoreAPerilousJourney": [
@@ -326,7 +313,6 @@
             ["LOAD_CARDS", "Core-A Perilous Journey"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
         "setupCoreRohanAndGondorAtWar":[
@@ -346,7 +332,6 @@
             ["LOAD_CARDS", "Core-Rohan and Gondor at War"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
 		],
 		"setupGrandPrixTrilogy": [
@@ -372,7 +357,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
-            ["DRAW_STARTING_HANDS"],
             ["SET", "/automationEnabled", true]
         ],
 		"newRound": [

@@ -137,13 +137,25 @@
         "SET_NO_POINTS_AWARDED_ON_PATH_TIES": {
             "args": ["$BOOL"],
             "code": [
-                ["SET", "/noPointsAwardedOnPathTies", "$BOOL"]
+                ["SET", "/noPointsAwardedOnPathTies", "$BOOL"],
+                ["COND",
+                    "$BOOL",
+                    [
+                        ["PROMPT", "$PLAYER_ORDER", "notifyAll", "The 'No Points Awarded on Path Ties' rule is in effect. If a Path location is tied, no points will be awarded to either side. Scored Paths that are tied will be set aside rather than placed in the scoring area."]
+                    ]
+                ]
             ]
         },
         "SET_CORRUPTION_BONUS": {
             "args": ["$BOOL"],
             "code": [
-                ["SET", "/corruptionBonus", "$BOOL"]
+                ["SET", "/corruptionBonus", "$BOOL"],
+                ["COND",
+                    "$BOOL",
+                    [
+                        ["PROMPT", "$PLAYER_ORDER", "notifyAll", "The 'Corruption Bonus' rule is in effect. Each time a Free Peoples battleground (not a skirmish!) is moved to the Shadow Player scoring area while scoring, the corruption counter will increase by 1."]
+                    ]
+                ]
             ]
         },
         "RESOLVE_CORRUPTION_BONUS": {
@@ -389,7 +401,8 @@
                         ],
                         ["LOG", "└── The {{$GAME.tokenById.$TOKEN.label}} at {{$LOC_CARD.sides.A.name}} is now {{$GAME.textBoxById.$PLAY_GROUP_ID.content}}."]
                     ]
-                ]
+                ],
+                ["UPDATE_EXPECTED_POINTS"]
             ]
         },
         "COMPUTE_SCORE": {
@@ -419,7 +432,95 @@
                     ["LOG", "└── The game is tied {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."],
                     ["TRUE"],
                     ["LOG", "└── The game is tied {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."]
+                ],
+                ["SET", "/textBoxById/scoreRed/content",  "SP Score: {{$GAME.victoryPointsRed}}"],
+                ["SET", "/textBoxById/scoreBlue/content", "FP Score: {{$GAME.victoryPointsBlue}}"]
+            ]
+        },
+        "GET_LOCATION_WINNER": {
+            "args": ["$LOCATION_GROUP_ID"],
+            "code": [
+                ["VAR", "$BLUE_GROUP_ID", "$GAME.groupById.$LOCATION_GROUP_ID.activeBlueGroupId"],
+                ["VAR", "$RED_GROUP_ID", "$GAME.groupById.$LOCATION_GROUP_ID.activeRedGroupId"],
+                ["VAR", "$BLUE_TOTAL", "$GAME.textBoxById.$BLUE_GROUP_ID.content"],
+                ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
+                ["COND",
+                    ["GREATER_THAN", "$BLUE_TOTAL", "$RED_TOTAL"],
+                    "blue",
+                    ["GREATER_THAN", "$RED_TOTAL", "$BLUE_TOTAL"],
+                    "red",
+                    ["AND",
+                        "$GAME.noPointsAwardedOnPathTies",
+                        ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
+                    ],
+                    "neither",
+                    ["OR",
+                        ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "defense"],
+                        ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
+                    ],
+                    "blue",
+                    ["EQUAL", "$GAME.groupById.$RED_GROUP_ID.combatStat", "defense"],
+                    "red"
                 ]
+            ]
+        },
+        "SCORE_LOCATION": {
+            "args": ["$LOCATION_CARD_ID"],
+            "code": [
+                ["VAR", "$LOCATION_GROUP_ID", "$GAME.cardById.$LOCATION_CARD_ID.groupId"],
+                ["VAR", "$WINNER", ["GET_LOCATION_WINNER", "$LOCATION_GROUP_ID"]],
+                ["COND",
+                    ["EQUAL", "$WINNER", "blue"],
+                    [
+                        ["LOG", "{{$ALIAS_N}} scored for the Free Peoples Player(s) team."],
+                        ["MOVE_GROUP", "$LOCATION_GROUP_ID", "sharedScoringBlue"]
+                    ],
+                    ["EQUAL", "$WINNER", "red"],
+                    [
+                        ["LOG", "{{$ALIAS_N}} scored for the Shadow Player(s) team."],
+                        ["MOVE_GROUP", "$LOCATION_GROUP_ID", "sharedScoringRed"]
+                    ],
+                    ["EQUAL", "$WINNER", "neither"],
+                    [
+                        ["LOG", "{{$ALIAS_N}} scored for neither team."],
+                        ["MOVE_GROUP", "$LOCATION_GROUP_ID", "sharedAside"]
+                    ]
+                ]
+            ]
+        },
+        "GET_EXPECTED_POINTS_RED": {
+            "args": ["$LOCATION_GROUP_ID"],
+            "code": [
+                ["VAR", "$WINNER", ["GET_LOCATION_WINNER", "$LOCATION_GROUP_ID"]],
+                ["VAR", "$LOCATION_CARD", "$GAME.groupById.$LOCATION_GROUP_ID.parentCards.[0]"],
+                ["VAR", "$EXPECTED_POINTS", 0],
+                ["COND",
+                    ["EQUAL", "$WINNER", "red"],
+                    [
+                        ["INCREASE_VAR", "$EXPECTED_POINTS", ["ADD", "$LOCATION_CARD.sides.A.victoryPoints", "$LOCATION_CARD.tokens.corruption"]],
+                        ["COND",
+                            ["AND",
+                                ["EQUAL", "$LOCATION_CARD.sides.B.name", "Free Peoples Battleground"],
+                                ["EQUAL", "$GAME.corruptionBonus", true]
+                            ],
+                            ["INCREASE_VAR", "$EXPECTED_POINTS", 1]
+                        ]
+                    ]
+                ],
+                "$EXPECTED_POINTS"
+            ]
+        },
+        "GET_EXPECTED_POINTS_BLUE": {
+            "args": ["$LOCATION_GROUP_ID"],
+            "code": [
+                ["VAR", "$WINNER", ["GET_LOCATION_WINNER", "$LOCATION_GROUP_ID"]],
+                ["VAR", "$LOCATION_CARD", "$GAME.groupById.$LOCATION_GROUP_ID.parentCards.[0]"],
+                ["VAR", "$EXPECTED_POINTS", 0],
+                ["COND",
+                    ["EQUAL", "$WINNER", "blue"],
+                    ["INCREASE_VAR", "$EXPECTED_POINTS", "$LOCATION_CARD.sides.A.victoryPoints"]
+                ],
+                "$EXPECTED_POINTS"
             ]
         },
         "HIGHLIGHT_CURRENT_PLAYER": {
@@ -435,6 +536,33 @@
                     ["UPDATE_LAYOUT", "/layout/regions/{{$GAME.currentPlayer}}Reserve/style", {"background": "rgba(0, 255, 0, 0.2)"}]
                 ]
                 
+            ]
+        },
+        "UPDATE_EXPECTED_POINTS": {
+            "args": [],
+            "code": [
+                ["VAR", "$EXPECTED_POINTS_RED", 0],
+                ["VAR", "$EXPECTED_POINTS_BLUE", 0],
+                ["FOR_EACH_START_STOP_STEP", "$I", 1, 7, 1, [
+                    ["VAR", "$LOCATION_GROUP_ID", "sharedActiveLocation{{$I}}"],
+                    ["COND",
+                        ["AND", 
+                            ["GREATER_THAN", ["LENGTH", "$GAME.groupById.$LOCATION_GROUP_ID.stackIds"], 0],
+                            ["OR",
+                                ["EQUAL", "$GAME.groupById.$LOCATION_GROUP_ID.parentCards.[0].sides.A.type", "Battleground"],
+                                ["EQUAL", "$GAME.groupById.$LOCATION_GROUP_ID.parentCards.[0].sides.A.type", "Path"]
+                            ]
+                        ],
+                        [
+                            ["INCREASE_VAR", "$EXPECTED_POINTS_RED", ["GET_EXPECTED_POINTS_RED", "$LOCATION_GROUP_ID"]],
+                            ["INCREASE_VAR", "$EXPECTED_POINTS_BLUE", ["GET_EXPECTED_POINTS_BLUE", "$LOCATION_GROUP_ID"]]
+                        ]
+                    ]
+                ]],
+                ["INCREASE_VAR", "$EXPECTED_POINTS_RED", "$GAME.victoryPointsRed"],
+                ["INCREASE_VAR", "$EXPECTED_POINTS_BLUE", "$GAME.victoryPointsBlue"],
+                ["SET", "/textBoxById/expectedScoreRed/content", "Expected: {{$EXPECTED_POINTS_RED}}"],
+                ["SET", "/textBoxById/expectedScoreBlue/content", "Expected: {{$EXPECTED_POINTS_BLUE}}"]
             ]
         },
         "PLAY_NUMBERED_CARD_TO_RESERVE": {

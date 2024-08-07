@@ -41,8 +41,8 @@
                 "playerNCycled": {"groupId": "playerNCycled", "type": "pile", "direction": "horizontal", "left": "47%", "top": "84%", "width":  "8%", "height": "16%", "style": {"background": "rgba(0, 0, 0, 0.3)"}},
                 "playerNEliminated": {"groupId": "playerNEliminated", "type": "pile", "direction": "horizontal", "left": "55%", "top": "84%", "width":  "8%", "height": "16%", "style": {"background": "rgba(0, 0, 0, 0.3)"}},
                 "sharedAside": {"groupId": "sharedAside", "type": "row", "direction": "horizontal", "left": "88%", "top": "0%", "width": "12%", "height": "16%"},
-                "sharedScoringRed": {"groupId": "sharedScoringRed", "type": "fan", "direction": "vertical", "left": "88%", "top": "16%", "width": "12%", "height": "42%"},
-                "sharedScoringBlue": {"groupId": "sharedScoringBlue", "type": "fan", "direction": "vertical", "left": "88%", "top": "58%", "width": "12%", "height": "42%"}
+                "sharedScoringRed": {"groupId": "sharedScoringRed", "type": "fan", "direction": "vertical", "left": "88%", "top": "16%", "width": "12%", "height": "39%"},
+                "sharedScoringBlue": {"groupId": "sharedScoringBlue", "type": "fan", "direction": "vertical", "left": "88%", "top": "61%", "width": "12%", "height": "39%"}
             },
             "tableButtons": {
                 "layoutPath1": {"actionList": ["SET_PATH", 1], "label": "1", "left": "43%", "top": "80.5%", "width": "1.5%", "height": "3.5%"},
@@ -61,6 +61,10 @@
                 "layoutLocation6": {"actionList": ["SET_NUM_LOCATIONS", 6], "label": "6", "left": "86.5%", "top": "44%", "width": "1.5%", "height": "3%"}
             },
             "textBoxes": {
+                "scoreRed":         {"left": "88%", "top": "55%", "width": "6%", "height": "3%"},
+                "scoreBlue":        {"left": "88%", "top": "58%", "width": "6%", "height": "3%"},
+                "expectedScoreRed": {"left": "94%", "top": "55%", "width": "6%", "height": "3%"},
+                "expectedScoreBlue":{"left": "94%", "top": "58%", "width": "6%", "height": "3%"},
                 "sharedActiveRed1": {"left": "0%", "top": "32%", "width": "2%", "height": "3%"},
                 "sharedActiveBlue1":{"left": "0%", "top": "45%", "width": "2%", "height": "3%"},
                 "sharedActiveRed2": {"left": "44%", "top": "32%", "width": "2%", "height": "3%"},
@@ -130,9 +134,9 @@
                 "player3Cycled":     {"groupId": "player3Cycled",         "type": "pile","direction": "horizontal", "left": "74%", "top": "6/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(0, 177, 230, 0.2)"}},
                 "player3Eliminated": {"groupId": "player3Eliminated",     "type": "pile","direction": "horizontal", "left": "81%", "top": "6/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(0, 177, 230, 0.2)"}},
 
-                "sharedAside":       {"groupId": "sharedAside",       "type": "row", "direction": "horizontal", "left": "88%", "top": "0/7",  "width": "12%", "height": "1/7"},
-                "sharedScoringRed":  {"groupId": "sharedScoringRed",  "type": "fan", "direction": "vertical",   "left": "88%", "top": "1/7",  "width": "12%", "height": "5/14"},
-                "sharedScoringBlue": {"groupId": "sharedScoringBlue", "type": "fan", "direction": "vertical",   "left": "88%", "top": "7/14", "width": "12%", "height": "5/14"}
+                "sharedAside":       {"groupId": "sharedAside",       "type": "row", "direction": "horizontal", "left": "88%", "top": "0/7",  "width": "12%", "height": "14%"},
+                "sharedScoringRed":  {"groupId": "sharedScoringRed",  "type": "fan", "direction": "vertical",   "left": "88%", "top": "14%",  "width": "12%", "height": "33%"},
+                "sharedScoringBlue": {"groupId": "sharedScoringBlue", "type": "fan", "direction": "vertical",   "left": "88%", "top": "53%",  "width": "12%", "height": "33%"}
             },
             "tableButtons": {
                 "layoutPath1": {"actionList": ["SET_PATH", 1], "label": "1", "left": "43%",   "top": "83.5%", "width": "1.5%", "height": "3.5%"},
@@ -151,6 +155,10 @@
                 "layoutLocation6": {"actionList": ["SET_NUM_LOCATIONS", 6], "label": "6", "left": "86.5%", "top": "54%", "width": "1.5%", "height": "3%"}
             },
             "textBoxes": {
+                "scoreRed":         {"left": "88%", "top": "47%", "width": "6%", "height": "3%"},
+                "scoreBlue":        {"left": "88%", "top": "50%", "width": "6%", "height": "3%"},
+                "expectedScoreRed": {"left": "94%", "top": "47%", "width": "6%", "height": "3%"},
+                "expectedScoreBlue":{"left": "94%", "top": "50%", "width": "6%", "height": "3%"},
                 "sharedActiveRed1": {"left": "0%", "top": "3/7", "width": "2%", "height": "3%"},
                 "sharedActiveBlue1":{"left": "0%", "top": "54%", "width": "2%", "height": "3%"},
                 "sharedActiveRed2": {"left": "44%","top": "3/7", "width": "2%", "height": "3%"},

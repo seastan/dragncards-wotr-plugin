@@ -1,11 +1,9 @@
 {
-    "pluginName": "WotR The Card Game",
+    "pluginName": "WotR The Card Game 2",
     "tutorialUrl": "youtube.com",
     "minPlayers": 2,
     "maxPlayers": 4,
-    "firstPlayerImageUrl": "https://dragncards-wotr.s3.amazonaws.com/tokens/RectangleBlue.png",
     "backgroundUrl": "https://i.imgur.com/pIqGqRp.jpg",
     "loadPreBuiltOnNewGame": true,
-    "vacantSeatOnNewGame": true,
-    "defaultAttachmentDirection": "left"
+    "vacantSeatOnNewGame": true
 }

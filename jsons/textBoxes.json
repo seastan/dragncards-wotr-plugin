@@ -1,5 +1,17 @@
 {
     "textBoxes": {
+        "scoreRed": {
+            "content": "SP Score: 0"
+        },
+        "scoreBlue": {
+            "content": "FP Score: 0"
+        },
+        "expectedScoreRed": {
+            "content": "Expected: 0"
+        },
+        "expectedScoreBlue": {
+            "content": "Expected: 0"
+        },
         "sharedActiveBlue1": {
             "content": 0
         },
