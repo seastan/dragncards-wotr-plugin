@@ -2026,23 +2026,23 @@
         },
         "AtS-Two-Player Duel": {
             "label": "Co-op Two-Player Duel",
-            "postLoadActionList": "coopTwoPlayerSetup",
+            "postLoadActionList": "setupAtSTwoPlayerDuel",
             "cards": []
         },
         "Core-Three-Player Duel": {
             "label": "Three-Player Duel",
-            "postLoadActionList": "threePlayerSetup",
+            "postLoadActionList": "setupCoreThreePlayerDuel",
             "cards": []
         },
         "AtS-Three-Player Duel": {
             "label": "Co-op Three-Player Duel",
-            "postLoadActionList": "coopThreePlayerSetup",
+            "postLoadActionList": "setupAtSThreePlayerDuel",
             "cards": []
         },
         "Core-The Fellowship of the Ring": {
             "label": "The Fellowship of the Ring",
             "preLoadActionList": "keepBattlegroundOrder",
-            "postLoadActionList": "fellowshipSetup",
+            "postLoadActionList": "setupCoreFellowshipOfTheRing",
             "cards": [
                 {
                     "databaseId": "9b749f60-8f41-45d6-9b60-ab1a2a553c62",
@@ -2529,7 +2529,7 @@
         "AtS-The Fellowship of the Ring": {
             "label": "Co-op The Fellowship of the Ring",
             "preLoadActionList": "keepBattlegroundOrder",
-            "postLoadActionList": "coopFellowshipSetup",
+            "postLoadActionList": "setupAtSFellowshipOfTheRing",
             "cards": [
                 {
                     "_name": "Boromir",
@@ -3016,7 +3016,7 @@
         "Core-The Two Towers": {
             "label": "The Two Towers",
             "preLoadActionList": "keepBattlegroundOrder",
-	        "postLoadActionList": "twoTowersSetup",
+	        "postLoadActionList": "setupCoreTheTwoTowers",
             "cards": [
                 {
                     "loadGroupId": "player2Deck",
@@ -3334,7 +3334,7 @@
         },
 	    "Core-The Return of the King": {
             "label": "The Return of the King",
-			"postLoadActionList": "roTK",
+			"postLoadActionList": "setupCoreTheTheReturnOfTheKing",
             "cards": [
 				{
                     "loadGroupId": "player2Deck",
@@ -3775,7 +3775,7 @@
         "AtS-The Two Towers": {
             "label": "The Two Towers",
             "preLoadActionList": "keepBattlegroundOrder",
-	        "postLoadActionList": "twoTowersSetup",
+	        "postLoadActionList": "setupAtSTheTwoTowers",
             "cards": [
                 {
                     "loadGroupId": "player2Deck",
@@ -4087,7 +4087,7 @@
         },
 	    "AtS-The Return of the King": {
             "label": "The Return of the King",
-	        "postLoadActionList": "roTK",
+	        "postLoadActionList": "setupAtSTheTheReturnOfTheKing",
             "cards": [
 		        {
                     "loadGroupId": "player2Deck",
