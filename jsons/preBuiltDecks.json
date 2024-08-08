@@ -87,6 +87,7 @@
         },
         "Core-Aragorn": {
             "label": "Aragorn",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "loadGroupId": "playerNDeck",
@@ -272,6 +273,7 @@
         },
         "Core-Hobbit": {
             "label": "Hobbit",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "loadGroupId": "playerNDeck",
@@ -457,6 +459,7 @@
         },
         "Core-Isengard": {
             "label": "Isengard",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "loadGroupId": "playerNDeck",
@@ -642,6 +645,7 @@
         },
         "AtS-Isengard": {
             "label": "AtS-Isengard",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "950499de-8927-411b-9c01-f5cc0d28cb2a",
@@ -827,6 +831,7 @@
         },
         "Core-Sauron": {
             "label": "Sauron",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "loadGroupId": "playerNDeck",
@@ -1012,6 +1017,7 @@
         },
         "AtS-Sauron": {
             "label": "AtS-Sauron",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "441cccee-2555-453f-ae95-ac4d4c64c405",
@@ -1197,6 +1203,7 @@
         },
         "Core-Battlegrounds": {
             "label": "Battlegrounds",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "loadGroupId": "sharedBattlegroundBlue",
@@ -1286,6 +1293,7 @@
         },
         "GP-Battlegrounds":{
 			"label": "Battlegrounds",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "loadGroupId": "sharedBattlegroundBlue",
@@ -1363,6 +1371,7 @@
 		},
 		"AtS-Battlegrounds": {
             "label": "AtS-Battlegrounds",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
@@ -1452,6 +1461,7 @@
         },
         "Core-Paths": {
             "label": "Paths",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "79727ebc-5d66-4f84-a346-d462c0471c85",
@@ -1619,6 +1629,7 @@
         },
         "AtS-Paths": {
             "label": "Ats-Paths",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "79727ebc-5d66-4f84-a346-d462c0471c85",
@@ -1786,6 +1797,7 @@
         },
         "Core-Rulebook": {
             "label": "Rulebook",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "19d18e6b-b4b1-4e71-8df3-8ea283a13bcc",
@@ -1929,6 +1941,7 @@
         },
         "Duel Rules": {
             "label": "Duel Rules",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "569fea9d-4b7a-4ff2-bff5-176d3aeec0a4",
@@ -1946,6 +1959,7 @@
         },
         "Trilogy Rules": {
             "label": "Trilogy Rules",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "dd15e85c-e441-42a1-bed4-c36b0d6880bc",
@@ -1963,6 +1977,7 @@
         },
         "AtS-Rulebook": {
             "label": "AtS-Rulebook",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "67b00356-fa39-47a3-84de-e08f38136ec9",
@@ -2014,39 +2029,9 @@
                 }
             ]
         },
-        "Core-Trilogy": {
-            "label": "Core Trilogy Scenario",
-            "postLoadActionList": "setupCoreTrilogy",
-            "cards": []
-        },
-        "AtS-Trilogy": {
-            "label": "Co-op Trilogy Scenario",
-            "postLoadActionList": "setupAtSTrilogy",
-            "cards": []
-        },
-        "Core-Two-Player Duel": {
-            "label": "Two-Player Duel",
-            "postLoadActionList": "setupCoreTwoPlayerDuel",
-            "cards": []
-        },
-        "AtS-Two-Player Duel": {
-            "label": "Co-op Two-Player Duel",
-            "postLoadActionList": "setupAtSTwoPlayerDuel",
-            "cards": []
-        },
-        "Core-Three-Player Duel": {
-            "label": "Three-Player Duel",
-            "postLoadActionList": "setupCoreThreePlayerDuel",
-            "cards": []
-        },
-        "AtS-Three-Player Duel": {
-            "label": "Co-op Three-Player Duel",
-            "postLoadActionList": "setupAtSThreePlayerDuel",
-            "cards": []
-        },
         "Core-The Fellowship of the Ring": {
             "label": "The Fellowship of the Ring",
-            "postLoadActionList": "setupCoreFellowshipOfTheRing",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "9b749f60-8f41-45d6-9b60-ab1a2a553c62",
@@ -2532,7 +2517,7 @@
         },
         "AtS-The Fellowship of the Ring": {
             "label": "Co-op The Fellowship of the Ring",
-            "postLoadActionList": "setupAtSFellowshipOfTheRing",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "_name": "Boromir",
@@ -3018,7 +3003,7 @@
         },
         "Core-The Two Towers": {
             "label": "The Two Towers",
-	        "postLoadActionList": "setupCoreTheTwoTowers",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "loadGroupId": "player2Deck",
@@ -3336,7 +3321,7 @@
         },
 	    "Core-The Return of the King": {
             "label": "The Return of the King",
-			"postLoadActionList": "setupCoreTheTheReturnOfTheKing",
+            "hideFromSearch": true,
             "cards": [
 				{
                     "loadGroupId": "player2Deck",
@@ -3776,7 +3761,7 @@
         },
         "AtS-The Two Towers": {
             "label": "The Two Towers",
-	        "postLoadActionList": "setupAtSTheTwoTowers",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "loadGroupId": "player2Deck",
@@ -4088,7 +4073,7 @@
         },
 	    "AtS-The Return of the King": {
             "label": "The Return of the King",
-	        "postLoadActionList": "setupAtSTheTheReturnOfTheKing",
+            "hideFromSearch": true,
             "cards": [
 		        {
                     "loadGroupId": "player2Deck",
@@ -4528,7 +4513,7 @@
         },
         "Core-A Perilous Journey": {
             "label": "A Perilous Journey",
-            "postLoadActionList": "setupCoreAPerilousJourney",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
@@ -4986,7 +4971,7 @@
                     "databaseId": "2db048b2-a06f-4734-b627-8f313edec396",
                     "_name": "Haradrim Regulars"
                 },
-{
+                {
                     "databaseId": "79727ebc-5d66-4f84-a346-d462c0471c85",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck1",
@@ -5128,7 +5113,7 @@
         },    
 		"Core-Rohan and Gondor at War":{
             "label": "Rohan and Gondor at War",
-            "postLoadActionList": "setupCoreRohanAndGondorAtWar",
+            "hideFromSearch": true,
             "cards": [
                 {
                     "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
