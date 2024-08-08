@@ -231,7 +231,7 @@
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
-		"setupCoreTheTheReturnOfTheKing": [
+		"setupCoreTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
