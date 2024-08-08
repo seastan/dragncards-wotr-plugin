@@ -1,6 +1,9 @@
 
 {
     "labels": {
+        "toggleLocationDecks": {
+            "English": "Show/Hide Location Decks (6 player)"
+        },
         "sixPlayer": {
             "English": "Six Player"
         },

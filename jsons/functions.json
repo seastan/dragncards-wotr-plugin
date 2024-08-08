@@ -29,7 +29,8 @@
                 ["COND",
                     ["EQUAL", "$NUM_PLAYERS", 6],
                     [
-                        ["SET_NUM_BLUE_RED", 3, 3]
+                        ["SET_NUM_BLUE_RED", 3, 3],
+                        ["PROMPT", "$PLAYER_ORDER", "notifyAll", "To show/hide the location decks in 6 player mode, use the L key."]
                     ],
                     ["EQUAL", "$NUM_PLAYERS", 3],
                     [
@@ -671,6 +672,13 @@
             "code": ["OR", 
                 ["GREATER_THAN", "$CARD.sides.A.leadershipAttack", 0],
                 ["GREATER_THAN", "$CARD.sides.A.leadershipDefense", 0]
+            ]
+        },
+        "SET_LAYOUT_REGION_GROUP_ID": {
+            "args": ["$REGION_ID", "$GROUP_ID"],
+            "code": [
+                ["LOG", "{{$ALIAS_N}} updated their table layout to display the {{$GROUP_ID}} pile."],
+                ["SET", "/playerData/$PLAYER_N/layout/regions/{{$REGION_ID}}/groupId", "$GROUP_ID"]
             ]
         }
     }

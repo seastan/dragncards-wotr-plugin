@@ -665,6 +665,22 @@
             ["UPDATE_LAYOUT", "/layout/regions/player4Deck/groupId", "player3Deck"],
             ["UPDATE_LAYOUT", "/layout/regions/player4Cycled/groupId", "player3Cycled"],
             ["UPDATE_LAYOUT", "/layout/regions/player4Eliminated/groupId", "player3Eliminated"]
+        ],
+        "toggleLocationDecks": [
+            ["LOG", "{{$ALIAS_N}} toggled their visibility of the location decks."],
+            ["VAR", "$DECKS_VISIBLE", "$GAME.playerData.$PLAYER_N.layout.regions.sharedBattlegroundBlue.visible"],
+            ["VAR", "$NEW_VAL", ["NOT", "$DECKS_VISIBLE"]],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedBattlegroundBlue/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedBattlegroundRed/visible",  "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck1/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck2/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck3/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck4/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck5/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck6/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck7/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck8/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck9/visible", "$NEW_VAL"]   
         ]
     }
 }

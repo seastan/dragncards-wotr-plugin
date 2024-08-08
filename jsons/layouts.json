@@ -181,11 +181,11 @@
             "regions": {
 
                 "player2Hand":      {"groupId": "player2Hand",     "type": "fan", "direction": "horizontal", "left":  "0%", "top": "0/7", "width": "20%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}, "showMenu": true},
-                "player2Deck":      {"groupId": "player2Deck",     "type": "pile","direction": "horizontal", "left": "20%", "top": "0/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}},
+                "player2Swap":      {"groupId": "player2Deck",     "type": "pile","direction": "horizontal", "left": "20%", "top": "0/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}},
                 "player4Hand":      {"groupId": "player4Hand",     "type": "fan", "direction": "horizontal", "left": "27%", "top": "0/7", "width": "20%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}, "showMenu": true},
-                "player4Deck":      {"groupId": "player4Deck",     "type": "pile","direction": "horizontal", "left": "47%", "top": "0/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}},
+                "player4Swap":      {"groupId": "player4Deck",     "type": "pile","direction": "horizontal", "left": "47%", "top": "0/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}},
                 "player6Hand":      {"groupId": "player6Hand",     "type": "fan", "direction": "horizontal", "left": "54%", "top": "0/7", "width": "20%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}, "showMenu": true},
-                "player6Deck":      {"groupId": "player6Deck",     "type": "pile","direction": "horizontal", "left": "74%", "top": "0/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}},
+                "player6Swap":      {"groupId": "player6Deck",     "type": "pile","direction": "horizontal", "left": "74%", "top": "0/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}},
 
                 "player2Reserve":   {"groupId": "player2Reserve",   "type": "row",  "direction": "horizontal", "left": "0%",  "top": "1/7", "width": "1/3", "height": "1/7"},
                 "player4Reserve":   {"groupId": "player4Reserve",   "type": "row",  "direction": "horizontal", "left": "1/3", "top": "1/7", "width": "1/3", "height": "1/7"},
@@ -216,23 +216,54 @@
                 "player3Reserve":   {"groupId": "player3Reserve",    "type": "row",  "direction": "horizontal", "left": "1/3", "top": "5/7", "width": "1/3", "height": "1/7"},
                 "player5Reserve":   {"groupId": "player5Reserve",   "type": "row",  "direction": "horizontal", "left": "2/3", "top": "5/7", "width": "1/3", "height": "1/7"},
                 
-                "player1Hand":   {"groupId": "player1Hand",  "type": "fan", "direction": "horizontal", "left":  "0%", "top": "6/7", "width": "20%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}, "showMenu": true},
-                "player1Deck":   {"groupId": "player1Deck",  "type": "pile","direction": "horizontal", "left": "20%", "top": "6/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}},
-                "player3Hand":   {"groupId": "player3Hand",  "type": "fan", "direction": "horizontal", "left": "27%", "top": "6/7", "width": "20%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}, "showMenu": true},
-                "player3Deck":   {"groupId": "player3Deck",  "type": "pile","direction": "horizontal", "left": "47%", "top": "6/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}},
-                "player5Hand":   {"groupId": "player5Hand",  "type": "fan", "direction": "horizontal", "left": "54%", "top": "6/7", "width": "20%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}, "showMenu": true},
-                "player5Deck":   {"groupId": "player5Deck",  "type": "pile","direction": "horizontal", "left": "74%", "top": "6/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(178, 0, 0, 0.2)"}},
+                "player1Hand":   {"groupId": "player1Hand",  "type": "fan", "direction": "horizontal", "left":  "0%", "top": "6/7", "width": "20%", "height": "1/7", "style": {"background": "rgba(0, 177, 230, 0.2)"}, "showMenu": true},
+                "player1Swap":   {"groupId": "player1Deck",  "type": "pile","direction": "horizontal", "left": "20%", "top": "6/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(0, 177, 230, 0.2)"}},
+                "player3Hand":   {"groupId": "player3Hand",  "type": "fan", "direction": "horizontal", "left": "27%", "top": "6/7", "width": "20%", "height": "1/7", "style": {"background": "rgba(0, 177, 230, 0.2)"}, "showMenu": true},
+                "player3Swap":   {"groupId": "player3Deck",  "type": "pile","direction": "horizontal", "left": "47%", "top": "6/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(0, 177, 230, 0.2)"}},
+                "player5Hand":   {"groupId": "player5Hand",  "type": "fan", "direction": "horizontal", "left": "54%", "top": "6/7", "width": "20%", "height": "1/7", "style": {"background": "rgba(0, 177, 230, 0.2)"}, "showMenu": true},
+                "player5Swap":   {"groupId": "player5Deck",  "type": "pile","direction": "horizontal", "left": "74%", "top": "6/7", "width":  "7%", "height": "1/7", "style": {"background": "rgba(0, 177, 230, 0.2)"}},
 
                 "sharedAside":   {"groupId": "sharedAside",  "type": "row", "direction": "horizontal", "left": "81%", "top": "0/7",  "width": "19%", "height": "1/7"},
                 "sharedScoringRed":  {"groupId": "sharedScoringRed",  "type": "pile", "direction": "horizontal",   "left": "88%", "top": "30.8%",  "width": "12%", "height": "1/7"},
-                "sharedScoringBlue": {"groupId": "sharedScoringBlue", "type": "pile", "direction": "horizontal",   "left": "88%", "top": "55%",  "width": "12%", "height": "1/7"}            
+                "sharedScoringBlue": {"groupId": "sharedScoringBlue", "type": "pile", "direction": "horizontal",   "left": "88%", "top": "55%",  "width": "12%", "height": "1/7"},
+                
+                "sharedBattlegroundBlue": {"groupId": "sharedBattlegroundBlue", "type": "pile", "direction": "horizontal", "left": "32%", "top": "1/14", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style":  {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedBattlegroundRed":  {"groupId": "sharedBattlegroundRed",  "type": "pile", "direction": "horizontal", "left": "56%", "top": "1/14", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style":  {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedPathDeck1":        {"groupId": "sharedPathDeck1",        "type": "pile", "direction": "horizontal", "left":  "4%", "top": "17/28", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style": {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedPathDeck2":        {"groupId": "sharedPathDeck2",        "type": "pile", "direction": "horizontal", "left": "20%", "top": "17/28", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style": {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedPathDeck3":        {"groupId": "sharedPathDeck3",        "type": "pile", "direction": "horizontal", "left": "36%", "top": "17/28", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style": {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedPathDeck4":        {"groupId": "sharedPathDeck4",        "type": "pile", "direction": "horizontal", "left": "52%", "top": "17/28", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style": {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedPathDeck5":        {"groupId": "sharedPathDeck5",        "type": "pile", "direction": "horizontal", "left": "68%", "top": "17/28", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style": {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedPathDeck6":        {"groupId": "sharedPathDeck6",        "type": "pile", "direction": "horizontal", "left": "84%", "top": "17/28", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style": {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedPathDeck7":        {"groupId": "sharedPathDeck7",        "type": "pile", "direction": "horizontal", "left": "28%", "top": "23/28", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style": {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedPathDeck8":        {"groupId": "sharedPathDeck8",        "type": "pile", "direction": "horizontal", "left": "44%", "top": "23/28", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style": {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}},
+                "sharedPathDeck9":        {"groupId": "sharedPathDeck9",        "type": "pile", "direction": "horizontal", "left": "60%", "top": "23/28", "width": "12%", "height": "1/7", "visible": false, "showMenu": true,  "layerIndex": 1, "style": {"background": "rgba(55, 65, 81)", "borderRadius": "1vh", "boxShadow": "0 0 3vh 3vh rgba(0, 0, 0, 1)"}}
+
             },
             "tableButtons": {
                 "layoutLocation2": {"actionList": ["SET_NUM_LOCATIONS", 2], "label": "2", "left": "86.5%", "top": "42%", "width": "1.5%", "height": "3%"},
                 "layoutLocation3": {"actionList": ["SET_NUM_LOCATIONS", 3], "label": "3", "left": "86.5%", "top": "45%", "width": "1.5%", "height": "3%"},
                 "layoutLocation4": {"actionList": ["SET_NUM_LOCATIONS", 4], "label": "4", "left": "86.5%", "top": "48%", "width": "1.5%", "height": "3%"},
                 "layoutLocation5": {"actionList": ["SET_NUM_LOCATIONS", 5], "label": "5", "left": "86.5%", "top": "51%", "width": "1.5%", "height": "3%"},
-                "layoutLocation6": {"actionList": ["SET_NUM_LOCATIONS", 6], "label": "6", "left": "86.5%", "top": "54%", "width": "1.5%", "height": "3%"}
+                "layoutLocation6": {"actionList": ["SET_NUM_LOCATIONS", 6], "label": "6", "left": "86.5%", "top": "54%", "width": "1.5%", "height": "3%"},
+                "player1ShowDeck":       {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player1Swap", "player1Deck"],       "label": "D", "left": "25%", "top": "88.5%", "width": "1.5%", "height": "3%"},
+                "player1ShowCycled":     {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player1Swap", "player1Cycled"],     "label": "C", "left": "25%", "top": "91.5%", "width": "1.5%", "height": "3%"},
+                "player1ShowEliminated": {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player1Swap", "player1Eliminated"], "label": "E", "left": "25%", "top": "94.5%", "width": "1.5%", "height": "3%"},
+                "player3ShowDeck":       {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player3Swap", "player3Deck"],       "label": "D", "left": "52%", "top": "88.5%", "width": "1.5%", "height": "3%"},
+                "player3ShowCycled":     {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player3Swap", "player3Cycled"],     "label": "C", "left": "52%", "top": "91.5%", "width": "1.5%", "height": "3%"},
+                "player3ShowEliminated": {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player3Swap", "player3Eliminated"], "label": "E", "left": "52%", "top": "94.5%", "width": "1.5%", "height": "3%"},
+                "player5ShowDeck":       {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player5Swap", "player5Deck"],       "label": "D", "left": "79%", "top": "88.5%", "width": "1.5%", "height": "3%"},
+                "player5ShowCycled":     {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player5Swap", "player5Cycled"],     "label": "C", "left": "79%", "top": "91.5%", "width": "1.5%", "height": "3%"},
+                "player5ShowEliminated": {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player5Swap", "player5Eliminated"], "label": "E", "left": "79%", "top": "94.5%", "width": "1.5%", "height": "3%"},
+                "player2ShowDeck":       {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player2Swap", "player2Deck"],       "label": "D", "left": "25%", "top":  "2.5%", "width": "1.5%", "height": "3%"},
+                "player2ShowCycled":     {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player2Swap", "player2Cycled"],     "label": "C", "left": "25%", "top":  "5.5%", "width": "1.5%", "height": "3%"},
+                "player2ShowEliminated": {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player2Swap", "player2Eliminated"], "label": "E", "left": "25%", "top":  "8.5%", "width": "1.5%", "height": "3%"},
+                "player4ShowDeck":       {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player4Swap", "player4Deck"],       "label": "D", "left": "52%", "top":  "2.5%", "width": "1.5%", "height": "3%"},
+                "player4ShowCycled":     {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player4Swap", "player4Cycled"],     "label": "C", "left": "52%", "top":  "5.5%", "width": "1.5%", "height": "3%"},
+                "player4ShowEliminated": {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player4Swap", "player4Eliminated"], "label": "E", "left": "52%", "top":  "8.5%", "width": "1.5%", "height": "3%"},
+                "player6ShowDeck":       {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player6Swap", "player6Deck"],       "label": "D", "left": "79%", "top":  "2.5%", "width": "1.5%", "height": "3%"},
+                "player6ShowCycled":     {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player6Swap", "player6Cycled"],     "label": "C", "left": "79%", "top":  "5.5%", "width": "1.5%", "height": "3%"},
+                "player6ShowEliminated": {"actionList": ["SET_LAYOUT_REGION_GROUP_ID", "player6Swap", "player6Eliminated"], "label": "E", "left": "79%", "top":  "8.5%", "width": "1.5%", "height": "3%"}
             },
             "textBoxes": {
                 "scoreRed":         {"left": "88%", "top": "47%", "width": "6%", "height": "3%"},
