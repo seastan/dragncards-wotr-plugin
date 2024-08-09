@@ -50,7 +50,10 @@
                     "/corruptionScore"
                 ],
                 "condition": ["TRUE"],
-                "then": ["COMPUTE_SCORE"]
+                "then": [
+                    ["COMPUTE_SCORE"],
+                    ["UPDATE_EXPECTED_POINTS"]
+                ]
             },
             { 
                 "_comment": "Card enters combat",
