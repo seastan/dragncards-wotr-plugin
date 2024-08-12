@@ -208,6 +208,7 @@
             ["LOAD_CARDS", "Core-The Two Towers"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
+			["SET_PATH", 6],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -228,6 +229,7 @@
             ["LOAD_CARDS", "AtS-The Two Towers"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
+			["SET_PATH", 6],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -248,6 +250,7 @@
             ["LOAD_CARDS", "Core-The Return of the King"],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
+			["SET_PATH", 7],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -268,6 +271,7 @@
             ["LOAD_CARDS", "AtS-The Return of the King"],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
+			["SET_PATH", 7],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"]
         ],
@@ -467,7 +471,7 @@
             ["SET_TURN_ORDER", ["LIST", 1, 2]],
             ["SET_SETUP_DRAW", ["LIST", 4, 6]],
             ["SET_ROUND_DRAW", ["LIST", 4, 6]],
-            ["SET_SETUP_RINGS", ["LIST", 1, 0]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1]],
             ["SET_ROUND_RINGS", ["LIST", 1, 1]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", 1],
@@ -538,6 +542,55 @@
             ["SET_INITIAL_CORRUPTION", 0],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSEpicDuel": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+			["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 4, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 1]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 1],
+            ["SET_SKIRMISHES", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "FaS-Epic Duel-Starting decks"],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
+			["SHUFFLE_BATTLEGROUNDS", true],
+            ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
+				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
+			]
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSAtEpicDuel": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
+            ["LOAD_RULES", "AtS"],
+			["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 4, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 1],
+            ["SET_SKIRMISHES", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "FaS-AtS-Epic Duel-Starting decks"],
+			["LOAD_CARDS", "FaS-AtS-Trilogy-Paths"],
+			["SHUFFLE_BATTLEGROUNDS", true],
+			["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
+				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
+			]
             ["SET", "/automationEnabled", true]
         ],
 		"newRound": [
