@@ -14,6 +14,7 @@
         "Shadow Battleground":  {"width": 1.44, "height": 1.0, "imageUrl": "https://dragncards-wotr.s3.amazonaws.com/cards/RedBattlegroundBack.jpg"},
         "Free Peoples Battleground": {"width": 1.44, "height": 1.0, "imageUrl": "https://dragncards-wotr.s3.amazonaws.com/cards/BlueBattlegroundBack.jpg"},
         "Rulebook": {"width": 1.0, "height": 1.25, "imageUrl": "https://dragncards-wotr.s3.amazonaws.com/rules/Rules-01.jpg"},
-        "AtS Rulebook": {"width": 1.0, "height": 1.25, "imageUrl": "https://dragncards-wotr.s3.amazonaws.com/rules/Rules-01.jpg"}
+        "AtS Rulebook": {"width": 1.0, "height": 1.25, "imageUrl": "https://dragncards-wotr.s3.amazonaws.com/rules/Rules-01.jpg"},
+        "FaS Rulebook": {"width": 1.0, "height": 1.25, "imageUrl": "https://dragncards-wotr.s3.amazonaws.com/rules/Rules-01.jpg"}
     }
 }
