@@ -6942,6 +6942,12 @@
                     "loadGroupId": "sharedPathDeck1",
                     "_name": "Bag End"
                 },
+				{
+                    "databaseId": "",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck1",
+                    "_name": "A Long-expected Party"
+                },
                 {
                     "databaseId": "1dde4cd2-d7b7-4427-ab55-a1e2c2ab4568",
                     "quantity": 1,
@@ -6957,20 +6963,20 @@
 				{
                     "databaseId": "",
                     "quantity": 1,
-                    "loadGroupId": "sharedPathDeck1",
-                    "_name": "A Long-expected Party"
+                    "loadGroupId": "sharedPathDeck2",
+                    "_name": "The Barrow-downs"
                 },
+				{
+                    "databaseId": "1f563c26-db58-44d3-8aeb-67ce356aad74",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck2",
+                    "_name": "The Old Forest"
+                },	
                 {
                     "databaseId": "e592eccb-7ed6-4850-b103-6ed8712f3c6d",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck2",
                     "_name": "Inn of the Prancing Pony"
-                },
-                {
-                    "databaseId": "1f563c26-db58-44d3-8aeb-67ce356aad74",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck2",
-                    "_name": "The Old Forest"
                 },
                 {
                     "databaseId": "8cafa86d-cfa6-4acf-8bb4-bccc93d60f03",
@@ -6979,16 +6985,16 @@
                     "_name": "Weathertop"
                 },
 				{
-                    "databaseId": "",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck2",
-                    "_name": "The Barrow-downs"
-                },
-				{
                     "databaseId": "0c0cbcc6-7f44-49a9-a99f-c8281da0f601",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck3",
                     "_name": "Fords of Bruinen"
+                },
+				{
+                    "databaseId": "",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck3",
+                    "_name": "The Last Homely House"
                 },
                 {
                     "databaseId": "2ffefc8b-431c-4177-a010-25605ed66a34",
@@ -7002,17 +7008,17 @@
                     "loadGroupId": "sharedPathDeck3",
                     "_name": "The Council of Elrond"
                 },
-				{
-                    "databaseId": "",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck3",
-                    "_name": "The Last Homely House"
-                },
                 {
                     "databaseId": "7d170948-624c-4bd8-bbfb-f48c788cbc98",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck4",
                     "_name": "Caradhras"
+                },
+				{
+                    "databaseId": "692a6b6f-6801-4f2b-9476-4c813616666f",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck4",
+                    "_name": "The Doors of Durin"
                 },
                 {
                     "databaseId": "cd105c3b-e86b-4d1c-b194-e75819df3958",
@@ -7020,23 +7026,11 @@
                     "loadGroupId": "sharedPathDeck4",
                     "_name": "Khazad-dûm"
                 },
-                {
-                    "databaseId": "692a6b6f-6801-4f2b-9476-4c813616666f",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck4",
-                    "_name": "The Doors of Durin"
-                },
 				{
                     "databaseId": "",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck4",
                     "_name": "The High Pass"
-                },
-                {
-                    "databaseId": "018c57b0-538c-498a-a9c0-6fd308d4f8b7",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck5",
-                    "_name": "Egladil"
                 },
                 {
                     "databaseId": "143dc9f5-28bd-4681-b793-731a21544c90",
@@ -7051,6 +7045,12 @@
                     "_name": "Dimrill Dale"
                 },
 				{
+                    "databaseId": "018c57b0-538c-498a-a9c0-6fd308d4f8b7",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck5",
+                    "_name": "Egladil"
+                },
+				{
                     "databaseId": "",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck5",
@@ -7063,16 +7063,16 @@
                     "_name": "Amon Hen"
                 },
                 {
-                    "databaseId": "da78fce7-ae5b-4357-9bdf-d94f20dc53af",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck6",
-                    "_name": "Dead Marshes"
-                },
-                {
                     "databaseId": "ca9e10cf-f644-4de8-bcbf-abbb17c13e64",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck6",
                     "_name": "Emyn Muil"
+                },
+				{
+                    "databaseId": "da78fce7-ae5b-4357-9bdf-d94f20dc53af",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck6",
+                    "_name": "Dead Marshes"
                 },
 				{
                     "databaseId": "",
@@ -7105,22 +7105,10 @@
                     "_name": "The Tower of Ecthelion"
                 },
                 {
-                    "databaseId": "bfbb4446-a891-48f0-9b30-4f605cbfd501",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck8",
-                    "_name": "Cirith Ungol"
-                },
-                {
                     "databaseId": "360061e5-e271-4eb5-8044-190c37e1e2de",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck8",
                     "_name": "Morgul Vale"
-                },
-                {
-                    "databaseId": "589381ba-5652-4845-bce0-131335b683b6",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck8",
-                    "_name": "Shelob's Lair"
                 },
 				{
                     "databaseId": "",
@@ -7128,23 +7116,23 @@
                     "loadGroupId": "sharedPathDeck8",
                     "_name": "The Stairs"
                 },
-                {
-                    "databaseId": "477186c1-2316-43bb-b09b-cbc9b2132762",
+				{
+                    "databaseId": "bfbb4446-a891-48f0-9b30-4f605cbfd501",
                     "quantity": 1,
-                    "loadGroupId": "sharedPathDeck9",
-                    "_name": "Crack of Doom"
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Cirith Ungol"
                 },
-                {
+				{
+                    "databaseId": "589381ba-5652-4845-bce0-131335b683b6",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Shelob's Lair"
+                },
+				{
                     "databaseId": "4af0ee68-58c0-4e2a-b9b2-264694bf82f8",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck9",
                     "_name": "Morgai"
-                },
-                {
-                    "databaseId": "5446fbef-187c-4c09-8965-74a6dae37493",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck9",
-                    "_name": "Orodruin"
                 },
 				{
                     "databaseId": "",
@@ -7152,6 +7140,18 @@
                     "loadGroupId": "sharedPathDeck9",
                     "_name": "Gorgoroth"
                 }
+                {
+                    "databaseId": "477186c1-2316-43bb-b09b-cbc9b2132762",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Crack of Doom"
+                },
+                {
+                    "databaseId": "5446fbef-187c-4c09-8965-74a6dae37493",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Orodruin"
+                },
             ]
         },
 		"FaS-AtS-Trilogy-Battlegrounds": {
@@ -7299,14 +7299,20 @@
             ]
         },
 		"FaS-AtS-Trilogy-Paths": {
-            "label": "Paths",
-            "hideFromSearch": true,
-            "cards": [
+			"label": "Paths",
+				"hideFromSearch": true,
+				"cards": [
                 {
                     "databaseId": "79727ebc-5d66-4f84-a346-d462c0471c85",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck1",
                     "_name": "Bag End"
+                },
+				{
+                    "databaseId": "",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck1",
+                    "_name": "A Long-expected Party"
                 },
                 {
                     "databaseId": "1dde4cd2-d7b7-4427-ab55-a1e2c2ab4568",
@@ -7323,20 +7329,20 @@
 				{
                     "databaseId": "",
                     "quantity": 1,
-                    "loadGroupId": "sharedPathDeck1",
-                    "_name": "A Long-expected Party"
+                    "loadGroupId": "sharedPathDeck2",
+                    "_name": "The Barrow-downs"
                 },
+				{
+                    "databaseId": "1f563c26-db58-44d3-8aeb-67ce356aad74",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck2",
+                    "_name": "The Old Forest"
+                },	
                 {
                     "databaseId": "e592eccb-7ed6-4850-b103-6ed8712f3c6d",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck2",
                     "_name": "Inn of the Prancing Pony"
-                },
-                {
-                    "databaseId": "1f563c26-db58-44d3-8aeb-67ce356aad74",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck2",
-                    "_name": "The Old Forest"
                 },
                 {
                     "databaseId": "8cafa86d-cfa6-4acf-8bb4-bccc93d60f03",
@@ -7345,16 +7351,16 @@
                     "_name": "Weathertop"
                 },
 				{
-                    "databaseId": "",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck2",
-                    "_name": "The Barrow-downs"
-                },
-				{
                     "databaseId": "0c0cbcc6-7f44-49a9-a99f-c8281da0f601",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck3",
                     "_name": "Fords of Bruinen"
+                },
+				{
+                    "databaseId": "",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck3",
+                    "_name": "The Last Homely House"
                 },
                 {
                     "databaseId": "2ffefc8b-431c-4177-a010-25605ed66a34",
@@ -7368,17 +7374,17 @@
                     "loadGroupId": "sharedPathDeck3",
                     "_name": "The Council of Elrond"
                 },
-				{
-                    "databaseId": "",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck3",
-                    "_name": "The Last Homely House"
-                },
                 {
                     "databaseId": "7d170948-624c-4bd8-bbfb-f48c788cbc98",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck4",
                     "_name": "Caradhras"
+                },
+				{
+                    "databaseId": "59043f5d-011a-4ae5-b8fc-65f10e52c30a",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck4",
+                    "_name": "The Doors of Durin"
                 },
                 {
                     "databaseId": "cd105c3b-e86b-4d1c-b194-e75819df3958",
@@ -7386,23 +7392,11 @@
                     "loadGroupId": "sharedPathDeck4",
                     "_name": "Khazad-dûm"
                 },
-                {
-                    "databaseId": "59043f5d-011a-4ae5-b8fc-65f10e52c30a",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck4",
-                    "_name": "The Doors of Durin"
-                },
 				{
                     "databaseId": "",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck4",
                     "_name": "The High Pass"
-                },
-                {
-                    "databaseId": "018c57b0-538c-498a-a9c0-6fd308d4f8b7",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck5",
-                    "_name": "Egladil"
                 },
                 {
                     "databaseId": "143dc9f5-28bd-4681-b793-731a21544c90",
@@ -7417,6 +7411,12 @@
                     "_name": "Dimrill Dale"
                 },
 				{
+                    "databaseId": "018c57b0-538c-498a-a9c0-6fd308d4f8b7",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck5",
+                    "_name": "Egladil"
+                },
+				{
                     "databaseId": "",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck5",
@@ -7429,16 +7429,16 @@
                     "_name": "Amon Hen"
                 },
                 {
-                    "databaseId": "da78fce7-ae5b-4357-9bdf-d94f20dc53af",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck6",
-                    "_name": "Dead Marshes"
-                },
-                {
                     "databaseId": "ca9e10cf-f644-4de8-bcbf-abbb17c13e64",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck6",
                     "_name": "Emyn Muil"
+                },
+				{
+                    "databaseId": "da78fce7-ae5b-4357-9bdf-d94f20dc53af",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck6",
+                    "_name": "Dead Marshes"
                 },
 				{
                     "databaseId": "",
@@ -7471,22 +7471,10 @@
                     "_name": "The Tower of Ecthelion"
                 },
                 {
-                    "databaseId": "ca49537c-ac33-4305-82e4-14452118635c",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck8",
-                    "_name": "Cirith Ungol"
-                },
-                {
                     "databaseId": "304cba39-2c8d-446c-9f8c-55f24594aea0",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck8",
                     "_name": "Morgul Vale"
-                },
-                {
-                    "databaseId": "589381ba-5652-4845-bce0-131335b683b6",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck8",
-                    "_name": "Shelob's Lair"
                 },
 				{
                     "databaseId": "",
@@ -7494,23 +7482,23 @@
                     "loadGroupId": "sharedPathDeck8",
                     "_name": "The Stairs"
                 },
-                {
-                    "databaseId": "477186c1-2316-43bb-b09b-cbc9b2132762",
+				{
+                    "databaseId": "ca49537c-ac33-4305-82e4-14452118635c",
                     "quantity": 1,
-                    "loadGroupId": "sharedPathDeck9",
-                    "_name": "Crack of Doom"
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Cirith Ungol"
                 },
-                {
+				{
+                    "databaseId": "589381ba-5652-4845-bce0-131335b683b6",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck8",
+                    "_name": "Shelob's Lair"
+                },
+				{
                     "databaseId": "4af0ee68-58c0-4e2a-b9b2-264694bf82f8",
                     "quantity": 1,
                     "loadGroupId": "sharedPathDeck9",
                     "_name": "Morgai"
-                },
-                {
-                    "databaseId": "5446fbef-187c-4c09-8965-74a6dae37493",
-                    "quantity": 1,
-                    "loadGroupId": "sharedPathDeck9",
-                    "_name": "Orodruin"
                 },
 				{
                     "databaseId": "",
@@ -7518,8 +7506,20 @@
                     "loadGroupId": "sharedPathDeck9",
                     "_name": "Gorgoroth"
                 }
+                {
+                    "databaseId": "477186c1-2316-43bb-b09b-cbc9b2132762",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Crack of Doom"
+                },
+                {
+                    "databaseId": "5446fbef-187c-4c09-8965-74a6dae37493",
+                    "quantity": 1,
+                    "loadGroupId": "sharedPathDeck9",
+                    "_name": "Orodruin"
+                },
             ]
-        }
+        },
 		"FaS-AtS-Saruman": {
 			"label": "Saruman",
             "hideFromSearch": true,
@@ -12572,5 +12572,192 @@
                 }
 			]
 		},
+		
+		"FaS-Epic Duel-Starting decks": {
+            "label": "Starting decks",
+            "hideFromSearch": true,
+            "cards": [
+				{
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+				{
+                    "loadGroupId": "player1Cycled",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+				{
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+				{
+                    "loadGroupId": "player2Cycled",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+				{
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+				{
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+			]
+		},
+		"FaS-ED-FPFaction-Section3": {
+            "label": "Section 3 Free Peoples Faction Cards",
+            "hideFromSearch": true,
+            "cards": [
+				{
+                    "loadGroupId": "player1Cycled",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+			],
+			"postLoadActionList": ["SHUFFLE_BATTLEGROUNDS", true]
+		},
+		"FaS-ED-SPFaction-Section3": {
+            "label": "Section 3 Shadow Faction Cards",
+            "hideFromSearch": true,
+            "cards": [
+				{
+                    "loadGroupId": "player2Cycled",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+			],
+			"postLoadActionList": ["SHUFFLE_BATTLEGROUNDS", true]
+		},
+		"FaS-ED-Battlegrounds-Section2": {
+            "label": "Section 2 Battlegrounds",
+            "hideFromSearch": true,
+            "cards": [
+               {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+			],
+			"postLoadActionList": ["SHUFFLE_BATTLEGROUNDS", true]
+		},
+		"FaS-ED-Battlegrounds-Section3": {
+            "label": "Section 3 Battlegrounds",
+            "hideFromSearch": true,
+            "cards": [
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+			],
+			"postLoadActionList": ["SHUFFLE_BATTLEGROUNDS", true]
+		},
+		"FaS-AtS-Epic Duel-Starting decks": {
+            "label": "Starting decks",
+            "hideFromSearch": true,
+            "cards": [
+				{
+                    "loadGroupId": "player1Deck",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+				{
+                    "loadGroupId": "player1Cycled",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+				{
+                    "loadGroupId": "player2Deck",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+				{
+                    "loadGroupId": "player2Cycled",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+				{
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+				{
+                    "loadGroupId": "sharedBattlegroundRed",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+			]
+		},
+		"FaS-AtS-ED-FPFaction-Section3": {
+            "label": "Section 3 Free Peoples Faction Cards",
+            "hideFromSearch": true,
+            "cards": [
+				{
+                    "loadGroupId": "player2Cycled",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+			]
+		},
+		"FaS-AtS-ED-SPFaction-Section3": {
+            "label": "Section 3 Shadow Faction Cards",
+            "hideFromSearch": true,
+            "cards": [
+				{
+                    "loadGroupId": "player2Cycled",
+                    "quantity": 1,
+                    "databaseId": "67d31a30-c1e2-4c7c-adf9-6049b22474a7",
+                    "_name": "Gimli"
+                },
+			]
+		},
+		"FaS-AtS-ED-Battlegrounds-Section2": {
+            "label": "Section 2 Battlegrounds",
+            "hideFromSearch": true,
+            "cards": [
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+			],
+			"postLoadActionList": ["SHUFFLE_BATTLEGROUNDS", true]
+		},
+		"FaS-AtS-ED-Battlegrounds-Section3": {
+            "label": "Section 3 Battlegrounds",
+            "hideFromSearch": true,
+            "cards": [
+                {
+                    "loadGroupId": "sharedBattlegroundBlue",
+                    "quantity": 1,
+                    "databaseId": "ca265213-a92e-4fc1-ba72-cfb087363e1b",
+                    "_name": "Dol Amroth"
+                },
+			],
+			"postLoadActionList": ["SHUFFLE_BATTLEGROUNDS", true]
+		}
 	}
 }
