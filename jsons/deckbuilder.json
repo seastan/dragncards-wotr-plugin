@@ -18,10 +18,13 @@
         ],
         "spawnGroups": [
             {"loadGroupId": "playerNDeck", "label": "id:myDeck"},
+            {"loadGroupId": "playerNCycled", "label": "id:myCycled"},
             {"loadGroupId": "player1Deck", "label": "id:player1Deck"},
             {"loadGroupId": "player2Deck", "label": "id:player2Deck"},
             {"loadGroupId": "player3Deck", "label": "id:player3Deck"},
             {"loadGroupId": "player4Deck", "label": "id:player4Deck"},
+            {"loadGroupId": "player5Deck", "label": "id:player5Deck"},
+            {"loadGroupId": "player6Deck", "label": "id:player6Deck"},
             {"loadGroupId": "sharedBattlegroundBlue","label": "id:freePeoplesBattlegroundDeck"},
             {"loadGroupId": "sharedBattlegroundRed", "label": "id:shadowBattlegroundDeck"},
             {"loadGroupId": "sharedPathDeck1", "label": "id:pathDeck1"},
