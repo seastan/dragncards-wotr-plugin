@@ -436,6 +436,7 @@
             ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-War in the North Trilogy"],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true]
@@ -478,6 +479,7 @@
             ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-War in the North 2P Duel"],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
 			["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true]
