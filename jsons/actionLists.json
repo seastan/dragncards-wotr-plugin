@@ -436,6 +436,7 @@
             ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-War in the North Trilogy"],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true]
@@ -478,6 +479,7 @@
             ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-War in the North 2P Duel"],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
 			["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true]
@@ -565,7 +567,7 @@
             ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
 				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
 				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
-			]
+			]],
             ["SET", "/automationEnabled", true]
         ],
 		"setupFaSAtEpicDuel": [
@@ -590,7 +592,7 @@
 			["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
 				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
 				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
-			]
+			]],
             ["SET", "/automationEnabled", true]
         ],
 		"newRound": [
