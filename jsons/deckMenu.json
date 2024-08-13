@@ -35,29 +35,16 @@
 					{"deckListId": "modeFaSWarInTheNorth2P", "label": "War in the North - Two Player Duel Rules"},
 					{"deckListId": "modeFaSWarInTheNorth3P", "label": "War in the North - Three Player Duel Rules"}
 				],
-				"subMenus": [
-<<<<<<< HEAD
-                    {
-                        "label": "Epic Duel",
-                        "deckLists": [
-                            {"deckListId": "FaS-Epic Duel-Starting decks", "label": "Starting Setup"},
-                            {"deckListId": "FaS-ED-FPFaction-Section3", "label": "Section 3 Free Peoples Faction Cards"},
-                            {"deckListId": "FaS-ED-SPFaction-Section3", "label": "Section 3 Shadow Faction Cards"},
-                            {"deckListId": "FaS-ED-Battlegrounds-Section2", "label": "Section 2 Battlegrounds"},
-                            {"deckListId": "FaS-ED-Battlegrounds-Section3", "label": "Section 3 Battlegrounds"}
-                        ]
-                    }
-=======
+				"subMenus": {
 					"label": "Epic Duel",
 					"deckLists": [
-						{"deckListId": "modeFaSEpicDuel", "label": "Starting Setup"}
-						{"deckListId": "FaS-ED-FPFaction-Section3", "label": "Section 3 Free Peoples Faction Cards"}
-						{"deckListId": "FaS-ED-SPFaction-Section3", "label": "Section 3 Shadow Faction Cards"}
-						{"deckListId": "FaS-ED-Battlegrounds-Section2", "label": "Section 2 Battlegrounds"}
+						{"deckListId": "modeFaSEpicDuel", "label": "Starting Setup"},
+						{"deckListId": "FaS-ED-FPFaction-Section3", "label": "Section 3 Free Peoples Faction Cards"},
+						{"deckListId": "FaS-ED-SPFaction-Section3", "label": "Section 3 Shadow Faction Cards"},
+						{"deckListId": "FaS-ED-Battlegrounds-Section2", "label": "Section 2 Battlegrounds"},
 						{"deckListId": "FaS-ED-Battlegrounds-Section3", "label": "Section 3 Battlegrounds"}
 					]
->>>>>>> 10f5db5065cfdd33846ee35b871f3dc611e68bcd
-                ]
+                }
             },
 			{
 				"label": "Fire and Swords - Solo/Coop",
@@ -67,29 +54,16 @@
 					{"deckListId": "modeFaSAtSWarInTheNorth2P", "label": "War in the North - Two Player Duel Rules"},
 					{"deckListId": "modeFaSAtSWarInTheNorth3P", "label": "War in the North - Three Player Duel Rules"}
 				],
-				"subMenus": [
-<<<<<<< HEAD
-                    {
-                        "label": "Epic Duel",
-                        "deckLists": [
-                            {"deckListId": "FaS-AtS-Epic Duel-Starting decks", "label": "Starting Setup"},
-                            {"deckListId": "FaS-AtS-ED-FPFaction-Section3", "label": "Section 3 Free Peoples Faction Cards"},
-                            {"deckListId": "FaS-AtS-ED-SPFaction-Section3", "label": "Section 3 Shadow Faction Cards"},
-                            {"deckListId": "FaS-AtS-ED-Battlegrounds-Section2", "label": "Section 2 Battlegrounds"},
-                            {"deckListId": "FaS-AtS-ED-Battlegrounds-Section3", "label": "Section 3 Battlegrounds"}
-                        ]
-                    }
-=======
+				"subMenus": {
 					"label": "Epic Duel",
 					"deckLists": [
-						{"deckListId": "modeFasAtSEpicDuel", "label": "Starting Setup"}
-						{"deckListId": "FaS-ED-FPFaction-Section3", "label": "Section 3 Free Peoples Faction Cards"}
-						{"deckListId": "FaS-AtS-ED-SPFaction-Section3", "label": "Section 3 Shadow Faction Cards"}
-						{"deckListId": "FaS-AtS-ED-Battlegrounds-Section2", "label": "Section 2 Battlegrounds"}
+						{"deckListId": "modeFasAtSEpicDuel", "label": "Starting Setup"},
+						{"deckListId": "FaS-ED-FPFaction-Section3", "label": "Section 3 Free Peoples Faction Cards"},
+						{"deckListId": "FaS-AtS-ED-SPFaction-Section3", "label": "Section 3 Shadow Faction Cards"},
+						{"deckListId": "FaS-AtS-ED-Battlegrounds-Section2", "label": "Section 2 Battlegrounds"},
 						{"deckListId": "FaS-AtS-ED-Battlegrounds-Section3", "label": "Section 3 Battlegrounds"}
 					]
->>>>>>> 10f5db5065cfdd33846ee35b871f3dc611e68bcd
-                ]
+                }
             }
         ]
     }
