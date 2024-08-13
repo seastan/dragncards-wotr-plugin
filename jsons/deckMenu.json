@@ -38,7 +38,7 @@
 				"subMenus": [
 					"label": "Epic Duel",
 					"deckLists": [
-						{"deckListId": "FaS-Epic Duel-Starting decks", "label": "Starting Setup"}
+						{"deckListId": "modeFaSEpicDuel", "label": "Starting Setup"}
 						{"deckListId": "FaS-ED-FPFaction-Section3", "label": "Section 3 Free Peoples Faction Cards"}
 						{"deckListId": "FaS-ED-SPFaction-Section3", "label": "Section 3 Shadow Faction Cards"}
 						{"deckListId": "FaS-ED-Battlegrounds-Section2", "label": "Section 2 Battlegrounds"}
@@ -57,8 +57,8 @@
 				"subMenus": [
 					"label": "Epic Duel",
 					"deckLists": [
-						{"deckListId": "FaS-AtS-Epic Duel-Starting decks", "label": "Starting Setup"}
-						{"deckListId": "FaS-AtS-ED-FPFaction-Section3", "label": "Section 3 Free Peoples Faction Cards"}
+						{"deckListId": "modeFasAtSEpicDuel", "label": "Starting Setup"}
+						{"deckListId": "FaS-ED-FPFaction-Section3", "label": "Section 3 Free Peoples Faction Cards"}
 						{"deckListId": "FaS-AtS-ED-SPFaction-Section3", "label": "Section 3 Shadow Faction Cards"}
 						{"deckListId": "FaS-AtS-ED-Battlegrounds-Section2", "label": "Section 2 Battlegrounds"}
 						{"deckListId": "FaS-AtS-ED-Battlegrounds-Section3", "label": "Section 3 Battlegrounds"}
