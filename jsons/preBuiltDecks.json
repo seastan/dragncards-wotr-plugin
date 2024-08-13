@@ -7677,13 +7677,13 @@
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "Half-orcs and Goblin-men",
+                    "databaseId": "a16d805b-ec68-477d-92e7-26f60a89f9dd",
                     "_name": "Half-orcs and Goblin-men"
                 },
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "A Little Mischief in a Mean Way",
+                    "databaseId": "da861cb6-e930-4c4f-a643-05ecb8758073",
                     "_name": "A Little Mischief in a Mean Way"
                 },
 				{
@@ -7755,31 +7755,31 @@
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "Goblins of the Misty Mountains",
+                    "databaseId": "cfb4d6b6-fbf7-4597-8bce-74d27410f85e",
                     "_name": "Goblins of the Misty Mountains"
                 },
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "Orc-Chieftain",
+                    "databaseId": "23f8de28-b9ce-4008-89b0-f8d92ca1e23d",
                     "_name": "Orc-chieftain"
                 },
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "Spiders of Mirkwood",
+                    "databaseId": "b41cacfb-b685-4cc2-bbb6-bc933e021bf5",
                     "_name": "Spiders of Mirkwood"
                 },
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "Watcher in the Water",
+                    "databaseId": "5b993dd1-2c39-4d40-8ee2-5fddc316e779",
                     "_name": "Watcher in the Water"
                 },
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "Wolves",
+                    "databaseId": "43523f8b-e4cd-465f-a30b-d593821e12a6",
                     "_name": "Wolves"
                 }
 			]
