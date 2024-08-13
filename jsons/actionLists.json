@@ -806,14 +806,11 @@
                     ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
                     ["COND",
                         ["GREATER_THAN", "$BLUE_TOTAL", "$RED_TOTAL"],
-                        [
-                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Free Peoples Player(s) team."],
-                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringBlue", 0]
-                        ],
+                        ["MOVE_TO_SCORING", "$ACTIVE_CARD", "blue"],
+
                         ["GREATER_THAN", "$RED_TOTAL", "$BLUE_TOTAL"],
                         [
-                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Shadow Player(s) team."],
-                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringRed", 0],
+                            ["MOVE_TO_SCORING", "$ACTIVE_CARD", "red"],
                             ["COND", 
                                 ["EQUAL", "$ACTIVE_FACE.type", "Path"],
                                 [
@@ -826,6 +823,7 @@
                                 ["RESOLVE_CORRUPTION_BONUS"]
                             ]
                         ],
+                        
                         ["AND",
                             "$GAME.noPointsAwardedOnPathTies",
                             ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
@@ -834,19 +832,15 @@
                             ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for neither team."],
                             ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedAside", 0]
                         ],
+
                         ["OR",
                             ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "defense"],
                             ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
                         ],
-                        [
-                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Free Peoples Player(s) team."],
-                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringBlue", 0]
-                        ],
+                        ["MOVE_TO_SCORING", "$ACTIVE_CARD", "blue"],
+
                         ["EQUAL", "$GAME.groupById.$RED_GROUP_ID.combatStat", "defense"],
-                        [
-                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Shadow Player(s) team."],
-                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringRed", 0]
-                        ]
+                        ["MOVE_TO_SCORING", "$ACTIVE_CARD", "red"]
                     ]
                 ],
                 ["TRUE"],

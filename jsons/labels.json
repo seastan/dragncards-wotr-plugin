@@ -1,6 +1,9 @@
 
 {
     "labels": {
+        "myCycled": {
+            "English": "My Cycled"
+        },
         "toggleLocationDecks": {
             "English": "Show/Hide Location Decks (6 player)"
         },
@@ -344,37 +347,37 @@
             "English": "P4 Reserve"
         },
         "player5Hand": {
-            "English": "Player 4 Hand"
+            "English": "Player 5 Hand"
         },
         "player5Deck": {
-            "English": "Player 4 Deck"
+            "English": "Player 5 Deck"
         },
         "player5Cycled": {
-            "English": "Player 4 Cycled"
+            "English": "Player 5 Cycled"
         },
         "player5Eliminated": {
-            "English": "Player 4 Eliminated"
+            "English": "Player 5 Eliminated"
         },
         "player5Reserve": {
-            "English": "Player 4 Reserve"
+            "English": "Player 5 Reserve"
         },
         "p6Reserve": {
             "English": "P6 Reserve"
         },
         "player6Hand": {
-            "English": "Player 4 Hand"
+            "English": "Player 6 Hand"
         },
         "player6Deck": {
-            "English": "Player 4 Deck"
+            "English": "Player 6 Deck"
         },
         "player6Cycled": {
-            "English": "Player 4 Cycled"
+            "English": "Player 6 Cycled"
         },
         "player6Eliminated": {
-            "English": "Player 4 Eliminated"
+            "English": "Player 6 Eliminated"
         },
         "player6Reserve": {
-            "English": "Player 4 Reserve"
+            "English": "Player 6 Reserve"
         },
         "p5Reserve": {
             "English": "P5 Reserve"

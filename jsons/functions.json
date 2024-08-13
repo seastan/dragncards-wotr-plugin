@@ -78,6 +78,33 @@
                 ]]
             ]
         },
+        "MOVE_TO_SCORING": {
+            "args": ["$CARD", "$WINNING_TEAM"],
+            "code": [
+                ["COND",
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "blue"], ["EQUAL", "$CARD.type", "BattleGround"]],
+                    [
+                        ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Free Peoples Player(s) team."],
+                        ["MOVE_CARD", "$CARD.id", "sharedScoringBlue", 0]
+                    ],
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "red"], ["EQUAL", "$CARD.type", "BattleGround"]],
+                    [
+                        ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Shadow Player(s) team."],
+                        ["MOVE_CARD", "$CARD.id", "sharedScoringRed", 0]
+                    ],
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "blue"], ["EQUAL", "$CARD.type", "Skirmish"]],
+                    [
+                        ["LOG", "$ALIAS_N", " resolved the ", "$ACTIVE_FACE.name", " skirmish. The Free Peoples Player(s) team won. Setting it aside."],
+                        ["MOVE_CARD", "$CARD.id", "sharedAside", 0]
+                    ],
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "red"], ["EQUAL", "$CARD.type", "Skirmish"]],
+                    [
+                        ["LOG", "$ALIAS_N", " resolved the ", "$ACTIVE_FACE.name", " skirmish. The Shadow Player(s) team won. Setting it aside."],
+                        ["MOVE_CARD", "$CARD.id", "sharedAside", 0]
+                    ]
+                ]
+            ]
+        },
         "LOAD_DECK_FOR_PLAYER": {
             "args": ["$PLAYER_I", "$DECK_ID"],
             "code": [
