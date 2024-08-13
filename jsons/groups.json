@@ -1,815 +1,897 @@
 {
-    "groups": {
-        "sharedBattlegroundBlue": {
-            "groupType": "deck",
-            "label": "id:freePeoplesBattlegroundDeck", 
-            "tableLabel": "",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "controller": "shared",
-                "deckGroupId": "sharedBattlegroundRed"
-            }
-        },
-        "sharedBattlegroundRed": {
-            "groupType": "deck",
-            "label": "id:shadowBattlegroundDeck", 
-            "tableLabel": "",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "controller": "shared",
-                "deckGroupId": "sharedBattlegroundRed"
-            }
-        },
-        "sharedScoringBlue": {
-            "groupType": "scored",
-            "label": "id:freePeoplesScoringArea", 
-            "tableLabel": "id:freePeoplesScoringArea",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-            }
-        },
-        "sharedScoringRed": {
-            "groupType": "scored",
-            "label": "id:shadowScoringArea", 
-            "tableLabel": "id:shadowScoringArea",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-            }
-        },
-        "sharedPathDeck1": {
-            "groupType": "deck",
-            "label": "id:pathDeck1",
-            "tableLabel": "id:pathDeck1",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "deckGroupId": "sharedPathDeck1"
-            }
-        },
-        "sharedPathDeck2": {
-            "groupType": "deck",
-            "label": "id:pathDeck2",
-            "tableLabel": "id:pathDeck2",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "deckGroupId": "sharedPathDeck2"
-            }
-        },
-        "sharedPathDeck3": {
-            "groupType": "deck",
-            "label": "id:pathDeck3",
-            "tableLabel": "id:pathDeck3",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "deckGroupId": "sharedPathDeck3"
-            }
-        },
-        "sharedPathDeck4": {
-            "groupType": "deck",
-            "label": "id:pathDeck4",
-            "tableLabel": "id:pathDeck4",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "deckGroupId": "sharedPathDeck4"
-            }
-        },
-        "sharedPathDeck5": {
-            "groupType": "deck",
-            "label": "id:pathDeck5",
-            "tableLabel": "id:pathDeck5",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "deckGroupId": "sharedPathDeck5"
-            }
-        },
-        "sharedPathDeck6": {
-            "groupType": "deck",
-            "label": "id:pathDeck6",
-            "tableLabel": "id:pathDeck6",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "deckGroupId": "sharedPathDeck6"
-            }
-        },
-        "sharedPathDeck7": {
-            "groupType": "deck",
-            "label": "id:pathDeck7",
-            "tableLabel": "id:pathDeck7",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "deckGroupId": "sharedPathDeck7"
-            }
-        },
-        "sharedPathDeck8": {
-            "groupType": "deck",
-            "label": "id:pathDeck8",
-            "tableLabel": "id:pathDeck8",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "deckGroupId": "sharedPathDeck8"
-            }
-        },
-        "sharedPathDeck9": {
-            "groupType": "deck",
-            "label": "id:pathDeck9",
-            "tableLabel": "id:pathDeck9",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "deckGroupId": "sharedPathDeck9"
-            }
-        },
-        "sharedSetAsidePile1": {
-            "groupType": "deck",
-            "label": "id:setAsidePile1", 
-            "tableLabel": "id:setAsidePile1",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-            }
-        },
-        "sharedSetAsidePile2": {
-            "groupType": "deck",
-            "label": "id:setAsidePile2", 
-            "tableLabel": "id:setAsidePile2",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-            }
-        },
-        "sharedSetAsideHand": {
-            "groupType": "deck",
-            "label": "id:setAsideHand", 
-            "tableLabel": "id:setAsideHand",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-            }
-        },
- 	    "sharedActivePath": {
-            "groupType": "inPlay",
-            "label": "id:activePath", 
-            "tableLabel": "id:locationPath",
-            "canHaveAttachments": true,
-            "activeBlueGroupId": "sharedActiveBluePath",
-            "onCardEnter": {
-                "locationIndex": 1
-            },
-            "onCardLeave": {
-                "locationIndex": null
-            }
-        },
-        "sharedActiveLocation1": {
-            "groupType": "inPlay",
-            "label": "id:activeLocation1", 
-            "tableLabel": "id:location1",
-            "canHaveAttachments": true,
-            "activeRedGroupId": "sharedActiveRed1",
-            "activeBlueGroupId": "sharedActiveBlue1",
-            "onCardEnter": {
-                "locationIndex": 1
-            },
-            "onCardLeave": {
-                "locationIndex": null
-            }
-        },
-        "sharedActiveLocation2": {
-            "groupType": "inPlay",
-            "label": "id:activeLocation2", 
-            "tableLabel": "id:location2",
-            "canHaveAttachments": true,
-            "activeRedGroupId": "sharedActiveRed2",
-            "activeBlueGroupId": "sharedActiveBlue2",
-            "onCardEnter": {
-                "locationIndex": 2
-            },
-            "onCardLeave": {
-                "locationIndex": null
-            }
-        },
-        "sharedActiveLocation3": {
-            "groupType": "inPlay",
-            "label": "id:activeLocation3", 
-            "tableLabel": "id:location3",
-            "canHaveAttachments": true,
-            "activeRedGroupId": "sharedActiveRed3",
-            "activeBlueGroupId": "sharedActiveBlue3",
-            "onCardEnter": {
-                "locationIndex": 3
-            },
-            "onCardLeave": {
-                "locationIndex": null
-            }
-        },
-        "sharedActiveLocation4": {
-            "groupType": "inPlay",
-            "label": "id:activeLocation4", 
-            "tableLabel": "id:location4",
-            "canHaveAttachments": true,
-            "activeRedGroupId": "sharedActiveRed4",
-            "activeBlueGroupId": "sharedActiveBlue4",
-            "onCardEnter": {
-                "locationIndex": 4
-            },
-            "onCardLeave": {
-                "locationIndex": null
-            }
-        },
-        "sharedActiveLocation5": {
-            "groupType": "inPlay",
-            "label": "id:activeLocation5", 
-            "tableLabel": "id:location5",
-            "canHaveAttachments": true,
-            "activeRedGroupId": "sharedActiveRed5",
-            "activeBlueGroupId": "sharedActiveBlue5",
-            "onCardEnter": {
-                "locationIndex": 5
-            },
-            "onCardLeave": {
-                "locationIndex": null
-            }
-        },
-        "sharedActiveLocation6": {
-            "groupType": "inPlay",
-            "label": "id:activeLocation6", 
-            "tableLabel": "id:location6",
-            "canHaveAttachments": true,
-            "activeRedGroupId": "sharedActiveRed6",
-            "activeBlueGroupId": "sharedActiveBlue6",
-            "onCardEnter": {
-                "locationIndex": 6
-            },
-            "onCardLeave": {
-                "locationIndex": null
-            }
-        },
-	    "sharedActiveRedPath": {
-            "groupType": "inPlay",
-            "label": "id:activeShadowPath", 
-            "tableLabel": "id:shadowPath",
-            "canHaveAttachments": true,
-            "color": "red",
-            "onCardEnter": {
-                "locationIndex": 1,
-                "locationGroupId": "sharedActivePath"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null
-            }
-        },
-        "sharedActiveRed1": {
-            "groupType": "inPlay",
-            "label": "id:activeShadow1", 
-            "tableLabel": "id:shadow1",
-            "canHaveAttachments": true,
-            "color": "red",
-            "onCardEnter": {
-                "locationIndex": 1,
-                "locationGroupId": "sharedActiveLocation1"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveRed2": {
-            "groupType": "inPlay",
-            "label": "id:activeShadow2", 
-            "tableLabel": "id:shadow2",
-            "canHaveAttachments": true,
-            "color": "red",
-            "onCardEnter": {
-                "locationIndex": 2,
-                "locationGroupId": "sharedActiveLocation2"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveRed3": {
-            "groupType": "inPlay",
-            "label": "id:activeShadow3", 
-            "tableLabel": "id:shadow3",
-            "canHaveAttachments": true,
-            "color": "red",
-            "onCardEnter": {
-                "locationIndex": 3,
-                "locationGroupId": "sharedActiveLocation3"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveRed4": {
-            "groupType": "inPlay",
-            "label": "id:activeShadow4", 
-            "tableLabel": "id:shadow4",
-            "canHaveAttachments": true,
-            "color": "red",
-            "onCardEnter": {
-                "locationIndex": 4,
-                "locationGroupId": "sharedActiveLocation4"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveRed5": {
-            "groupType": "inPlay",
-            "label": "id:activeShadow5", 
-            "tableLabel": "id:shadow5",
-            "canHaveAttachments": true,
-            "color": "red",
-            "onCardEnter": {
-                "locationIndex": 5,
-                "locationGroupId": "sharedActiveLocation5"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveRed6": {
-            "groupType": "inPlay",
-            "label": "id:activeShadow6", 
-            "tableLabel": "id:shadow6",
-            "canHaveAttachments": true,
-            "color": "red",
-            "onCardEnter": {
-                "locationIndex": 6,
-                "locationGroupId": "sharedActiveLocation6"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-	    "sharedActiveBluePath": {
-            "groupType": "inPlay",
-            "label": "id:activeFreePeoplesPath", 
-            "tableLabel": "id:freePeoplesPath",
-            "canHaveAttachments": true,
-            "color": "blue",
-            "onCardEnter": {
-                "locationIndex": 1,
-                "locationGroupId": "sharedActivePath"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveBlue1": {
-            "groupType": "inPlay",
-            "label": "id:activeFreePeoples1", 
-            "tableLabel": "id:freePeoples1",
-            "canHaveAttachments": true,
-            "color": "blue",
-            "onCardEnter": {
-                "locationIndex": 1,
-                "locationGroupId": "sharedActiveLocation1"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveBlue2": {
-            "groupType": "inPlay",
-            "label": "id:activeFreePeoples2", 
-            "tableLabel": "id:freePeoples2",
-            "canHaveAttachments": true,
-            "color": "blue",
-            "onCardEnter": {
-                "locationIndex": 2,
-                "locationGroupId": "sharedActiveLocation2"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveBlue3": {
-            "groupType": "inPlay",
-            "label": "id:activeFreePeoples3", 
-            "tableLabel": "id:freePeoples3",
-            "canHaveAttachments": true,
-            "color": "blue",
-            "onCardEnter": {
-                "locationIndex": 3,
-                "locationGroupId": "sharedActiveLocation3"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveBlue4": {
-            "groupType": "inPlay",
-            "label": "id:activeFreePeoples4", 
-            "tableLabel": "id:freePeoples4",
-            "canHaveAttachments": true,
-            "color": "blue",
-            "onCardEnter": {
-                "locationIndex": 4,
-                "locationGroupId": "sharedActiveLocation4"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveBlue5": {
-            "groupType": "inPlay",
-            "label": "id:activeFreePeoples5", 
-            "tableLabel": "id:freePeoples5",
-            "canHaveAttachments": true,
-            "color": "blue",
-            "onCardEnter": {
-                "locationIndex": 5,
-                "locationGroupId": "sharedActiveLocation5"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "sharedActiveBlue6": {
-            "groupType": "inPlay",
-            "label": "id:activeFreePeoples6", 
-            "tableLabel": "id:freePeoples6",
-            "canHaveAttachments": true,
-            "color": "blue",
-            "onCardEnter": {
-                "locationIndex": 6,
-                "locationGroupId": "sharedActiveLocation6"
-            },
-            "onCardLeave": {
-                "locationIndex": null,
-                "locationGroupId": null,
-                "isSupporting": false,
-                "isSupported": false
-            }
-        },
-        "player1Hand": {
-            "groupType": "hand",
-            "label": "id:player1Hand", 
-            "tableLabel": "id:hand",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "controller": "player1",
-                "peeking": {"player1": true}
-            }
-        },
-        "player1Deck": {
-            "groupType": "deck",
-            "label": "id:player1Deck", 
-            "tableLabel": "id:deck",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "controller": "player1",
-                "deckGroupId": "player1Deck",
-                "cycleGroupId": "player1Cycled",
-                "eliminateGroupId": "player1Eliminated"
-            },
-            "onCardLeave": {
-                "controller": "player1"
-            }
-        },
-        "player1Cycled": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player1Cycled", 
-            "tableLabel": "id:cycled",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player1Eliminated": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player1Eliminated", 
-            "tableLabel": "id:eliminated",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player1Reserve": {
-            "groupType": "inPlay",
-            "label": "id:player1Reserve", 
-            "tableLabel": "id:p1Reserve",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-                "rotation": 90
-            }
-        },
-        "player2Hand": {
-            "groupType": "hand",
-            "label": "id:player2Hand", 
-            "tableLabel": "id:hand",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "controller": "player2",
-                "peeking": {"player2": true}
-            }
-        },
-        "player2Deck": {
-            "groupType": "deck",
-            "label": "id:player2Deck", 
-            "tableLabel": "id:deck",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "controller": "player2",
-                "deckGroupId": "player2Deck",
-                "cycleGroupId": "player2Cycled",
-                "eliminateGroupId": "player2Eliminated"
-            },
-            "onCardLeave": {
-                "controller": "player2"
-            }
-        },
-        "player2Cycled": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player2Cycled", 
-            "tableLabel": "id:cycled",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player2Eliminated": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player2Eliminated", 
-            "tableLabel": "id:eliminated",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player2Reserve": {
-            "groupType": "inPlay",
-            "label": "id:player2Reserve", 
-            "tableLabel": "id:p2Reserve",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-                "rotation": 90
-            }
-        },
-        "player3Hand": {
-            "groupType": "hand",
-            "label": "id:player3Hand", 
-            "tableLabel": "id:hand",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "controller": "player3",
-                "peeking": {"player3": true}
-            }
-        },
-        "player3Deck": {
-            "groupType": "deck",
-            "label": "id:player3Deck", 
-            "tableLabel": "id:deck",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "controller": "player3",
-                "deckGroupId": "player3Deck",
-                "cycleGroupId": "player3Cycled",
-                "eliminateGroupId": "player3Eliminated"
-            },
-		"onCardLeave": {
-		"controller": "player3"
-		}
-        },
-        "player3Cycled": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player3Cycled", 
-            "tableLabel": "id:cycled",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player3Eliminated": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player3Eliminated", 
-            "tableLabel": "id:eliminated",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player3Reserve": {
-            "groupType": "inPlay",
-            "label": "id:player3Reserve", 
-            "tableLabel": "id:p3Reserve",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-                "rotation": 90
-            }
-        },
-        "player4Hand": {
-            "groupType": "hand",
-            "label": "id:player4Hand", 
-            "tableLabel": "id:hand",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "controller": "player4",
-                "peeking": {"player4": true}
-            }
-        },
-        "player4Deck": {
-            "groupType": "deck",
-            "label": "id:player4Deck", 
-            "tableLabel": "id:deck",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "controller": "player4",
-                "deckGroupId": "player4Deck",
-                "cycleGroupId": "player4Cycled",
-                "eliminateGroupId": "player4Eliminated"
-            },
-            "onCardLeave": {
-                "controller": "player4"
-            }
-        },
-        "player4Cycled": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player4Cycled", 
-            "tableLabel": "id:cycled",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player4Eliminated": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player4Eliminated", 
-            "tableLabel": "id:eliminated",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player4Reserve": {
-            "groupType": "inPlay",
-            "label": "id:player4Reserve", 
-            "tableLabel": "id:p4Reserve",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-                "rotation": 90
-            }
-        },
-        "player5Hand": {
-            "groupType": "hand",
-            "label": "id:player5Hand", 
-            "tableLabel": "id:hand",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "controller": "player5",
-                "peeking": {"player5": true}
-            }
-        },
-        "player5Deck": {
-            "groupType": "deck",
-            "label": "id:player5Deck", 
-            "tableLabel": "id:deck",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "controller": "player5",
-                "deckGroupId": "player5Deck",
-                "cycleGroupId": "player5Cycled",
-                "eliminateGroupId": "player5Eliminated"
-            },
-            "onCardLeave": {
-                "controller": "player5"
-            }
-        },
-        "player5Cycled": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player5Cycled", 
-            "tableLabel": "id:cycled",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player5Eliminated": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player5Eliminated", 
-            "tableLabel": "id:eliminated",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player5Reserve": {
-            "groupType": "inPlay",
-            "label": "id:player5Reserve", 
-            "tableLabel": "id:p5Reserve",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-                "rotation": 90
-            }
-        },
-        "player6Hand": {
-            "groupType": "hand",
-            "label": "id:player6Hand", 
-            "tableLabel": "id:hand",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "controller": "player6",
-                "peeking": {"player6": true}
-            }
-        },
-        "player6Deck": {
-            "groupType": "deck",
-            "label": "id:player6Deck", 
-            "tableLabel": "id:deck",
-            "canHaveAttachments": false,
-            "shuffleOnLoad": true,
-            "onCardEnter": {
-                "controller": "player6",
-                "deckGroupId": "player6Deck",
-                "cycleGroupId": "player6Cycled",
-                "eliminateGroupId": "player6Eliminated"
-            },
-            "onCardLeave": {
-                "controller": "player6"
-            }
-        },
-        "player6Cycled": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player6Cycled", 
-            "tableLabel": "id:cycled",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player6Eliminated": {
-            "groupType": "nonFlippingPile",
-            "label": "id:player6Eliminated", 
-            "tableLabel": "id:eliminated",
-            "canHaveAttachments": false,
-            "onCardEnter": {
-                "peeking": {}
-            }
-        },
-        "player6Reserve": {
-            "groupType": "inPlay",
-            "label": "id:player6Reserve", 
-            "tableLabel": "id:p6Reserve",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-                "rotation": 90
-            }
-        },
-        "sharedAside": {
-            "groupType": "discard",
-            "label": "id:aside", 
-            "tableLabel": "id:aside",
-            "canHaveAttachments": true,
-            "onCardEnter": {
-                "rotation": 0
-            }
-        }
+    "actionLists": {
+        "setupCoreTrilogy": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Core-Paths"],
+            ["LOAD_CARDS", "Core-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Hobbit"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
+            ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
+            ["SET", "/automationEnabled", true]
+        ],
+        "setupAtSTrilogy": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
+			["LOAD_RULES", "AtS"],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 0, 1, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "AtS-Paths"],
+            ["LOAD_CARDS", "AtS-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Hobbit"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
+            ["LOAD_DECK_FOR_PLAYER", "player4", "AtS-Isengard"],
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
+            ["SET", "/automationEnabled", true]
+        ],
+        "setupCoreTwoPlayerDuel": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 4, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 1]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Core-Paths"],
+            ["LOAD_CARDS", "Core-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Hobbit"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupAtSTwoPlayerDuel": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
+            ["LOAD_RULES", "AtS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 4, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "AtS-Paths"],
+            ["LOAD_CARDS", "AtS-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Hobbit"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Isengard"],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupCoreThreePlayerDuel": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 3],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 1, 3]],
+            ["SET_SETUP_DRAW", ["LIST", 6, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 6, 4, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Core-Paths"],
+            ["LOAD_CARDS", "Core-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Hobbit"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
+            ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Isengard"],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupAtSThreePlayerDuel": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
+			["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 3],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 1, 3]],
+            ["SET_SETUP_DRAW", ["LIST", 6, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 6, 4, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 0, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "AtS-Paths"],
+            ["LOAD_CARDS", "AtS-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Hobbit"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
+            ["LOAD_DECK_FOR_PLAYER", "player3", "AtS-Isengard"],
+            ["SET", "/automationEnabled", true]
+        ],
+        "setupCoreFellowshipOfTheRing": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Balrog of Moria"]],
+            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 0, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Core-The Fellowship of the Ring"],
+            ["SHUFFLE_BATTLEGROUNDS", false],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true],
+			["SET", "/firstPlayer", "player2"]
+        ],
+        "setupAtSFellowshipOfTheRing": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "AtS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Balrog of Moria"]],
+            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 0, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "AtS-The Fellowship of the Ring"],
+            ["SHUFFLE_BATTLEGROUNDS", false],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true],
+			["SET", "/firstPlayer", "player2"]
+        ],
+		"setupCoreTheTwoTowers": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Théoden", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_SETUP_DRAW", ["LIST", 6, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 2, 2]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Core-The Two Towers"],
+            ["SHUFFLE_BATTLEGROUNDS", false],
+            ["SHUFFLE_PATHS", true],
+			["SET_PATH", 6],
+            ["SET", "/automationEnabled", true],
+			["SET", "/firstPlayer", "player2"]
+        ],
+		"setupAtSTheTwoTowers": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "AtS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Théoden", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_SETUP_DRAW", ["LIST", 6, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 2, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "AtS-The Two Towers"],
+            ["SHUFFLE_BATTLEGROUNDS", false],
+            ["SHUFFLE_PATHS", true],
+			["SET_PATH", 6],
+            ["SET", "/automationEnabled", true],
+			["SET", "/firstPlayer", "player2"]
+        ],
+		"setupCoreTheReturnOfTheKing": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "The Witch-king", "Aragorn"]],
+            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_SETUP_DRAW", ["LIST", 6, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 2, 2]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Core-The Return of the King"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+			["SET_PATH", 7],
+            ["SET", "/automationEnabled", true],
+			["SET", "/firstPlayer", "player2"]
+        ],
+		"setupAtSTheReturnOfTheKing": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "AtS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "The Witch-king", "Aragorn"]],
+            ["SET_TURN_ORDER", ["LIST", 2, 1]],
+            ["SET_SETUP_DRAW", ["LIST", 6, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 2, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "AtS-The Return of the King"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+			["SET_PATH", 7],
+            ["SET", "/automationEnabled", true],
+			["SET", "/firstPlayer", "player2"]
+        ],
+		"setupCoreExpertDuel": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],            
+			["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 2, 2]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 2],
+            ["LOAD_CARDS", "Core-Paths"],
+            ["LOAD_CARDS", "Core-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Hobbit"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
+            ["SET", "/automationEnabled", true]
+        ],
+        "setupCoreAPerilousJourney": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Strider", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Core-A Perilous Journey"],
+            ["SHUFFLE_BATTLEGROUNDS", false],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true]
+        ],
+        "setupCoreRohanAndGondorAtWar":[
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf the White", "The Witch-king", "Aragorn", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Core-Rohan and Gondor at War"],
+            ["SHUFFLE_BATTLEGROUNDS", false],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true]
+		],
+		"setupGrandPrixTrilogy": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+			["LOAD_CARDS", "Core-Paths"],
+            ["LOAD_CARDS", "GP-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", false],
+            ["SHUFFLE_PATHS", false],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Hobbit"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
+            ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSExpandedTrilogy": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+            ["LOAD_RULES", "Core"],
+            ["SET_NUM_PLAYERS", 6],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Gandalf", "Saruman", "Aragorn", "Bill Ferny"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4, 5, 6]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
+            ["LOAD_CARDS", "FaS-Trilogy-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "FaS-Frodo"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player3", "FaS-Gandalf"],
+            ["LOAD_DECK_FOR_PLAYER", "player4", "FaS-Saruman"],
+			["LOAD_DECK_FOR_PLAYER", "player5", "FaS-Aragorn"],
+			["LOAD_DECK_FOR_PLAYER", "player6", "FaS-Bill"],
+            ["SET_LAYOUT", "shared", "sixPlayer"],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSAtSExpandedTrilogy": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
+            ["LOAD_RULES", "AtS"],
+			["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 6],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Gandalf", "Saruman", "Aragorn", "Bill Ferny"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4, 5, 6]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 0, 1, 0, 1, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+			["LOAD_CARDS", "FaS-AtS-Trilogy-Paths"],
+            ["LOAD_CARDS", "FaS-AtS-Trilogy-Battlegrounds"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["LOAD_DECK_FOR_PLAYER", "player1", "FaS-Frodo"],
+            ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
+            ["LOAD_DECK_FOR_PLAYER", "player3", "FaS-Gandalf"],
+            ["LOAD_DECK_FOR_PLAYER", "player4", "FaS-AtS-Saruman"],
+			["LOAD_DECK_FOR_PLAYER", "player5", "FaS-Aragorn"],
+			["LOAD_DECK_FOR_PLAYER", "player6", "FaS-AtS-Bill"],
+            ["SET_LAYOUT", "shared", "sixPlayer"],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSWarInTheNorth4P": [
+			["DEFINE", "$PLAYER_N", "player1"],
+			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+            ["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Strider", "The Balrog of Moria"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_SKIRMISHES", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "FaS-War in the North Trilogy"],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
+            ["SHUFFLE_BATTLEGROUNDS", false],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true]
+		]
+		"setupFaSAtSWarInTheNorth4P": [
+			["DEFINE", "$PLAYER_N", "player1"],
+			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
+            ["LOAD_RULES", "AtS"],
+			["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Strider", "The Balrog of Moria"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 0, 1, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", 1],
+            ["SET_SKIRMISHES", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
+            ["LOAD_CARDS", "FaS-AtS-War in the North Trilogy"],
+            ["SHUFFLE_BATTLEGROUNDS", false],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true]
+		]
+		"setupFaSWarInTheNorth2P": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+			["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 4, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 1]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 1],
+            ["SET_SKIRMISHES", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "FaS-War in the North 2P Duel"],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
+			["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSAtSWarInTheNorth2P": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
+            ["LOAD_RULES", "AtS"],
+			["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 4, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 1]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 1],
+            ["SET_SKIRMISHES", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "FaS-AtS-War in the North 2P Duel"],
+			["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSWarInTheNorth3P": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+            ["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 3],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 1, 3]],
+            ["SET_SETUP_DRAW", ["LIST", 6, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 6, 4, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 1],
+            ["SET_SKIRMISHES", true],
+			["LOAD_CARDS", "FaS-War in the North 3P Duel"]
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSAtSWarInTheNorth3P": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
+			["LOAD_RULES", "AtS"],
+			["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 3],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 1, 3]],
+            ["SET_SETUP_DRAW", ["LIST", 6, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 6, 4, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 0, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 1],
+            ["SET_SKIRMISHES", true],
+			["LOAD_CARDS", "FaS-AtS-War in the North 3P Duel"]
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSEpicDuel": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
+			["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 4, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 1]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 1],
+            ["SET_SKIRMISHES", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "FaS-Epic Duel-Starting decks"],
+			["LOAD_CARDS", "FaS-Trilogy-Paths"],
+			["SHUFFLE_BATTLEGROUNDS", true],
+            ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
+				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
+			]],
+            ["SET", "/automationEnabled", true]
+        ],
+		"setupFaSAtEpicDuel": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
+            ["LOAD_RULES", "AtS"],
+			["LOAD_RULES", "FaS"],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 4, 6]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 0]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
+            ["SET_CORRUPTION_BONUS", 1],
+            ["SET_SKIRMISHES", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "FaS-AtS-Epic Duel-Starting decks"],
+			["LOAD_CARDS", "FaS-AtS-Trilogy-Paths"],
+			["SHUFFLE_BATTLEGROUNDS", true],
+			["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
+				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
+			]],
+            ["SET", "/automationEnabled", true]
+        ],
+		"newRound": [
+            ["VAR", "$ADDITIONAL_CARDS", 0],
+            ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID", 
+                [
+                    ["COND",
+                        ["EQUAL", "$CARD.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
+                        ["SET", "/cardById/$CARD_ID/rotation", 0]
+                    ],
+                    ["COND",
+                        ["AND",
+                            ["EQUAL", "$CARD.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
+                            ["IN_STRING", "$CARD.sides.A.text", "draw 1 additional card each Draw step"]
+                        ],
+                        ["UPDATE_VAR", "$ADDITIONAL_CARDS", ["ADD", "$ADDITIONAL_CARDS", 1]]
+                    ]
+                ]
+            ],
+            ["LOG", "$ALIAS_N", " performed their draw step."],
+            ["DRAW_CARD", "$GAME.playerData.$PLAYER_N.roundDraw"],
+            ["COND",
+                ["GREATER_THAN", "$ADDITIONAL_CARDS", 0],
+                [
+                    ["LOG", "└── {{$ALIAS_N}} drew {{$ADDITIONAL_CARDS}} additional card(s)."],
+                    ["DRAW_CARD", "$ADDITIONAL_CARDS"]
+                ]
+            ],
+            ["COND",
+                ["LESS_THAN", "$GAME.playerData.$PLAYER_N.ringTokens", "$GAME.playerData.$PLAYER_N.roundRings"],
+                [
+                    ["LOG", "$ALIAS_N", " reset their ring tokens."],
+                    ["SET", "/playerData/$PLAYER_N/ringTokens", "$GAME.playerData.$PLAYER_N.roundRings"]
+                ]
+            ],
+            ["COND",
+                ["EQUAL", "$PLAYER_N", "player1"],
+                [
+
+                    ["COND", 
+                        ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.firstPlayer", "player2"]],
+                        [
+                            ["SET", "/firstPlayer", "player1"],
+                            ["SET", "/prevFirstPlayer", "player2"]
+                        ],
+                        ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.firstPlayer", "player1"], ["EQUAL", "$GAME.prevFirstPlayer", "player2"]],
+                        [
+                            ["SET", "/firstPlayer", "player3"],
+                            ["SET", "/prevFirstPlayer", "player1"]
+                        ],
+                        true,
+                        [
+                            ["SET", "/prevFirstPlayer", "$GAME.firstPlayer"],
+                            ["SET", "/firstPlayer", ["NEXT_PLAYER", "$GAME.firstPlayer"]]
+                        ]
+                    ],
+                    ["INCREASE_VAL", "/roundNumber", 1],
+                    ["LOG", "$ALIAS_N", " moved the first player token and increased the round number."]
+                ]
+            ]
+        ],
+        "pass": [
+            ["LOG", "$ALIAS_N", " passes."],
+            ["COND", 
+                ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.currentPlayer", "player2"]],
+                [
+                    ["SET", "/currentPlayer", "player1"],
+                    ["SET", "/prevCurrentPlayer", "player2"]
+                ],
+                ["AND", ["EQUAL", "$GAME.numPlayers", 3], ["EQUAL", "$GAME.currentPlayer", "player1"], ["EQUAL", "$GAME.prevCurrentPlayer", "player2"]],
+                [
+                    ["SET", "/currentPlayer", "player3"],
+                    ["SET", "/prevCurrentPlayer", "player1"]
+                ],
+                true,
+                [
+                    ["SET", "/prevCurrentPlayer", "$GAME.currentPlayer"],
+                    ["SET", "/currentPlayer", ["NEXT_PLAYER", "$GAME.currentPlayer"]]
+                ]
+            ]
+        ],
+        "drawCard": [
+            ["LOG", "{{$ALIAS_N}} drew a card."],
+            ["DRAW_CARD"]
+        ],
+        "zeroTokens": [
+            ["SET", "$ACTIVE_TOKENS_PATH", {}],
+            ["LOG", "$ALIAS_N", " removed all tokens from ", "$ACTIVE_FACE.name", "."]
+        ],
+        "toggleRotate": [
+            ["COND",
+                ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 90], "$ACTIVE_CARD.inPlay"],
+                [
+                    ["LOG", "$ALIAS_N", " rotated ", "$ACTIVE_FACE.name", "."],
+                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 0]
+                ],
+                ["AND", ["EQUAL", "$ACTIVE_CARD.rotation", 0], "$ACTIVE_CARD.inPlay"],
+                [
+                    ["LOG", "$ALIAS_N", " rotated ", "$ACTIVE_FACE.name", "."],
+                    ["SET", "/cardById/$ACTIVE_CARD_ID/rotation", 90]
+                ]
+            ]
+        ],
+        "flipCard": [
+            ["COND",
+            ["EQUAL", "$ACTIVE_CARD.currentSide", "A"],
+            [
+                ["LOG", "$ALIAS_N", " flipped ", "$ACTIVE_FACE.name", " facedown."],
+                ["SET", "/cardById/$ACTIVE_CARD_ID/currentSide", "B"]
+            ],
+            true,
+            [
+                ["SET", "/cardById/$ACTIVE_CARD_ID/currentSide", "A"],
+                ["LOG", "$ALIAS_N", " flipped ", "$ACTIVE_FACE.name", " faceup."]
+            ]
+            ]
+        ],
+        "cycleCard": [
+            ["COND",
+                ["EQUAL", "$ACTIVE_CARD.cycleGroupId", null],
+                ["LOG", "$ALIAS_N", " failed to cycle ", "$ACTIVE_FACE.name", " because it is not associated with a cycle pile. Please drag the card instead."],
+                true,
+                [
+                    ["LOG", "$ALIAS_N", " cycled ", "$ACTIVE_FACE.name", "."],
+                    ["MOVE_CARD", "$ACTIVE_CARD_ID", "$ACTIVE_CARD.cycleGroupId", 0, 0]
+                ]
+            ]
+        ],
+        "cycleDeck": ["CYCLE_DECK", "$PLAYER_N"],
+        "eliminateCard": [
+            ["COND",
+            ["EQUAL", "$ACTIVE_CARD.eliminateGroupId", null],
+            ["LOG", "$ALIAS_N", " failed to eliminate ", "$ACTIVE_FACE.name", " because it is not associated with an eliminated pile. Please drag the card instead."],
+            true,
+            [
+                ["LOG", "$ALIAS_N", " eliminated ", "$ACTIVE_FACE.name", "."],
+                ["MOVE_CARD", "$ACTIVE_CARD_ID", "$ACTIVE_CARD.eliminateGroupId", 0, 0]
+            ]
+            ]
+        ],
+        "detach": [
+            ["COND",
+            ["GREATER_THAN", "$ACTIVE_CARD.cardIndex", 0],
+            [
+                ["MOVE_CARD", "$ACTIVE_CARD_ID", "$ACTIVE_CARD.groupId", ["ADD", "$ACTIVE_CARD.stackIndex", 1], 0],
+                ["LOG", "$ALIAS_N", " detached ", "$ACTIVE_FACE.name", "."]
+            ]
+            ]
+        ],
+        "togglePeeking": [
+            ["DEFINE", "$GROUP_ID", "$ACTIVE_CARD.groupId"],
+            ["DEFINE", "$GROUP_NAME", ["$GAME.groupById.$GROUP_ID.name"]],
+            ["COND",
+            ["EQUAL", "$ACTIVE_CARD.peeking.$PLAYER_N", true],
+            [
+                ["LOG", "$ALIAS_N", " stopped peeking at a card in ", "$GROUP_NAME"],
+                ["SET", "/cardById/$ACTIVE_CARD_ID/peeking/$PLAYER_N", false]
+            ],
+            true,
+            [
+                ["LOG", "$ALIAS_N", " started peeking at a card in ", "$GROUP_NAME"],
+                ["SET", "/cardById/$ACTIVE_CARD_ID/peeking/$PLAYER_N", true]
+            ]
+            ]
+        ],
+        "shuffleGroupIntoDeck": [
+            ["DEFINE", "$ORIG_GROUP", "$GAME.playerUi.dropdownMenu.group"],
+            ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID",
+            ["COND", 
+                ["AND",
+                ["EQUAL", "$CARD.groupId", "$GAME.playerUi.dropdownMenu.group.id"],
+                ["NOT_EQUAL", "$CARD.deckGroupId", null]
+                ],
+                [
+                ["MOVE_CARD", "$CARD_ID", "$CARD.deckGroupId", 0, 0],
+                ["SHUFFLE_GROUP", "$CARD.deckGroupId"]
+                ]
+            ]
+            ],
+            ["LOG", "$ALIAS_N", " shuffled the cards in ", "$ORIG_GROUP.name", " into their corresponding decks."]
+        ],
+        "printPileSizes": [
+            ["LOG", "Printing pile sizes:"],
+            ["FOR_EACH_KEY_VAL", "$PLAYER_I", "$PLAYER_DATA", "$GAME.playerData", [
+                ["VAR", "$DECK_LENGTH", ["LENGTH", "$GAME.groupById.{{$PLAYER_I}}Deck.stackIds"]],
+                ["VAR", "$CYCLE_LENGTH", ["LENGTH", "$GAME.groupById.{{$PLAYER_I}}Cycled.stackIds"]],
+                ["VAR", "$ELIM_LENGTH", ["LENGTH", "$GAME.groupById.{{$PLAYER_I}}Eliminated.stackIds"]],
+                ["LOG", "├── {{$PLAYER_DATA.label}} Deck/Cycle/Elim: {{$DECK_LENGTH}}/{{$CYCLE_LENGTH}}/{{$ELIM_LENGTH}}"]
+            ]]
+        ],
+        "deleteCard": [
+            ["LOG", "$ALIAS_N", " deleted ", "$ACTIVE_FACE.name", "."],
+            ["DELETE", "$ACTIVE_CARD_ID"]
+        ],
+        "increaseCorruption": [
+            ["LOG", "$ALIAS_N", " increased the corruption counter."],
+            ["INCREASE_VAL", "/corruptionScore", 1],
+            ["COMPUTE_SCORE"]
+        ],
+
+        "decreaseCorruption": [
+            ["LOG", "$ALIAS_N", " decreased the corruption counter."],
+            ["DECREASE_VAL", "/corruptionScore", 1],
+            ["COMPUTE_SCORE"]
+        ],
+        "scoreLocation": [
+            ["COND", 
+                ["IN_STRING", "$ACTIVE_GROUP_ID", "sharedActiveLocation"],
+                [
+                    ["VAR", "$BLUE_GROUP_ID", "$ACTIVE_GROUP.activeBlueGroupId"],
+                    ["VAR", "$RED_GROUP_ID", "$ACTIVE_GROUP.activeRedGroupId"],
+                    ["VAR", "$BLUE_TOTAL", "$GAME.textBoxById.$BLUE_GROUP_ID.content"],
+                    ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
+                    ["COND",
+                        ["GREATER_THAN", "$BLUE_TOTAL", "$RED_TOTAL"],
+                        [
+                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Free Peoples Player(s) team."],
+                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringBlue", 0]
+                        ],
+                        ["GREATER_THAN", "$RED_TOTAL", "$BLUE_TOTAL"],
+                        [
+                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Shadow Player(s) team."],
+                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringRed", 0],
+                            ["COND", 
+                                ["EQUAL", "$ACTIVE_FACE.type", "Path"],
+                                [
+                                    ["LOG", "$ALIAS_N", " flipped ", "$ACTIVE_FACE.name", " facedown."],
+                                    ["SET", "/cardById/$ACTIVE_CARD_ID/currentSide", "B"],
+                                    ["LOG", "$ALIAS_N", " increased the corruption score by ", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"], "."],
+                                    ["INCREASE_VAL", "/corruptionScore", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"]]
+                                ],
+                                ["EQUAL", "$ACTIVE_FACE.type", "Battleground"],
+                                ["RESOLVE_CORRUPTION_BONUS"]
+                            ]
+                        ],
+                        ["AND",
+                            "$GAME.noPointsAwardedOnPathTies",
+                            ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
+                        ],
+                        [
+                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for neither team."],
+                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedAside", 0]
+                        ],
+                        ["OR",
+                            ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "defense"],
+                            ["EQUAL", "$GAME.groupById.$BLUE_GROUP_ID.combatStat", "buckler"]
+                        ],
+                        [
+                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Free Peoples Player(s) team."],
+                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringBlue", 0]
+                        ],
+                        ["EQUAL", "$GAME.groupById.$RED_GROUP_ID.combatStat", "defense"],
+                        [
+                            ["LOG", "$ALIAS_N", " scored ", "$ACTIVE_FACE.name", " for the Shadow Player(s) team."],
+                            ["MOVE_CARD", "$ACTIVE_CARD_ID", "sharedScoringRed", 0]
+                        ]
+                    ]
+                ],
+                ["TRUE"],
+                ["LOG", "$ALIAS_N", " attempted to score an invalid card."]
+                    
+            ]
+        ],
+        "getHandFromSetAsideHand": [
+            ["LOG", "{{$PLAYER_N}} moved the cards in Set-Aside Hand to their hand."],
+            ["MOVE_STACKS", "sharedSetAsideHand", "{{$PLAYER_N}}Hand"]
+        ],
+        "cycleSetAsidePiles": [
+            ["LOG", "{{$PLAYER_N}} cycled the cards in id:setAsidePile1"],
+            ["MOVE_STACKS", "sharedSetAsidePile1", "{{$PLAYER_N}}Cycled"],
+            ["LOG", "{{$PLAYER_N}} cycled the cards in id:setAsidePile2"],
+            ["MOVE_STACKS", "sharedSetAsidePile2", "{{$PLAYER_N}}Cycled"]
+        ],
+        "postSetLayout": [
+            ["SET_NUM_BLUE_RED", "$GAME.numBlue", "$GAME.numRed"],
+            ["HIGHLIGHT_CURRENT_PLAYER"]
+        ],
+        "changeP4ToP3": [
+            ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/groupId", "player3Reserve"],
+            ["UPDATE_LAYOUT", "/layout/regions/player4Hand/groupId", "player3Hand"],
+            ["UPDATE_LAYOUT", "/layout/regions/player4Deck/groupId", "player3Deck"],
+            ["UPDATE_LAYOUT", "/layout/regions/player4Cycled/groupId", "player3Cycled"],
+            ["UPDATE_LAYOUT", "/layout/regions/player4Eliminated/groupId", "player3Eliminated"]
+        ],
+        "toggleLocationDecks": [
+            ["LOG", "{{$ALIAS_N}} toggled their visibility of the location decks."],
+            ["VAR", "$DECKS_VISIBLE", "$GAME.playerData.$PLAYER_N.layout.regions.sharedBattlegroundBlue.visible"],
+            ["VAR", "$NEW_VAL", ["NOT", "$DECKS_VISIBLE"]],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedBattlegroundBlue/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedBattlegroundRed/visible",  "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck1/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck2/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck3/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck4/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck5/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck6/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck7/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck8/visible", "$NEW_VAL"],
+            ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck9/visible", "$NEW_VAL"]   
+        ]
     }
 }
