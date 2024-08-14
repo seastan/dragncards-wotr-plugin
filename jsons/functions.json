@@ -40,6 +40,10 @@
                     [
                         ["SET_NUM_BLUE_RED", 2, 2]
                     ],
+                    ["EQUAL", "$NUM_PLAYERS", 2],
+                    [
+                        ["SET_NUM_BLUE_RED", 1, 1]
+                    ],
                     ["EQUAL", "$NUM_PLAYERS", 1],
                     [
                         ["SET_NUM_BLUE_RED", 1, 1]
@@ -82,22 +86,22 @@
             "args": ["$CARD", "$WINNING_TEAM"],
             "code": [
                 ["COND",
-                    ["AND", ["EQUAL", "$WINNING_TEAM", "blue"], ["EQUAL", "$CARD.type", "BattleGround"]],
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "blue"], ["EQUAL", "$CARD.currentFace.type", "Battleground"]],
                     [
                         ["LOG", "$ALIAS_N", " scored ", "$CARD.currentFace.name", " for the Free Peoples Player(s) team."],
                         ["MOVE_CARD", "$CARD.id", "sharedScoringBlue", 0]
                     ],
-                    ["AND", ["EQUAL", "$WINNING_TEAM", "red"], ["EQUAL", "$CARD.type", "BattleGround"]],
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "red"], ["EQUAL", "$CARD.currentFace.type", "Battleground"]],
                     [
                         ["LOG", "$ALIAS_N", " scored ", "$CARD.currentFace.name", " for the Shadow Player(s) team."],
                         ["MOVE_CARD", "$CARD.id", "sharedScoringRed", 0]
                     ],
-                    ["AND", ["EQUAL", "$WINNING_TEAM", "blue"], ["EQUAL", "$CARD.type", "Skirmish"]],
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "blue"], ["EQUAL", "$CARD.currentFace.type", "Skirmish"]],
                     [
                         ["LOG", "$ALIAS_N", " resolved the ", "$CARD.currentFace.name", " skirmish. The Free Peoples Player(s) team won. Setting it aside."],
                         ["MOVE_CARD", "$CARD.id", "sharedAside", 0]
                     ],
-                    ["AND", ["EQUAL", "$WINNING_TEAM", "red"], ["EQUAL", "$CARD.type", "Skirmish"]],
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "red"], ["EQUAL", "$CARD.currentFace.type", "Skirmish"]],
                     [
                         ["LOG", "$ALIAS_N", " resolved the ", "$CARD.currentFace.name", " skirmish. The Shadow Player(s) team won. Setting it aside."],
                         ["MOVE_CARD", "$CARD.id", "sharedAside", 0]
@@ -527,14 +531,25 @@
                 ["VAR", "$EXPECTED_POINTS", 0],
                 ["COND",
                     ["EQUAL", "$WINNER", "red"],
-                    [
-                        ["INCREASE_VAR", "$EXPECTED_POINTS", ["ADD", "$LOCATION_CARD.sides.A.victoryPoints", "$LOCATION_CARD.tokens.corruption"]],
-                        ["COND",
-                            ["AND",
-                                ["EQUAL", "$LOCATION_CARD.sides.B.name", "Free Peoples Battleground"],
-                                ["EQUAL", "$GAME.corruptionBonus", true]
-                            ],
-                            ["INCREASE_VAR", "$EXPECTED_POINTS", 1]
+                    ["COND",
+                        ["EQUAL", "$LOCATION_CARD.sides.A.type", "Battleground"],
+                        [
+                            ["INCREASE_VAR", "$EXPECTED_POINTS", ["ADD", "$LOCATION_CARD.sides.A.victoryPoints", "$LOCATION_CARD.tokens.corruption"]],
+                            ["COND",
+                                ["AND",
+                                    ["EQUAL", "$LOCATION_CARD.sides.B.name", "Free Peoples Battleground"],
+                                    ["EQUAL", "$GAME.corruptionBonus", true]
+                                ],
+                                ["INCREASE_VAR", "$EXPECTED_POINTS", 1]
+                            ]
+                        ],
+                        ["EQUAL", "$LOCATION_CARD.sides.A.type", "Path"],
+                        [
+                            ["VAR", "$BLUE_GROUP_ID", "$GAME.groupById.$LOCATION_GROUP_ID.activeBlueGroupId"],
+                            ["VAR", "$RED_GROUP_ID", "$GAME.groupById.$LOCATION_GROUP_ID.activeRedGroupId"],
+                            ["VAR", "$BLUE_TOTAL", "$GAME.textBoxById.$BLUE_GROUP_ID.content"],
+                            ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
+                            ["INCREASE_VAR", "$EXPECTED_POINTS", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"]]
                         ]
                     ]
                 ],
