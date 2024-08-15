@@ -2152,6 +2152,30 @@
                 }
             ]
         },
+		"GP-Rulebook": {
+            "label": "AtS-Rulebook",
+            "hideFromSearch": true,
+            "cards": [
+                {
+                    "databaseId": "86cc6675-89af-45fc-90e7-009dab29c2f7",
+                    "quantity": 1,
+                    "loadGroupId": "sharedAside",
+                    "_name": "GP Rulebook 01"
+                },
+				{
+                    "databaseId": "305de154-be05-43a4-b1bd-7dce78ba8a1a",
+                    "quantity": 1,
+                    "loadGroupId": "sharedAside",
+                    "_name": "GP Rulebook 02"
+                },
+				{
+                    "databaseId": "20a03f3a-abdd-49aa-b4c0-f2fb04e1eeff",
+                    "quantity": 1,
+                    "loadGroupId": "sharedAside",
+                    "_name": "GP Rulebook 03"
+                },
+			]
+		}
         "Core-The Fellowship of the Ring": {
             "label": "The Fellowship of the Ring",
             "hideFromSearch": true,
