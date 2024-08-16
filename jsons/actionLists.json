@@ -196,7 +196,7 @@
         ],
 		"setupCoreTheTwoTowers": [
             ["DEFINE", "$PLAYER_N", "player1"],
-			["LOAD_CARDS", {"databaseId" => "ef784cfe-7d53-4804-91b6-66291cf8089c", "loadGroupId" => "sharedAside", "quantity" => 1}],
+			["LOAD_CARDS", {"ef784cfe-7d53-4804-91b6-66291cf8089c", "sharedAside", 1}],
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Théoden", "Saruman"]],
@@ -218,7 +218,7 @@
         ],
 		"setupAtSTheTwoTowers": [
             ["DEFINE", "$PLAYER_N", "player1"],
-			["LOAD_CARDS", {"databaseId" => "ef784cfe-7d53-4804-91b6-66291cf8089c", "loadGroupId" => "sharedAside", "quantity" => 1}],
+			["LOAD_CARDS", {"ef784cfe-7d53-4804-91b6-66291cf8089c", "sharedAside", 1}],
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
@@ -241,7 +241,7 @@
         ],
 		"setupCoreTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
-			["LOAD_CARDS", {"databaseId" => "ff3a03bd-7c7e-49d8-89fe-254b5462576f", "loadGroupId" => "sharedAside", "quantity" => 1}],
+			["LOAD_CARDS", {"ff3a03bd-7c7e-49d8-89fe-254b5462576f", "sharedAside", 1}],
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Aragorn", "The Witch-king"]],
@@ -263,7 +263,7 @@
         ],
 		"setupAtSTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
-			["LOAD_CARDS", {"databaseId" => "ff3a03bd-7c7e-49d8-89fe-254b5462576f", "loadGroupId" => "sharedAside", "quantity" => 1}],
+			["LOAD_CARDS", {"ff3a03bd-7c7e-49d8-89fe-254b5462576f", "sharedAside", 1}],
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
@@ -287,7 +287,7 @@
 		"setupCoreExpertDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],            
-			["LOAD_CARDS", {"databaseId" => "553afb55-e134-4ae8-a888-b26a1a327ec7", "loadGroupId" => "sharedAside", "quantity" => 1}],
+			["LOAD_CARDS", {"553afb55-e134-4ae8-a888-b26a1a327ec7", "sharedAside", 1}],
 			["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
