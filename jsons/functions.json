@@ -100,6 +100,16 @@
                         ["LOG", "$ALIAS_N", " scored ", "$CARD.currentFace.name", " for the Shadow Player(s) team."],
                         ["MOVE_CARD", "$CARD.id", "sharedScoringRed", 0]
                     ],
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "blue"], ["EQUAL", "$CARD.currentFace.type", "Path"]],
+                    [
+                        ["LOG", "$ALIAS_N", " scored ", "$CARD.currentFace.name", " for the Free Peoples Player(s) team."],
+                        ["MOVE_CARD", "$CARD.id", "sharedScoringBlue", 0]
+                    ],
+                    ["AND", ["EQUAL", "$WINNING_TEAM", "red"], ["EQUAL", "$CARD.currentFace.type", "Path"]],
+                    [
+                        ["LOG", "$ALIAS_N", " scored ", "$CARD.currentFace.name", " for the Shadow Player(s) team."],
+                        ["MOVE_CARD", "$CARD.id", "sharedScoringRed", 0]
+                    ],
                     ["AND", ["EQUAL", "$WINNING_TEAM", "blue"], ["EQUAL", "$CARD.currentFace.type", "Skirmish"]],
                     [
                         ["LOG", "$ALIAS_N", " resolved the ", "$CARD.currentFace.name", " skirmish. The Free Peoples Player(s) team won. Setting it aside."],

@@ -2173,9 +2173,9 @@
                     "quantity": 1,
                     "loadGroupId": "sharedAside",
                     "_name": "GP Rulebook 03"
-                },
+                }
 			]
-		}
+		},
         "Core-The Fellowship of the Ring": {
             "label": "The Fellowship of the Ring",
             "hideFromSearch": true,
