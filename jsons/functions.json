@@ -38,7 +38,7 @@
                     ],
                     ["EQUAL", "$NUM_PLAYERS", 3],
                     [
-                        ["SET_NUM_BLUE_RED", 2, 1]
+                        ["SET_NUM_BLUE_RED", 1, 2]
                     ],
                     ["EQUAL", "$NUM_PLAYERS", 4],
                     [

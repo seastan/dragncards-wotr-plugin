@@ -149,6 +149,7 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "AtS-Isengard"],
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
             ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
             ["SET", "/groupById/player3Reserve/onCardEnter/rotation", 0]
@@ -237,8 +238,8 @@
             ["LOAD_CARDS", "AtS-The Two Towers"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-			["SET_PATH", 6],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
+            ["SET_PATH", 6],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"],
             ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
@@ -286,8 +287,8 @@
             ["LOAD_CARDS", "AtS-The Return of the King"],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
-			["SET_PATH", 7],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
+            ["SET_PATH", 7],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"],
             ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
@@ -574,6 +575,7 @@
             ["SET_INITIAL_CORRUPTION", 0],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
             ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
             ["SET", "/groupById/player3Reserve/onCardEnter/rotation", 0]
@@ -602,7 +604,7 @@
 			]],
             ["SET", "/automationEnabled", true]
         ],
-		"setupFaSAtEpicDuel": [
+		"setupFaSAtSEpicDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
 			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba", "d60b9a41-691c-4ea6-b660-e430dd77a9d3", "624a2836-4d19-484a-b519-a0daa0963247"]],
             ["LOAD_RULES", "AtS"],

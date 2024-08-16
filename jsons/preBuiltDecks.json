@@ -12229,7 +12229,7 @@
 				"_name": "Moria"
 			  },
 			  {
-				"databaseId": "599956bf-ec71-408e-b6a5-1d95e2Ddee2f",
+				"databaseId": "599956bf-ec71-408e-b6a5-1d95e4ddee2f",
 				"quantity": 1,
 				"loadGroupId": "sharedBattlegroundRed",
 				"_name": "Mount Gundabad"
@@ -12259,7 +12259,7 @@
 				"_name": "The Red Bannerman"
 			  },
 			  {
-				"databaseId": "599ec8ae-1db0-47fe-abfc-2Dd54b70e47e",
+				"databaseId": "599ec8ae-1db0-47fe-abfc-4dd54b70e47e",
 				"quantity": 1,
 				"loadGroupId": "player2Deck",
 				"_name": "Easterling Commander"
@@ -12319,7 +12319,7 @@
 				"_name": "Black Rider's Mount"
 			  },
 			  {
-				"databaseId": "441cccee-2555-453f-ae95-ac2D4c64c405",
+				"databaseId": "441cccee-2555-453f-ae95-ac4d4c64c405",
 				"quantity": 1,
 				"loadGroupId": "player2Deck",
 				"_name": "Black Uruks"
@@ -12337,7 +12337,7 @@
 				"_name": "Mordor Orcs"
 			  },
 			  {
-				"databaseId": "9ebec151-260e-4ba9-a49e-18825112Db15",
+				"databaseId": "9ebec151-260e-4ba9-a49e-18825114db15",
 				"quantity": 1,
 				"loadGroupId": "player2Deck",
 				"_name": "Morgul Blade"
@@ -12349,13 +12349,13 @@
 				"_name": "Nazgûl's Mantle"
 			  },
 			  {
-				"databaseId": "81d54c26-8982-2D7b-8997-3c2237bc5a11",
+				"databaseId": "81d54c26-8982-4d7b-8997-3c2237bc5a11",
 				"quantity": 1,
 				"loadGroupId": "player2Deck",
 				"_name": "The Beguiler"
 			  },
 			  {
-				"databaseId": "f463d4c8-79a6-49ec-ad53-e182Dec25ed8",
+				"databaseId": "f463d4c8-79a6-49ec-ad53-e184dec25ed8",
 				"quantity": 1,
 				"loadGroupId": "player2Deck",
 				"_name": "The Black Easterling"
@@ -12417,169 +12417,169 @@
 			  {
 				"databaseId": "2d3f7241-b72e-4ee4-980b-597f8b056966",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "A Little Mischief in a Mean Way"
 			  },
 			  {
 				"databaseId": "a2726153-ab9b-4e15-b35d-ea608eebff2f",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Saruman"
 			  },
 			  {
 				"databaseId": "4444419a-d47a-485d-9bd7-f7d9d8304704",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Balrog of Moria"
 			  },
 			  {
 				"databaseId": "9fd35ae2-e347-442d-b16e-a7a4b92a991f",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Barrow-wights"
 			  },
 			  {
-				"databaseId": "20710710-079c-499e-8d45-72D4c436c6ed",
+				"databaseId": "20710710-079c-499e-8d45-74d4c436c6ed",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Candles of Corpses"
 			  },
 			  {
 				"databaseId": "c8c8d0c0-044e-4b0b-9d56-8efe4a90dbfa",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Caradhras the Cruel"
 			  },
 			  {
 				"databaseId": "60a4f973-0e2b-43d7-a1e0-fe4998a2f235",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Cave-troll"
 			  },
 			  {
-				"databaseId": "e602D6a3-b7e6-40ef-b88f-4c459567fffc",
+				"databaseId": "e604d6a3-b7e6-40ef-b88f-4c459567fffc",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Flocks of Crebain"
 			  },
 			  {
-				"databaseId": "a35116a1-e6d1-4404-bdd1-9b2Dd6b0a92D",
+				"databaseId": "a35116a1-e6d1-4404-bdd1-9b4dd6b0a94d",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Goblins of the Misty Mountains"
 			  },
 			  {
 				"databaseId": "e2335cc1-b542-4774-9b96-121e795d6c00",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Goblins of the Misty Mountains"
 			  },
 			  {
 				"databaseId": "1fc35485-f30f-4867-99b8-b5f6c220780e",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Gollum"
 			  },
 			  {
 				"databaseId": "27b02a55-c886-4c7f-9ea7-72a8b54e2daa",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Hill-troll"
 			  },
 			  {
-				"databaseId": "5329c719-a1cc-2D83-89a7-072904c50433",
+				"databaseId": "5329c719-a1cc-4d83-89a7-072904c50433",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Shelob"
 			  },
 			  {
 				"databaseId": "f805f51d-49bc-407d-9c15-c3dda808d1de",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Goblins of the Misty Mountains"
 			  },
 			  {
 				"databaseId": "23f8de28-b9ce-4008-89b0-f8d92ca1e23d",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Orc-Chieftain"
 			  },
 			  {
 				"databaseId": "a3811422-fc47-476a-a245-f7af3b59d199",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Spiders of Mirkwood"
 			  },
 			  {
-				"databaseId": "1072Decf-9dd6-466b-b22d-08a4a8f4e8de",
+				"databaseId": "1074decf-9dd6-466b-b22d-08a4a8f4e8de",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Watcher in the Water"
 			  },
 			  {
 				"databaseId": "d915ed1e-9838-4ba9-86a3-ff7749df1f59",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Wolves"
 			  },
 			  {
 				"databaseId": "45ea7a8c-4f12-4186-b6f3-d15a8f78b947",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Bill Ferny"
 			  },
 			  {
 				"databaseId": "eae6991b-1750-4110-8fc2-91ccd5faabb9",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Death to the Straw-heads"
 			  },
 			  {
-				"databaseId": "42529f91-6b4b-4296-ac8a-b492De6853cf",
+				"databaseId": "42529f91-6b4b-4296-ac8a-b494de6853cf",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Dirty Thieving Ruffians"
 			  },
 			  {
 				"databaseId": "e28ba9e2-1d23-46e9-8e3d-a96e88d38a55",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Gathering to the Summons"
 			  },
 			  {
 				"databaseId": "bcddae8e-3590-494a-b116-4ff5eb8ce015",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Lost!"
 			  },
 			  {
 				"databaseId": "a3186d0c-b37a-4769-9501-ebba863e875e",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Lotho Sackville-Baggins"
 			  },
 			  {
 				"databaseId": "2b149357-59f8-4b10-beb2-4463ffcc28a5",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Spies"
 			  },
 			  {
 				"databaseId": "bbe09bb6-ed7d-470e-a36a-d00b1dc38cdf",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Squint-eyed Southerner"
 			  },
 			  {
 				"databaseId": "3d2a831a-2151-42bb-ae7f-f4e8b31a936b",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Ted Sandyman"
 			  },
 			  {
 				"databaseId": "9c0c3ab3-6734-4465-ac87-7250b6f6abe8",
 				"quantity": 1,
-				"loadGroupId": "player2Deck",
+				"loadGroupId": "player3Deck",
 				"_name": "Wild Men of Dunland"
 			  }
 			]
