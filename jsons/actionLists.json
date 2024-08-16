@@ -448,7 +448,7 @@
             ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
             ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
-            ["SET_CORRUPTION_BONUS", 0],
+            ["SET_CORRUPTION_BONUS", 1],
             ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-War in the North Trilogy"],
