@@ -145,7 +145,7 @@
         },
         "SET_SETUP_RINGS": {
             "args": ["$VAL_LIST"],
-            "code": ["SET_PLAYERS_PROPS", "setupRings", "$VAL_LIST"]
+            "code": ["SET_PLAYERS_PROPS", "ringTokens", "$VAL_LIST"]
         },
         "SET_ROUND_RINGS": {
             "args": ["$VAL_LIST"],
@@ -222,12 +222,6 @@
             "args": ["$CORRUPTION_BONUS"],
             "code": [
                 ["SET", "/corruptionScore", "$CORRUPTION_BONUS"]
-            ]
-        },
-        "SET_SKIRMISHES": {
-            "args": ["$SKIRMISHES"],
-            "code": [
-                ["SET", "/skirmishes", "$SKIRMISHES"]
             ]
         },
         "LOAD_PROMOS": {

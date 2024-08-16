@@ -13,7 +13,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "Core-Battlegrounds"],
@@ -39,7 +38,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "AtS-Paths"],
             ["LOAD_CARDS", "AtS-Battlegrounds"],
@@ -50,7 +48,9 @@
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "AtS-Isengard"],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
+            ["SET", "/groupById/player4Reserve/onCardEnter/rotation", 0]
         ],
         "setupCoreTwoPlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -65,7 +65,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 1]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "Core-Battlegrounds"],
@@ -91,7 +90,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "AtS-Paths"],
             ["LOAD_CARDS", "AtS-Battlegrounds"],
@@ -101,7 +99,9 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Isengard"],
-            ["SET", "/automationEnabled", true]
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
+            ["SET", "/automationEnabled", true],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
         ],
 		"setupCoreThreePlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -116,7 +116,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "Core-Battlegrounds"],
@@ -141,7 +140,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "AtS-Paths"],
             ["LOAD_CARDS", "AtS-Battlegrounds"],
@@ -151,7 +149,9 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "AtS-Isengard"],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
+            ["SET", "/groupById/player3Reserve/onCardEnter/rotation", 0]
         ],
         "setupCoreFellowshipOfTheRing": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -165,7 +165,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-The Fellowship of the Ring"],
             ["SHUFFLE_BATTLEGROUNDS", false],
@@ -186,20 +185,20 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "AtS-The Fellowship of the Ring"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-			["SET", "/firstPlayer", "player2"]
+			["SET", "/firstPlayer", "player2"],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
         ],
 		"setupCoreTheTwoTowers": [
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_CARDS", ["LIST",
                 {"databaseId" : "ef784cfe-7d53-4804-91b6-66291cf8089c", "loadGroupId" : "sharedAside", "quantity" : 1}
-                ]
-            ], 
+                ]], 
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Théoden", "Saruman"]],
@@ -210,7 +209,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-The Two Towers"],
             ["SHUFFLE_BATTLEGROUNDS", false],
@@ -223,8 +221,7 @@
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_CARDS", ["LIST",
                 {"databaseId" : "ef784cfe-7d53-4804-91b6-66291cf8089c", "loadGroupId" : "sharedAside", "quantity" : 1}
-                ]
-            ],
+                ]],
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
@@ -236,21 +233,21 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "AtS-The Two Towers"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
 			["SET_PATH", 6],
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-			["SET", "/firstPlayer", "player2"]
+			["SET", "/firstPlayer", "player2"],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
         ],
 		"setupCoreTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_CARDS", ["LIST",
                 {"databaseId" : "ff3a03bd-7c7e-49d8-89fe-254b5462576f", "loadGroupId" : "sharedAside", "quantity" : 1}
-                ]
-            ],
+                ]],
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Aragorn", "The Witch-king"]],
@@ -261,7 +258,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-The Return of the King"],
             ["SHUFFLE_BATTLEGROUNDS", true],
@@ -274,8 +270,7 @@
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_CARDS", ["LIST",
                 {"databaseId" : "ff3a03bd-7c7e-49d8-89fe-254b5462576f", "loadGroupId" : "sharedAside", "quantity" : 1}
-                ]
-            ],
+                ]],
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
@@ -287,22 +282,22 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "AtS-The Return of the King"],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
 			["SET_PATH", 7],
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-			["SET", "/firstPlayer", "player2"]
+			["SET", "/firstPlayer", "player2"],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
         ],
 		"setupCoreExpertDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],            
 			["LOAD_CARDS", ["LIST",
                 {"databaseId" : "553afb55-e134-4ae8-a888-b26a1a327ec7", "loadGroupId" : "sharedAside", "quantity" : 1}
-                ]
-            ], 
+                ]], 
             ["LOAD_RULES", "Core"],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
@@ -313,7 +308,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 2],
             ["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "Core-Battlegrounds"],
@@ -338,7 +332,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-A Perilous Journey"],
             ["SHUFFLE_BATTLEGROUNDS", false],
@@ -358,7 +351,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 1, 1, 1]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "Core-Rohan and Gondor at War"],
             ["SHUFFLE_BATTLEGROUNDS", false],
@@ -379,7 +371,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 1, 1, 1]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
 			["LOAD_CARDS", "Core-Paths"],
             ["LOAD_CARDS", "GP-Battlegrounds"],
@@ -405,7 +396,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
 			["LOAD_CARDS", "FaS-Trilogy-Paths"],
             ["LOAD_CARDS", "FaS-Trilogy-Battlegrounds"],
@@ -435,7 +425,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 0],
-            ["SET_SKIRMISHES", false],
             ["SET_INITIAL_CORRUPTION", 0],
 			["LOAD_CARDS", "FaS-AtS-Trilogy-Paths"],
             ["LOAD_CARDS", "FaS-AtS-Trilogy-Battlegrounds"],
@@ -448,7 +437,10 @@
 			["LOAD_DECK_FOR_PLAYER", "player5", "FaS-Aragorn"],
 			["LOAD_DECK_FOR_PLAYER", "player6", "FaS-AtS-Bill"],
             ["SET_LAYOUT", "shared", "sixPlayer"],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
+            ["SET", "/groupById/player4Reserve/onCardEnter/rotation", 0],
+            ["SET", "/groupById/player6Reserve/onCardEnter/rotation", 0]
         ],
 		"setupFaSWarInTheNorth4P": [
 			["DEFINE", "$PLAYER_N", "player1"],
@@ -464,7 +456,6 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", true],
-            ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-War in the North Trilogy"],
 			["LOAD_CARDS", "FaS-Trilogy-Paths"],
@@ -487,13 +478,15 @@
             ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", true],
-            ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
 			["LOAD_CARDS", "FaS-AtS-Trilogy-Paths"],
             ["LOAD_CARDS", "FaS-AtS-War in the North Trilogy"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["SET", "/automationEnabled", true]
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
+            ["SET", "/automationEnabled", true],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
+            ["SET", "/groupById/player4Reserve/onCardEnter/rotation", 0]
 		],
 		"setupFaSWarInTheNorth2P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -509,7 +502,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 1]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", true],
-            ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-War in the North 2P Duel"],
 			["LOAD_CARDS", "FaS-Trilogy-Paths"],
@@ -532,13 +524,14 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", true],
-            ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-AtS-War in the North 2P Duel"],
 			["LOAD_CARDS", "FaS-AtS-Trilogy-Paths"],
 			["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
-            ["SET", "/automationEnabled", true]
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
+            ["SET", "/automationEnabled", true],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
         ],
 		"setupFaSWarInTheNorth3P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -554,7 +547,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
             ["SET_CORRUPTION_BONUS", true],
-            ["SET_SKIRMISHES", true],
 			["LOAD_CARDS", "FaS-War in the North 3P Duel"],
 			["LOAD_CARDS", "FaS-Trilogy-Paths"],
             ["SET_INITIAL_CORRUPTION", 0],
@@ -576,14 +568,15 @@
             ["SET_SETUP_RINGS", ["LIST", 1, 0, 0]],
             ["SET_ROUND_RINGS", ["LIST", 1, 0, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", true],
-            ["SET_CORRUPTION_BONUS", true],
-            ["SET_SKIRMISHES", true],
+            ["SET_CORRUPTION_BONUS", true],   
 			["LOAD_CARDS", "FaS-AtS-War in the North 3P Duel"],
 			["LOAD_CARDS", "FaS-AtS-Trilogy-Paths"],
             ["SET_INITIAL_CORRUPTION", 0],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
+            ["SET", "/groupById/player3Reserve/onCardEnter/rotation", 0]
         ],
 		"setupFaSEpicDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -599,7 +592,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 1]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 1],
-            ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-Epic Duel-Starting decks"],
 			["LOAD_CARDS", "FaS-Trilogy-Paths"],
@@ -625,7 +617,6 @@
             ["SET_ROUND_RINGS", ["LIST", 1, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
             ["SET_CORRUPTION_BONUS", 1],
-            ["SET_SKIRMISHES", true],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-AtS-Epic Duel-Starting decks"],
 			["LOAD_CARDS", "FaS-AtS-Trilogy-Paths"],
@@ -634,7 +625,9 @@
 				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
 				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
 			]],
-            ["SET", "/automationEnabled", true]
+            ["SET_LAYOUT", "shared", "allHandsVisible"],
+            ["SET", "/automationEnabled", true],
+            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
         ],
 		"newRound": [
             ["VAR", "$ADDITIONAL_CARDS", 0],
