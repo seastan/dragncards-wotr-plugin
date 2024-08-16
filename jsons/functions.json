@@ -15,6 +15,10 @@
                 [
                     ["LOAD_CARDS", "FaS-Rulebook"]
                 ],
+		["EQUAL", "$PRODUCT_ID", "GpS"],
+                [
+                    ["LOAD_CARDS", "GpS-Rulebook"]
+                ],
                 ["TRUE"],
                 [
                     ["LOG", "Product {{$PRODUCT_ID}} not found."]
