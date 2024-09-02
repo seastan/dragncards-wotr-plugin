@@ -208,6 +208,17 @@
                 ]
             ]
         },
+        "SET_EPIC_REMINDER": {
+            "args": ["$BOOL"],
+            "code": [
+                ["COND",
+                    "$BOOL",
+                    [
+                        ["PROMPT", "$PLAYER_ORDER", "notifyAll", "After recycling your deck for the first time, load your Section 3 Faction cards from Menu->Load->Load prebuilt deck.\nAfter both players have recycled once and twice, load the Section 2 and 3 battlegrounds from the same menu."]
+                    ]
+                ]
+            ]
+        },
         "RESOLVE_CORRUPTION_BONUS": {
             "args": [],
             "code": ["COND", 

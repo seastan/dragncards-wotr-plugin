@@ -141,7 +141,7 @@
                     ["IS_LEADER", "$TARGET"]
                 ],
                 "then": [
-                    ["LOG", "An leader entered play"],
+                    ["LOG", "A leader entered play"],
                     ["LEADER_ENTERED_GROUP", "$TARGET", "$TARGET.groupId"]
                 ]
             },
