@@ -7701,7 +7701,7 @@
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "a16d805b-ec68-477d-92e7-26f60a89f9dd",
+                    "databaseId": "dcf9c997-cea0-4dd6-ad27-b01d312f33d4",
                     "_name": "Half-orcs and Goblin-men"
                 },
 				{
@@ -7791,19 +7791,19 @@
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "b41cacfb-b685-4cc2-bbb6-bc933e021bf5",
+                    "databaseId": "a3811422-fc47-476a-a245-f7af3b59d199",
                     "_name": "Spiders of Mirkwood"
                 },
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "5b993dd1-2c39-4d40-8ee2-5fddc316e779",
+                    "databaseId": "1074decf-9dd6-466b-b22d-08a4a8f4e8de",
                     "_name": "Watcher in the Water"
                 },
 				{
                     "loadGroupId": "playerNDeck",
                     "quantity": 1,
-                    "databaseId": "43523f8b-e4cd-465f-a30b-d593821e12a6",
+                    "databaseId": "d915ed1e-9838-4ba9-86a3-ff7749df1f59",
                     "_name": "Wolves"
                 }
 			]
@@ -14810,127 +14810,128 @@
 		"FaS-AtS-ED-SPFaction-Section3": {
             "label": "Section 3 Shadow Faction Cards",
             "hideFromSearch": true,
-            "cards": [
-				 {
-					"databaseId": "5820a581-653e-48e7-99e8-e0803368d7b0",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Allies of Sauron"
-				  },
-				  {
-					"databaseId": "8207a09a-3b44-4ba4-afef-d4f696b05c5e",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Easterling Axe-men"
-				  },
-				  {
-					"databaseId": "1451c7a0-0d80-483d-b9e3-d0e480e05f5f",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Horde from the East"
-				  },
-				  {
-					"databaseId": "cdb448b0-8340-4009-9595-b011f78fc11c",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Wainriders"
-				  },
-				  {
-					"databaseId": "2d3f7241-b72e-4ee4-980b-597f8b056966",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "A Little Mischief in a Mean Way"
-				  },
-				  {
-					"databaseId": "5329c719-a1cc-4d83-89a7-072904c50433",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Shelob"
-				  },
-				  {
-					"databaseId": "40b9f576-1c9a-4747-a061-cd4cd38a3889",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "The Black Captain"
-				  },
-				  {
-					"databaseId": "d90443bb-6e7e-4c9d-a122-140d7a8895b6",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Fell Beast"
-				  },
-				  {
-					"databaseId": "1510bb6a-66f1-446f-bf09-8241187c4432",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Gorbag & Shagrat"
-				  },
-				  {
-					"databaseId": "74605d40-73f5-49a5-915a-b599ad8721ef",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Grond, Hammer of the Underworld"
-				  },
-				  {
-					"databaseId": "a934eaab-676f-47e5-923e-6960907a1521",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Mordor Orcs"
-				  },
-				  {
-					"databaseId": "87b4f16a-8935-4751-859b-5988f07717ce",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Mordor Orcs"
-				  },
-				  {
-					"databaseId": "f21c29a3-89ed-447e-b6e5-08a1fb333b92",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Mordor Orcs"
-				  },
-				  {
-					"databaseId": "d34dd625-f725-4700-946e-9797d4b4d5e6",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Mordor Orcs"
-				  },
-				  {
-					"databaseId": "5f246cea-5793-46c7-9845-fa6708a816fc",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Mouth of Sauron"
-				  },
-				  {
-					"databaseId": "c4db81b2-9848-495e-ba97-8807b3ee3103",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Olog-hai"
-				  },
-				  {
-					"databaseId": "42529f91-6b4b-4296-ac8a-b494de6853cf",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Dirty Thieving Ruffians"
-				  },
-				  {
-					"databaseId": "03455178-5819-457b-b22d-9d49abab59aa",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "The Black Serpent"
-				  },
-				  {
-					"databaseId": "2a34b48f-bf62-47ad-8d6c-f14213419976",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "Haradrim Cavalry"
-				  },
-				  {
-					"databaseId": "1941b0d7-0564-4431-a7f9-41e43e4d6490",
-					"quantity": 1,
-					"loadGroupId": "player2Cycled",
-					"_name": "The Last Stroke of Doom"
-				  }
+            "cards":
+                [
+                    {
+                      "databaseId": "5820a581-653e-48e7-99e8-e0803368d7b0",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Allies of Sauron"
+                    },
+                    {
+                      "databaseId": "8207a09a-3b44-4ba4-afef-d4f696b05c5e",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Easterling Axe-men"
+                    },
+                    {
+                      "databaseId": "1451c7a0-0d80-483d-b9e3-d0e480e05f5f",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Horde from the East"
+                    },
+                    {
+                      "databaseId": "cdb448b0-8340-4009-9595-b011f78fc11c",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Wainriders"
+                    },
+                    {
+                      "databaseId": "2d3f7241-b72e-4ee4-980b-597f8b056966",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "A Little Mischief in a Mean Way"
+                    },
+                    {
+                      "databaseId": "5329c719-a1cc-4d83-89a7-072904c50433",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Shelob"
+                    },
+                    {
+                      "databaseId": "40b9f576-1c9a-4747-a061-cd4cd38a3889",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "The Black Captain"
+                    },
+                    {
+                      "databaseId": "d90443bb-6e7e-4c9d-a122-140d7a8895b6",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Fell Beast"
+                    },
+                    {
+                      "databaseId": "1510bb6a-66f1-446f-bf09-8241187c4432",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Gorbag & Shagrat"
+                    },
+                    {
+                      "databaseId": "74605d40-73f5-49a5-915a-b599ad8721ef",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Grond, Hammer of the Underworld"
+                    },
+                    {
+                      "databaseId": "d34dd625-f725-4700-946e-9797d4b4d5e6",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Mordor Orcs"
+                    },
+                    {
+                      "databaseId": "f21c29a3-89ed-447e-b6e5-08a1fb333b92",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Mordor Orcs"
+                    },
+                    {
+                      "databaseId": "87b4f16a-8935-4751-859b-5988f07717ce",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Mordor Orcs"
+                    },
+                    {
+                      "databaseId": "a934eaab-676f-47e5-923e-6960907a1521",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Mordor Orcs"
+                    },
+                    {
+                      "databaseId": "03455178-5819-457b-b22d-9d49abab59aa",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "The Black Serpent"
+                    },
+                    {
+                      "databaseId": "2a34b48f-bf62-47ad-8d6c-f14213419976",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Haradrim Cavalry"
+                    },
+                    {
+                      "databaseId": "1941b0d7-0564-4431-a7f9-41e43e4d6490",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "The Last Stroke of Doom"
+                    },
+                    {
+                      "databaseId": "42529f91-6b4b-4296-ac8a-b494de6853cf",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Dirty Thieving Ruffians"
+                    },
+                    {
+                      "databaseId": "5f246cea-5793-46c7-9845-fa6708a816fc",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Mouth of Sauron"
+                    },
+                    {
+                      "databaseId": "c4db81b2-9848-495e-ba97-8807b3ee3103",
+                      "quantity": 1,
+                      "loadGroupId": "player2Cycled",
+                      "_name": "Olog-hai"
+                    }
 			]
 		},
 		"FaS-AtS-ED-Battlegrounds-Section2": {

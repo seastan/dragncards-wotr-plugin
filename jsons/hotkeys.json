@@ -17,6 +17,8 @@
             {"key": "Alt+2", "actionList": ["DRAW_CARD_PLAYER_I", "player2"], "label": "id:drawCard2"},
             {"key": "Alt+3", "actionList": ["DRAW_CARD_PLAYER_I", "player3"], "label": "id:drawCard3"},
             {"key": "Alt+4", "actionList": ["DRAW_CARD_PLAYER_I", "player4"], "label": "id:drawCard4"},
+            {"key": "Alt+5", "actionList": ["DRAW_CARD_PLAYER_I", "player5"], "label": "id:drawCard5"},
+            {"key": "Alt+6", "actionList": ["DRAW_CARD_PLAYER_I", "player6"], "label": "id:drawCard6"},
             {"key": "P", "actionList": "pass", "label": "id:pass"},
             {"key": "Z", "actionList": "printPileSizes", "label": "id:printPileSizes"},
             {"key": "U", "actionList": "increaseCorruption", "label": "id:increaseCorruption"},

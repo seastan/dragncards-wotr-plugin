@@ -82,6 +82,12 @@
         "drawCard4": {
             "English": "Draw a card for player 4"
         },
+        "drawCard5": {
+            "English": "Draw a card for player 5"
+        },
+        "drawCard6": {
+            "English": "Draw a card for player 6"
+        },
         "pass": {
             "English": "Pass"
         },
