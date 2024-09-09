@@ -15,7 +15,7 @@
                 [
                     ["LOAD_CARDS", "FaS-Rulebook"]
                 ],
-		["EQUAL", "$PRODUCT_ID", "GpS"],
+		        ["EQUAL", "$PRODUCT_ID", "GpS"],
                 [
                     ["LOAD_CARDS", "GpS-Rulebook"]
                 ],

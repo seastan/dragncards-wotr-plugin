@@ -534,7 +534,6 @@
             "tableLabel": "id:p1Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
-                "rotation": 90
             }
         },
         "player2Hand": {
@@ -587,7 +586,6 @@
             "tableLabel": "id:p2Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
-                "rotation": 90
             }
         },
         "player3Hand": {
@@ -640,7 +638,6 @@
             "tableLabel": "id:p3Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
-                "rotation": 90
             }
         },
         "player4Hand": {
@@ -693,7 +690,6 @@
             "tableLabel": "id:p4Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
-                "rotation": 90
             }
         },
         "player5Hand": {
@@ -746,7 +742,6 @@
             "tableLabel": "id:p5Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
-                "rotation": 90
             }
         },
         "player6Hand": {
@@ -799,7 +794,6 @@
             "tableLabel": "id:p6Reserve",
             "canHaveAttachments": true,
             "onCardEnter": {
-                "rotation": 90
             }
         },
         "sharedAside": {
@@ -808,7 +802,6 @@
             "tableLabel": "id:aside",
             "canHaveAttachments": true,
             "onCardEnter": {
-                "rotation": 0
             }
         }
     }

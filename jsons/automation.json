@@ -113,7 +113,7 @@
                     ["COMPUTE_STRENGTH", "$LOC_GROUP.activeBlueGroupId"]
                 ]
             },
-            { 
+            {
                 "_comment": "Card enters play",
                 "type": "trigger", 
                 "listenTo": [
@@ -121,11 +121,45 @@
                 ],
                 "condition": ["AND", "$TARGET.inPlay", ["PREV", ["NOT", "$TARGET.inPlay"]]],
                 "then": [
-                    ["COND", 
-                        ["EQUAL", "$TARGET.roundEnteredPlay", "$GAME.roundNumber"],
-                        ["PROMPT", "$PLAYER_N", "cardEnteredPlayThisRound", "$TARGET.sides.A.name"],
-                        ["TRUE"],
-                        ["SET", "/cardById/$TARGET_ID/roundEnteredPlay", "$GAME.roundNumber"]
+                    ["COND",
+                        ["EQUAL", "$GAME.AtSMode", false],
+                            ["COND",
+                                ["OR",
+                                    ["EQUAL", "$TARGET.sides.A.type", "Army"],
+                                    ["EQUAL", "$TARGET.sides.A.type", "Character"]
+                                ],
+                                ["COND",
+                                    ["EQUAL", "$TARGET.groupId", ["JOIN_STRING", "$PLAYER_N", "Reserve"]],
+                                    ["SET", "/cardById/$TARGET_ID/rotation", 90]
+                                ]
+                            ],
+                        ["EQUAL", "$GAME.AtSMode", true],
+                            ["COND",
+                                ["OR",
+                                    ["EQUAL", "$TARGET.sides.A.type", "Army"],
+                                    ["EQUAL", "$TARGET.sides.A.type", "Character"]
+                                ],
+                                ["COND",
+                                    ["OR",
+                                        ["EQUAL", "$TARGET.groupId", ["JOIN_STRING", "player1", "Reserve"]],
+                                        ["EQUAL", "$TARGET.groupId", ["JOIN_STRING", "player3", "Reserve"]],
+                                        ["EQUAL", "$TARGET.groupId", ["JOIN_STRING", "player5", "Reserve"]]
+                                    ],
+                                    ["SET", "/cardById/$TARGET_ID/rotation", 90]
+                                ]
+                            ]
+                    ],
+                    ["COND",
+                        ["OR",
+                            ["EQUAL", "$TARGET.sides.A.type", "Item"],
+                            ["EQUAL", "$TARGET.sides.A.type", "Character"]
+                        ],
+                        ["COND", 
+                            ["EQUAL", "$TARGET.roundEnteredPlay", "$GAME.roundNumber"],
+                            ["PROMPT", "$PLAYER_N", "cardEnteredPlayThisRound", "$TARGET.sides.A.name"],
+                            ["TRUE"],
+                            ["SET", "/cardById/$TARGET_ID/roundEnteredPlay", "$GAME.roundNumber"]
+                        ]
                     ]
                 ]
             },

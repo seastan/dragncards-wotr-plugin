@@ -11,9 +11,7 @@
                     {"deckListId": "modeCoreTheTwoTowers", "label": "The Two Towers"},
                     {"deckListId": "modeCoreTheReturnOfTheKing", "label": "The Return of the King"},
                     {"deckListId": "modeCoreExpertDuel", "label": "Expert Duel"},
-                    {"deckListId": "modeCoreAPerilousJourney", "label": "A Perilous Journey"},
-                    {"deckListId": "modeCoreRohanAndGondorAtWar", "label": "Rohan and Gondor at War"},
-                    {"deckListId": "modeGrandPrixTrilogy", "label": "Grand Prix Trilogy"}	    
+                    {"deckListId": "modeCoreAPerilousJourney", "label": "A Perilous Journey"}	    
                 ]
             },
             {   

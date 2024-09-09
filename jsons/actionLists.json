@@ -22,7 +22,9 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
         "setupAtSTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -49,8 +51,8 @@
             ["LOAD_DECK_FOR_PLAYER", "player4", "AtS-Isengard"],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
-            ["SET", "/groupById/player4Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
         "setupCoreTwoPlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -74,7 +76,9 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupAtSTwoPlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -101,7 +105,8 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "AtS-Isengard"],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupCoreThreePlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -125,7 +130,9 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Isengard"],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupAtSThreePlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -151,8 +158,8 @@
             ["LOAD_DECK_FOR_PLAYER", "player3", "AtS-Isengard"],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
-            ["SET", "/groupById/player3Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
         "setupCoreFellowshipOfTheRing": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -171,7 +178,9 @@
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true],
-			["SET", "/firstPlayer", "player2"]
+            ["SET", "/AtSMode", false],
+			["SET", "/firstPlayer", "player2"],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
         "setupAtSFellowshipOfTheRing": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -193,7 +202,8 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupCoreTheTwoTowers": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -216,7 +226,9 @@
             ["SHUFFLE_PATHS", true],
 			["SET_PATH", 6],
             ["SET", "/automationEnabled", true],
-			["SET", "/firstPlayer", "player2"]
+            ["SET", "/AtSMode", false],
+			["SET", "/firstPlayer", "player2"],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupAtSTheTwoTowers": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -242,7 +254,8 @@
             ["SET_PATH", 6],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupCoreTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -265,7 +278,9 @@
             ["SHUFFLE_PATHS", true],
 			["SET_PATH", 7],
             ["SET", "/automationEnabled", true],
-			["SET", "/firstPlayer", "player2"]
+            ["SET", "/AtSMode", false],
+			["SET", "/firstPlayer", "player2"],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupAtSTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -291,7 +306,8 @@
             ["SET_PATH", 7],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupCoreExpertDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -318,7 +334,9 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player1", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
         "setupCoreAPerilousJourney": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -337,7 +355,9 @@
             ["LOAD_CARDS", "Core-A Perilous Journey"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
         "setupCoreRohanAndGondorAtWar":[
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -356,7 +376,9 @@
             ["LOAD_CARDS", "Core-Rohan and Gondor at War"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
 		],
 		"setupGrandPrixTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -381,7 +403,9 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupFaSExpandedTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -409,7 +433,9 @@
 			["LOAD_DECK_FOR_PLAYER", "player5", "FaS-Aragorn"],
 			["LOAD_DECK_FOR_PLAYER", "player6", "FaS-Bill"],
             ["SET_LAYOUT", "shared", "sixPlayer"],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupFaSAtSExpandedTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -439,9 +465,8 @@
 			["LOAD_DECK_FOR_PLAYER", "player6", "FaS-AtS-Bill"],
             ["SET_LAYOUT", "shared", "sixPlayer"],
             ["SET", "/automationEnabled", true],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
-            ["SET", "/groupById/player4Reserve/onCardEnter/rotation", 0],
-            ["SET", "/groupById/player6Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupFaSWarInTheNorth4P": [
 			["DEFINE", "$PLAYER_N", "player1"],
@@ -462,7 +487,9 @@
 			["LOAD_CARDS", "FaS-Trilogy-Paths"],
             ["SHUFFLE_BATTLEGROUNDS", false],
             ["SHUFFLE_PATHS", true],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
 		],
 		"setupFaSAtSWarInTheNorth4P": [
 			["DEFINE", "$PLAYER_N", "player1"],
@@ -486,8 +513,8 @@
             ["SHUFFLE_PATHS", true],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
-            ["SET", "/groupById/player4Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
 		],
 		"setupFaSWarInTheNorth2P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -508,7 +535,9 @@
 			["LOAD_CARDS", "FaS-Trilogy-Paths"],
 			["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupFaSAtSWarInTheNorth2P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -532,7 +561,8 @@
             ["SHUFFLE_PATHS", true],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupFaSWarInTheNorth3P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -553,7 +583,9 @@
             ["SET_INITIAL_CORRUPTION", 0],
             ["SHUFFLE_BATTLEGROUNDS", true],
             ["SHUFFLE_PATHS", true],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupFaSAtSWarInTheNorth3P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -577,8 +609,8 @@
             ["SHUFFLE_PATHS", true],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0],
-            ["SET", "/groupById/player3Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupFaSEpicDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -603,7 +635,9 @@
 				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
 				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
 			]],
-            ["SET", "/automationEnabled", true]
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupFaSAtSEpicDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -631,7 +665,8 @@
 			]],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
-            ["SET", "/groupById/player2Reserve/onCardEnter/rotation", 0]
+            ["SET", "/AtSMode", true],
+            ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"newRound": [
             ["VAR", "$ADDITIONAL_CARDS", 0],
@@ -859,7 +894,7 @@
                                     ["LOG", "$ALIAS_N", " increased the corruption score by ", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"], "."],
                                     ["INCREASE_VAL", "/corruptionScore", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"]]
                                 ],
-                                ["EQUAL", "$ACTIVE_FACE.type", "Battleground"],
+                                ["EQUAL","$ACTIVE_CARD.sides.B.name", "Free Peoples Battleground"],
                                 ["RESOLVE_CORRUPTION_BONUS"]
                             ]
                         ],

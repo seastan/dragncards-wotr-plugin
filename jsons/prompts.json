@@ -31,7 +31,7 @@
         },
         "cardEnteredPlayThisRound": {
             "args": ["$PLAYED_CARD_NAME"],
-            "message": "{{$PLAYED_CARD_NAME}} was played this round already. Cards can only be played once per round.",
+            "message": "{{$PLAYED_CARD_NAME}} was played this round already. Characters and Items can only be played once per round.",
             "options": [
                 {
                     "label": "Ok",
