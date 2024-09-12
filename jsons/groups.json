@@ -516,7 +516,11 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "controller": "player1",
+                "deckGroupId": "player1Deck",
+                "cycleGroupId": "player1Cycled",
+                "eliminateGroupId": "player1Eliminated"
             }
         },
         "player1Eliminated": {
@@ -568,7 +572,11 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "controller": "player2",
+                "deckGroupId": "player2Deck",
+                "cycleGroupId": "player2Cycled",
+                "eliminateGroupId": "player2Eliminated"
             }
         },
         "player2Eliminated": {
@@ -620,7 +628,11 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "controller": "player3",
+                "deckGroupId": "player3Deck",
+                "cycleGroupId": "player3Cycled",
+                "eliminateGroupId": "player3Eliminated"
             }
         },
         "player3Eliminated": {
@@ -672,7 +684,11 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "controller": "player4",
+                "deckGroupId": "player4Deck",
+                "cycleGroupId": "player4Cycled",
+                "eliminateGroupId": "player4Eliminated"
             }
         },
         "player4Eliminated": {
@@ -724,7 +740,11 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "controller": "player5",
+                "deckGroupId": "player5Deck",
+                "cycleGroupId": "player5Cycled",
+                "eliminateGroupId": "player5Eliminated"
             }
         },
         "player5Eliminated": {
@@ -776,7 +796,11 @@
             "tableLabel": "id:cycled",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "controller": "player6",
+                "deckGroupId": "player6Deck",
+                "cycleGroupId": "player6Cycled",
+                "eliminateGroupId": "player6Eliminated"
             }
         },
         "player6Eliminated": {

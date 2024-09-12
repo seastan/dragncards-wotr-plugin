@@ -847,6 +847,12 @@
             ],
             ["LOG", "$ALIAS_N", " shuffled the cards in ", "$ORIG_GROUP.name", " into their corresponding decks."]
         ],
+        "flipThemAll": [
+            ["LOG", "{{$ALIAS_N}} flipped {{$ACTIVE_GROUP.label}} facedown."], 
+            ["FOR_EACH_VAL", "$CARD_ID", "$ACTIVE_GROUP.parentCardIds", [
+                ["SET", "/cardById/$CARD_ID/currentSide", "B"]
+            ]]
+        ],
         "printPileSizes": [
             ["LOG", "Printing pile sizes:"],
             ["FOR_EACH_KEY_VAL", "$PLAYER_I", "$PLAYER_DATA", "$GAME.playerData", [

@@ -25,6 +25,9 @@
         "shuffleGroupIntoDeck": {
             "English": "Shuffle into deck"
         },
+        "flipThemAll": {
+            "English": "Flip all facedown"
+        },
         "myDeck": {
             "English": "My Deck"
         },

@@ -2,10 +2,15 @@
     "groupMenu": {
         "peekAtTopN": [1, 3, 5, 7],
         "moveToGroupIds": ["sharedSetAsideHand", "sharedSetAsidePile1", "sharedSetAsidePile2"],
+        "suppress": ["Look at top X"],
         "options": [
             {
                 "label": "id:shuffleGroupIntoDeck",
                 "actionList": "shuffleGroupIntoDeck"
+            },
+            {
+                "label": "id:flipThemAll",
+                "actionList": "flipThemAll"
             }
         ]
     }

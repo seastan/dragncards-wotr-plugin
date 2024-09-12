@@ -214,7 +214,7 @@
                 ["COND",
                     "$BOOL",
                     [
-                        ["PROMPT", "$PLAYER_ORDER", "notifyAll", "After recycling your deck for the first time, load your Section 3 Faction cards from Menu->Load->Load prebuilt deck.\nDuring the Victory step, after both players have recycled at least once and twice, load the Section 2 and 3 battlegrounds from the same menu."]
+                        ["PROMPT", "$PLAYER_ORDER", "notifyAll", "When required, you can load your Section 3 Faction cards and/or the Section 2 and 3 battlegrounds from Menu->Load->Load prebuilt deck."]
                     ]
                 ]
             ]
