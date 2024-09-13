@@ -187,6 +187,7 @@
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
 			["SET", "/firstPlayer", "player2"],
+            ["SET", "/currentPlayer", "player2"],
             ["INCREASE_VAL", "/roundNumber", 1]
         ],
         "setupAtSFellowshipOfTheRing": [
@@ -210,6 +211,7 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"],
+            ["SET", "/currentPlayer", "player2"],
             ["SET", "/AtSMode", true],
             ["INCREASE_VAL", "/roundNumber", 1]
         ],
@@ -237,6 +239,7 @@
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
 			["SET", "/firstPlayer", "player2"],
+            ["SET", "/currentPlayer", "player2"],
             ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupAtSTheTwoTowers": [
@@ -264,6 +267,7 @@
             ["SET_PATH", 6],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"],
+            ["SET", "/currentPlayer", "player2"],
             ["SET", "/AtSMode", true],
             ["INCREASE_VAL", "/roundNumber", 1]
         ],
@@ -291,6 +295,7 @@
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
 			["SET", "/firstPlayer", "player2"],
+            ["SET", "/currentPlayer", "player2"],
             ["INCREASE_VAL", "/roundNumber", 1]
         ],
 		"setupAtSTheReturnOfTheKing": [
@@ -318,6 +323,7 @@
             ["SET_PATH", 7],
             ["SET", "/automationEnabled", true],
 			["SET", "/firstPlayer", "player2"],
+            ["SET", "/currentPlayer", "player2"],
             ["SET", "/AtSMode", true],
             ["INCREASE_VAL", "/roundNumber", 1]
         ],
