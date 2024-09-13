@@ -556,6 +556,9 @@
         "onlyShowMyHand" : {
             "English": "Only Show My Hand"
         },
+        "epicDuel" : {
+            "English": "Epic Duel"
+        },
         "getHandFromSetAsideHand": {
             "English": "Return cards in set-aside hand to my hand"
         },
@@ -570,6 +573,60 @@
         },
         "setAsidePile2": {
             "English": "Set-Aside Pile 2"
+        },
+        "pathDeck1A": {
+            "English": "Path Deck 1A"
+        },
+        "pathDeck2A": {
+            "English": "Path Deck 2A"
+        },
+        "pathDeck3A": {
+            "English": "Path Deck 3A"
+        },
+        "pathDeck4A": {
+            "English": "Path Deck 4A"
+        },
+        "pathDeck5A": {
+            "English": "Path Deck 5A"
+        },
+        "pathDeck6A": {
+            "English": "Path Deck 6A"
+        },
+        "pathDeck7A": {
+            "English": "Path Deck 7A"
+        },
+        "pathDeck8A": {
+            "English": "Path Deck 8A"
+        },
+        "pathDeck9A": {
+            "English": "Path Deck 9A"
+        },
+        "pathDeck1B": {
+            "English": "Path Deck 1B"
+        },
+        "pathDeck2B": {
+            "English": "Path Deck 2B"
+        },
+        "pathDeck3B": {
+            "English": "Path Deck 3B"
+        },
+        "pathDeck4B": {
+            "English": "Path Deck 4B"
+        },
+        "pathDeck5B": {
+            "English": "Path Deck 5B"
+        },
+        "pathDeck6B": {
+            "English": "Path Deck 6B"
+        },
+        "pathDeck7B": {
+            "English": "Path Deck 7B"
+        },
+        "pathDeck8B": {
+            "English": "Path Deck 8B"
+        },
+        "pathDeck9B": {
+            "English": "Path Deck 9B"
         }
     }
 }

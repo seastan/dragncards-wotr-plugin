@@ -56,7 +56,8 @@
                     [
                         ["LOG", "Invalid number of players."]
                     ]
-                ]
+                ],
+                ["HIGHLIGHT_CURRENT_PLAYER"]
             ]
         },
         "SET_PLAYERS_PROPS": {
@@ -280,10 +281,23 @@
                         ["UPDATE_LAYOUT", "/layout/regions/player1Cycled/left", "30%"],
                         ["UPDATE_LAYOUT", "/layout/regions/player1Eliminated/left", "37%"],
                         
-                        ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
-                            ["VAR", "$LEFT", ["CALC", "0.415+{{$I}}*0.015"]],
-                            ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", "$LEFT"]
-                        ]]
+                        ["COND",
+                            ["EQUAL", "$GAME.EDM", false],
+                            [
+                                ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+                                    ["VAR", "$LEFT", ["CALC", "0.415+{{$I}}*0.015"]],
+                                    ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", "$LEFT"]]
+                                ]
+                            ],
+                            ["EQUAL", "$GAME.EDM", true],
+                            [
+                                ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+                                    ["VAR", "$LEFT", ["CALC", "0.415+{{$I}}*0.015"]],
+                                    ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}A/left", "$LEFT"],
+                                    ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}B/left", "$LEFT"]]
+                                ]
+                            ]
+                        ]
                     ],
                     ["EQUAL", "$NUM_BLUE", 1],
                     [
@@ -302,10 +316,23 @@
                         ["UPDATE_LAYOUT", "/layout/regions/player1Cycled/left", "74%"],
                         ["UPDATE_LAYOUT", "/layout/regions/player1Eliminated/left", "81%"],
 
-                        ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
-                            ["VAR", "$LEFT", ["CALC", "0.73+{{$I}}*0.015"]],
-                            ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", "$LEFT"]
-                        ]]
+                        ["COND",
+                            ["EQUAL", "$GAME.EDM", false],
+                            [
+                                ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+                                    ["VAR", "$LEFT", ["CALC", "0.73+{{$I}}*0.015"]],
+                                    ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}/left", "$LEFT"]]
+                                ]
+                            ],
+                            ["EQUAL", "$GAME.EDM", true],
+                            [
+                                ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
+                                    ["VAR", "$LEFT", ["CALC", "0.73+{{$I}}*0.015"]],
+                                    ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}A/left", "$LEFT"],
+                                    ["UPDATE_LAYOUT", "/layout/tableButtons/layoutPath{{$I}}B/left", "$LEFT"]]
+                                ]
+                            ]
+                        ]
                     ]
                 ]
             ]

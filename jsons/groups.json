@@ -827,6 +827,186 @@
             "canHaveAttachments": true,
             "onCardEnter": {
             }
+        },
+        "sharedPathDeck1A": {
+            "groupType": "deck",
+            "label": "id:pathDeck1A",
+            "tableLabel": "id:pathDeck1A",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck1A"
+            }
+        },
+        "sharedPathDeck2A": {
+            "groupType": "deck",
+            "label": "id:pathDeck2A",
+            "tableLabel": "id:pathDeck2A",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck2A"
+            }
+        },
+        "sharedPathDeck3A": {
+            "groupType": "deck",
+            "label": "id:pathDeck3A",
+            "tableLabel": "id:pathDeck3A",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck3A"
+            }
+        },
+        "sharedPathDeck4A": {
+            "groupType": "deck",
+            "label": "id:pathDeck4A",
+            "tableLabel": "id:pathDeck4A",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck4A"
+            }
+        },
+        "sharedPathDeck5A": {
+            "groupType": "deck",
+            "label": "id:pathDeck5A",
+            "tableLabel": "id:pathDeck5A",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck5A"
+            }
+        },
+        "sharedPathDeck6A": {
+            "groupType": "deck",
+            "label": "id:pathDeck6A",
+            "tableLabel": "id:pathDeck6A",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck6A"
+            }
+        },
+        "sharedPathDeck7A": {
+            "groupType": "deck",
+            "label": "id:pathDeck7A",
+            "tableLabel": "id:pathDeck7A",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck7A"
+            }
+        },
+        "sharedPathDeck8A": {
+            "groupType": "deck",
+            "label": "id:pathDeck8A",
+            "tableLabel": "id:pathDeck8A",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck8A"
+            }
+        },
+        "sharedPathDeck9A": {
+            "groupType": "deck",
+            "label": "id:pathDeck9",
+            "tableLabel": "id:pathDeck9",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck9A"
+            }
+        },
+        "sharedPathDeck1B": {
+            "groupType": "deck",
+            "label": "id:pathDeck1B",
+            "tableLabel": "id:pathDeck1B",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck1B"
+            }
+        },
+        "sharedPathDeck2B": {
+            "groupType": "deck",
+            "label": "id:pathDeck2B",
+            "tableLabel": "id:pathDeck2B",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck2B"
+            }
+        },
+        "sharedPathDeck3B": {
+            "groupType": "deck",
+            "label": "id:pathDeck3B",
+            "tableLabel": "id:pathDeck3B",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck3B"
+            }
+        },
+        "sharedPathDeck4B": {
+            "groupType": "deck",
+            "label": "id:pathDeck4B",
+            "tableLabel": "id:pathDeck4B",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck4B"
+            }
+        },
+        "sharedPathDeck5B": {
+            "groupType": "deck",
+            "label": "id:pathDeck5B",
+            "tableLabel": "id:pathDeck5B",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck5B"
+            }
+        },
+        "sharedPathDeck6B": {
+            "groupType": "deck",
+            "label": "id:pathDeck6B",
+            "tableLabel": "id:pathDeck6B",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck6B"
+            }
+        },
+        "sharedPathDeck7B": {
+            "groupType": "deck",
+            "label": "id:pathDeck7B",
+            "tableLabel": "id:pathDeck7B",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck7B"
+            }
+        },
+        "sharedPathDeck8B": {
+            "groupType": "deck",
+            "label": "id:pathDeck8B",
+            "tableLabel": "id:pathDeck8B",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck8B"
+            }
+        },
+        "sharedPathDeck9B": {
+            "groupType": "deck",
+            "label": "id:pathDeck9B",
+            "tableLabel": "id:pathDeck9B",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": true,
+            "onCardEnter": {
+                "deckGroupId": "sharedPathDeck9B"
+            }
         }
     }
 }

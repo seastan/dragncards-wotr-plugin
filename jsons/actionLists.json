@@ -4,6 +4,7 @@
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
@@ -31,6 +32,7 @@
 			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
 			["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
@@ -58,6 +60,7 @@
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2]],
@@ -85,6 +88,7 @@
             ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2]],
@@ -112,6 +116,7 @@
             ["DEFINE", "$PLAYER_N", "player1"],
 			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 3],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 1, 3]],
@@ -138,6 +143,7 @@
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "d2e8078c-c71c-4098-ae47-6d82ee9bc295", "b1f20381-8487-4603-a2e6-f30dbfb5c1ba"]],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 3],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 1, 3]],
@@ -164,6 +170,7 @@
         "setupCoreFellowshipOfTheRing": [
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Balrog of Moria"]],
             ["SET_TURN_ORDER", ["LIST", 2, 1]],
@@ -186,6 +193,7 @@
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Balrog of Moria"]],
             ["SET_TURN_ORDER", ["LIST", 2, 1]],
@@ -211,6 +219,7 @@
                 {"databaseId" : "ef784cfe-7d53-4804-91b6-66291cf8089c", "loadGroupId" : "sharedAside", "quantity" : 1}
                 ]], 
             ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Théoden", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 2, 1]],
@@ -237,6 +246,7 @@
                 ]],
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Théoden", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 2, 1]],
@@ -263,6 +273,7 @@
                 {"databaseId" : "ff3a03bd-7c7e-49d8-89fe-254b5462576f", "loadGroupId" : "sharedAside", "quantity" : 1}
                 ]],
             ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Aragorn", "The Witch-king"]],
             ["SET_TURN_ORDER", ["LIST", 2, 1]],
@@ -289,6 +300,7 @@
                 ]],
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Aragorn", "The Witch-king"]],
             ["SET_TURN_ORDER", ["LIST", 2, 1]],
@@ -316,6 +328,7 @@
                 {"databaseId" : "553afb55-e134-4ae8-a888-b26a1a327ec7", "loadGroupId" : "sharedAside", "quantity" : 1}
                 ]], 
             ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2]],
@@ -342,6 +355,7 @@
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_RULES", "GpS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Strider", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
@@ -363,6 +377,7 @@
             ["DEFINE", "$PLAYER_N", "player1"],
 			["LOAD_RULES", "GpS"],
             ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf the White", "The Witch-king", "Aragorn", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
@@ -385,6 +400,7 @@
             ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "GpS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
@@ -412,6 +428,7 @@
 			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba", "d60b9a41-691c-4ea6-b660-e430dd77a9d3", "624a2836-4d19-484a-b519-a0daa0963247"]],
             ["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 6],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Gandalf", "Saruman", "Aragorn", "Bill Ferny"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4, 5, 6]],
@@ -443,6 +460,7 @@
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 6],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Gandalf", "Saruman", "Aragorn", "Bill Ferny"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4, 5, 6]],
@@ -473,6 +491,7 @@
 			["LOAD_PROMOS", ["LIST", "d60b9a41-691c-4ea6-b660-e430dd77a9d3", "624a2836-4d19-484a-b519-a0daa0963247", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Strider", "The Balrog of Moria"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
@@ -497,6 +516,7 @@
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Strider", "The Balrog of Moria"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
@@ -521,6 +541,7 @@
             ["LOAD_PROMOS", ["LIST", "d60b9a41-691c-4ea6-b660-e430dd77a9d3", "624a2836-4d19-484a-b519-a0daa0963247", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
 			["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2]],
@@ -545,6 +566,7 @@
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2]],
@@ -569,6 +591,7 @@
 			["LOAD_PROMOS", ["LIST", "d60b9a41-691c-4ea6-b660-e430dd77a9d3", "624a2836-4d19-484a-b519-a0daa0963247", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 3],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 1, 3]],
@@ -593,6 +616,7 @@
 			["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
             ["SET_NUM_PLAYERS", 3],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 1, 3]],
@@ -617,6 +641,7 @@
 			["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba", "d60b9a41-691c-4ea6-b660-e430dd77a9d3", "624a2836-4d19-484a-b519-a0daa0963247"]],
 			["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", true],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2]],
@@ -629,15 +654,13 @@
             ["SET_CORRUPTION_BONUS", 1],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-Epic Duel-Starting decks"],
-			["LOAD_CARDS", "FaS-Trilogy-Paths"],
+			["LOAD_CARDS", "FaS-Duel-Paths"],
 			["SHUFFLE_BATTLEGROUNDS", true],
-            ["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
-				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
-				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
-			]],
+            ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_LAYOUT", "shared", "epicDuel"]
         ],
 		"setupFaSAtSEpicDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -645,6 +668,7 @@
             ["LOAD_RULES", "AtS"],
 			["LOAD_RULES", "FaS"],
 			["LOAD_RULES", "Core"],
+            ["SET", "/EDM", true],
             ["SET_NUM_PLAYERS", 2],
             ["SET_PLAYER_NAMES", ["LIST", "Gandalf", "The Witch-king"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2]],
@@ -657,16 +681,14 @@
             ["SET_CORRUPTION_BONUS", 1],
             ["SET_INITIAL_CORRUPTION", 0],
             ["LOAD_CARDS", "FaS-AtS-Epic Duel-Starting decks"],
-			["LOAD_CARDS", "FaS-AtS-Trilogy-Paths"],
+			["LOAD_CARDS", "FaS-AtS-Duel-Paths"],
 			["SHUFFLE_BATTLEGROUNDS", true],
-			["FOR_EACH_START_STOP_STEP", "$I", 1, 10, 1, [
-				["SHUFFLE_TOP_X", "sharedPathDeck{{$I}}", 2],
-				["SHUFFLE_BOTTOM_X", "sharedPathDeck{{$I}}", 2]
-			]],
+            ["SHUFFLE_PATHS", true],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_LAYOUT", "shared", "epicDuel"]
         ],
 		"newRound": [
             ["VAR", "$ADDITIONAL_CARDS", 0],
@@ -845,7 +867,7 @@
                 ]
             ]
             ],
-            ["LOG", "$ALIAS_N", " shuffled the cards in ", "$ORIG_GROUP.name", " into their corresponding decks."]
+            ["LOG", "$ALIAS_N", " shuffled the cards in ", "$ORIG_GROUP.label", " into their corresponding decks."]
         ],
         "flipThemAll": [
             ["LOG", "{{$ALIAS_N}} flipped {{$ACTIVE_GROUP.label}} facedown."], 
@@ -938,10 +960,6 @@
             ["MOVE_STACKS", "sharedSetAsidePile1", "{{$PLAYER_N}}Cycled"],
             ["LOG", "{{$PLAYER_N}} cycled the cards in id:setAsidePile2"],
             ["MOVE_STACKS", "sharedSetAsidePile2", "{{$PLAYER_N}}Cycled"]
-        ],
-        "postSetLayout": [
-            ["SET_NUM_BLUE_RED", "$GAME.numBlue", "$GAME.numRed"],
-            ["HIGHLIGHT_CURRENT_PLAYER"]
         ],
         "changeP4ToP3": [
             ["UPDATE_LAYOUT", "/layout/regions/player4Reserve/groupId", "player3Reserve"],
