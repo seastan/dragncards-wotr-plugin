@@ -4,15 +4,15 @@
             ["SET", "/automationEnabled", false],
             ["SET", "/currentPlayer", "player1"]
         ],
-        "gameRules": [
-            { 
+        "gameRules": {
+            "currentPlayer": { 
                 "_comment": "Track current player",
                 "type": "trigger", 
                 "listenTo": ["/currentPlayer"],
                 "condition": ["TRUE"],
                 "then": ["HIGHLIGHT_CURRENT_PLAYER"]
             },
-            { 
+            "handSize": { 
                 "_comment": "Track hand size",
                 "type": "trigger", 
                 "listenTo": ["/groupById/player1Hand/stackIds", "/groupById/player2Hand/stackIds", "/groupById/player3Hand/stackIds", "/groupById/player4Hand/stackIds"],
@@ -21,7 +21,7 @@
                     ["SET_HAND_SIZE", "$TARGET.onCardEnter.controller"]
                 ]
             },
-            { 
+            "victoryPoints": { 
                 "_comment": "Track victory points",
                 "type": "trigger", 
                 "listenTo": [
@@ -33,7 +33,7 @@
                 ],
                 "then": ["COMPUTE_SCORE"]
             },
-            {
+            "corruption": {
                 "_comment": "Track corruption",
                 "type": "trigger",
                 "listenTo": ["/corruptionScore"],
@@ -43,7 +43,7 @@
                 ],
                 "then": ["COMPUTE_SCORE"]
             },
-            { 
+            "scoreUpdate": { 
                 "_comment": "Update score when corruption counter changes value",
                 "type": "trigger", 
                 "listenTo": [
@@ -55,7 +55,7 @@
                     ["UPDATE_EXPECTED_POINTS"]
                 ]
             },
-            { 
+            "cardEntersCombat": { 
                 "_comment": "Card enters combat",
                 "type": "trigger", 
                 "listenTo": [
@@ -67,7 +67,7 @@
                 ],
                 "then": ["COMPUTE_STRENGTH", "$TARGET.groupId"]
             },
-            { 
+            "cardLeavesCombat": { 
                 "_comment": "Card leaves combat",
                 "type": "trigger", 
                 "listenTo": [
@@ -79,7 +79,7 @@
                 ],
                 "then": ["COMPUTE_STRENGTH", ["PREV", "$TARGET.groupId"]]
             },
-            { 
+            "locationEnters": { 
                 "_comment": "Location enters play",
                 "type": "trigger", 
                 "listenTo": [
@@ -96,7 +96,7 @@
                     ["COMPUTE_STRENGTH", "$LOC_GROUP.activeBlueGroupId"]
                 ]
             },
-            { 
+            "locationLeaves": { 
                 "_comment": "Location leaves play",
                 "type": "trigger", 
                 "listenTo": [
@@ -113,7 +113,7 @@
                     ["COMPUTE_STRENGTH", "$LOC_GROUP.activeBlueGroupId"]
                 ]
             },
-            {
+            "cardEntersPlay": {
                 "_comment": "Card enters play",
                 "type": "trigger", 
                 "listenTo": [
@@ -163,7 +163,7 @@
                     ]
                 ]
             },
-            { 
+            "LeaderEntersLocation": { 
                 "_comment": "Leader enters location",
                 "type": "trigger", 
                 "listenTo": [
@@ -179,7 +179,7 @@
                     ["LEADER_ENTERED_GROUP", "$TARGET", "$TARGET.groupId"]
                 ]
             },
-            { 
+            "armyEntersLocation": { 
                 "_comment": "Army enters location",
                 "type": "trigger", 
                 "listenTo": [
@@ -195,7 +195,7 @@
                     ["ARMY_ENTERED_GROUP", "$TARGET", "$TARGET.groupId"]
                 ]
             },
-            { 
+            "trackLocation": { 
                 "_comment": "Track location",
                 "type": "trigger", 
                 "listenTo": ["/groupById/sharedActiveLocation1/stackIds", "/groupById/sharedActiveLocation2/stackIds", "/groupById/sharedActiveLocation3/stackIds", "/groupById/sharedActiveLocation4/stackIds", "/groupById/sharedActiveLocation5/stackIds", "/groupById/sharedActiveLocation6/stackIds"],
@@ -233,12 +233,12 @@
                     ]
                 ]
             }
-        ],
+        },
         "cards": {
             "a6cdd8d3-cd6e-4d1a-908b-2f788fbb357e": {
                 "_comment": "Aragorn",
-                "rules": [
-                    { 
+                "rules": {
+                    "eliminateStrider": { 
                         "type": "trigger", 
                         "listenTo": ["/cardById/$THIS_ID/inPlay"],
                         "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
@@ -246,12 +246,13 @@
                             ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Aragorn", "Strider"]
                         ]
                     }
-                ]
+                }
             },
+
             "ffa8235b-c293-44c0-b88e-7ebb5f909960": {
                 "_comment": "Gandalf the White",
-                "rules": [
-                    { 
+                "rules": {
+                    "eliminateGandalfTheGrey": { 
                         "type": "trigger", 
                         "listenTo": ["/cardById/$THIS_ID/inPlay"],
                         "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
@@ -259,12 +260,13 @@
                             ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Gandalf the White", "Gandalf the Grey"]
                         ]
                     }
-                ]
+                }
             },
+
             "b9539977-4ed1-44c6-aa09-5431a4a11967": {
                 "_comment": "Gothmog",
-                "rules": [
-                    { 
+                "rules": {
+                    "eliminateWK": { 
                         "type": "trigger", 
                         "listenTo": ["/cardById/$THIS_ID/inPlay"],
                         "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
@@ -272,12 +274,12 @@
                             ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Gothmog", "The Witch-king"]
                         ]
                     }
-                ]
+                }
             },
             "d2e8078c-c71c-4098-ae47-6d82ee9bc295": {
                 "_comment": "Gothmog",
-                "rules": [
-                    { 
+                "rules": {
+                    "eliminateWK": { 
                         "type": "trigger", 
                         "listenTo": ["/cardById/$THIS_ID/inPlay"],
                         "condition": ["AND", "$THIS.inPlay", ["PREV", ["NOT", "$THIS.inPlay"]]],
@@ -285,7 +287,7 @@
                             ["PROMPT", "$PLAYER_N", "eliminateOnPlay", "Gothmog", "The Witch-king"]
                         ]
                     }
-                ]
+                }
             },
             "1bf8e385-9b87-47a0-a536-f560cc0db14e": {
                 "_comment": "Mirror of Galadriel",
