@@ -696,6 +696,10 @@
             ["INCREASE_VAL", "/roundNumber", 1],
             ["SET_LAYOUT", "shared", "epicDuel"]
         ],
+        "initialDraw": [
+            ["LOG", "$ALIAS_N", " drew their initial hand of cards."],
+            ["DRAW_CARD", "$GAME.playerData.$PLAYER_N.setupDraw"]
+        ],
 		"newRound": [
             ["VAR", "$ADDITIONAL_CARDS", 0],
             ["FOR_EACH_KEY_VAL", "$CARD_ID", "$CARD", "$CARD_BY_ID", 

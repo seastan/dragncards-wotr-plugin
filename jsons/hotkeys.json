@@ -25,7 +25,8 @@
             {"key": "J", "actionList": "decreaseCorruption", "label": "id:decreaseCorruption"},
             {"key": "Shift+H", "actionList": "getHandFromSetAsideHand", "label": "id:getHandFromSetAsideHand"},
             {"key": "Shift+J", "actionList": "cycleSetAsidePiles", "label": "id:cycleSetAsidePiles"},
-            {"key": "L", "actionList": "toggleLocationDecks", "label": "id:toggleLocationDecks"}
+            {"key": "L", "actionList": "toggleLocationDecks", "label": "id:toggleLocationDecks"},
+            {"key": "Shift+D", "actionList": "initialDraw", "label": "id:drawInitialCards"}
         ],
         "card": [
             {"key": "F", "actionList": "flipCard", "label": "id:flip"},
