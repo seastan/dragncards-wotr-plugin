@@ -629,7 +629,7 @@
             "English": "Path Deck 9B"
         },
         "drawInitialCards": {
-            "English": "Draw the initial hand of cards"
+            "English": "Draw your starting hand"
         }
     }
 }

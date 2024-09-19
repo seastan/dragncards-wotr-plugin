@@ -697,7 +697,7 @@
             ["SET_LAYOUT", "shared", "epicDuel"]
         ],
         "initialDraw": [
-            ["LOG", "$ALIAS_N", " drew their initial hand of cards."],
+            ["LOG", "$ALIAS_N", " drew their starting hand."],
             ["DRAW_CARD", "$GAME.playerData.$PLAYER_N.setupDraw"]
         ],
 		"newRound": [

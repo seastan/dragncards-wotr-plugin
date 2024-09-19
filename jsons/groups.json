@@ -5,7 +5,7 @@
             "label": "id:freePeoplesBattlegroundDeck", 
             "tableLabel": "",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "controller": "shared",
                 "deckGroupId": "sharedBattlegroundRed"
@@ -16,7 +16,7 @@
             "label": "id:shadowBattlegroundDeck", 
             "tableLabel": "",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "controller": "shared",
                 "deckGroupId": "sharedBattlegroundRed"
@@ -43,7 +43,7 @@
             "label": "id:pathDeck1",
             "tableLabel": "id:pathDeck1",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck1"
             }
@@ -53,7 +53,7 @@
             "label": "id:pathDeck2",
             "tableLabel": "id:pathDeck2",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck2"
             }
@@ -63,7 +63,7 @@
             "label": "id:pathDeck3",
             "tableLabel": "id:pathDeck3",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck3"
             }
@@ -73,7 +73,7 @@
             "label": "id:pathDeck4",
             "tableLabel": "id:pathDeck4",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck4"
             }
@@ -83,7 +83,7 @@
             "label": "id:pathDeck5",
             "tableLabel": "id:pathDeck5",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck5"
             }
@@ -93,7 +93,7 @@
             "label": "id:pathDeck6",
             "tableLabel": "id:pathDeck6",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck6"
             }
@@ -103,7 +103,7 @@
             "label": "id:pathDeck7",
             "tableLabel": "id:pathDeck7",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck7"
             }
@@ -113,7 +113,7 @@
             "label": "id:pathDeck8",
             "tableLabel": "id:pathDeck8",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck8"
             }
@@ -123,7 +123,7 @@
             "label": "id:pathDeck9",
             "tableLabel": "id:pathDeck9",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck9"
             }
@@ -833,7 +833,7 @@
             "label": "id:pathDeck1A",
             "tableLabel": "id:pathDeck1A",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck1A"
             }
@@ -843,7 +843,7 @@
             "label": "id:pathDeck2A",
             "tableLabel": "id:pathDeck2A",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck2A"
             }
@@ -853,7 +853,7 @@
             "label": "id:pathDeck3A",
             "tableLabel": "id:pathDeck3A",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck3A"
             }
@@ -863,7 +863,7 @@
             "label": "id:pathDeck4A",
             "tableLabel": "id:pathDeck4A",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck4A"
             }
@@ -873,7 +873,7 @@
             "label": "id:pathDeck5A",
             "tableLabel": "id:pathDeck5A",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck5A"
             }
@@ -883,7 +883,7 @@
             "label": "id:pathDeck6A",
             "tableLabel": "id:pathDeck6A",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck6A"
             }
@@ -893,7 +893,7 @@
             "label": "id:pathDeck7A",
             "tableLabel": "id:pathDeck7A",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck7A"
             }
@@ -903,7 +903,7 @@
             "label": "id:pathDeck8A",
             "tableLabel": "id:pathDeck8A",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck8A"
             }
@@ -913,7 +913,7 @@
             "label": "id:pathDeck9",
             "tableLabel": "id:pathDeck9",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck9A"
             }
@@ -923,7 +923,7 @@
             "label": "id:pathDeck1B",
             "tableLabel": "id:pathDeck1B",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck1B"
             }
@@ -933,7 +933,7 @@
             "label": "id:pathDeck2B",
             "tableLabel": "id:pathDeck2B",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck2B"
             }
@@ -943,7 +943,7 @@
             "label": "id:pathDeck3B",
             "tableLabel": "id:pathDeck3B",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck3B"
             }
@@ -953,7 +953,7 @@
             "label": "id:pathDeck4B",
             "tableLabel": "id:pathDeck4B",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck4B"
             }
@@ -963,7 +963,7 @@
             "label": "id:pathDeck5B",
             "tableLabel": "id:pathDeck5B",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck5B"
             }
@@ -973,7 +973,7 @@
             "label": "id:pathDeck6B",
             "tableLabel": "id:pathDeck6B",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck6B"
             }
@@ -983,7 +983,7 @@
             "label": "id:pathDeck7B",
             "tableLabel": "id:pathDeck7B",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck7B"
             }
@@ -993,7 +993,7 @@
             "label": "id:pathDeck8B",
             "tableLabel": "id:pathDeck8B",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck8B"
             }
@@ -1003,7 +1003,7 @@
             "label": "id:pathDeck9B",
             "tableLabel": "id:pathDeck9B",
             "canHaveAttachments": false,
-            "shuffleOnLoad": true,
+            "shuffleOnLoad": false,
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck9B"
             }
