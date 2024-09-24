@@ -15,7 +15,7 @@
             "handSize": { 
                 "_comment": "Track hand size",
                 "type": "trigger", 
-                "listenTo": ["/groupById/player1Hand/stackIds", "/groupById/player2Hand/stackIds", "/groupById/player3Hand/stackIds", "/groupById/player4Hand/stackIds"],
+                "listenTo": ["/groupById/player1Hand/stackIds", "/groupById/player2Hand/stackIds", "/groupById/player3Hand/stackIds", "/groupById/player4Hand/stackIds", "/groupById/player5Hand/stackIds", "/groupById/player6Hand/stackIds"],
                 "condition": ["TRUE"],
                 "then": [
                     ["SET_HAND_SIZE", "$TARGET.onCardEnter.controller"]
