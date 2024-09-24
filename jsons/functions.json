@@ -112,13 +112,36 @@
                     ],
                     ["AND", ["EQUAL", "$WINNING_TEAM", "blue"], ["EQUAL", "$CARD.currentFace.type", "Skirmish"]],
                     [
-                        ["LOG", "$ALIAS_N", " resolved the ", "$CARD.currentFace.name", " skirmish. The Free Peoples Player(s) team won. Setting it aside."],
-                        ["MOVE_CARD", "$CARD.id", "sharedAside", 0]
+                        ["COND", ["EQUAL", "$GAME.nullTieOnSkirmish", true],
+                            [
+                                ["LOG", "$ALIAS_N", " resolved the ", "$CARD.currentFace.name", " skirmish. Neither team won. Returning it to Free Peoples battleground deck."],
+                                ["MOVE_CARD", "$CARD.id", "sharedBattlegroundBlue", 0],
+                                ["SHUFFLE_GROUP", "sharedBattlegroundBlue"]
+                                
+                            ]
+                        ],
+                        ["COND", ["EQUAL", "$GAME.nullTieOnSkirmish", false],
+                            [
+                                ["LOG", "$ALIAS_N", " resolved the ", "$CARD.currentFace.name", " skirmish. The Free Peoples Player(s) team won. Setting it aside."],
+                                ["MOVE_CARD", "$CARD.id", "sharedAside", 0]
+                            ]
+                        ]
                     ],
                     ["AND", ["EQUAL", "$WINNING_TEAM", "red"], ["EQUAL", "$CARD.currentFace.type", "Skirmish"]],
                     [
-                        ["LOG", "$ALIAS_N", " resolved the ", "$CARD.currentFace.name", " skirmish. The Shadow Player(s) team won. Setting it aside."],
-                        ["MOVE_CARD", "$CARD.id", "sharedAside", 0]
+                        ["COND", ["EQUAL", "$GAME.nullTieOnSkirmish", true],
+                            [
+                                ["LOG", "$ALIAS_N", " resolved the ", "$CARD.currentFace.name", " skirmish. Neither team won. Returning it to Shadow battleground deck."],
+                                ["MOVE_CARD", "$CARD.id", "sharedBattlegroundRed", 0],
+                                ["SHUFFLE_GROUP", "sharedBattlegroundRed"]
+                            ]
+                        ],
+                        ["COND", ["EQUAL", "$GAME.nullTieOnSkirmish", false],
+                            [
+                                ["LOG", "$ALIAS_N", " resolved the ", "$CARD.currentFace.name", " skirmish. The Shadow Player(s) team won. Setting it aside."],
+                                ["MOVE_CARD", "$CARD.id", "sharedAside", 0]
+                            ]
+                        ]
                     ]
                 ]
             ]
@@ -495,6 +518,13 @@
                                 ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
                                 ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
                             ]
+                        ],
+                        ["COND",
+                            ["EQUAL", "$LOC_CARD.sides.A.type", "Skirmish"],
+                            [
+                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
+                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
+                            ]
                         ]
                         //["LOG", "└── The {{$GAME.tokenById.$TOKEN.label}} at {{$LOC_CARD.sides.A.name}} is now {{$GAME.textBoxById.$PLAY_GROUP_ID.content}}."]
                     ]
@@ -558,30 +588,6 @@
                     "blue",
                     ["EQUAL", "$GAME.groupById.$RED_GROUP_ID.combatStat", "defense"],
                     "red"
-                ]
-            ]
-        },
-        "SCORE_LOCATION": {
-            "args": ["$LOCATION_CARD_ID"],
-            "code": [
-                ["VAR", "$LOCATION_GROUP_ID", "$GAME.cardById.$LOCATION_CARD_ID.groupId"],
-                ["VAR", "$WINNER", ["GET_LOCATION_WINNER", "$LOCATION_GROUP_ID"]],
-                ["COND",
-                    ["EQUAL", "$WINNER", "blue"],
-                    [
-                        ["LOG", "{{$ALIAS_N}} scored for the Free Peoples Player(s) team."],
-                        ["MOVE_GROUP", "$LOCATION_GROUP_ID", "sharedScoringBlue"]
-                    ],
-                    ["EQUAL", "$WINNER", "red"],
-                    [
-                        ["LOG", "{{$ALIAS_N}} scored for the Shadow Player(s) team."],
-                        ["MOVE_GROUP", "$LOCATION_GROUP_ID", "sharedScoringRed"]
-                    ],
-                    ["EQUAL", "$WINNER", "neither"],
-                    [
-                        ["LOG", "{{$ALIAS_N}} scored for neither team."],
-                        ["MOVE_GROUP", "$LOCATION_GROUP_ID", "sharedAside"]
-                    ]
                 ]
             ]
         },
