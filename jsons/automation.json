@@ -358,6 +358,37 @@
                         ]]
                     ]
                 }
+            },
+            "a2f892a8-59cb-4f1b-a8f3-936091fa5aa9": {
+                "_comment": "Phial of Galadriel",
+                "rules": {
+                    "entersPath":
+                    {
+                        "type": "trigger",
+                        "listenTo": ["/cardById/$THIS_ID/locationGroupId"],
+                        "condition": ["TRUE"],
+                        "then": [
+                            ["VAR", "$NEW_LOCATION_GROUP_ID", "$TARGET.locationGroupId"],
+                            ["COND",
+                                ["NOT_EQUAL", "$NEW_LOCATION_GROUP_ID", null],
+                                [
+                                    ["VAR", "$NEW_LOCATION_CARD", "$GAME.groupById.$NEW_LOCATION_GROUP_ID.parentCards.[0]"],
+                                    ["LOG", "└── Added 2 Path Defense Tokens to {{$NEW_LOCATION_CARD.sides.A.name}}."],
+                                    ["INCREASE_VAL", "/cardById/$NEW_LOCATION_CARD.id/tokens/pathBlue", 2]
+                                ]
+                            ],
+                            ["VAR", "$OLD_LOCATION_GROUP_ID", ["PREV", "$TARGET.locationGroupId"]],
+                            ["COND",
+                                ["NOT_EQUAL", "$OLD_LOCATION_GROUP_ID", null],
+                                [
+                                    ["VAR", "$OLD_LOCATION_CARD", "$GAME.groupById.$OLD_LOCATION_GROUP_ID.parentCards.[0]"],
+                                    ["LOG", "└── Removed 2 Path Defense Tokens from {{$OLD_LOCATION_CARD.sides.A.name}}."],
+                                    ["DECREASE_VAL", "/cardById/$OLD_LOCATION_CARD.id/tokens/pathBlue", 2]
+                                ]
+                            ]
+                        ]
+                    }
+                }
             }
         }
     }
