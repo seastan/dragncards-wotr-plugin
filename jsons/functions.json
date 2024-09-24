@@ -169,17 +169,42 @@
             "code": [
                 ["COND",
                     "$BOOL",
-                    [
-                        ["LOG", "Shuffled paths."],
-                        ["SHUFFLE_GROUP", "sharedPathDeck1"],
-                        ["SHUFFLE_GROUP", "sharedPathDeck2"],
-                        ["SHUFFLE_GROUP", "sharedPathDeck3"],
-                        ["SHUFFLE_GROUP", "sharedPathDeck4"],
-                        ["SHUFFLE_GROUP", "sharedPathDeck5"],
-                        ["SHUFFLE_GROUP", "sharedPathDeck6"],
-                        ["SHUFFLE_GROUP", "sharedPathDeck7"],
-                        ["SHUFFLE_GROUP", "sharedPathDeck8"],
-                        ["SHUFFLE_GROUP", "sharedPathDeck9"]
+                    ["COND",
+                        ["EQUAL", "$GAME.EDM", false],
+                        [
+                            ["LOG", "Shuffled paths."],
+                            ["SHUFFLE_GROUP", "sharedPathDeck1"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck2"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck3"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck4"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck5"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck6"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck7"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck8"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck9"]
+                        ],
+                        ["EQUAL", "$GAME.EDM", true],
+                        [
+                            ["LOG", "Shuffled paths."],
+                            ["SHUFFLE_GROUP", "sharedPathDeck1A"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck2A"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck3A"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck4A"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck5A"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck6A"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck7A"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck8A"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck9A"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck1B"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck2B"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck3B"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck4B"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck5B"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck6B"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck7B"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck8B"],
+                            ["SHUFFLE_GROUP", "sharedPathDeck9B"]
+                        ]
                     ]
                 ]
             ]

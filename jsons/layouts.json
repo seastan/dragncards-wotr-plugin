@@ -175,7 +175,7 @@
             }
         },
         "sixPlayer": {
-            "postSetActionList": ["SET_NUM_PLAYERS", ["CALC", "{{$GAME.numBlue}}+{{$GAME.numRed}}"]],
+            "postSetActionList": ["HIGHLIGHT_CURRENT_PLAYER"],
             "cardSize": 12,
             "rowSpacing": 3,
             "chat": {"left": "81%", "top": "86%", "width": "19%", "height": "14%"},
