@@ -80,7 +80,6 @@
             "code": [
                 ["FOR_EACH_START_STOP_STEP", "$I", 0, "$GAME.numPlayers", 1, [
                     ["VAR", "$DECK_ID", "$DECK_IDS.[{{$I}}]"],  
-                    ["LOG_DEV", "$DECK_ID"],
                     ["VAR", "$PLAYER_NUM", ["ADD", "$I", 1]],
                     ["VAR", "$PLAYER_N", "player{{$PLAYER_NUM}}"],
                     ["LOAD_CARDS", "$DECK_ID"]
@@ -469,8 +468,6 @@
                 ["VAR", "$STAT", "$PLAY_GROUP.combatStat"],
                 ["VAR", "$TOKEN", "$PLAY_GROUP.combatToken"],
 		        ["VAR", "$BLUE_GROUP_ID", "$LOC_GROUP.activeBlueGroupId"],
-                ["LOG_DEV", "$STAT"],
-                ["LOG_DEV", "$TOKEN"],
                 ["SET", "/textBoxById/$PLAY_GROUP_ID/content", 0],
                 ["COND",
                     ["GREATER_THAN", ["LENGTH", "$LOC_GROUP.stackIds"], 0],
@@ -498,8 +495,8 @@
                                 ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
                                 ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
                             ]
-                        ],
-                        ["LOG", "└── The {{$GAME.tokenById.$TOKEN.label}} at {{$LOC_CARD.sides.A.name}} is now {{$GAME.textBoxById.$PLAY_GROUP_ID.content}}."]
+                        ]
+                        //["LOG", "└── The {{$GAME.tokenById.$TOKEN.label}} at {{$LOC_CARD.sides.A.name}} is now {{$GAME.textBoxById.$PLAY_GROUP_ID.content}}."]
                     ]
                 ],
                 ["UPDATE_EXPECTED_POINTS"]
