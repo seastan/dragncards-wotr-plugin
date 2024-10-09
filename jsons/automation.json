@@ -194,7 +194,8 @@
             },
             "LeaderEntersLocation": { 
                 "_comment": "Leader enters location",
-                "type": "trigger", 
+                "type": "trigger",
+                "priority": 3, 
                 "listenTo": [
                     "/cardById/*/groupId"
                 ],
@@ -210,7 +211,8 @@
             },
             "armyEntersLocation": { 
                 "_comment": "Army enters location",
-                "type": "trigger", 
+                "type": "trigger",
+                "priority": 3, 
                 "listenTo": [
                     "/cardById/*/groupId"
                 ],
@@ -306,7 +308,7 @@
                 }
             },
             "d2e8078c-c71c-4098-ae47-6d82ee9bc295": {
-                "_comment": "Gothmog",
+                "_comment": "AtS-Gothmog",
                 "rules": {
                     "eliminateWK": { 
                         "type": "trigger", 
@@ -715,7 +717,7 @@
                 }
             },
             "4444419a-d47a-485d-9bd7-f7d9d8304704": {
-                "_comment": "Balrog of Moria",
+                "_comment": "AtS-Balrog of Moria",
                 "rules": {
                     "entersKD":
                     {
@@ -741,7 +743,7 @@
                 }
             },
             "20710710-079c-499e-8d45-74d4c436c6ed": {
-                "_comment": "Candles of Corpses",
+                "_comment": "AtS-Candles of Corpses",
                 "rules": {
                     "entersDead":
                     {
@@ -767,7 +769,7 @@
                 }
             },
             "5329c719-a1cc-4d83-89a7-072904c50433": {
-                "_comment": "Shelob",
+                "_comment": "AtS-Shelob",
                 "rules": {
                     "entersLair":
                     {
@@ -793,7 +795,7 @@
                 }
             },
             "1510bb6a-66f1-446f-bf09-8241187c4432": {
-                "_comment": "Gorbag & Shagrat",
+                "_comment": "AtS-Gorbag & Shagrat",
                 "rules": {
                     "entersLair":
                     {
@@ -819,7 +821,7 @@
                 }
             },
             "f463d4c8-79a6-49ec-ad53-e184dec25ed8": {
-                "_comment": "The Black Easterling",
+                "_comment": "AtS-The Black Easterling",
                 "rules": {
                     "entersDG":
                     {
@@ -1071,8 +1073,34 @@
                     }
                 }
             },
+            "b41cacfb-b685-4cc2-bbb6-bc933e021bf5": {
+                "_comment": "Spiders of Mirkwood",
+                "rules": {
+                    "entersWLR":
+                    {
+                        "type": "trigger",
+                        "listenTo": ["/cardById/$THIS_ID/locationGroupId"],
+                        "condition": ["TRUE"],
+                        "then": [
+                            ["VAR", "$NEW_LOCATION_GROUP_ID", "$TARGET.locationGroupId"],
+                            ["COND",
+                                ["NOT_EQUAL", "$NEW_LOCATION_GROUP_ID", null],
+                                [
+                                    ["VAR", "$NEW_LOCATION_CARD", "$GAME.groupById.$NEW_LOCATION_GROUP_ID.parentCards.[0]"],
+                                    ["COND", ["EQUAL", "$NEW_LOCATION_CARD.sides.A.name", "Woodland Realm"],
+                                        [
+                                            ["LOG", "└── Added 1 Battleground Attack Token to {{$TARGET.sides.A.name}}."],
+                                            ["INCREASE_VAL", "/cardById/$TARGET.id/tokens/attackRed", 1]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    }
+                }
+            },
             "a3811422-fc47-476a-a245-f7af3b59d199": {
-                "_comment": "Mirkwood Skirmishers",
+                "_comment": "AtS-Spiders of Mirkwood",
                 "rules": {
                     "entersWLR":
                     {
@@ -1252,7 +1280,7 @@
                 }
             },
             "9fd35ae2-e347-442d-b16e-a7a4b92a991f": {
-                "_comment": "Barrow-wights",
+                "_comment": "AtS-Barrow-wights",
                 "rules": {
                     "entersDowns":
                     {
@@ -1278,7 +1306,7 @@
                 }
             },
             "a3186d0c-b37a-4769-9501-ebba863e875e": {
-                "_comment": "Lotho Sackville-Baggins",
+                "_comment": "AtS-Lotho Sackville-Baggins",
                 "rules": {
                     "entersShire":
                     {
@@ -1306,7 +1334,7 @@
                 }
             },
             "3d2a831a-2151-42bb-ae7f-f4e8b31a936b": {
-                "_comment": "Ted Sandyman",
+                "_comment": "AtS-Ted Sandyman",
                 "rules": {
                     "entersShire":
                     {
@@ -1329,6 +1357,193 @@
                                     ]
                                 ]
                             ]
+                        ]
+                    }
+                }
+            },
+            "211bad96-3abb-49e8-a925-aa4b255c59ed": {
+                "_comment": "Théoden",
+                "rules": {
+                    "awakenThéoden": { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/*/inPlay"],
+                        "condition": ["OR", 
+                            ["EQUAL", "$TARGET.databaseId", "211bad96-3abb-49e8-a925-aa4b255c59ed"],
+                            ["EQUAL", "$TARGET.databaseId", "a73e2226-d69e-4a25-b68d-f5f4352bd3c1"],
+                            ["EQUAL", "$TARGET.databaseId", "ffa8235b-c293-44c0-b88e-7ebb5f909960"]
+                        ],
+                        "then": [
+                            ["VAR", "$GANDALF_G_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "Gandalf the Grey"]]],
+                            ["VAR", "$GANDALF_W_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "Gandalf the White"]]],
+                            ["VAR", "$THEODEN_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "Théoden"]]],
+                            ["COND",
+                                ["AND", 
+                                    ["OR", "$GANDALF_G_CARD.inPlay", "$GANDALF_W_CARD.inPlay"], 
+                                    "$THEODEN_CARD.inPlay", 
+                                    ["EQUAL", "$THEODEN_CARD.bonusApplied", false]
+                                ],
+                                [
+                                    ["LOG", "└── Added 1 Attack and 1 Defense Tokens to {{$THEODEN_CARD.sides.A.name}}."],
+                                    ["INCREASE_VAL", "/cardById/$THEODEN_CARD.id/tokens/attackBlue", 1],
+                                    ["INCREASE_VAL", "/cardById/$THEODEN_CARD.id/tokens/defenseBlue", 1],
+                                    ["SET", "/cardById/$THEODEN_CARD.id/bonusApplied", true]
+                                ],
+                                ["AND",
+                                    ["OR",
+                                        ["AND", 
+                                            ["NOT", "$GANDALF_G_CARD.inPlay"],
+                                            ["NOT", "$GANDALF_W_CARD.inPlay"]
+                                        ],
+                                        ["NOT", "$THEODEN_CARD.inPlay"]
+                                    ],
+                                    ["EQUAL", "$THEODEN_CARD.bonusApplied", true]
+                                ],
+                                [
+                                    ["COND",
+                                        "$THEODEN_CARD.inPlay",
+                                        [
+                                            ["LOG", "└── Removed 1 Attack and 1 Defense Tokens from {{$THEODEN_CARD.sides.A.name}}."],
+                                            ["DECREASE_VAL", "/cardById/$THEODEN_CARD.id/tokens/attackBlue", 1],
+                                            ["DECREASE_VAL", "/cardById/$THEODEN_CARD.id/tokens/defenseBlue", 1],
+                                            ["SET", "/cardById/$THEODEN_CARD.id/bonusApplied", false]
+                                        ]
+                                    ]
+                                ],
+                                ["OR",
+                                    ["AND",
+                                        ["OR", 
+                                            "$GANDALF_G_CARD.inPlay",
+                                            "$GANDALF_W_CARD.inPlay"
+                                        ],
+                                        ["NOT", "$THEODEN_CARD.inPlay"]
+                                    ],
+                                    ["AND",
+                                        ["AND", 
+                                            ["NOT", "$GANDALF_G_CARD.inPlay"],
+                                            ["NOT", "$GANDALF_W_CARD.inPlay"]
+                                        ],
+                                        "$THEODEN_CARD.inPlay"
+                                    ]
+                                ],
+                                ["SET", "/cardById/$THEODEN_CARD.id/bonusApplied", false]
+                            ]
+                        ]
+                    }
+                }
+            },
+            "fb8585d5-0858-4177-91eb-4ddc54785cdc": {
+                "_comment": "Arwen",
+                "rules": {
+                    "ArwenBanner": { 
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/*/inPlay"],
+                        "condition": ["OR", 
+                            ["EQUAL", "$TARGET.databaseId", "fb8585d5-0858-4177-91eb-4ddc54785cdc"],
+                            ["EQUAL", "$TARGET.databaseId", "a6cdd8d3-cd6e-4d1a-908b-2f788fbb357e"],
+                            ["EQUAL", "$TARGET.databaseId", "f88cd1e7-0e1e-40d9-91bc-990ba64c5bc3"]
+                        ],
+                        "then": [
+                            ["VAR", "$ARWEN_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "Arwen"]]],
+                            ["VAR", "$ARAGORN_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "Aragorn"]]],
+                            ["VAR", "$STRIDER_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "Strider"]]],
+                            ["COND",
+                                ["AND", 
+                                    "$ARAGORN_CARD.inPlay", 
+                                    ["IN_STRING", "$ARWEN_CARD.groupId", "Reserve"], 
+                                    ["EQUAL", "$ARWEN_CARD.bonusApplied", false]
+                                ],
+                                [
+                                    ["LOG", "└── Added 1 Battleground and 1 Path Defense Tokens to {{$ARAGORN_CARD.sides.A.name}}."],
+                                    ["INCREASE_VAL", "/cardById/$ARAGORN_CARD.id/tokens/pathBlue", 1],
+                                    ["INCREASE_VAL", "/cardById/$ARAGORN_CARD.id/tokens/defenseBlue", 1],
+                                    ["SET", "/cardById/$ARWEN_CARD.id/bonusApplied", true]
+                                ],
+                                ["AND", 
+                                    "$STRIDER_CARD.inPlay", 
+                                    ["IN_STRING", "$ARWEN_CARD.groupId", "Reserve"],  
+                                    ["EQUAL", "$ARWEN_CARD.bonusApplied", false]
+                                ],
+                                [
+                                    ["LOG", "└── Added 1 Battleground and 1 Path Defense Tokens to {{$STRIDER_CARD.sides.A.name}}."],
+                                    ["INCREASE_VAL", "/cardById/$STRIDER_CARD.id/tokens/pathBlue", 1],
+                                    ["INCREASE_VAL", "/cardById/$STRIDER_CARD.id/tokens/defenseBlue", 1],
+                                    ["SET", "/cardById/$ARWEN_CARD.id/bonusApplied", true]
+                                ],
+                                ["AND", 
+                                    "$STRIDER_CARD.inPlay", 
+                                    ["NOT", ["IN_STRING", "$ARWEN_CARD.groupId", "Reserve"]],  
+                                    ["EQUAL", "$ARWEN_CARD.bonusApplied", true]
+                                ],
+                                [
+                                    ["LOG", "└── Removed 1 Battleground and 1 Path Defense Tokens from {{$STRIDER_CARD.sides.A.name}}."],
+                                    ["DECREASE_VAL", "/cardById/$STRIDER_CARD.id/tokens/pathBlue", 1],
+                                    ["DECREASE_VAL", "/cardById/$STRIDER_CARD.id/tokens/defenseBlue", 1],
+                                    ["SET", "/cardById/$ARWEN_CARD.id/bonusApplied", false]
+                                ],
+                                ["AND", 
+                                    "$ARAGORN_CARD.inPlay", 
+                                    ["NOT", ["IN_STRING", "$ARWEN_CARD.groupId", "Reserve"]], 
+                                    ["EQUAL", "$ARWEN_CARD.bonusApplied", true]
+                                ],
+                                [
+                                    ["LOG", "└── Removed 1 Battleground and 1 Path Defense Tokens from {{$ARAGORN_CARD.sides.A.name}}."],
+                                    ["DECREASE_VAL", "/cardById/$ARAGORN_CARD.id/tokens/pathBlue", 1],
+                                    ["DECREASE_VAL", "/cardById/$ARAGORN_CARD.id/tokens/defenseBlue", 1],
+                                    ["SET", "/cardById/$ARWEN_CARD.id/bonusApplied", false]
+                                ],
+                                ["OR",
+                                    ["AND",
+                                        ["OR", 
+                                            "$ARAGORN_CARD.inPlay",
+                                            "$STRIDER_CARD.inPlay"
+                                        ],
+                                        ["NOT", ["IN_STRING", "$ARWEN_CARD.groupId", "Reserve"]]
+                                    ],
+                                    ["AND",
+                                        ["AND", 
+                                            ["NOT", "$ARAGORN_CARD.inPlay"],
+                                            ["NOT", "$STRIDER_CARD.inPlay"]
+                                        ],
+                                        ["NOT", ["IN_STRING", "$ARWEN_CARD.groupId", "Reserve"]]
+                                    ]
+                                ],
+                                ["SET", "/cardById/$ARWEN_CARD.id/bonusApplied", false]
+                            ]
+                        ]
+                    }
+                }
+            },
+            "2e650769-f9f4-4cf0-b57f-8f019b538b02": { 
+                "_comment": "Dead Men of Dunharrow",
+                "rules": {
+                    "fulfilledOath": {
+                        "type": "trigger", 
+                        "listenTo": ["/cardById/$THIS_ID/locationGroupId"],
+                        "priority": 4,
+                        "condition": ["TRUE"],
+                        "then": [
+                            ["VAR", "$ARAGORN_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "Aragorn"]]],
+                            ["VAR", "$STRIDER_CARD", ["ONE_CARD", "$CARD", ["EQUAL", "$CARD.sides.A.name", "Strider"]]],
+                            ["COND", 
+                                ["OR",
+                                    ["AND",
+                                        ["EQUAL", "$ARAGORN_CARD.groupId", "$TARGET.groupId"],
+                                        "TARGET.isSupporting",
+                                        "ARAGORN_CARD.isSupported"
+                                    ],
+                                    ["AND",
+                                        ["EQUAL", "$STRIDER_CARD.groupId", "$TARGET.groupId"],
+                                        "TARGET.isSupporting",
+                                        "STRIDER_CARD.isSupported"
+                                    ]
+                                ],
+                                [
+                                    ["LOG", "└── Added 2 Battleground Attack and Defense Tokens to {{$TARGET.sides.A.name}}."],
+                                    ["INCREASE_VAL", "/cardById/$TARGET.id/tokens/attackBlue", 2],
+                                    ["INCREASE_VAL", "/cardById/$TARGET.id/tokens/defenseBlue", 2],
+                                    ["SET", "/cardById/$TARGET.id/bonusApplied", true]
+                                ]
+                            ]    
                         ]
                     }
                 }

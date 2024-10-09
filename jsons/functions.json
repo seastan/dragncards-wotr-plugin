@@ -556,7 +556,6 @@
                     ["LOG", "└── The Shadow Player(s) are leading {{$GAME.victoryPointsRed}}-{{$GAME.victoryPointsBlue}}."],
                     ["GREATER_THAN", "$GAME.victoryPointsBlue", "$GAME.victoryPointsRed"],
                     ["LOG", "└── The Free Peoples Player(s) are leading {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."],
-                    ["LOG", "└── The game is tied {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."],
                     ["TRUE"],
                     ["LOG", "└── The game is tied {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."]
                 ],
@@ -781,7 +780,8 @@
             "args": ["$CARD"],
             "code": ["OR", 
                 ["GREATER_THAN", "$CARD.sides.A.leadershipAttack", 0],
-                ["GREATER_THAN", "$CARD.sides.A.leadershipDefense", 0]
+                ["GREATER_THAN", "$CARD.sides.A.leadershipDefense", 0],
+                ["EQUAL", "$CARD.sides.A.name", "Strider"]
             ]
         },
         "SET_LAYOUT_REGION_GROUP_ID": {
@@ -789,6 +789,19 @@
             "code": [
                 ["LOG", "{{$ALIAS_N}} updated their table layout to display the {{$GROUP_ID}} pile."],
                 ["SET", "/playerData/$PLAYER_N/layout/regions/{{$REGION_ID}}/groupId", "$GROUP_ID"]
+            ]
+        },
+        "XOR": {
+            "args": ["$A", "$B"],
+            "code": [
+                ["COND",
+                    ["AND", "$A", "$B"],
+                    false,
+                    ["OR", "$A", "$B"],
+                    true,
+                    ["TRUE"],
+                    false
+                ]
             ]
         }
     }
