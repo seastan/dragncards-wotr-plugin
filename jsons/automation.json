@@ -92,12 +92,12 @@
                             ["PREV", ["IN_STRING", "$TARGET.groupId", "sharedActiveRed"]],
                             ["PREV", ["IN_STRING", "$TARGET.groupId", "sharedActiveBlue"]]
                         ],
-                        ["EQUAL", "$TARGET.addedLeadership", 1]
+                        ["EQUAL", "$TARGET.addedLeadership", true]
                     ],
                 "then": [
-                    ["SET", "/cardById/$TARGET.id/sides/A/leadershipAttack", 0],
-                    ["SET", "/cardById/$TARGET.id/sides/A/leadershipDefense", 0],
-                    ["SET", "/cardById/$TARGET.id/addedLeadership", 0],
+                    ["SET", "/cardById/$TARGET.id/sides/A/leadershipAttack", false],
+                    ["SET", "/cardById/$TARGET.id/sides/A/leadershipDefense", false],
+                    ["SET", "/cardById/$TARGET.id/addedLeadership", false],
                     ["LOG", "└── Removed any additional Leadership from {{$TARGET.sides.A.name}}."]
                 ]
             },
@@ -891,7 +891,7 @@
                                         [
                                             ["LOG", "└── Added 1 Leadership Defense to {{$TARGET.sides.A.name}}."],
                                             ["INCREASE_VAL", "/cardById/$TARGET.id/sides/A/leadershipDefense", 1],
-                                            ["SET", "/cardById/$TARGET.id/addedLeadership", 1]
+                                            ["SET", "/cardById/$TARGET.id/addedLeadership", true]
                                         ]
                                     ]
                                 ]
@@ -920,13 +920,13 @@
                                         [
                                             ["LOG", "└── Added 1 Leadership Attack Token to {{$TARGET.sides.A.name}}."],
                                             ["INCREASE_VAL", "/cardById/$TARGET.id/sides/A/leadershipAttack", 1],
-                                            ["SET", "/cardById/$TARGET.id/addedLeadership", 1]
+                                            ["SET", "/cardById/$TARGET.id/addedLeadership", true]
                                         ],
                                         ["EQUAL", "$NEW_LOCATION_CARD.sides.A.name", "Lórien"],
                                         [
                                             ["LOG", "└── Added 1 Leadership Defense to {{$TARGET.sides.A.name}}."],
                                             ["INCREASE_VAL", "/cardById/$TARGET.id/sides/A/leadershipDefense", 1],
-                                            ["SET", "/cardById/$TARGET.id/addedLeadership", 1]
+                                            ["SET", "/cardById/$TARGET.id/addedLeadership", true]
                                         ]
                                     ]
                                 ]
@@ -954,7 +954,7 @@
                                         [
                                             ["LOG", "└── Added 1 Leadership Defense to {{$TARGET.sides.A.name}}."],
                                             ["INCREASE_VAL", "/cardById/$TARGET.id/sides/A/leadershipDefense", 1],
-                                            ["SET", "/cardById/$TARGET.id/addedLeadership", 1]
+                                            ["SET", "/cardById/$TARGET.id/addedLeadership", true]
                                         ]
                                     ]
                                 ]
@@ -982,7 +982,7 @@
                                         [
                                             ["LOG", "└── Added 1 Leadership Defense to {{$TARGET.sides.A.name}}."],
                                             ["INCREASE_VAL", "/cardById/$TARGET.id/sides/A/leadershipDefense", 1],
-                                            ["SET", "/cardById/$TARGET.id/addedLeadership", 1]
+                                            ["SET", "/cardById/$TARGET.id/addedLeadership", true]
                                         ]
                                     ]
                                 ]
@@ -1170,7 +1170,7 @@
                                         [
                                             ["LOG", "└── Added 1 Leadership Attack to {{$TARGET.sides.A.name}}."],
                                             ["INCREASE_VAL", "/cardById/$TARGET.id/sides/A/leadershipAttack", 1],
-                                            ["SET", "/cardById/$TARGET.id/addedLeadership", 1]
+                                            ["SET", "/cardById/$TARGET.id/addedLeadership", true]
                                         ]
                                     ]
                                 ]
@@ -1198,7 +1198,7 @@
                                         [
                                             ["LOG", "└── Added 1 Leadership Attack to {{$TARGET.sides.A.name}}."],
                                             ["INCREASE_VAL", "/cardById/$TARGET.id/sides/A/leadershipAttack", 1],
-                                            ["SET", "/cardById/$TARGET.id/addedLeadership", 1]
+                                            ["SET", "/cardById/$TARGET.id/addedLeadership", true]
                                         ]
                                     ]
                                 ]
@@ -1324,7 +1324,7 @@
                                         [
                                             ["LOG", "└── Added 1 Leadership Attack to {{$TARGET.sides.A.name}}."],
                                             ["INCREASE_VAL", "/cardById/$TARGET.id/sides/A/leadershipAttack", 1],
-                                            ["SET", "/cardById/$TARGET.id/addedLeadership", 1]
+                                            ["SET", "/cardById/$TARGET.id/addedLeadership", true]
                                         ]
                                     ]
                                 ]
@@ -1352,7 +1352,7 @@
                                         [
                                             ["LOG", "└── Added 1 Leadership Attack to {{$TARGET.sides.A.name}}."],
                                             ["INCREASE_VAL", "/cardById/$TARGET.id/sides/A/leadershipAttack", 1],
-                                            ["SET", "/cardById/$TARGET.id/addedLeadership", 1]
+                                            ["SET", "/cardById/$TARGET.id/addedLeadership", true]
                                         ]
                                     ]
                                 ]
@@ -1544,6 +1544,47 @@
                                     ["SET", "/cardById/$TARGET.id/bonusApplied", true]
                                 ]
                             ]    
+                        ]
+                    }
+                }
+            },
+            "5af26f58-8ca2-46af-a559-1bc30c9ec5a4": {
+                "_comment": "The High Pass",
+                "rules": {
+                    "goblinsMountain":
+                    {
+                        "type": "trigger",
+                        "listenTo": ["/cardById/*/groupId"],
+                        "condition": ["AND", 
+                            ["IN_STRING", "$TARGET.groupId", "sharedActiveRed"],
+                            ["NOT_EQUAL", "$TARGET.groupId", ["PREV", "$TARGET.groupId"]],
+                            ["EQUAL", "$TARGET.sides.A.faction", "Monstrous"],
+                            ["EQUAL", "$TARGET.sides.A.type", "Army"],
+                            ["EQUAL", "$TARGET.locationIndex", "$THIS.locationIndex"]
+                        ],
+                        "then": [
+                            ["LOG", "└── Added 1 Path Attack Token to {{$THIS.sides.A.name}}."],
+                            ["INCREASE_VAL", "/cardById/$THIS.id/tokens/pathRed", 1]
+                        ]
+                    }
+                }
+            },
+            "33c0a908-1248-4a75-98eb-dfa4bf63e856": {
+                "_comment": "Fangorn",
+                "rules": {
+                    "Entwood":
+                    {
+                        "type": "trigger",
+                        "listenTo": ["/cardById/*/groupId"],
+                        "condition": ["AND", 
+                            ["IN_STRING", "$TARGET.groupId", "sharedActiveBlue"],
+                            ["NOT_EQUAL", "$TARGET.groupId", ["PREV", "$TARGET.groupId"]],
+                            ["EQUAL", ["SUBSTRING", "$TARGET.sides.A.text", 0, 3], "Ent"],
+                            ["EQUAL", "$TARGET.locationIndex", "$THIS.locationIndex"]
+                        ],
+                        "then": [
+                            ["LOG", "└── Added 1 Path Defense Token to {{$TARGET.sides.A.name}}."],
+                            ["INCREASE_VAL", "/cardById/$TARGET.id/tokens/pathBlue", 1]
                         ]
                     }
                 }

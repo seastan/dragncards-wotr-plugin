@@ -504,7 +504,8 @@
                 "controller": "player1",
                 "deckGroupId": "player1Deck",
                 "cycleGroupId": "player1Cycled",
-                "eliminateGroupId": "player1Eliminated"
+                "eliminateGroupId": "player1Eliminated",
+                "bonusApplied": false
             },
             "onCardLeave": {
                 "controller": "player1"
@@ -520,7 +521,8 @@
                 "controller": "player1",
                 "deckGroupId": "player1Deck",
                 "cycleGroupId": "player1Cycled",
-                "eliminateGroupId": "player1Eliminated"
+                "eliminateGroupId": "player1Eliminated",
+                "bonusApplied": false
             }
         },
         "player1Eliminated": {
@@ -529,7 +531,8 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "bonusApplied": false
             }
         },
         "player1Reserve": {
@@ -560,7 +563,8 @@
                 "controller": "player2",
                 "deckGroupId": "player2Deck",
                 "cycleGroupId": "player2Cycled",
-                "eliminateGroupId": "player2Eliminated"
+                "eliminateGroupId": "player2Eliminated",
+                "bonusApplied": false
             },
             "onCardLeave": {
                 "controller": "player2"
@@ -576,7 +580,8 @@
                 "controller": "player2",
                 "deckGroupId": "player2Deck",
                 "cycleGroupId": "player2Cycled",
-                "eliminateGroupId": "player2Eliminated"
+                "eliminateGroupId": "player2Eliminated",
+                "bonusApplied": false
             }
         },
         "player2Eliminated": {
@@ -585,7 +590,8 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "bonusApplied": false
             }
         },
         "player2Reserve": {
@@ -616,7 +622,8 @@
                 "controller": "player3",
                 "deckGroupId": "player3Deck",
                 "cycleGroupId": "player3Cycled",
-                "eliminateGroupId": "player3Eliminated"
+                "eliminateGroupId": "player3Eliminated",
+                "bonusApplied": false
             },
 		"onCardLeave": {
 		"controller": "player3"
@@ -632,7 +639,8 @@
                 "controller": "player3",
                 "deckGroupId": "player3Deck",
                 "cycleGroupId": "player3Cycled",
-                "eliminateGroupId": "player3Eliminated"
+                "eliminateGroupId": "player3Eliminated",
+                "bonusApplied": false
             }
         },
         "player3Eliminated": {
@@ -641,7 +649,8 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "bonusApplied": false
             }
         },
         "player3Reserve": {
@@ -672,7 +681,8 @@
                 "controller": "player4",
                 "deckGroupId": "player4Deck",
                 "cycleGroupId": "player4Cycled",
-                "eliminateGroupId": "player4Eliminated"
+                "eliminateGroupId": "player4Eliminated",
+                "bonusApplied": false
             },
             "onCardLeave": {
                 "controller": "player4"
@@ -688,7 +698,8 @@
                 "controller": "player4",
                 "deckGroupId": "player4Deck",
                 "cycleGroupId": "player4Cycled",
-                "eliminateGroupId": "player4Eliminated"
+                "eliminateGroupId": "player4Eliminated",
+                "bonusApplied": false
             }
         },
         "player4Eliminated": {
@@ -697,7 +708,8 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "bonusApplied": false
             }
         },
         "player4Reserve": {
@@ -728,7 +740,8 @@
                 "controller": "player5",
                 "deckGroupId": "player5Deck",
                 "cycleGroupId": "player5Cycled",
-                "eliminateGroupId": "player5Eliminated"
+                "eliminateGroupId": "player5Eliminated",
+                "bonusApplied": false
             },
             "onCardLeave": {
                 "controller": "player5"
@@ -744,7 +757,8 @@
                 "controller": "player5",
                 "deckGroupId": "player5Deck",
                 "cycleGroupId": "player5Cycled",
-                "eliminateGroupId": "player5Eliminated"
+                "eliminateGroupId": "player5Eliminated",
+                "bonusApplied": false
             }
         },
         "player5Eliminated": {
@@ -753,7 +767,8 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "bonusApplied": false
             }
         },
         "player5Reserve": {
@@ -771,7 +786,8 @@
             "canHaveAttachments": false,
             "onCardEnter": {
                 "controller": "player6",
-                "peeking": {"player6": true}
+                "peeking": {"player6": true},
+                "bonusApplied": false
             }
         },
         "player6Deck": {
@@ -784,7 +800,8 @@
                 "controller": "player6",
                 "deckGroupId": "player6Deck",
                 "cycleGroupId": "player6Cycled",
-                "eliminateGroupId": "player6Eliminated"
+                "eliminateGroupId": "player6Eliminated",
+                "bonusApplied": false
             },
             "onCardLeave": {
                 "controller": "player6"
@@ -800,7 +817,8 @@
                 "controller": "player6",
                 "deckGroupId": "player6Deck",
                 "cycleGroupId": "player6Cycled",
-                "eliminateGroupId": "player6Eliminated"
+                "eliminateGroupId": "player6Eliminated",
+                "bonusApplied": false
             }
         },
         "player6Eliminated": {
@@ -809,7 +827,8 @@
             "tableLabel": "id:eliminated",
             "canHaveAttachments": false,
             "onCardEnter": {
-                "peeking": {}
+                "peeking": {},
+                "bonusApplied": false
             }
         },
         "player6Reserve": {
