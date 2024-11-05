@@ -1,7 +1,6 @@
 {
     "automation": {
         "postNewGameActionList": [
-            ["SET", "/automationEnabled", false],
             ["SET", "/currentPlayer", "player1"]
         ],
         "gameRules": {
