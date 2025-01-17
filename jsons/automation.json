@@ -1503,7 +1503,7 @@
                                             ["NOT", "$ARAGORN_CARD.inPlay"],
                                             ["NOT", "$STRIDER_CARD.inPlay"]
                                         ],
-                                        ["NOT", ["IN_STRING", "$ARWEN_CARD.groupId", "Reserve"]]
+                                        ["IN_STRING", "$ARWEN_CARD.groupId", "Reserve"]
                                     ]
                                 ],
                                 ["SET", "/cardById/$ARWEN_CARD.id/bonusApplied", false]
@@ -1584,6 +1584,29 @@
                         "then": [
                             ["LOG", "└── Added 1 Path Defense Token to {{$TARGET.sides.A.name}}."],
                             ["INCREASE_VAL", "/cardById/$TARGET.id/tokens/pathBlue", 1]
+                        ]
+                    }
+                }
+            },
+           "1cc677c5-db10-4cfe-9398-f532ec53bc4c": {
+                "_comment": "Sting",
+                "rules": {
+                    "glitteringBlue":
+                    {
+                        "type": "trigger",
+                        "listenTo": ["/cardById/*/groupId"],
+                        "condition": ["AND",
+                            ["IN_STRING", "$TARGET.groupId", "sharedActiveRed"],
+                            ["NOT_EQUAL", "$TARGET.groupId", ["PREV", "$TARGET.groupId"]],
+                            ["EQUAL", "$TARGET.sides.A.faction", "Monstrous"],
+                            ["EQUAL", "$TARGET.sides.A.type", "Character"],
+                            ["EQUAL", "$TARGET.locationIndex", "$THIS.locationIndex"],
+                            ["NOT_EQUAL", "$THIS.bonusApplied", true]
+                        ],
+                        "then": [
+                            ["LOG", "└── Added 1 Path Defense Token to {{$THIS.sides.A.name}}."],
+                            ["INCREASE_VAL", "/cardById/$THIS.id/tokens/pathBlue", 1],
+                            ["SET", "/cardById/$THIS.id/bonusApplied", true]
                         ]
                     }
                 }

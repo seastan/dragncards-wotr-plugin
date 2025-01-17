@@ -1,6 +1,7 @@
 {
     "actionLists": {
         "setupCoreTrilogy": [
+            ["SET", "/automationEnabled", true],
             ["DEFINE", "$PLAYER_N", "player1"],
             ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "Core"],
@@ -23,7 +24,6 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Sauron"],
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
-            ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
             ["INCREASE_VAL", "/roundNumber", 1]
         ],
@@ -919,7 +919,12 @@
                     ["VAR", "$RED_TOTAL", "$GAME.layout.textBoxes.$RED_GROUP_ID.content"],
                     ["SET", "/nullTieOnSkirmish", false],
                     ["COND",
-                        ["AND", ["EQUAL", "$BLUE_TOTAL", 0], ["EQUAL", "$RED_TOTAL", 0], ["EQUAL", "$ACTIVE_CARD.currentFace.type", "Skirmish"]],
+                        ["AND",
+                            ["EQUAL", "$BLUE_TOTAL", 0],
+                            ["EQUAL", "$RED_TOTAL", 0],
+                            ["EQUAL", ["LENGTH", "$GAME.groupById.$BLUE_GROUP_ID.stackIds", 0]],
+                            ["EQUAL", ["LENGTH", "$GAME.groupById.$RED_GROUP_ID.stackIds", 0]],
+                            ["EQUAL", "$ACTIVE_CARD.currentFace.type", "Skirmish"]],
                         ["SET", "/nullTieOnSkirmish", true]
                     ],
                     ["COND",   
