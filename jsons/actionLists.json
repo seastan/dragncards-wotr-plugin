@@ -915,8 +915,8 @@
                 [
                     ["VAR", "$BLUE_GROUP_ID", "$ACTIVE_GROUP.activeBlueGroupId"],
                     ["VAR", "$RED_GROUP_ID", "$ACTIVE_GROUP.activeRedGroupId"],
-                    ["VAR", "$BLUE_TOTAL", "$GAME.textBoxById.$BLUE_GROUP_ID.content"],
-                    ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
+                    ["VAR", "$BLUE_TOTAL", "$GAME.layout.textBoxes.$BLUE_GROUP_ID.content"],
+                    ["VAR", "$RED_TOTAL", "$GAME.layout.textBoxes.$RED_GROUP_ID.content"],
                     ["SET", "/nullTieOnSkirmish", false],
                     ["COND",
                         ["AND", ["EQUAL", "$BLUE_TOTAL", 0], ["EQUAL", "$RED_TOTAL", 0], ["EQUAL", "$ACTIVE_CARD.currentFace.type", "Skirmish"]],

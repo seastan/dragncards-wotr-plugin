@@ -491,7 +491,7 @@
                 ["VAR", "$STAT", "$PLAY_GROUP.combatStat"],
                 ["VAR", "$TOKEN", "$PLAY_GROUP.combatToken"],
 		        ["VAR", "$BLUE_GROUP_ID", "$LOC_GROUP.activeBlueGroupId"],
-                ["SET", "/textBoxById/$PLAY_GROUP_ID/content", 0],
+                ["UPDATE_LAYOUT", "/layout/textBoxes/$PLAY_GROUP_ID/label", 0],
                 ["COND",
                     ["GREATER_THAN", ["LENGTH", "$LOC_GROUP.stackIds"], 0],
                     [
@@ -500,33 +500,32 @@
                             ["COND",
                                 ["EQUAL", "$CARD.groupId", "$PLAY_GROUP_ID"],
                                 [
-                                    ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$CARD.sides.A.$STAT"],
-                                    ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$CARD.tokens.$TOKEN"]
+                                    ["UPDATE_LAYOUT", "/layout/textBoxes/$PLAY_GROUP_ID/label", ["ADD", "$GAME.layout.textBoxes.$PLAY_GROUP_ID.label", "$CARD.sides.A.$STAT"]],
+                                    ["UPDATE_LAYOUT", "/layout/textBoxes/$PLAY_GROUP_ID/label", ["ADD", "$GAME.layout.textBoxes.$PLAY_GROUP_ID.label", "$CARD.tokens.$TOKEN"]]
                                 ]
                             ]
                         ],
                         ["COND",
                             ["EQUAL", "$LOC_CARD.sides.A.type", "Battleground"],
                             [
-                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
-                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
+                                ["UPDATE_LAYOUT", "/layout/textBoxes/$PLAY_GROUP_ID/label", ["ADD", "$GAME.layout.textBoxes.$PLAY_GROUP_ID.label", "$LOC_CARD.sides.A.$STAT"]],
+                                ["UPDATE_LAYOUT", "/layout/textBoxes/$PLAY_GROUP_ID/label", ["ADD", "$GAME.layout.textBoxes.$PLAY_GROUP_ID.label", "$LOC_CARD.tokens.$TOKEN"]]
                             ]
                         ],
                         ["COND",
                             ["EQUAL", "$LOC_CARD.sides.A.type", "Path"],
                             [
-                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
-                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
+                                ["UPDATE_LAYOUT", "/layout/textBoxes/$PLAY_GROUP_ID/label", ["ADD", "$GAME.layout.textBoxes.$PLAY_GROUP_ID.label", "$LOC_CARD.sides.A.$STAT"]],
+                                ["UPDATE_LAYOUT", "/layout/textBoxes/$PLAY_GROUP_ID/label", ["ADD", "$GAME.layout.textBoxes.$PLAY_GROUP_ID.label", "$LOC_CARD.tokens.$TOKEN"]]
                             ]
                         ],
                         ["COND",
                             ["EQUAL", "$LOC_CARD.sides.A.type", "Skirmish"],
                             [
-                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.sides.A.$STAT"],
-                                ["INCREASE_VAL", "/textBoxById/$PLAY_GROUP_ID/content", "$LOC_CARD.tokens.$TOKEN"]
+                                ["UPDATE_LAYOUT", "/layout/textBoxes/$PLAY_GROUP_ID/label", ["ADD", "$GAME.layout.textBoxes.$PLAY_GROUP_ID.label", "$LOC_CARD.sides.A.$STAT"]],
+                                ["UPDATE_LAYOUT", "/layout/textBoxes/$PLAY_GROUP_ID/label", ["ADD", "$GAME.layout.textBoxes.$PLAY_GROUP_ID.label", "$LOC_CARD.tokens.$TOKEN"]]
                             ]
                         ]
-                        //["LOG", "└── The {{$GAME.tokenById.$TOKEN.label}} at {{$LOC_CARD.sides.A.name}} is now {{$GAME.textBoxById.$PLAY_GROUP_ID.content}}."]
                     ]
                 ],
                 ["UPDATE_EXPECTED_POINTS"]
@@ -559,8 +558,8 @@
                     ["TRUE"],
                     ["LOG", "└── The game is tied {{$GAME.victoryPointsBlue}}-{{$GAME.victoryPointsRed}}."]
                 ],
-                ["SET", "/textBoxById/scoreRed/content",  "SP Score: {{$GAME.victoryPointsRed}}"],
-                ["SET", "/textBoxById/scoreBlue/content", "FP Score: {{$GAME.victoryPointsBlue}}"]
+                ["UPDATE_LAYOUT", "/layout/textBoxes/scoreRed/label",  "SP Score: {{$GAME.victoryPointsRed}}"],
+                ["UPDATE_LAYOUT", "/layout/textBoxes/scoreBlue/label", "FP Score: {{$GAME.victoryPointsBlue}}"]
             ]
         },
         "GET_LOCATION_WINNER": {
@@ -568,8 +567,8 @@
             "code": [
                 ["VAR", "$BLUE_GROUP_ID", "$GAME.groupById.$LOCATION_GROUP_ID.activeBlueGroupId"],
                 ["VAR", "$RED_GROUP_ID", "$GAME.groupById.$LOCATION_GROUP_ID.activeRedGroupId"],
-                ["VAR", "$BLUE_TOTAL", "$GAME.textBoxById.$BLUE_GROUP_ID.content"],
-                ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
+                ["VAR", "$BLUE_TOTAL", "$GAME.layout.textBoxes.$BLUE_GROUP_ID.label"],
+                ["VAR", "$RED_TOTAL", "$GAME.layout.textBoxes.$RED_GROUP_ID.label"],
                 ["COND",
                     ["GREATER_THAN", "$BLUE_TOTAL", "$RED_TOTAL"],
                     "blue",
@@ -614,8 +613,8 @@
                         [
                             ["VAR", "$BLUE_GROUP_ID", "$GAME.groupById.$LOCATION_GROUP_ID.activeBlueGroupId"],
                             ["VAR", "$RED_GROUP_ID", "$GAME.groupById.$LOCATION_GROUP_ID.activeRedGroupId"],
-                            ["VAR", "$BLUE_TOTAL", "$GAME.textBoxById.$BLUE_GROUP_ID.content"],
-                            ["VAR", "$RED_TOTAL", "$GAME.textBoxById.$RED_GROUP_ID.content"],
+                            ["VAR", "$BLUE_TOTAL", "$GAME.layout.textBoxes.$BLUE_GROUP_ID.label"],
+                            ["VAR", "$RED_TOTAL", "$GAME.layout.textBoxes.$RED_GROUP_ID.label"],
                             ["INCREASE_VAR", "$EXPECTED_POINTS", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"]]
                         ]
                     ]
@@ -674,8 +673,8 @@
                 ]],
                 ["INCREASE_VAR", "$EXPECTED_POINTS_RED", "$GAME.victoryPointsRed"],
                 ["INCREASE_VAR", "$EXPECTED_POINTS_BLUE", "$GAME.victoryPointsBlue"],
-                ["SET", "/textBoxById/expectedScoreRed/content", "Expected: {{$EXPECTED_POINTS_RED}}"],
-                ["SET", "/textBoxById/expectedScoreBlue/content", "Expected: {{$EXPECTED_POINTS_BLUE}}"]
+                ["UPDATE_LAYOUT", "/layout/textBoxes/expectedScoreRed/label", "Expected: {{$EXPECTED_POINTS_RED}}"],
+                ["UPDATE_LAYOUT", "/layout/textBoxes/expectedScoreBlue/label", "Expected: {{$EXPECTED_POINTS_BLUE}}"]
             ]
         },
         "PLAY_NUMBERED_CARD_TO_RESERVE": {
