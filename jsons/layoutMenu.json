@@ -1,8 +1,0 @@
-{
-    "layoutMenu": [
-        {"label": "id:onlyShowMyHand", "layoutId": "onlyShowMyHand", "numPlayers": null},
-        {"label": "id:allHandsVisible", "layoutId": "allHandsVisible", "numPlayers": null},
-        {"label": "id:sixPlayer", "layoutId": "sixPlayer", "numPlayers": null},
-        {"label": "id:epicDuel", "layoutId": "epicDuel", "numPlayers": null}
-    ]
-}

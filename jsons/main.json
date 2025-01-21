@@ -1,8 +1,6 @@
 {
     "pluginName": "WotR Card Game",
     "tutorialUrl": "youtube.com",
-    "minPlayers": 2,
-    "maxPlayers": 6,
     "backgroundUrl": "https://i.imgur.com/pIqGqRp.jpg",
     "loadPreBuiltOnNewGame": true,
     "vacantSeatOnNewGame": true

@@ -1,0 +1,54 @@
+{
+    "playerCountMenu": [
+        {
+            "label": "1",
+            "numPlayers": 1,
+            "layoutId": "onlyShowMyHand"
+        },
+        {
+            "label": "2",
+            "numPlayers": 2,
+            "layoutId": "onlyShowMyHand"
+        },
+        {
+            "label": "3",
+            "numPlayers": 3,
+            "layoutId": "onlyShowMyHand"
+        },
+        {
+            "label": "4",
+            "numPlayers": 4,
+            "layoutId": "onlyShowMyHand"
+        },
+        {
+            "label": "6",
+            "numPlayers": 6,
+            "layoutId": "sixPlayer"
+        },
+        {
+            "label": "1 (all hands visible)",
+            "numPlayers": 1,
+            "layoutId": "allHandsVisible"
+        },
+        {
+            "label": "2 (all hands visible)",
+            "numPlayers": 2,
+            "layoutId": "allHandsVisible"
+        },
+        {
+            "label": "3 (all hands visible)",
+            "numPlayers": 3,
+            "layoutId": "allHandsVisible"
+        },
+        {
+            "label": "4 (all hands visible)",
+            "numPlayers": 4,
+            "layoutId": "allHandsVisible"
+        },
+        {
+            "label": "2 (epic duel)",
+            "numPlayers": 2,
+            "layoutId": "epicDuel"
+        }
+    ]
+}
