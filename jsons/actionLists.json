@@ -1004,6 +1004,10 @@
             ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck7/visible", "$NEW_VAL"],
             ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck8/visible", "$NEW_VAL"],
             ["SET", "/playerData/$PLAYER_N/layout/regions/sharedPathDeck9/visible", "$NEW_VAL"]   
+        ],
+        "toggleVault": [
+            ["LOG", "{{$ALIAS_N}} has opened their vault."],
+            ["LOOK_AT", "$PLAYER_N", "{{$PLAYER_N}}Vault", -1, true]
         ]
     }
 }
