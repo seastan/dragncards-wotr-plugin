@@ -7,6 +7,27 @@
         "toggleLocationDecks": {
             "English": "Show/Hide Location Decks (6 player)"
         },
+        "toggleVault": {
+            "English": "Open the Vault"
+        },
+        "player1Vault": {
+            "English": "Player 1 Vault"
+        },
+        "player2Vault": {
+            "English": "Player 2 Vault"
+        },
+        "player3Vault": {
+            "English": "Player 3 Vault"
+        },
+        "player4Vault": {
+            "English": "Player 4 Vault"
+        },
+        "player5Vault": {
+            "English": "Player 5 Vault"
+        },
+        "player6Vault": {
+            "English": "Player 6 Vault"
+        },
         "sixPlayer": {
             "English": "Six Player"
         },

@@ -1026,6 +1026,108 @@
             "onCardEnter": {
                 "deckGroupId": "sharedPathDeck9B"
             }
+        },
+        "player1Vault": {
+            "groupType": "deck",
+            "label": "id:player1Vault", 
+            "tableLabel": "id:deck",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": false,
+            "onCardEnter": {
+                "controller": "player1",
+                "deckGroupId": "player1Deck",
+                "cycleGroupId": "player1Cycled",
+                "eliminateGroupId": "player1Eliminated",
+                "bonusApplied": false
+            },
+            "onCardLeave": {
+                "controller": "player1"
+            }
+        },
+        "player2Vault": {
+            "groupType": "deck",
+            "label": "id:player2Vault", 
+            "tableLabel": "id:deck",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": false,
+            "onCardEnter": {
+                "controller": "player2",
+                "deckGroupId": "player2Deck",
+                "cycleGroupId": "player2Cycled",
+                "eliminateGroupId": "player2Eliminated",
+                "bonusApplied": false
+            },
+            "onCardLeave": {
+                "controller": "player2"
+            }
+        },
+        "player3Vault": {
+            "groupType": "deck",
+            "label": "id:player3Vault", 
+            "tableLabel": "id:deck",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": false,
+            "onCardEnter": {
+                "controller": "player3",
+                "deckGroupId": "player3Deck",
+                "cycleGroupId": "player3Cycled",
+                "eliminateGroupId": "player3Eliminated",
+                "bonusApplied": false
+            },
+            "onCardLeave": {
+                "controller": "player3"
+            }
+        },
+        "player4Vault": {
+            "groupType": "deck",
+            "label": "id:player4Vault", 
+            "tableLabel": "id:deck",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": false,
+            "onCardEnter": {
+                "controller": "player4",
+                "deckGroupId": "player4Deck",
+                "cycleGroupId": "player4Cycled",
+                "eliminateGroupId": "player4Eliminated",
+                "bonusApplied": false
+            },
+            "onCardLeave": {
+                "controller": "player4"
+            }
+        },
+        "player5Vault": {
+            "groupType": "deck",
+            "label": "id:player5Vault", 
+            "tableLabel": "id:deck",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": false,
+            "onCardEnter": {
+                "controller": "player5",
+                "deckGroupId": "player5Deck",
+                "cycleGroupId": "player5Cycled",
+                "eliminateGroupId": "player5Eliminated",
+                "bonusApplied": false
+            },
+            "onCardLeave": {
+                "controller": "player5"
+            }
+        },
+        "player6Vault": {
+            "groupType": "deck",
+            "label": "id:player6Vault", 
+            "tableLabel": "id:deck",
+            "canHaveAttachments": false,
+            "shuffleOnLoad": false,
+            "onCardEnter": {
+                "controller": "player6",
+                "deckGroupId": "player6Deck",
+                "cycleGroupId": "player6Cycled",
+                "eliminateGroupId": "player6Eliminated",
+                "bonusApplied": false
+            },
+            "onCardLeave": {
+                "controller": "player6"
+            }
         }
     }
 }
