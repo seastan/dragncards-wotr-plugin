@@ -170,7 +170,7 @@
                                 ["COND",
                                     ["OR",
                                         ["EQUAL", "$TARGET.groupId", ["JOIN_STRING", "player1", "Reserve"]],
-                                        ["EQUAL", "$TARGET.groupId", ["JOIN_STRING", "player3", "Reserve"]],
+                                        ["AND",["EQUAL", "$TARGET.groupId", ["JOIN_STRING", "player3", "Reserve"]],["NOT_EQUAL", "$GAME.numPlayers", 3]],
                                         ["EQUAL", "$TARGET.groupId", ["JOIN_STRING", "player5", "Reserve"]]
                                     ],
                                     ["SET", "/cardById/$TARGET_ID/rotation", 90]
