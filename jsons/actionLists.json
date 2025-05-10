@@ -379,6 +379,28 @@
             ["SET", "/AtSMode", false],
             ["INCREASE_VAL", "/roundNumber", 1]
         ],
+        "setupFaS4PlayerTrilogy": [
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["SET", "/EDM", false],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 9, 9, 9, 9]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_PLAYEST_SCENARIO",true],
+            ["SET_CORRUPTION_BONUS", false],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "FaS-4 Player Trilogy"],
+            ["LOAD_RULES", "Test"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/automationEnabled", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1]
+        ],
         "setupCoreRohanAndGondorAtWar":[
             ["DEFINE", "$PLAYER_N", "player1"],
 			["LOAD_RULES", "GpS"],
@@ -403,7 +425,6 @@
 		],
 		"setupGrandPrixTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
-            ["LOAD_PROMOS", ["LIST", "43bd748d-d81c-4d98-8440-6c5dfcb75a54", "e9762403-b5d0-4ff8-97b6-347defc8b8e6", "b9539977-4ed1-44c6-aa09-5431a4a11967", "584da922-12a5-44a8-b47f-bd280374d3ba"]],
             ["LOAD_RULES", "GpS"],
 			["LOAD_RULES", "Core"],
             ["SET", "/EDM", false],

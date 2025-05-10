@@ -19,6 +19,10 @@
                 [
                     ["LOAD_CARDS", "GpS-Rulebook"]
                 ],
+                ["EQUAL", "$PRODUCT_ID", "Test"],
+                [
+                    ["LOAD_CARDS", "Test-Rulebook"]
+                ],
                 ["TRUE"],
                 [
                     ["LOG", "Product {{$PRODUCT_ID}} not found."]
@@ -228,6 +232,18 @@
                             ["SHUFFLE_GROUP", "sharedPathDeck8B"],
                             ["SHUFFLE_GROUP", "sharedPathDeck9B"]
                         ]
+                    ]
+                ]
+            ]
+        },
+        "SET_PLAYEST_SCENARIO": {
+            "args": ["$BOOL"],
+            "code": [
+                ["SET", "/playtestScenario", "$BOOL"],
+                ["COND",
+                    "$BOOL",
+                    [
+                        ["PROMPT", "$PLAYER_ORDER", "notifyAll", "This is a playtesting scenario. You can find the rules in the sharedAside pile."]
                     ]
                 ]
             ]

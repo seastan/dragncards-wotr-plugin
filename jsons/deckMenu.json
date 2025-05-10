@@ -11,7 +11,9 @@
                     {"deckListId": "modeCoreTheTwoTowers", "label": "The Two Towers"},
                     {"deckListId": "modeCoreTheReturnOfTheKing", "label": "The Return of the King"},
                     {"deckListId": "modeCoreExpertDuel", "label": "Expert Duel"},
-                    {"deckListId": "modeCoreAPerilousJourney", "label": "A Perilous Journey"}	    
+                    {"deckListId": "modeCoreAPerilousJourney", "label": "A Perilous Journey"},
+                    {"deckListId": "modeCoreRohanAndGondorAtWar", "label": "Rohan and Gondor at War"},
+                    {"deckListId": "modeCoreGrandPrixTrilogy", "label": "Grand Prix Trilogy"}	    
                 ]
             },
             {   
@@ -31,7 +33,8 @@
                     {"deckListId": "modeFaSExpandedTrilogy", "label": "Expanded Trilogy"},
 					{"deckListId": "modeFaSWarInTheNorth4P", "label": "War in the North - Trilogy Rules"},
 					{"deckListId": "modeFaSWarInTheNorth2P", "label": "War in the North - Two Player Duel Rules"},
-					{"deckListId": "modeFaSWarInTheNorth3P", "label": "War in the North - Three Player Duel Rules"}
+					{"deckListId": "modeFaSWarInTheNorth3P", "label": "War in the North - Three Player Duel Rules"},
+                    {"deckListId": "modeFaS4P", "label": "[TEST] 4 Player Trilogy"}
 				],
 				"subMenus": [
                     {
