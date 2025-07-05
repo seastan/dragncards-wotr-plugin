@@ -948,14 +948,12 @@
         ],
         "increaseCorruption": [
             ["LOG", "$ALIAS_N", " increased the corruption counter."],
-            ["INCREASE_VAL", "/corruptionScore", 1],
-            ["COMPUTE_SCORE"]
+            ["INCREASE_VAL", "/corruptionScore", 1]
         ],
 
         "decreaseCorruption": [
             ["LOG", "$ALIAS_N", " decreased the corruption counter."],
-            ["DECREASE_VAL", "/corruptionScore", 1],
-            ["COMPUTE_SCORE"]
+            ["DECREASE_VAL", "/corruptionScore", 1]
         ],
         "scoreLocation": [
             ["COND", 

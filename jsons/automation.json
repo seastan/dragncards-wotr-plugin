@@ -40,15 +40,6 @@
                     "$GAME.corruptionScore",
                     ["PREV", "$GAME.corruptionScore"]
                 ],
-                "then": ["COMPUTE_SCORE"]
-            },
-            "scoreUpdate": { 
-                "_comment": "Update score when corruption counter changes value",
-                "type": "trigger", 
-                "listenTo": [
-                    "/corruptionScore"
-                ],
-                "condition": ["TRUE"],
                 "then": [
                     ["COMPUTE_SCORE"],
                     ["UPDATE_EXPECTED_POINTS"]

@@ -662,6 +662,19 @@
                             ["VAR", "$RED_TOTAL", "$GAME.layout.textBoxes.$RED_GROUP_ID.label"],
                             ["INCREASE_VAR", "$EXPECTED_POINTS", ["SUBTRACT", "$RED_TOTAL", "$BLUE_TOTAL"]]
                         ]
+                    ],
+                    ["EQUAL", "$WINNER", "blue"],
+                    ["COND",
+                        ["EQUAL", "$LOCATION_CARD.sides.A.type", "Battleground"],
+                        [
+                            ["COND",
+                                ["AND",
+                                    ["EQUAL", "$LOCATION_CARD.sides.B.name", "Shadow Battleground"],
+                                    ["EQUAL", "$GAME.corruptionBonus", true]
+                                ],
+                                ["DECREASE_VAR", "$EXPECTED_POINTS", 1]
+                            ]
+                        ]
                     ]
                 ],
                 "$EXPECTED_POINTS"
