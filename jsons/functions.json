@@ -272,6 +272,18 @@
                 ]
             ]
         },
+        "SET_CORRUPTION_BONUS_DOUBLE": {
+            "args": ["$BOOL"],
+            "code": [
+                ["SET", "/corruptionBonus", "$BOOL"],
+                ["COND",
+                    "$BOOL",
+                    [
+                        ["PROMPT", "$PLAYER_ORDER", "notifyAll", "The 'Corruption Bonus' rule is in effect. Each time a Free Peoples battleground (not a skirmish) is moved to the Shadow scoring area while scoring, the corruption counter will increase by 1. Each time a Shadow battleground (not a skirmish) is moved to the Free Peoples scoring area while scoring, the corruption counter will decrease by 1 (minimum 0)."]
+                    ]
+                ]
+            ]
+        },
         "SET_EPIC_REMINDER": {
             "args": ["$BOOL"],
             "code": [
@@ -283,7 +295,7 @@
                 ]
             ]
         },
-        "RESOLVE_CORRUPTION_BONUS": {
+        "RESOLVE_CORRUPTION_BONUS_SHADOW": {
             "args": [],
             "code": ["COND", 
                 "$GAME.corruptionBonus",
@@ -291,6 +303,23 @@
                     ["LOG", "$ALIAS_N", " added 1 to the corruption score due to the corruption bonus rule."],
                     ["INCREASE_VAL", "/corruptionScore", 1]
                 ]
+            ]
+        },
+        "RESOLVE_CORRUPTION_BONUS_FREE": {
+        "args": [],
+        "code": ["COND",
+            "$GAME.corruptionBonus",
+            [
+                ["COND",
+                    ["EQUAL", "$GAME.corruptionScore", 0],
+                        ["LOG", "No corruption available to remove, the benefit is ignored."],
+                    ["GREATER_THAN", "$GAME.corruptionScore", 0],
+                    [
+                        ["LOG", "$ALIAS_N", " removed 1 from the corruption score due to the corruption bonus rule."],
+                        ["DECREASE_VAL", "/corruptionScore", 1]
+                    ]
+                ]
+            ]
             ]
         },
         "SET_INITIAL_CORRUPTION": {
