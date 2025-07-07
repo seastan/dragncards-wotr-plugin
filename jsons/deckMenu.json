@@ -55,7 +55,8 @@
 					{"deckListId": "modeFaSAtSExpandedTrilogy", "label": "Expanded Trilogy"},
 					{"deckListId": "modeFaSAtSWarInTheNorth4P", "label": "War in the North - Trilogy Rules"},
 					{"deckListId": "modeFaSAtSWarInTheNorth2P", "label": "War in the North - Two Player Duel Rules"},
-					{"deckListId": "modeFaSAtSWarInTheNorth3P", "label": "War in the North - Three Player Duel Rules"}
+					{"deckListId": "modeFaSAtSWarInTheNorth3P", "label": "War in the North - Three Player Duel Rules"},
+                    {"deckListId": "modeFaSAtS4P", "label": "[TEST] 4 Player Trilogy"}
 				],
 				"subMenus": [
                     {

@@ -1,10 +1,11 @@
 {
     "announcements": [
+        "2025-07-05: Fire & Swords 4p trilogy scenario updated and Solo version added",
         "2025-05-08: Final Tournament Scenarios added",
         "2025-03-18: Fire & Swords 4-player trilogy added for playtesting",
         "2024-09-26: Many additional icons added by card effects are now automated",
         "2024-09-18: Press Shift+D to perform the setup draw (after shuffling the promo cards into the deck).",
-        "2024-09-02: !NEW! Fire & Swords added",
+        "2024-09-02: Fire & Swords expansion added",
         "2024-01-20: Added a card ability to Mirror of Galadriel. Hover over it and press Shift+A to use it.",
         "2024-01-20: New default layout where all hands are visible. To change to the old, go to Menu->Layout",
         "2024-01-20: Bug fixes related to card visibility",
