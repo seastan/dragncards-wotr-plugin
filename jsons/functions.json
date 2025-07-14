@@ -275,7 +275,7 @@
         "SET_CORRUPTION_BONUS_DOUBLE": {
             "args": ["$BOOL"],
             "code": [
-                ["SET", "/corruptionBonus", "$BOOL"],
+                ["SET", "/corruptionBonusDouble", "$BOOL"],
                 ["COND",
                     "$BOOL",
                     [
@@ -298,7 +298,10 @@
         "RESOLVE_CORRUPTION_BONUS_SHADOW": {
             "args": [],
             "code": ["COND", 
-                "$GAME.corruptionBonus",
+                ["OR",
+                    ["EQUAL", "$GAME.corruptionBonus", true],
+                    ["EQUAL", "$GAME.corruptionBonusDouble", true]
+                ],
                 [
                     ["LOG", "$ALIAS_N", " added 1 to the corruption score due to the corruption bonus rule."],
                     ["INCREASE_VAL", "/corruptionScore", 1]
@@ -308,7 +311,7 @@
         "RESOLVE_CORRUPTION_BONUS_FREE": {
         "args": [],
         "code": ["COND",
-            "$GAME.corruptionBonus",
+            "$GAME.corruptionBonusDouble",
             [
                 ["COND",
                     ["EQUAL", "$GAME.corruptionScore", 0],
@@ -649,7 +652,10 @@
                             ["COND",
                                 ["AND",
                                     ["EQUAL", "$LOCATION_CARD.sides.B.name", "Free Peoples Battleground"],
-                                    ["EQUAL", "$GAME.corruptionBonus", true]
+                                    ["OR",
+                                        ["EQUAL", "$GAME.corruptionBonus", true],
+                                        ["EQUAL", "$GAME.corruptionBonusDouble", true]
+                                    ]
                                 ],
                                 ["INCREASE_VAR", "$EXPECTED_POINTS", 1]
                             ]
@@ -670,7 +676,7 @@
                             ["COND",
                                 ["AND",
                                     ["EQUAL", "$LOCATION_CARD.sides.B.name", "Shadow Battleground"],
-                                    ["EQUAL", "$GAME.corruptionBonus", true]
+                                    ["EQUAL", "$GAME.corruptionBonusDouble", true]
                                 ],
                                 ["DECREASE_VAR", "$EXPECTED_POINTS", 1]
                             ]
