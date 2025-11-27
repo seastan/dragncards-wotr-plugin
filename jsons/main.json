@@ -3,5 +3,5 @@
     "tutorialUrl": "youtube.com",
     "backgroundUrl": "https://i.imgur.com/pIqGqRp.jpg",
     "loadPreBuiltOnNewGame": true,
-    "vacantSeatOnNewGame": true
+    "vacantSeatOnNewGame": false
 }
