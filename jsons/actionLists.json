@@ -26,7 +26,8 @@
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Aragorn"],
             ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
         "setupAtSTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -56,7 +57,8 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
         "setupCoreTwoPlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -84,7 +86,8 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupAtSTwoPlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -114,7 +117,8 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupCoreThreePlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -142,7 +146,8 @@
             ["LOAD_DECK_FOR_PLAYER", "player3", "Core-Isengard"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupAtSThreePlayerDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -171,7 +176,8 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
         "setupCoreFellowshipOfTheRing": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -195,7 +201,8 @@
             ["SET", "/AtSMode", false],
 			["SET", "/firstPlayer", "player2"],
             ["SET", "/currentPlayer", "player2"],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
         "setupAtSFellowshipOfTheRing": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -221,7 +228,8 @@
 			["SET", "/firstPlayer", "player2"],
             ["SET", "/currentPlayer", "player2"],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupCoreTheTwoTowers": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -249,7 +257,8 @@
             ["SET", "/AtSMode", false],
 			["SET", "/firstPlayer", "player2"],
             ["SET", "/currentPlayer", "player2"],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupAtSTheTwoTowers": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -279,7 +288,8 @@
 			["SET", "/firstPlayer", "player2"],
             ["SET", "/currentPlayer", "player2"],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupCoreTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -307,7 +317,8 @@
             ["SET", "/AtSMode", false],
 			["SET", "/firstPlayer", "player2"],
             ["SET", "/currentPlayer", "player2"],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupAtSTheReturnOfTheKing": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -337,7 +348,8 @@
 			["SET", "/firstPlayer", "player2"],
             ["SET", "/currentPlayer", "player2"],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupCoreExpertDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -368,7 +380,8 @@
             ["LOAD_DECK_FOR_PLAYER", "player2", "Core-Isengard"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
         "setupCoreAPerilousJourney": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -391,7 +404,8 @@
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
         "setupFaS4PlayerTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -399,12 +413,12 @@
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
-            ["SET_SETUP_DRAW", ["LIST", 9, 9, 9, 9]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
             ["SET_ROUND_DRAW", ["LIST", 4, 5, 4, 5]],
             ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
             ["SET_ROUND_RINGS", ["LIST", 1, 1, 1, 1]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
-            ["SET_PLAYEST_SCENARIO",true],
+            ["SET_PLAYTEST_SCENARIO",true],
             ["SET_CORRUPTION_BONUS", false],
             ["SET_CORRUPTION_BONUS_DOUBLE", true],
             ["SET_INITIAL_CORRUPTION", 0],
@@ -414,7 +428,8 @@
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
         "setupFaSAtS4PlayerTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -422,12 +437,12 @@
             ["SET_NUM_PLAYERS", 4],
             ["SET_PLAYER_NAMES", ["LIST", "Frodo", "The Witch-king", "Aragorn", "Saruman"]],
             ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
-            ["SET_SETUP_DRAW", ["LIST", 9, 9, 9, 9]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
             ["SET_ROUND_DRAW", ["LIST", 4, 5, 4, 5]],
             ["SET_SETUP_RINGS", ["LIST", 1, 0, 1, 0]],
             ["SET_ROUND_RINGS", ["LIST", 1, 0, 1, 0]],
             ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
-            ["SET_PLAYEST_SCENARIO",true],
+            ["SET_PLAYTEST_SCENARIO",true],
             ["SET_CORRUPTION_BONUS", false],
             ["SET_CORRUPTION_BONUS_DOUBLE", true],
             ["SET_INITIAL_CORRUPTION", 0],
@@ -438,7 +453,8 @@
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
             ["SET_LAYOUT", "shared", "allHandsVisible"],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
         "setupCoreRohanAndGondorAtWar":[
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -461,7 +477,8 @@
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
 		],
 		"setupGrandPrixTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -489,7 +506,8 @@
             ["LOAD_DECK_FOR_PLAYER", "player4", "Core-Isengard"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupFaSExpandedTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -521,7 +539,8 @@
             ["SET_LAYOUT", "shared", "sixPlayer"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupFaSAtSExpandedTrilogy": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -554,7 +573,8 @@
             ["SET_LAYOUT", "shared", "sixPlayer"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupFaSWarInTheNorth4P": [
 			["DEFINE", "$PLAYER_N", "player1"],
@@ -579,7 +599,8 @@
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
 		],
 		"setupFaSAtSWarInTheNorth4P": [
 			["DEFINE", "$PLAYER_N", "player1"],
@@ -606,7 +627,8 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
 		],
 		"setupFaSWarInTheNorth2P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -631,7 +653,8 @@
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupFaSAtSWarInTheNorth2P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -658,7 +681,8 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupFaSWarInTheNorth3P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -683,7 +707,8 @@
             ["SHUFFLE_PATHS", true],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupFaSAtSWarInTheNorth3P": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -710,7 +735,8 @@
             ["SET_LAYOUT", "shared", "allHandsVisible"],
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
-            ["INCREASE_VAL", "/roundNumber", 1]
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupFaSEpicDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -737,7 +763,8 @@
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", false],
             ["INCREASE_VAL", "/roundNumber", 1],
-            ["SET_LAYOUT", "shared", "epicDuel"]
+            ["SET_LAYOUT", "shared", "epicDuel"],
+            ["SET_DECKBUILD_REMINDER", false]
         ],
 		"setupFaSAtSEpicDuel": [
             ["DEFINE", "$PLAYER_N", "player1"],
@@ -766,7 +793,152 @@
             ["SET", "/automationEnabled", true],
             ["SET", "/AtSMode", true],
             ["INCREASE_VAL", "/roundNumber", 1],
-            ["SET_LAYOUT", "shared", "epicDuel"]
+            ["SET_LAYOUT", "shared", "epicDuel"],
+            ["SET_DECKBUILD_REMINDER", false]
+        ],
+        "setupDeckBuildEriador2P": [
+            ["SET", "/automationEnabled", true],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "FaS"],
+            ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Free", "Shadow"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 2, 2]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", false],
+            ["SET_CORRUPTION_BONUS_DOUBLE", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Eriador-Locations"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", true]
+        ],
+        "setupDeckBuildRhovanion2P": [
+            ["SET", "/automationEnabled", true],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "FaS"],
+            ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Free", "Shadow"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 2, 2]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", false],
+            ["SET_CORRUPTION_BONUS_DOUBLE", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Rhovanion-Locations"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", true]
+        ],
+        "setupDeckBuildTheSouth2P": [
+            ["SET", "/automationEnabled", true],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "FaS"],
+            ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
+            ["SET_NUM_PLAYERS", 2],
+            ["SET_PLAYER_NAMES", ["LIST", "Free", "Shadow"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 4, 6]],
+            ["SET_SETUP_RINGS", ["LIST", 2, 2]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", false],
+            ["SET_CORRUPTION_BONUS_DOUBLE", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "TheSouth-Locations"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", true]
+        ],
+        "setupDeckBuildEriador4P": [
+            ["SET", "/automationEnabled", true],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "FaS"],
+            ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "FP I", "SP I", "FP II", "SP II"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", false],
+            ["SET_CORRUPTION_BONUS_DOUBLE", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Eriador-Locations"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", true]
+        ],
+        "setupDeckBuildRhovanion4P": [
+            ["SET", "/automationEnabled", true],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "FaS"],
+            ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "FP I", "SP I", "FP II", "SP II"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", false],
+            ["SET_CORRUPTION_BONUS_DOUBLE", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "Rhovanion-Locations"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", true]
+        ],
+        "setupDeckBuildTheSouth4P": [
+            ["SET", "/automationEnabled", true],
+            ["DEFINE", "$PLAYER_N", "player1"],
+            ["LOAD_RULES", "FaS"],
+            ["LOAD_RULES", "Core"],
+            ["SET", "/EDM", false],
+            ["SET_NUM_PLAYERS", 4],
+            ["SET_PLAYER_NAMES", ["LIST", "FP I", "SP I", "FP II", "SP II"]],
+            ["SET_TURN_ORDER", ["LIST", 1, 2, 3, 4]],
+            ["SET_SETUP_DRAW", ["LIST", 7, 7, 7, 7]],
+            ["SET_ROUND_DRAW", ["LIST", 3, 4, 3, 4]],
+            ["SET_SETUP_RINGS", ["LIST", 1, 1, 1, 1]],
+            ["SET_ROUND_RINGS", ["LIST", 0, 0, 0, 0]],
+            ["SET_NO_POINTS_AWARDED_ON_PATH_TIES", false],
+            ["SET_CORRUPTION_BONUS", false],
+            ["SET_CORRUPTION_BONUS_DOUBLE", true],
+            ["SET_INITIAL_CORRUPTION", 0],
+            ["LOAD_CARDS", "TheSouth-Locations"],
+            ["SHUFFLE_BATTLEGROUNDS", true],
+            ["SHUFFLE_PATHS", true],
+            ["SET", "/AtSMode", false],
+            ["INCREASE_VAL", "/roundNumber", 1],
+            ["SET_DECKBUILD_REMINDER", true]
         ],
         "initialDraw": [
             ["LOG", "$ALIAS_N", " drew their starting hand."],
