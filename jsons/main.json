@@ -1,5 +1,9 @@
 {
     "pluginName": "WotR Card Game",
+    "imageUrlPrefix": {
+        "Default": "https://dragncards-wotr.s3.amazonaws.com/",
+        "Spanish": "https://pub-3904bc8834e24cfaa196a93083a727fa.r2.dev/"
+    },
     "tutorialUrl": "youtube.com",
     "backgroundUrl": "https://i.imgur.com/pIqGqRp.jpg",
     "loadPreBuiltOnNewGame": true,
